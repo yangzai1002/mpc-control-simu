@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b5e5f7b2-05bd-4146-a87c-a6ea5992d519">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="1213ba0f-eace-400a-8fc8-b68e48fde312">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="06bbccdb-a1b5-4e6f-9541-1eba7ad63c44">
+              <SHORT-NAME>swcs</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="975bfabe-6214-4f62-bf0a-13457f20742c">
+                  <SHORT-NAME>xh265_encoder</SHORT-NAME>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="8d43db39-93a9-49d6-9de1-c2751efa947f">
+                    <SHORT-NAME>xh265_encoder_rootswc</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/xh265_encoder</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

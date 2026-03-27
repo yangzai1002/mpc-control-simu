@@ -1,0 +1,11 @@
+{
+	"filespace_manager": [
+	{
+		"path": "/opt/usr/ap_adsfi/bag/",
+        	"prefix": "",
+		"suffix": ".bag",
+		"size":512000
+	}
+	]
+
+}

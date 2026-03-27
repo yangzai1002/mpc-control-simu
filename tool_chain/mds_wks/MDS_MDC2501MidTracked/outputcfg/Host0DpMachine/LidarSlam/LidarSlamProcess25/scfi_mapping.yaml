@@ -1,0 +1,18 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+lidar_slam_base:
+  sendInstanceID:
+    LocationInfoIntf:
+        instanceId: [20206]
+        portName: ["tpliodr"]
+  recvInstanceID:
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20203,20203,20202,20201,20203,20201,20201,20201,20201,20201,20203,20203]
+        portName: ["tpfront_right_lidar_points","tpfront_right_lidar_points","tpfront_left_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_right_lidar_points"]
+    SensorImuServiceInterface:
+        instanceId: [20223,20223,20223,20223]
+        portName: ["tpsensorimu","tpsensorimu","tpsensorimu","tpsensorimu"]
+    SensorWheelSpeedServiceInterface:
+        instanceId: [20204]
+        portName: ["tpwheelspeed"]

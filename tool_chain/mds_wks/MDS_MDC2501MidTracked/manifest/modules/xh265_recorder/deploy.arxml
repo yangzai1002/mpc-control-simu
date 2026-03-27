@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="3cfee955-f631-400f-9652-a50184ac5f29">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="d55d18cc-4802-407b-b5c9-d67140e5865b">
+          <SHORT-NAME>process_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="2ab819b5-02df-4a26-b1c9-76a1cc1b090f">
+              <SHORT-NAME>processDesigns</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="03a6c813-727e-458d-acb8-fd0a5caf6c19">
+                  <SHORT-NAME>Libxh265_recorderProcessDesign42</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/xh265_recorder</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="9746488b-1336-4613-8712-ad4ebe84c451">
+              <SHORT-NAME>processes</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS UUID="8d4b80d8-3bb1-4b09-8f8d-9d1bb26b184b">
+                  <SHORT-NAME>Libxh265_recorderProcess42</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libxh265_recorderProcessDesign42</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/xh265_recorder</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>NETWORK</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                </PROCESS>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="523d2cb5-e636-4b8b-9eb3-dd10ce7051df">
+              <SHORT-NAME>processToMachineMappingSets</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-TO-MACHINE-MAPPING-SET UUID="55ae5d82-7abc-4146-a155-01bf719d59de">
+                  <SHORT-NAME>LibProcessToMachineMappingSet_xh265_recorderProcess42</SHORT-NAME>
+                  <PROCESS-TO-MACHINE-MAPPINGS>
+                    <PROCESS-TO-MACHINE-MAPPING UUID="ec2aab30-f69a-48fd-b0b3-20ed6170e188">
+                      <SHORT-NAME>LibprocessToMachineMapping41</SHORT-NAME>
+                      <MACHINE-REF DEST="MACHINE">/HuaweiMDC/Machine/Host0DpMachine</MACHINE-REF>
+                      <PROCESS-REF DEST="PROCESS">/HuaweiMDC/process_manifests/processes/Libxh265_recorderProcess42</PROCESS-REF>
+                    </PROCESS-TO-MACHINE-MAPPING>
+                  </PROCESS-TO-MACHINE-MAPPINGS>
+                </PROCESS-TO-MACHINE-MAPPING-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="91bb3a5a-ff6d-44de-a835-d80694806c1e">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e3037584-519a-49d5-afc6-a3548d39eea8">
+              <SHORT-NAME>InstanceToPortMappings</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="2e2dc6fd-0acc-4754-90ae-ce370789e293">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance159_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/xh265_recorder/xh265_recorder_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/xh265_recorder/video_encoded_frame</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libxh265_recorderProcessDesign42</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance159</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="1a9ca253-46dd-4f5e-9eac-a4cb460dba3d">
+          <SHORT-NAME>instance_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="74154cab-84b8-421d-ab48-cb0cbab83244">
+              <SHORT-NAME>requiredInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="2c73d8d3-1efd-400d-b1b8-c6c36d874799">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance159</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorImageServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorImageServiceInterface_DdsDeployment/EventSensorImageDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5122</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="7d398ab0-7010-41e1-ae5c-c9cfb16632fd">
+              <SHORT-NAME>instanceToMachineMappings</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="52971958-1432-48f2-b638-a5697c8927e7">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance159_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance159</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,21 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+odometry_base:
+  sendInstanceID:
+    LocationInfoIntf:
+        instanceId: [20209]
+        portName: ["tpododr"]
+  recvInstanceID:
+    SensorGpsServiceInterface:
+        instanceId: [20244]
+        portName: ["tpsensorgps"]
+    SensorWheelSpeedServiceInterface:
+        instanceId: [20204]
+        portName: ["tpwheelspeed"]
+    LocationServiceInterface:
+        instanceId: [20229]
+        portName: ["tpimu"]
+    SensorImuServiceInterface:
+        instanceId: [20223]
+        portName: ["tpsensorimu"]

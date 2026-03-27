@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="7e586e14-20c3-4598-8dd0-dd9e303f963e">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="24d37862-3c20-4969-97c8-5dc629fe4864">
+          <SHORT-NAME>process_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="22380217-06e4-49c7-9d88-1e847ab2b3ea">
+              <SHORT-NAME>processDesigns</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="a785e841-6644-4025-8d37-3f92ebea1b3d">
+                  <SHORT-NAME>Libhw_fr671_radarProcessDesign20</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="17517cd3-1a7e-45f8-a649-7065cd475323">
+              <SHORT-NAME>processes</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS UUID="0b903344-6721-4f94-a0ec-a24adba4e6ef">
+                  <SHORT-NAME>Libhw_fr671_radarProcess20</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>NETWORK</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                </PROCESS>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="d4c1199b-d6e2-44dc-815e-ef705c0b3cdc">
+              <SHORT-NAME>processToMachineMappingSets</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-TO-MACHINE-MAPPING-SET UUID="fc919a0b-87a9-40ca-8214-7755e25deb68">
+                  <SHORT-NAME>LibProcessToMachineMappingSet_hw_fr671_radarProcess20</SHORT-NAME>
+                  <PROCESS-TO-MACHINE-MAPPINGS>
+                    <PROCESS-TO-MACHINE-MAPPING UUID="a5351b2f-a70e-4cd5-83b3-dbf3568c1648">
+                      <SHORT-NAME>LibprocessToMachineMapping19</SHORT-NAME>
+                      <MACHINE-REF DEST="MACHINE">/HuaweiMDC/Machine/Host0DpMachine</MACHINE-REF>
+                      <PROCESS-REF DEST="PROCESS">/HuaweiMDC/process_manifests/processes/Libhw_fr671_radarProcess20</PROCESS-REF>
+                    </PROCESS-TO-MACHINE-MAPPING>
+                  </PROCESS-TO-MACHINE-MAPPINGS>
+                </PROCESS-TO-MACHINE-MAPPING-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="5abcddef-e388-4022-9b19-f0eec2b08fa9">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="72d0ea3e-ce48-4f0e-aea8-29242b50a6aa">
+              <SHORT-NAME>InstanceToPortMappings</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="4c72456d-56b1-4bb9-ac6c-b85b55a6a432">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance42_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpackets</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance42</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="4d95f914-256e-404e-b98e-fb9fe8c55977">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance105_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpimu1</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance105</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="a139c9d4-d6ab-4c7b-84b3-3ac9e24c6afa">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpoints</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="ee592644-27a9-42aa-a833-69903a8f36ab">
+                  <SHORT-NAME>LibRPortPrototype4_DdsRequiredServiceInstance107_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpimu2</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance107</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="ba1e3066-9de2-40f1-aa5f-b8f6219b45ea">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance44_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpackets</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance44</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="6526164b-545d-471d-ba2c-f17aeabd001d">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance201_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpvehiclestate2</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance201</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="1bcb51e1-2af1-4d59-bdd2-4699744cfff7">
+                  <SHORT-NAME>LibRPortPrototype3_DdsRequiredServiceInstance202_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpvehiclestate3</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance202</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="a536eb63-4f37-4274-9a8e-7242ba08780f">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance43_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpackets</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance43</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="70dc49d4-b62b-4f94-80a2-30e173f3d91f">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpoints</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="7f1d5d27-fc65-4e03-a9a5-ed22528d5aa9">
+                  <SHORT-NAME>LibRPortPrototype6_DdsRequiredServiceInstance109_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpimu3</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype6_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="3fa4c35a-94f5-40ce-97fd-242b24075658">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance200_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/tpvehiclestate1</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance200</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="616c9b4d-719f-441b-b6dd-2bcdffda7a70">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/hw_fr671_radar_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar/radarpoints</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libhw_fr671_radarProcessDesign20</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="fccd0f68-d0cb-4d35-8c4a-8cf4499592e6">
+          <SHORT-NAME>instance_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="bcb981b6-3fdc-4104-a757-d167e3b27946">
+              <SHORT-NAME>providedInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="2e6da037-84ba-4dd6-95d1-c95789f3dda4">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance42</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment/EventSensorRadarPacketDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5054</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="609dbf1d-51d1-466a-bfc4-58c8092f7661">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment/EventRadarPointCloudDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5056</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="f292c1fb-3018-47c9-8798-329b855641fa">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance44</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment/EventSensorRadarPacketDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5058</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="75b9c640-0e8b-4a8f-af9d-3549e629e76e">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance43</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorRadarPacketServiceInterface_DdsDeployment/EventSensorRadarPacketDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5061</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="cf13dc60-111f-4a9f-a512-8ff0eb964108">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment/EventRadarPointCloudDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5062</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="f3ce97cb-81ea-4729-ae45-904e6815fa5e">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment/EventRadarPointCloudDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>5065</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="8ebdaf48-aa2e-4e5c-ba53-12ef7094282b">
+              <SHORT-NAME>instanceToMachineMappings</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="689950c4-3163-4a24-82a7-055a3af30f4c">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance42_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance42</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="82ec1832-cb4b-4fdb-9b27-8ff9f0d7040e">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance105_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance105</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="adc01db7-c423-4dc9-9fed-e270d1c955d2">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="dc11fa5a-190e-4412-abb6-d46bf3ed47a2">
+                  <SHORT-NAME>LibRPortPrototype4_DdsRequiredServiceInstance107_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance107</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="897dd06d-d6bb-4a44-a41b-3a692e93743f">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance44_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance44</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="36cc9360-b353-49f4-aac7-d144dd0ed034">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance201_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance201</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="6e71c5a2-ac4c-4812-9a9b-6dcce7507859">
+                  <SHORT-NAME>LibRPortPrototype3_DdsRequiredServiceInstance202_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance202</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="5a827c42-44f2-4b31-909b-3ff11d3b2b91">
+                  <SHORT-NAME>Libradarpackets_DdsProvidedServiceInstance43_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance43</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="bb1b2c39-bed7-4770-9bbd-0a807b58cc83">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="e8e07e1c-2700-4af1-a28a-60519c134fa6">
+                  <SHORT-NAME>LibRPortPrototype6_DdsRequiredServiceInstance109_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype6_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="3808a898-bdc3-4aba-bb62-95617c125846">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance200_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance200</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="a988fda7-25c3-4361-a452-6c1ae924d354">
+                  <SHORT-NAME>LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="bc3513e2-dbe5-4121-8351-2f7a83a2dbf6">
+              <SHORT-NAME>requiredInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="ad4ef133-4a8e-45ac-8a13-396921e3300e">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance105</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment/LocationEventDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5055</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="0228464d-b8f3-4985-8ea4-c6f970e729f9">
+                  <SHORT-NAME>LibRPortPrototype4_DdsRequiredServiceInstance107</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment/LocationEventDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5057</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="07397ef3-73b6-423a-8892-6d7f4d58fca1">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance201</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment/EventVehicleInfoDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5059</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="e0962786-fdc5-4453-b398-84edc8c69c4a">
+                  <SHORT-NAME>LibRPortPrototype3_DdsRequiredServiceInstance202</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment/EventVehicleInfoDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5060</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="4da236d1-007d-49e2-9f9a-a7e3d1dfb3b0">
+                  <SHORT-NAME>LibRPortPrototype6_DdsRequiredServiceInstance109</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationDdsInterfaceDeployment/LocationEventDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5063</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="e5331f8c-d940-454a-a706-beee777a390f">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance200</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/VehicleInfomationServiceInterface_DdsDeployment/EventVehicleInfoDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5064</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

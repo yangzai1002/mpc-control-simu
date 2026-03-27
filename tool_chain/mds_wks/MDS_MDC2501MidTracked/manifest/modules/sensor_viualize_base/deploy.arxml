@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6800ba75-ad4c-4cd2-af73-7c251cac9302">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="46b35c87-cd8d-48a2-b946-50c60f56597d">
+          <SHORT-NAME>process_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="1b3f0115-0359-4020-b4d5-d38ff29a819e">
+              <SHORT-NAME>processDesigns</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="6e91cef7-2365-4677-9ee7-59be4f6e62d6">
+                  <SHORT-NAME>Libsensor_viualize_baseProcessDesign38</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="5adac9dd-ae96-4637-8ec5-988ef77b6a26">
+              <SHORT-NAME>processes</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS UUID="fddba8d9-1c9f-4d4d-8a75-0363c2bec3e8">
+                  <SHORT-NAME>Libsensor_viualize_baseProcess38</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libsensor_viualize_baseProcessDesign38</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>NETWORK</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                </PROCESS>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="6edfa81d-37c1-427e-8285-33e1072c0883">
+              <SHORT-NAME>processToMachineMappingSets</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-TO-MACHINE-MAPPING-SET UUID="248f5fc6-67d5-45a6-bfa3-708effe6ed35">
+                  <SHORT-NAME>LibProcessToMachineMappingSet_sensor_viualize_baseProcess38</SHORT-NAME>
+                  <PROCESS-TO-MACHINE-MAPPINGS>
+                    <PROCESS-TO-MACHINE-MAPPING UUID="29017207-696b-440a-9a6d-1f34bbbabf1f">
+                      <SHORT-NAME>LibprocessToMachineMapping37</SHORT-NAME>
+                      <MACHINE-REF DEST="MACHINE">/HuaweiMDC/Machine/Host0DpMachine</MACHINE-REF>
+                      <PROCESS-REF DEST="PROCESS">/HuaweiMDC/process_manifests/processes/Libsensor_viualize_baseProcess38</PROCESS-REF>
+                    </PROCESS-TO-MACHINE-MAPPING>
+                  </PROCESS-TO-MACHINE-MAPPINGS>
+                </PROCESS-TO-MACHINE-MAPPING-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="a6e713e9-dc26-4d4e-8ba4-ee62a22a92c9">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0d668251-13f1-4b32-b4cd-81964738939f">
+              <SHORT-NAME>InstanceToPortMappings</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="7c5c554b-001b-4336-ba47-7e80ed999e7b">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance163_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/sensor_viualize_base_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/tplidarfront</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libsensor_viualize_baseProcessDesign38</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/Libtplidarfront</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="70b6eb4a-5773-4718-8af7-55ba6673389b">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance164_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/sensor_viualize_base_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/tpcameralist</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libsensor_viualize_baseProcessDesign38</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance164</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="e30eee0f-b936-44f9-9f31-4a4dfd759e5e">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance110_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/sensor_viualize_base_rootswc</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base/RPortPrototype1</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/Libsensor_viualize_baseProcessDesign38</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance110</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="c7ca2419-38c9-4792-a22c-aa25ff381a21">
+          <SHORT-NAME>instance_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="48fdd395-5c77-470f-b7ad-06eb62cd398c">
+              <SHORT-NAME>requiredInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="e0796a73-cd4e-4637-b22f-7041e33936d0">
+                  <SHORT-NAME>Libtplidarfront</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5013</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="e73f2674-84cd-400f-b706-44217e29bd5e">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance164</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorImageListServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorImageListServiceInterface_DdsDeployment/EventImageListDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5014</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="f0cbfea9-d9cf-4f1b-abf6-5a61551e93d7">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance110</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/RadarPointCloudServiceInterface_DdsDeployment/EventRadarPointCloudDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>5015</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="4ccaa544-5a26-49d2-971d-700938e5f1d6">
+              <SHORT-NAME>instanceToMachineMappings</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="4d423fcb-834b-48cd-a4af-aeec487e9602">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance163_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/Libtplidarfront</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="2c99c06e-09b2-413b-9d36-36160df4eab0">
+                  <SHORT-NAME>LibRPortPrototype2_DdsRequiredServiceInstance164_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance164</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="a61957d6-dd12-4e04-b7a1-4d6233994638">
+                  <SHORT-NAME>LibRPortPrototype1_DdsRequiredServiceInstance110_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance110</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

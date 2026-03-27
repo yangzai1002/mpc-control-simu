@@ -1,0 +1,27 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+xvehicle_status_recorder_base:
+  sendInstanceID:
+  recvInstanceID:
+    SensorGpsServiceInterface:
+        instanceId: [20244]
+        portName: ["ivsensorgps"]
+    BodyCommandServiceInterface:
+        instanceId: [20211]
+        portName: ["tpvehicle_to_can_pre_aeb"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tpfusionloc"]
+    VehicleInfomationServiceInterface:
+        instanceId: [20205]
+        portName: ["tpvehiclestate"]
+    MsgImageDataListServiceInterface:
+        instanceId: [20200]
+        portName: ["image_list"]
+    FaultDataServiceInterface:
+        instanceId: [20220]
+        portName: ["tpfault_data"]
+    RemoteControlServiceInterface:
+        instanceId: [20213]
+        portName: ["tpappremotecmd"]

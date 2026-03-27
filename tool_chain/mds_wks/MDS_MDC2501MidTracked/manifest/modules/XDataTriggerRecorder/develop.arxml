@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="969ae499-7059-488f-b401-fa2233e1c4ff">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="241e27d4-b438-4ae5-8d61-4ae6e6028912">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ddd2efd6-0d38-4b50-b5e7-9b48d4ef27e0">
+              <SHORT-NAME>exes</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="0cae7dcd-9d7c-4694-8c22-c99556858aac">
+                  <SHORT-NAME>XDataTriggerRecorder</SHORT-NAME>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="461ce5b7-6d86-482b-a2ad-5e4284ea298d">
+                    <SHORT-NAME>xdata_trigger_recorder_baseExecutable46Prototype</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/HuaweiMDC/Common/Common/xdata_trigger_recorder_baseCompositionSwComponentType46</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="2ba2b021-6a9b-4dd0-aa73-6f066a562ad6">
+          <SHORT-NAME>Common</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0e74de9c-ae29-452b-8a7f-d748d3d08008">
+              <SHORT-NAME>Common</SHORT-NAME>
+              <ELEMENTS>
+                <COMPOSITION-SW-COMPONENT-TYPE UUID="3b38e0eb-b520-4ccd-85f6-21483677b7d6">
+                  <SHORT-NAME>xdata_trigger_recorder_baseCompositionSwComponentType46</SHORT-NAME>
+                  <COMPONENTS>
+                    <SW-COMPONENT-PROTOTYPE UUID="4368d322-e698-4a53-813d-b18e9dcd15ec">
+                      <SHORT-NAME>xdata_trigger_recorder_basePrototype</SHORT-NAME>
+                      <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/xdata_trigger_recorder_base</TYPE-TREF>
+                    </SW-COMPONENT-PROTOTYPE>
+                  </COMPONENTS>
+                </COMPOSITION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

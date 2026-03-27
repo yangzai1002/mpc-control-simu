@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="77b318ca-e361-48f6-8587-884ab7b77b79">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="38da6a71-c706-4307-90f9-55be6dfb485b">
+          <SHORT-NAME>process_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="9692b9a0-6e68-4c97-94de-3b22a05c434d">
+              <SHORT-NAME>processDesigns</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="fcafa294-bf01-477f-b3c9-08b02d79a069">
+                  <SHORT-NAME>LidarDetectionProcessDesign28</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/exes/LidarDetection</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="640dd596-ff47-4671-94c4-2ff2dd03dae3">
+              <SHORT-NAME>processes</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS UUID="83ef0a57-b9e6-48f7-aa51-90fc51d64cb9">
+                  <SHORT-NAME>LidarDetectionProcess28</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarDetectionProcessDesign28</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/exes/LidarDetection</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>NETWORK</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                </PROCESS>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="fc965496-0435-46f0-95c3-38d62b6746de">
+              <SHORT-NAME>processToMachineMappingSets</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-TO-MACHINE-MAPPING-SET UUID="af5fa2c5-2c9c-4065-8176-92a3ca391aea">
+                  <SHORT-NAME>ProcessToMachineMappingSet_LidarDetectionProcess28</SHORT-NAME>
+                  <PROCESS-TO-MACHINE-MAPPINGS>
+                    <PROCESS-TO-MACHINE-MAPPING UUID="b12795b4-62b1-4a6f-8666-5f79a77f9c9b">
+                      <SHORT-NAME>processToMachineMapping27</SHORT-NAME>
+                      <MACHINE-REF DEST="MACHINE">/HuaweiMDC/Machine/Host0DpMachine</MACHINE-REF>
+                      <PROCESS-REF DEST="PROCESS">/HuaweiMDC/process_manifests/processes/LidarDetectionProcess28</PROCESS-REF>
+                    </PROCESS-TO-MACHINE-MAPPING>
+                  </PROCESS-TO-MACHINE-MAPPINGS>
+                </PROCESS-TO-MACHINE-MAPPING-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="b6560390-15ec-4127-9d54-7df22fb6e0de">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="5ee1fa2c-a71e-4b8c-b4d5-eee2e10c1452">
+              <SHORT-NAME>InstanceToPortMappings</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="963bf5f3-f412-453a-aaa2-013034253e7d">
+                  <SHORT-NAME>tplidarobjects_DdsProvidedServiceInstance39_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarDetection/LidarDetectionExecutable28Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarDet/SwComponent/lidar_det_base/tplidarobjects</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarDetectionProcessDesign28</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/tplidarobjects_DdsProvidedServiceInstance39</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="e4e70108-0d1e-411e-8238-75cbd2993ab8">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance53_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarDetection/LidarDetectionExecutable28Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarDet/SwComponent/lidar_det_base/tpfront_middle_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarDetectionProcessDesign28</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance53</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="6209524b-56f6-4b00-8c12-2b67a9379eeb">
+          <SHORT-NAME>instance_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="1853f80c-3d0d-42b8-afd8-cfb0872f2e9e">
+              <SHORT-NAME>providedInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="bbe9912a-0bc4-45d2-90de-1ec7350bd00d">
+                  <SHORT-NAME>tplidarobjects_DdsProvidedServiceInstance39</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayDdsInterfaceDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayDdsInterfaceDeployment/Object3dArrayEventDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>20222</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="68e376b9-eefe-4b96-801b-c1ecfdf8b81f">
+              <SHORT-NAME>instanceToMachineMappings</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="4c288509-af52-4b0e-a596-7fb09ad54441">
+                  <SHORT-NAME>tplidarobjects_DdsProvidedServiceInstance39_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/tplidarobjects_DdsProvidedServiceInstance39</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="045e193a-d0c9-4a73-b473-6c70fe17b12d">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance53_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance53</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="6551d7d6-b623-465e-b9b3-538a71485139">
+              <SHORT-NAME>requiredInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="b27f930d-4274-4e2e-9160-cd63970a1f3f">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance53</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20201</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

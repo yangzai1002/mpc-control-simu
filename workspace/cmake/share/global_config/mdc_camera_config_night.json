@@ -1,0 +1,156 @@
+[
+  {
+    "cameraId": 0,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "front_middle",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 60
+  },
+  {
+    "cameraId": 1,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "right_back",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 60
+  },
+  {
+    "cameraId": 2,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "left_back",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 60
+  },
+  {
+    "cameraId": 3,
+    "moduleName": "HK_NS6603_B10_HSMT_ISP",
+    "cameraName": "night",
+    "fps": 30,
+    "width": 2048,
+    "height": 1200,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 60
+  },
+  {
+    "cameraId": 4,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "front_fisheye",
+    "fps": 30,
+    "width": 1920,
+    "height": 1280,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 200
+  },
+  {
+    "cameraId": 5,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "right_fisheye",
+    "fps": 30,
+    "width": 1920,
+    "height": 1280,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 200
+  },
+  {
+    "cameraId": 6,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "back_fisheye",
+    "fps": 30,
+    "width": 1920,
+    "height": 1280,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 200
+  },
+  {
+    "cameraId": 7,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "left_fisheye",
+    "fps": 30,
+    "width": 1920,
+    "height": 1280,
+    "streamDepth": 30,
+    "clusterId": 1,
+    "fov": 200
+  },
+  {
+    "cameraId": 8,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "right_back_around",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 100
+  },
+  {
+    "cameraId": 9,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "right_front_around",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 100
+  },
+  {
+    "cameraId": 10,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "left_front_around",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 100
+  },
+  {
+    "cameraId": 11,
+    "moduleName": "HUAWEI_NS6012_HSMT3G_IMX623",
+    "cameraName": "left_back_around",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 100
+  },
+  {
+    "cameraId": 12,
+    "moduleName": "HUAWEI_NS6012_OX08B40",
+    "cameraName": "back",
+    "fps": 30,
+    "width": 3840,
+    "height": 2160,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 120
+  },
+  {
+    "cameraId": 13,
+    "moduleName": "HUAWEI_NS6012_OX08B40",
+    "cameraName": "front",
+    "fps": 30,
+    "width": 3840,
+    "height": 2160,
+    "streamDepth": 30,
+    "clusterId": 0,
+    "fov": 120
+  }
+]

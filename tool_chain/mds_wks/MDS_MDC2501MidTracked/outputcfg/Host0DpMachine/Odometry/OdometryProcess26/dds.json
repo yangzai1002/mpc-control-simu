@@ -1,0 +1,175 @@
+{
+  "applicationName": "/HuaweiMDC/Common/Common/OdometryCompositionSwComponentType26/OdometryProcess26",
+  "services": [
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "serviceId": 4673,
+      "events": [
+        {
+          "event": "LocationInfo",
+          "id": 22646,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation",
+          "topicName": "LocationDdsEvent"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpododr_DdsProvidedServiceInstance37",
+          "instance": "20209",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 22646,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "serviceId": 4672,
+      "events": [
+        {
+          "event": "LocationEvent",
+          "id": 23528,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation",
+          "topicName": "LocationDdsEvent"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance110",
+          "instance": "20229",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 23528,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "serviceId": 17,
+      "events": [
+        {
+          "event": "EventGps",
+          "id": 20028,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafGnssInfo",
+          "topicName": "TopicOfEventGps"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance111",
+          "instance": "20244",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 20028,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "serviceId": 19,
+      "events": [
+        {
+          "event": "EventSensorImu",
+          "id": 8135,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafIMU",
+          "topicName": "TopicOfEventSensorImu"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance41",
+          "instance": "20223",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 8135,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "serviceId": 16,
+      "events": [
+        {
+          "event": "EventWheelSpeed",
+          "id": 29843,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafWheelSpeedList",
+          "topicName": "TopicOfEventWheelSpeed"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance40",
+          "instance": "20204",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 29843,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

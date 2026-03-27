@@ -1,0 +1,39 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/mid_track_chassis_recv/Libmid_track_chassis_recvProcess7",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "serviceId": 3,
+      "events": [
+        {
+          "event": "EventVehicleInfo",
+          "id": 45548,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VehicleInformation",
+          "topicName": "TopicOfEventVehicleInfo"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibVehicleInfoPPortPrototype_DdsProvidedServiceInstance6",
+          "instance": "5115",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 45548,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

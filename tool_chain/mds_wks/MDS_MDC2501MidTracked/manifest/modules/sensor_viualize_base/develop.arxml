@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b48e5b69-37f4-4189-909c-388027fd7f40">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="75757037-7921-4673-a7f4-5cf63dd5ae09">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="65469aad-2526-4d08-b175-f2d083231d42">
+              <SHORT-NAME>swcs</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="042fd36f-7fb1-4ff1-9947-29659fae655c">
+                  <SHORT-NAME>sensor_viualize_base</SHORT-NAME>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="225f2901-f7d8-4c58-a6b9-8d5f7aae4c71">
+                    <SHORT-NAME>sensor_viualize_base_rootswc</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/sensor_viualize_base</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

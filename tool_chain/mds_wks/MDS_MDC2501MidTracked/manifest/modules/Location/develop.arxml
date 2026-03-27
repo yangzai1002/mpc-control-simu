@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="891be196-5061-4bbf-8700-1bd325d1203c">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="f866733c-f453-4faf-ac42-7e5bb612d0ac">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="7c6e8287-2257-4804-b6e5-0363fbc9ffff">
+              <SHORT-NAME>exes</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="29eafe2b-2ad4-4e4e-9f6f-c20da7b8a8e4">
+                  <SHORT-NAME>Location</SHORT-NAME>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="58362120-e296-4287-9e8a-b32255a5e635">
+                    <SHORT-NAME>LocationExecutable27Prototype</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/HuaweiMDC/Common/Common/LocationCompositionSwComponentType27</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="4f4ca483-6c81-4622-bbd8-6a1b10218d41">
+          <SHORT-NAME>Common</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="332ef778-176a-4dc6-8c56-70ba631aaa44">
+              <SHORT-NAME>Common</SHORT-NAME>
+              <ELEMENTS>
+                <COMPOSITION-SW-COMPONENT-TYPE UUID="a99a6787-1c81-4f4e-9a72-3c952c595a7c">
+                  <SHORT-NAME>LocationCompositionSwComponentType27</SHORT-NAME>
+                  <COMPONENTS>
+                    <SW-COMPONENT-PROTOTYPE UUID="bfed7406-a363-4d77-9b8d-a4412befde2d">
+                      <SHORT-NAME>LocationPrototype</SHORT-NAME>
+                      <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Location/SwComponent/fusion_location_base</TYPE-TREF>
+                    </SW-COMPONENT-PROTOTYPE>
+                  </COMPONENTS>
+                </COMPOSITION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,48 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "HwFr671RadarFront/hw_fr671_radarExecutable20Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20219",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/radarpackets_DdsProvidedServiceInstance42"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "HwFr671RadarFront/hw_fr671_radarExecutable20Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RadarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/RadarPointCloudPPortPrototype_DdsProvidedServiceInstance41"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "HwFr671RadarFront/hw_fr671_radarExecutable20Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20229",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance107"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "HwFr671RadarFront/hw_fr671_radarExecutable20Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20205",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance201"
+        }
+      ]
+    }
+  ]
+}

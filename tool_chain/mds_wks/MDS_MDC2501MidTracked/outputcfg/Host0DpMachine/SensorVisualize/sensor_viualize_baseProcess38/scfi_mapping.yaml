@@ -1,0 +1,15 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+sensor_viualize_base:
+  sendInstanceID:
+  recvInstanceID:
+    RadarPointCloudServiceInterface:
+        instanceId: [20225,20225]
+        portName: ["RPortPrototype1","RPortPrototype1"]
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20201]
+        portName: ["tplidarfront"]
+    MsgImageDataListServiceInterface:
+        instanceId: [20200]
+        portName: ["tpcameralist"]

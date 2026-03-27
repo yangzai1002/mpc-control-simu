@@ -1,0 +1,9 @@
+{
+   "board_config" : [
+      {
+         "cross_board_communication" : 1,
+         "ip" : "26.28.1.2",
+         "same_board_communication" : 0
+      }
+   ]
+}

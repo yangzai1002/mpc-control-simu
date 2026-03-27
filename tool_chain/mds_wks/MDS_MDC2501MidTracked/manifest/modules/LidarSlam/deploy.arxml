@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ac5d252a-927b-49eb-8a06-ab72940b3ffd">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="ff752353-bf68-478f-a8d3-df31f640751c">
+          <SHORT-NAME>process_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="02d73242-fab5-4b6d-8d1f-b319ae7620c3">
+              <SHORT-NAME>processDesigns</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="2c67a691-282c-46d2-8a72-d58a52321401">
+                  <SHORT-NAME>LidarSlamProcessDesign25</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/exes/LidarSlam</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="b169878d-fe29-46b9-a1e9-610187d91563">
+              <SHORT-NAME>processes</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS UUID="229f3bfd-8a43-491d-85bd-3b267939afab">
+                  <SHORT-NAME>LidarSlamProcess25</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/HuaweiMDC/exe_manifests/exes/LidarSlam</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>NETWORK</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                </PROCESS>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="8165b950-c494-4d14-938a-29c796e23adb">
+              <SHORT-NAME>processToMachineMappingSets</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-TO-MACHINE-MAPPING-SET UUID="eaa918bd-f895-4060-8640-9b3e8ff6ad84">
+                  <SHORT-NAME>ProcessToMachineMappingSet_LidarSlamProcess25</SHORT-NAME>
+                  <PROCESS-TO-MACHINE-MAPPINGS>
+                    <PROCESS-TO-MACHINE-MAPPING UUID="e42bc9da-fa8f-4c15-89c6-80de4ab14d5b">
+                      <SHORT-NAME>processToMachineMapping24</SHORT-NAME>
+                      <MACHINE-REF DEST="MACHINE">/HuaweiMDC/Machine/Host0DpMachine</MACHINE-REF>
+                      <PROCESS-REF DEST="PROCESS">/HuaweiMDC/process_manifests/processes/LidarSlamProcess25</PROCESS-REF>
+                    </PROCESS-TO-MACHINE-MAPPING>
+                  </PROCESS-TO-MACHINE-MAPPINGS>
+                </PROCESS-TO-MACHINE-MAPPING-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="62c497e1-4767-45fa-ac0f-c32cecc96c1b">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e9ff947f-ad97-4e19-8c3b-3fe6a5806aa0">
+              <SHORT-NAME>InstanceToPortMappings</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="05d5075e-6b3d-4396-99d7-a375fc05afd0">
+                  <SHORT-NAME>RPortPrototype3_DdsRequiredServiceInstance109_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_right_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="7bff0002-19eb-4f90-b432-9fc92cca267c">
+                  <SHORT-NAME>tpliodr_DdsProvidedServiceInstance36_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpliodr</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/tpliodr_DdsProvidedServiceInstance36</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="5dadcc91-8691-45b0-a230-bdef3509f45b">
+                  <SHORT-NAME>lidarpointsleft_DdsRequiredServiceInstance201_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_left_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsleft_DdsRequiredServiceInstance201</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="2b324e25-6c2d-4100-aea6-09daca30dcc0">
+                  <SHORT-NAME>lidarpointsfront_DdsRequiredServiceInstance200_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_middle_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsfront_DdsRequiredServiceInstance200</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="d19386d0-b88b-45d9-a6d7-d8510e109de6">
+                  <SHORT-NAME>RPortPrototype4_DdsRequiredServiceInstance110_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpsensorimu</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance110</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="04562184-7eb3-431d-9c14-7ef1fba2a210">
+                  <SHORT-NAME>lidarpointsright_DdsRequiredServiceInstance202_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_right_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance202</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="ca124399-bea7-44e9-ad2e-2fd629cad7ae">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance107_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_middle_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance107</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="29ad08e6-05ea-48e5-a318-9fdc1e79a7bf">
+                  <SHORT-NAME>tpfront_middle_lidar_points_DdsRequiredServiceInstance109_PortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpfront_middle_lidar_points</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/tpfront_middle_lidar_points_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="bf794267-bc62-45b1-ae8c-533b6645817f">
+                  <SHORT-NAME>RPortPrototype5_DdsRequiredServiceInstance111_wspeedPortMapping</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/HuaweiMDC/exe_manifests/exes/LidarSlam/LidarSlamExecutable25Prototype</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base/tpwheelspeed</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/HuaweiMDC/process_manifests/processDesigns/LidarSlamProcessDesign25</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance111_wspeed</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="97aabe13-07d7-4647-96d1-bba24707e1b9">
+          <SHORT-NAME>instance_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e774e3d2-e389-428b-861c-171c27aee74a">
+              <SHORT-NAME>requiredInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="b3cacd90-fe74-4f8b-80da-86fdf6106080">
+                  <SHORT-NAME>RPortPrototype3_DdsRequiredServiceInstance109</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20203</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="1e6d4d66-49f2-4b1e-8caf-ae2e297060b7">
+                  <SHORT-NAME>lidarpointsleft_DdsRequiredServiceInstance201</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20202</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="4d5e8ccf-8a13-4d2f-9a42-faeb8dd1fdb6">
+                  <SHORT-NAME>lidarpointsfront_DdsRequiredServiceInstance200</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20201</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="09b7c4b9-223c-4f22-ae50-b0549cc8b02c">
+                  <SHORT-NAME>RPortPrototype4_DdsRequiredServiceInstance110</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorImuServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorImuServiceInterface_DdsDeployment/EventSensorImuDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20223</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="1927eea0-c0c5-417a-b6b9-177ec0f5d76e">
+                  <SHORT-NAME>lidarpointsright_DdsRequiredServiceInstance202</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20203</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="ce7f2a09-0b80-497c-8444-8f0f41352c2d">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance107</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20201</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="2e6f36b7-5121-42d5-ac5d-e86eecaf7f97">
+                  <SHORT-NAME>tpfront_middle_lidar_points_DdsRequiredServiceInstance109</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorLidarPointCloudServiceInterface_DdsDeployment/EventPointCloud2DdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20201</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+                <DDS-REQUIRED-SERVICE-INSTANCE UUID="571333fd-6943-44a5-9682-ad43457bbb4c">
+                  <SHORT-NAME>RPortPrototype5_DdsRequiredServiceInstance111_wspeed</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/serviceInterface/SensorWheelSpeedServiceInterface_DdsDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/serviceInterface/SensorWheelSpeedServiceInterface_DdsDeployment/EventWheelSpeedDdsDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <REQUIRED-SERVICE-INSTANCE-ID>20204</REQUIRED-SERVICE-INSTANCE-ID>
+                </DDS-REQUIRED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="1c689e3c-1e61-4ca2-b378-5df93910a033">
+              <SHORT-NAME>instanceToMachineMappings</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="74dbf3c2-e34a-48ad-8156-c02eb3cc0706">
+                  <SHORT-NAME>RPortPrototype3_DdsRequiredServiceInstance109_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="9f343d0c-83ac-47a1-b487-7789a8465d0a">
+                  <SHORT-NAME>RPortPrototype3_DdsRequiredServiceInstance109_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="503dbff8-dd20-4dd7-ac51-447d8df9f697">
+                  <SHORT-NAME>tpliodr_DdsProvidedServiceInstance36_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-PROVIDED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/providedInstances/tpliodr_DdsProvidedServiceInstance36</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="b5ec12b9-5478-4fa8-aea0-54942cfa3630">
+                  <SHORT-NAME>lidarpointsleft_DdsRequiredServiceInstance201_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsleft_DdsRequiredServiceInstance201</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="847ff0a1-a5ae-4b2b-9c6a-dca204577c5f">
+                  <SHORT-NAME>lidarpointsfront_DdsRequiredServiceInstance200_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsfront_DdsRequiredServiceInstance200</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="47a3b306-a3fa-4254-b035-501b9fe7ea1f">
+                  <SHORT-NAME>RPortPrototype4_DdsRequiredServiceInstance110_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance110</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="5349889e-2ed9-477b-99e6-16c79f2339f1">
+                  <SHORT-NAME>RPortPrototype4_DdsRequiredServiceInstance110_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance110</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="f3a6c20f-e137-4313-90d3-0a4b808c4709">
+                  <SHORT-NAME>lidarpointsright_DdsRequiredServiceInstance202_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance202</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="bd42bab3-f90a-4617-8991-31b97630593a">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance107_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance107</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="2d8057c5-a4c8-42d8-aa33-db132b6f78af">
+                  <SHORT-NAME>RPortPrototype1_DdsRequiredServiceInstance107_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance107</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="e95b866b-4879-4edf-98d4-eaed9ad05763">
+                  <SHORT-NAME>tpfront_middle_lidar_points_DdsRequiredServiceInstance109_ToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/tpfront_middle_lidar_points_DdsRequiredServiceInstance109</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                <DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="e402213f-2cd0-4479-b4b8-14c054ce0345">
+                  <SHORT-NAME>RPortPrototype5_DdsRequiredServiceInstance111_wspeedToDdsMachineMapping</SHORT-NAME>
+                  <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/HuaweiMDC/Machine/Host0DpMachineDesign/Host0DpEthernetCommConnector</COMMUNICATION-CONNECTOR-REF>
+                  <SERVICE-INSTANCE-REFS>
+                    <SERVICE-INSTANCE-REF DEST="DDS-REQUIRED-SERVICE-INSTANCE">/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance111_wspeed</SERVICE-INSTANCE-REF>
+                  </SERVICE-INSTANCE-REFS>
+                </DDS-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="21a35601-d8bc-43f8-89d4-67d50e62859e">
+              <SHORT-NAME>providedInstances</SHORT-NAME>
+              <ELEMENTS>
+                <DDS-PROVIDED-SERVICE-INSTANCE UUID="81e482ef-e7e3-4e67-8c05-46fbfae6ca1c">
+                  <SHORT-NAME>tpliodr_DdsProvidedServiceInstance36</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="DDS-SERVICE-INTERFACE-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoDdsInterfaceDeployment</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <QOS-PROFILE>default_qos.xml</QOS-PROFILE>
+                  <DOMAIN-ID>30</DOMAIN-ID>
+                  <TRANSPORT-PLUGINS>
+                    <TRANSPORT-PLUGIN>SHM</TRANSPORT-PLUGIN>
+                  </TRANSPORT-PLUGINS>
+                  <EVENT-QOS-PROPSS>
+                    <DDS-EVENT-QOS-PROPS>
+                      <EVENT-REF DEST="DDS-EVENT-DEPLOYMENT">/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoDdsInterfaceDeployment/LocationInfoEventDeployment</EVENT-REF>
+                    </DDS-EVENT-QOS-PROPS>
+                  </EVENT-QOS-PROPSS>
+                  <SERVICE-INSTANCE-ID>20206</SERVICE-INSTANCE-ID>
+                </DDS-PROVIDED-SERVICE-INSTANCE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

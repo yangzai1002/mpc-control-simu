@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TerrainSegConfig>
+    <!-- 激光雷达基础参数 -->
+    <LidarParams>
+        <laser_num>96</laser_num>
+        <w_res>0.2</w_res>
+        <max_angle>150.0</max_angle>
+        <min_angle>30.0</min_angle>
+        <far_range>25.0</far_range>
+        <mid_range>10.0</mid_range>
+        <far_range_neg>19.0</far_range_neg>
+    </LidarParams>
+
+    <!-- 点云分割参数 -->
+    <SegmentParams>
+        <pp_vertical_angle_thresh>45.0</pp_vertical_angle_thresh> <!-- 度，代码中转弧度 -->
+        <pp_height_thresh>0.05</pp_height_thresh>
+        <pp_height_thresh_far>0.36</pp_height_thresh_far>
+        <pp_horizon_dist_thresh>0.56</pp_horizon_dist_thresh>
+        <pp_angle_thresh>25.0</pp_angle_thresh> <!-- 度，代码中转弧度 -->
+        <road_lowerbound>-2.0</road_lowerbound>
+        <road_upperbound>1.0</road_upperbound>
+        <seg_plane_znorm>0.7</seg_plane_znorm>
+        <road_region_min_point>50</road_region_min_point>
+        <vertifactor>0.035</vertifactor>
+        <horizfactor>0.02</horizfactor>
+    </SegmentParams>
+
+    <!-- 栅格地图参数 -->
+    <OgmParams>
+        <ogm_width>150</ogm_width>
+        <ogm_height>300</ogm_height>
+        <offset_x>75</offset_x>
+        <offset_y>50</offset_y>
+        <ogm_resolution>0.2</ogm_resolution>
+        <base_smooth_error>0.3</base_smooth_error>
+        <max_smooth_error>1.0</max_smooth_error>
+        <smooth_hori_factor>0.02</smooth_hori_factor>
+    </OgmParams>
+
+
+    <!-- 雷达标定参数 -->
+    <front_middle_lidar>
+        <pitch>0</pitch>
+        <roll>0</roll>
+        <yaw>0</yaw>
+        <x>0.</x>
+        <y>1.76</y>
+        <z>1.41</z>
+    </front_middle_lidar>
+
+
+    <!-- 车辆参数 -->
+    <VehicleParams>
+        <vehicle_height>1.4</vehicle_height>
+        <vehicle_width>1.0</vehicle_width>
+        <vehicle_length>2.0</vehicle_length>
+        <pos_minheight>0.3</pos_minheight>
+        <neg_minheight>2.0</neg_minheight>
+    </VehicleParams>
+</TerrainSegConfig>

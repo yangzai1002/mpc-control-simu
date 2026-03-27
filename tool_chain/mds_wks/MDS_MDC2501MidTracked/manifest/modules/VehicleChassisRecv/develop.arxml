@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1af90eff-03bf-4144-9607-e92750f86bd0">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="956dcffc-6733-4757-84ee-54e43e81d974">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="96ad3e1c-0f59-4d8d-9fbe-557f3993af02">
+              <SHORT-NAME>exes</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="0eee084e-b6ec-44c9-8146-9a3279f277d7">
+                  <SHORT-NAME>VehicleChassisRecv</SHORT-NAME>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="83d17a0f-fbd7-4894-aefa-289e08eedfcd">
+                    <SHORT-NAME>mid_track_chassis_recvExecutable7Prototype</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/HuaweiMDC/Common/Common/mid_track_chassis_recvCompositionSwComponentType7</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="07e69185-6b96-4b9a-add3-5901bb1faaa3">
+          <SHORT-NAME>Common</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="c306ef33-91cb-45d7-bfd2-57d6919dbe15">
+              <SHORT-NAME>Common</SHORT-NAME>
+              <ELEMENTS>
+                <COMPOSITION-SW-COMPONENT-TYPE UUID="f3ccff7f-d565-4457-82da-1f0d2b0aa127">
+                  <SHORT-NAME>mid_track_chassis_recvCompositionSwComponentType7</SHORT-NAME>
+                  <COMPONENTS>
+                    <SW-COMPONENT-PROTOTYPE UUID="3396993e-eaf6-4742-92c7-1033eb896ea9">
+                      <SHORT-NAME>mid_track_chassis_recvPrototype</SHORT-NAME>
+                      <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/mid_track_chassis_recv</TYPE-TREF>
+                    </SW-COMPONENT-PROTOTYPE>
+                  </COMPONENTS>
+                </COMPOSITION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

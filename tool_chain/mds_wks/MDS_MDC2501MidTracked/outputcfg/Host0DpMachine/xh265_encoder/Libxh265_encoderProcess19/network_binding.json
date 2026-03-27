@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "xh265_encoder/xh265_encoder_rootswc/video_encoded_frame",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5016",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libvideo_encoded_frame_DdsProvidedServiceInstance49"
+        }
+      ]
+    }
+  ]
+}

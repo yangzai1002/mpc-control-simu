@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+xfault_handler_base:
+  sendInstanceID:
+    FaultDataServiceInterface:
+        instanceId: [20220]
+        portName: ["tpfault_data"]
+  recvInstanceID:
+    RemoteControlServiceInterface:
+        instanceId: [20213]
+        portName: ["tpappremotecmd"]

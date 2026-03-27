@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="7f8156d7-d06e-4fd3-a94b-b722d206a38d">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="505936a0-da42-4d12-8015-dbd0c82a1753">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="18f17420-3706-4e05-9bf5-8cbe2e11bb9c">
+              <SHORT-NAME>RadarDet</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="1b5f012f-d96b-48c7-8602-7fa0ae711a67">
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="0ed6edf6-4426-4646-bd21-ab932001d736">
+                      <SHORT-NAME>radar_det_execute</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="2b2ca083-5465-4f9f-986e-adddbb960ed1">
+                        <SHORT-NAME>radar_det_root_swc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/RadarDet/SwComponent/radar_det_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="433f3f42-f707-4b46-a792-aeb552a06ec9">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="" UUID="abba4c40-6db7-4a60-9302-a35058671c4e">
+                      <SHORT-NAME>radar_det_base</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">libName</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">radar_det_base</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE S="" UUID="3ae51ae5-e016-4c97-baaf-34cfd0ba15a7">
+                          <SHORT-NAME>Object3dPPort</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

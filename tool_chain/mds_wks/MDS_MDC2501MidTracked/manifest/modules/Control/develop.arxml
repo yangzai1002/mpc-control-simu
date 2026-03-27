@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0e22afde-b1a9-4d5a-83ae-8806cdc1e850">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c66b1c35-1d48-4fa9-845f-d50d42cfa15f">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="bc202b1b-47af-4cc7-9d57-8ed32702a966">
+              <SHORT-NAME>exes</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="6f83c1bc-8a9c-4454-821e-940ed4f4d580">
+                  <SHORT-NAME>Control</SHORT-NAME>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="96816102-d9f4-41cc-8d03-7a7dcc904f40">
+                    <SHORT-NAME>ControlExecutable16Prototype</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/HuaweiMDC/Common/Common/ControlCompositionSwComponentType16</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="8ff0ae1c-1e5b-4fcd-9d7c-0e307726833f">
+          <SHORT-NAME>Common</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="40ad5466-8aff-4153-8817-4ecc5fda8ce6">
+              <SHORT-NAME>Common</SHORT-NAME>
+              <ELEMENTS>
+                <COMPOSITION-SW-COMPONENT-TYPE UUID="04dbd7ce-492a-4832-9227-855292518f8f">
+                  <SHORT-NAME>ControlCompositionSwComponentType16</SHORT-NAME>
+                  <COMPONENTS>
+                    <SW-COMPONENT-PROTOTYPE UUID="a0eeda61-9e1d-43f5-aa76-3d7b45dccff6">
+                      <SHORT-NAME>ControlPrototype</SHORT-NAME>
+                      <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Control/SwComponent/control_base</TYPE-TREF>
+                    </SW-COMPONENT-PROTOTYPE>
+                  </COMPONENTS>
+                </COMPOSITION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

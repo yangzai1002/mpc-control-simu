@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="7ca9b4a0-0971-4045-b54a-1bf762eb23a7">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="16dc9f56-af29-4c5a-ae03-daf168482543">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="8fc9a5a8-ee77-4f06-aab4-fa053ba7136d">
+              <SHORT-NAME>exes</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="8c0d8b01-53c2-4731-9725-64f15ddb91c5">
+                  <SHORT-NAME>XFaultHandler</SHORT-NAME>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="63275863-0d58-4225-972b-5ff77f4682bb">
+                    <SHORT-NAME>xfault_handler_baseExecutable43Prototype</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/HuaweiMDC/Common/Common/xfault_handler_baseCompositionSwComponentType43</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="9c6ed5b7-629d-4a31-a050-035bc52949e5">
+          <SHORT-NAME>Common</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="8f0e171d-26b0-4de6-85ea-893d996979af">
+              <SHORT-NAME>Common</SHORT-NAME>
+              <ELEMENTS>
+                <COMPOSITION-SW-COMPONENT-TYPE UUID="e83cb1ca-120d-48c2-b718-22d6e4623b44">
+                  <SHORT-NAME>xfault_handler_baseCompositionSwComponentType43</SHORT-NAME>
+                  <COMPONENTS>
+                    <SW-COMPONENT-PROTOTYPE UUID="a37723b0-7d67-427d-a4d3-55e0be15857b">
+                      <SHORT-NAME>xfault_handler_basePrototype</SHORT-NAME>
+                      <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/xfault_handler_base</TYPE-TREF>
+                    </SW-COMPONENT-PROTOTYPE>
+                  </COMPONENTS>
+                </COMPOSITION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

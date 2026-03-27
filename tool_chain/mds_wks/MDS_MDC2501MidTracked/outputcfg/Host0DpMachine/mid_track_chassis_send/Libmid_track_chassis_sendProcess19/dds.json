@@ -1,0 +1,39 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/mid_track_chassis_send/Libmid_track_chassis_sendProcess19",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "serviceId": 21,
+      "events": [
+        {
+          "event": "EventFaultData",
+          "id": 28026,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData",
+          "topicName": "TopicOfEventFaultData"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance139",
+          "instance": "5053",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 28026,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

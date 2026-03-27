@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="2406f5a1-cea3-47ee-ac5c-c91f4125ec69">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="45e86d4b-25bf-4174-ae24-58ad734bd3ae">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="71dcd058-93ad-4975-b75b-31da1d2f0c09">
+              <SHORT-NAME>CameraLane</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="68ee54f0-1fe7-458b-a1e2-2e580b8de14f">
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="175d9196-1a62-4f84-af79-204dbf4539d3">
+                      <SHORT-NAME>camera_lane_execute</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="02a1a266-68fe-4c0f-bdd6-b97871d3df50">
+                        <SHORT-NAME>camera_lane_root_swc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/CameraLane/SwComponent/camera_lane_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="7dc8d325-cbd7-4fc3-9716-3a39ff3e3422">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="" UUID="6f9f8d58-f61c-4e66-8447-cefaa03acd43">
+                      <SHORT-NAME>camera_lane_base</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">libName</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">camera_lane_base</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE S="" UUID="a9d6b6d3-7a38-43cf-b478-6dd29a90f5ba">
+                          <SHORT-NAME>LaneLinePPort</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/LaneLineArrayServiceInterface/LaneArrayIntf</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

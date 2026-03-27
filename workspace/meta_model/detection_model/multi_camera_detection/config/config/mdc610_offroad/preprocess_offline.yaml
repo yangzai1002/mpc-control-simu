@@ -1,0 +1,45 @@
+image_input_count: 6
+image_output_count: 6
+
+output_width: 640
+output_height: 320
+
+color_output_format: RGB_FORMAT
+scale_method: EQUAL_SCALING
+process_method: NORMLIZATION
+back_fill_method: GPU
+back_value_fill: [0.5, 0.5, 0.5]
+norm_value: [0.00392156, 0.00392156, 0.00392156]
+fusion_focus: true
+
+transform_conf:
+  - input_image_id: 0
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 0
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false
+  - input_image_id: 1
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 1
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false
+  - input_image_id: 2
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 2
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false
+  - input_image_id: 3
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 3
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false
+  - input_image_id: 4
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 4
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false
+  - input_image_id: 5
+    input_roi: [0, 120, 1920, 1080]
+    output_image_id: 5
+    output_roi: [0, 0, 640, 320]
+    use_cpu: false

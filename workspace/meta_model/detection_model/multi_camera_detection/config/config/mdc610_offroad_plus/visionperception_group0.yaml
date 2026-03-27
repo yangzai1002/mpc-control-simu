@@ -1,0 +1,30 @@
+camera_name: [front_h100, left_front, right_front, left_back, right_back, back]
+
+run_postprocess_inthread: true
+post_process_thread_token: dnn_postprocess
+
+detector_param:
+  - name: NormObjectDetection
+    detector_config: os_sodcenternet_seg_lane_group0.yaml
+    preprocess_config_online: preprocess_online.yaml
+    preprocess_config_offline: preprocess_offline.yaml
+    camera_mask: [0, 1, 2, 3, 4, 5]
+
+postprocess_param: postprocess.yaml
+
+tracker_param:
+  track_time_since_update: 1
+  track_time_hit: 1
+  track_iou: 0.4
+  feature_thresh: 0.51
+  use_feature: false
+  ignore_thresh: 0.4
+  feature_channel: 128
+  use_track_fusion: false
+
+lane_inst_param:
+   start_thresh: 1
+   cluster_thresh: 0.0225
+  
+show_image: false
+mask_compress: false

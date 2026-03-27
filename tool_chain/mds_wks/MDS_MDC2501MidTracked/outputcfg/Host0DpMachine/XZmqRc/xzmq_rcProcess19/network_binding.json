@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "XZmqRc/xzmq_rcExecutable19Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20213",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/ZmqRRemoteControlPPortPrototype_DdsProvidedServiceInstance26"
+        }
+      ]
+    }
+  ]
+}

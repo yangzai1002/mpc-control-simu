@@ -1,0 +1,209 @@
+{
+  "applicationName": "/HuaweiMDC/Common/Common/fusion_semantic_map_baseCompositionSwComponentType11/fusion_semantic_map_baseProcess11",
+  "services": [
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "serviceId": 4673,
+      "events": [
+        {
+          "event": "LocationInfo",
+          "id": 22646,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation",
+          "topicName": "LocationDdsEvent"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype14_DdsRequiredServiceInstance122",
+          "instance": "20218",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 22646,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "serviceId": 2,
+      "events": [
+        {
+          "event": "EventPointCloud2",
+          "id": 49671,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgLidarFrame",
+          "topicName": "TopicOfEventPointCloud2"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance119",
+          "instance": "20201",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance172",
+          "instance": "20201",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype12_DdsRequiredServiceInstance120",
+          "instance": "20202",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype12_DdsRequiredServiceInstance173",
+          "instance": "20202",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype13_DdsRequiredServiceInstance121",
+          "instance": "20203",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype13_DdsRequiredServiceInstance174",
+          "instance": "20203",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsfront_DdsRequiredServiceInstance197",
+          "instance": "20201",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsleft_DdsRequiredServiceInstance198",
+          "instance": "20202",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        },
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance199",
+          "instance": "20203",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 49671,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "HwL106LidarRight/hw_l106_lidarExecutable5Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20232",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/lidarpackets_DdsProvidedServiceInstance46"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "HwL106LidarRight/hw_l106_lidarExecutable5Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/PointCloudPPortPrototype_DdsProvidedServiceInstance4"
+        }
+      ]
+    }
+  ]
+}

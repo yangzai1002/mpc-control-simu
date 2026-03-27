@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="78affa68-6cd6-4b1b-815d-c26765e60de7">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="714de862-33ef-4837-a18b-fe2a4699b7ad">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="39343a52-0de8-4a40-8cb1-c8f5f3de2a92">
+              <SHORT-NAME>swcs</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="61a61e35-a6ab-4398-b8ee-a44b7e954145">
+                  <SHORT-NAME>hw_l106_lidar</SHORT-NAME>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="52035961-37c9-442b-8a94-f79ac66802ad">
+                    <SHORT-NAME>hw_l106_lidar_rootswc</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/hw_l106_lidar</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

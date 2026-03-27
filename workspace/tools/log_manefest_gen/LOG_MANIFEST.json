@@ -1,0 +1,12 @@
+{
+    "loggingBehavior": true,
+    "logTraceProcessId": "larg",        
+    "logTraceProcessDesc": "DM_ARA_LOG",
+    "logTraceLogModes": [
+        "file"
+    ],
+    "logTraceDefaultLogLevel": "info",
+    "logTraceSingleFileSize": 5014288,
+    "logTraceFileNum": 3,
+    "logTraceFilePath": "/opt/usr/zxz/log/"
+}

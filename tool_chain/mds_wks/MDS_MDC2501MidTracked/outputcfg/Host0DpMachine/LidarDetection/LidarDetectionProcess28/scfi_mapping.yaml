@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+lidar_det_base:
+  sendInstanceID:
+    Object3dArrayIntf:
+        instanceId: [20222]
+        portName: ["tplidarobjects"]
+  recvInstanceID:
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20201]
+        portName: ["tpfront_middle_lidar_points"]

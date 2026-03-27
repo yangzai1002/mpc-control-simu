@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1935d3b7-f8a1-4f3c-95f0-b13e41ee9c46">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Control</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="">
+                      <SHORT-NAME>control_execute</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="">
+                        <SHORT-NAME>control_root_swc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Control/SwComponent/control_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="">
+                      <SHORT-NAME>control_base</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">libName</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">control_base</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE S="">
+                          <SHORT-NAME>tpvehicle_to_can_pre_aeb</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="909a7bb4-8945-4788-9485-2a6866b326cc">
+                          <SHORT-NAME>tpvehiclestate</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="dfc82ff4-afe6-4db2-a1f2-a09c45fec82a">
+                          <SHORT-NAME>RPortPrototype4</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="a1931c6a-4a0b-4a47-b4d9-fb055f4e55e6">
+                          <SHORT-NAME>RPortPrototype1</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="bbc3fcf2-def5-4ff2-8a80-59e5cb6bb22d">
+                          <SHORT-NAME>tptask_cmd</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/BusinessCommandServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="d3dbf898-6b3d-4c3e-9db4-bc287fe96ab3">
+                          <SHORT-NAME>RPortPrototype7</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="01404431-2185-4e6e-b65e-8fdf49c35c45">
+                          <SHORT-NAME>tpfault_data</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="bc67a674-c22f-4384-933b-794128c3e8ae">
+                          <SHORT-NAME>tppathplan_auto</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/PlanningTrajectoryServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="fe095ba9-e50b-4810-9315-49b447cee7f8">
+                          <SHORT-NAME>tpfusionloc</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="7d9f6e7d-33d1-4922-a4f9-398d8a66fc2b">
+                          <SHORT-NAME>tppathplan_track</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

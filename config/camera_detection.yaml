@@ -1,0 +1,3 @@
+yolo: 
+  model_path: /opt/usr/wx/newap2/config/yolov7.om
+  camid: 0

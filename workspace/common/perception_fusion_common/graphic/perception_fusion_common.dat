@@ -1,0 +1,171 @@
+{
+   "compile_config" : {
+      "const_cmake_info" : [],
+      "depends" : [
+         {
+            "name" : "AppGlobalPlannedPath",
+            "type" : "protocol",
+            "version" : "0.1.1"
+         },
+         
+         {
+            "name" : "Xcommon_utils",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "mosquitto",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "glog",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "gflags",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "idpware",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "icaos_basic",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "boost_1_65_1",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "msgpack",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "protobuf",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "yaml_cpp",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "jsoncpp",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "pcl",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "Eigen",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "flann",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "opencv",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "proj",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "lidar",
+            "type" : "library",
+            "version" : "0.1.1"
+         },
+         {
+            "name" : "casadi",
+            "type" : "library",
+            "version" : "0.1.1"
+         }
+      ],
+      "third_party_includes_dirs" : [],
+      "third_party_libs" : [],
+      "third_party_link_dirs" : []
+   },
+   "module_config" : {
+      "addition_config_file" : [],
+      "config_plugin" : [],
+      "function_config" : {
+         "this" : [
+            {
+               "index" : 0,
+               "is_out" : 1,
+               "max" : 100,
+               "min" : 0,
+               "param_description" : "相机yaml文件名字",
+               "param_name" : "camera_yaml_name",
+               "param_type" : "string",
+               "param_value" : "ktdx_distortion.yaml"
+            },
+            {
+               "index" : 1,
+               "is_out" : 1,
+               "max" : 100,
+               "min" : 0,
+               "param_description" : "车辆参数配置文件",
+               "param_name" : "vehicle_yaml_name",
+               "param_type" : "string",
+               "param_value" : "vehicle_interface.yaml"
+            }
+         ]
+      },
+      "state_plugin" : []
+   },
+   "module_connection_vec" : [],
+   "module_info" : {
+      "category" : "自动驾驶/感知工具箱/融合感知",
+      "category_name" : "autonomous/perception/fusion",
+      "module_adaptive" : "x86_64;aarch64_93;aarch64_75",
+      "module_alias" : "",
+      "module_author" : "admin",
+      "module_belong" : "icaos",
+      "module_decare" : "void perception_fusion_common ( const int& dummy_in_data );",
+      "module_define" : "void perception_fusion_common ( const int& dummy_in_data ){\n \t // add your code here\n}",
+      "module_description" : "融合库，fusion部分函数公用库代码合并在此",
+      "module_granularity" : "Element",
+      "module_header" : "",
+      "module_invoke" : " perception_fusion_common ( dummy_in_data );",
+      "module_name" : "perception_fusion_common",
+      "module_state" : "develop",
+      "module_tag" : "",
+      "module_type" : "Userfunction",
+      "module_uuid" : "",
+      "module_version" : "0.1.1",
+      "param_list" : [
+         {
+            "index" : 0,
+            "param_description" : "无效输入",
+            "param_dir" : "In",
+            "param_name" : "dummy_in_data",
+            "param_type" : "int",
+            "param_type_version" : "0.1.1",
+            "param_value" : ""
+         }
+      ]
+   },
+   "module_instance_vec" : [],
+   "user_setting" : {
+      "compile_setting" : []
+   }
+}

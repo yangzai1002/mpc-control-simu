@@ -1,0 +1,29 @@
+
+VehicleInformation:  tpvehiclestate
+MsgHafLocation: tpimu, tplodr, tpododr, tpfusionloc
+MsgHafIMU: ivsensorimu
+MsgHafWheelSpeedList: ivwheelspeed
+MsgHafGnssInfo: ivsensorgps
+MsgCameraVPResult: tpperception_vp_result
+MsgHaf3dDetectionOutArray: tplidarobjects
+PerceptionStaticEnv: tpterrainmap, tpsemanticmap
+MsgHafFusionOutArray: tpperceptionobjects, tptarget_obj
+MsgHafEgoTrajectory: tppathplan_follow, tppathplan_adjust, tppathplan_arrive, tppathplan_track, tppathplan_auto, tpremote_path
+PlanningStatus: tpplanningstatus_follow, tpplanningstatus_adjust, tpplanningstatus_arrive, tpplanningstatus_track, tpplanningstatus_rc
+VehicleActControl: tpvehicle_to_can_pre_aeb, tpvehicle_to_can_auto
+AppRemoteControl: tpappremotecmd
+FaultData: tpfault_data
+VehicleSensorControl: tpsensorcontrol
+AppVideoProfile: video_profile
+BusinessCommand: tpbusiness_cmd, tptask_cmd
+TaskManageStatus: task_manage_status
+VideoRTPParameter: video_rtp_parameter_gcs
+TaskExecuteStatus: task_execute_status
+MsgImageData: tpimage_for_push, video_encoded_frame
+VideoEncodingPerf: video_encoding_perf
+MsgImageDataList: compressed_image_list
+SensorLidarPacket: lidarpackets_front, lidarpackets_left, lidarpackets_right
+SensorRadarPacket: radarpackets_right, radarpackets_front, radarpackets_left
+
+
+

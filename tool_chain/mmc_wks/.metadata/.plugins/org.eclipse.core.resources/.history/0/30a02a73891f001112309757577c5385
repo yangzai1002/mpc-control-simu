@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="9965f842-8d0b-4e8c-bc78-1c4aa58cc691">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="136a80a1-d4b0-48e0-a36d-32e171e0b1a7">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="c8c4195a-bd2a-4cdf-b28b-8096de4cb1e8">
+              <SHORT-NAME>LidarDet</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="5756835b-177e-4c22-8308-a5773d71bd6d">
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="91229940-64c6-4c76-a05c-e12acdecea2d">
+                      <SHORT-NAME>lidar_det_execute</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="2a4880d9-79ad-47cf-8fc4-a697b022ea25">
+                        <SHORT-NAME>lidar_det_root_swc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/LidarDet/SwComponent/lidar_det_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="54dff9d2-e651-4f13-9a22-d5e95ee6aa06">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="" UUID="651d1395-6a65-4735-a811-d328d9beb04a">
+                      <SHORT-NAME>lidar_det_base</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">libName</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">lidar_det_base</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE S="" UUID="ceda117d-cad1-4255-a1cf-1d4d21e42ee2">
+                          <SHORT-NAME>tplidarobjects</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="7987525c-b7c4-4a8c-ae81-c0b4b1187cbd">
+                          <SHORT-NAME>tpfront_middle_lidar_points</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE>
+                          <SHORT-NAME>tplidarstaticenv</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE>
+                          <SHORT-NAME>tplidarenvdetection</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

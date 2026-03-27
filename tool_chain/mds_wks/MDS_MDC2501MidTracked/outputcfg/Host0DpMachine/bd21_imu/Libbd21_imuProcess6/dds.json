@@ -1,0 +1,141 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/bd21_imu/Libbd21_imuProcess6",
+  "services": [
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "serviceId": 4672,
+      "events": [
+        {
+          "event": "LocationEvent",
+          "id": 23528,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation",
+          "topicName": "LocationDdsEvent"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpimu_DdsProvidedServiceInstance30",
+          "instance": "5114",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 23528,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "serviceId": 17,
+      "events": [
+        {
+          "event": "EventGps",
+          "id": 20028,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafGnssInfo",
+          "topicName": "TopicOfEventGps"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libivsensorgps_DdsProvidedServiceInstance45",
+          "instance": "5111",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 20028,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "serviceId": 19,
+      "events": [
+        {
+          "event": "EventSensorImu",
+          "id": 8135,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafIMU",
+          "topicName": "TopicOfEventSensorImu"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibImuPPortPrototype_DdsProvidedServiceInstance25",
+          "instance": "5112",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 8135,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "serviceId": 16,
+      "events": [
+        {
+          "event": "EventWheelSpeed",
+          "id": 29843,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafWheelSpeedList",
+          "topicName": "TopicOfEventWheelSpeed"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibWheelSpeedPPortPrototype_DdsProvidedServiceInstance23",
+          "instance": "5113",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 29843,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

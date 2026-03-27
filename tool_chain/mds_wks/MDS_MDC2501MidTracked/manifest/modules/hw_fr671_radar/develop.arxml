@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b8f3fcad-40ff-44b2-b30c-1a22bc0de8e9">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c37384a2-3474-4c66-8e0a-2ef971f41753">
+          <SHORT-NAME>exe_manifests</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="7579f5ef-983f-4476-a4a7-e79bde561f83">
+              <SHORT-NAME>swcs</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE UUID="7342cede-5096-433c-9dfa-5fcd8dbae0e9">
+                  <SHORT-NAME>hw_fr671_radar</SHORT-NAME>
+                  <ROOT-SW-COMPONENT-PROTOTYPE UUID="8e8700dd-0ce2-4633-abc1-0305143fea20">
+                    <SHORT-NAME>hw_fr671_radar_rootswc</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/exe_manifests/swcs/hw_fr671_radar</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

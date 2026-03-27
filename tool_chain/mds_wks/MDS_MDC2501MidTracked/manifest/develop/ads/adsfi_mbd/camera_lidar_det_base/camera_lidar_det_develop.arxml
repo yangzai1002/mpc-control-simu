@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b91db836-aac5-4ddf-a049-0653bf338b2c">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="db833e90-7f08-4040-92df-f038acf954c1">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="96744370-5bb2-4c47-bf5f-17d13a16d082">
+              <SHORT-NAME>CameraLidarDet</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="24f1d142-cfe4-4129-963b-79cdaec325ae">
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="faf6cc64-48fb-4e4f-ae63-7e69b7243b8b">
+                      <SHORT-NAME>camera_lidar_det_execute</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="6f297f21-89e5-4162-aa58-3197046713bb">
+                        <SHORT-NAME>camera_lidar_det_root_swc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/CameraLidarDet/SwComponent/camera_lidar_det_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="2b31ebb0-b6d4-4c4b-b127-3e4dd1975d7b">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="" UUID="e8df4b62-0abf-448a-8656-1f91de521598">
+                      <SHORT-NAME>camera_lidar_det_base</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG>
+                            <SD GID="_ExtensionKey">libName</SD>
+                            <SD GID="_Type">java.lang.String</SD>
+                            <SD GID="_Value">camera_lidar_det_base</SD>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE S="" UUID="73571941-3b34-4102-9b25-1aaa3cbc1293">
+                          <SHORT-NAME>Object3dPPort</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,32 @@
+{
+  "process": "/HuaweiMDC/process_manifests/processDesigns/Libxzmq_rcProcessDesign19",
+  "debounceAlgorithm": {
+    "counterBased": [],
+    "timerBased": [],
+    "monitorInternal": []
+  },
+  "diagnosticEvent": [],
+  "diagnosticSwMappings": {
+    "processCmInstance": 57,
+    "network": "192.168.10.6",
+    "dcm": {
+      "externalDcmService": [],
+      "appInfoService": [],
+      "dcmInfoService": [
+        {
+          "service": "Conversation",
+          "diagnosticServer": "/AllDiagServer",
+          "instanceSpecifier": "ap/diag/ConversationRport",
+          "processDesign": "/HuaweiMDC/process_manifests/processDesigns/Libxzmq_rcProcessDesign19",
+          "cmInstance": 1
+        }
+      ]
+    },
+    "dem": {
+      "demInfoService": [],
+      "appInfoService": []
+    }
+  },
+  "diagnosticDataIdentifier": [],
+  "diagnosticElements": []
+}

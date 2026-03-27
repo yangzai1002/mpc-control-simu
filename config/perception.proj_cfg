@@ -1,0 +1,138 @@
+perception:
+  common:
+    demo: 1
+  
+  XSemanticMapMLidars:
+    lidar_num: 3 # 感知多激光栅格模块使用的雷达总数，最大为7
+    lidar_0_max_x: 55.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_0_min_x: 0.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_0_max_y: 30.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_0_min_y: -30.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_0_filter_base: 4 # 感知多激光栅格模块使用主雷达滤波参数
+    lidar_1_max_x: 40.0 # 感知多激光栅格模块使用雷达1感知范围
+    lidar_1_min_x: -20.0 # 感知多激光栅格模块使用雷达1感知范围
+    lidar_1_max_y: 20.0 # 感知多激光栅格模块使用雷达1感知范围
+    lidar_1_min_y: -20.0 # 感知多激光栅格模块使用雷达1感知范围
+    lidar_1_filter_base: 4 # 感知多激光栅格模块使用雷达1滤波参数
+    lidar_2_max_x: 0.0 # 感知多激光栅格模块使用雷达2感知范围
+    lidar_2_min_x: -20.0 # 感知多激光栅格模块使用雷达2感知范围
+    lidar_2_max_y: 20.0 # 感知多激光栅格模块使用雷达2感知范围
+    lidar_2_min_y: -20.0 # 感知多激光栅格模块使用雷达2感知范围
+    lidar_2_filter_base: 4 # 感知多激光栅格模块使用雷达2滤波参数
+    lidar_max_z: 1.5 # 感知栅格最大高度有效值
+    lidar_min_z: -1.0 # 感知栅格最大高度有效值
+    voxel_size: 0.25 # 感知栅格大小
+    ground_dh: 0.15 # 感知栅格地面高度差阈值
+    filter_hung_dh: 0.5 # 滤除悬空点高度
+    remember_dis: 55.0 # 记忆范围（0.0时关闭记忆）
+    delete_width: 0.03 # 滤除栅格目标尺寸
+    delete_length: 0.03 # 滤除栅格目标尺寸
+    delete_height: 0.9  # 滤除栅格目标尺寸
+    force_detect_edge: 0.0 # 强化道路边界检测参数 0 <0.01 to close; >0.01则按照该值进行强化检测，推荐0.1或者0.2,越小，检测能力越强，越容易误捡    
+    ultra_mode: 1 # SemanticMapS2使用，SemanticMapMLidar尚未开启
+    open_vision_seg: true # 视觉语义可通行区域：总开关
+    vision_seg_front_cam: front_h100 # 视觉语义可通行区域：视觉语义输入中的前向相机名字
+    vision_seg_front_distortion_cam: front_120 # 视觉语义可通行区域：标定参数(ktdx_distortion.yaml)中的前向相机名字
+    is_out_to_utm: true #静态栅格输出为自车坐标系还是绝对坐标系
+    is_out_nobjs: true #是否输出负障碍物
+    
+  XSemanticMapS2:
+    lidar_max_x: 40.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_min_x: 0.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_max_y: 30.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_min_y: -30.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_filter_base: 4 # 感知多激光栅格模块使用主雷达滤波参数
+    lidar_max_z: 1.5 # 感知栅格最大高度有效值
+    lidar_min_z: -1.0 # 感知栅格最大高度有效值
+    voxel_size: 0.25 # 感知栅格大小
+    ground_dh: 0.3 # 感知栅格地面高度差阈值
+    filter_hung_dh: 1.5 # 滤除悬空点高度
+    remember_dis: 0.0 # 记忆范围（0.0时关闭记忆）
+    delete_width: 0.03 # 滤除栅格目标尺寸
+    delete_length: 0.03 # 滤除栅格目标尺寸
+    delete_height: 0.9  # 滤除栅格目标尺寸
+    ultra_mode: 1 # SemanticMapS2使用，SemanticMapMLidar尚未开启
+
+  XTerrainMapV1:  #V2 V1共享
+    offline_debug: false
+    offline_data_path: ""
+    lidar_max_x: 50.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_min_x: 0.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_max_y: 50.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_min_y: -50.0 # 感知多激光栅格模块使用主雷达感知范围
+    lidar_filter_base: 4 # 感知多激光栅格模块使用主雷达滤波参数
+    lidar_max_z: 1.5 # 感知栅格最大高度有效值
+    lidar_min_z: -1.0 # 感知栅格最大高度有效值
+    voxel_size: 0.2 # 感知栅格大小
+    ground_dh: 0.2 # 感知栅格地面高度差阈值
+    filter_hung_dh: 1.5 # 滤除悬空点高度
+    remember_dis: 0.0 # 记忆范围（0.0时关闭记忆）
+    delete_width: 0.03 # 滤除栅格目标尺寸
+    delete_length: 0.03 # 滤除栅格目标尺寸
+    delete_height: 0.9  # 滤除栅格目标尺寸
+    open_vision_seg: true #V2独享：视觉语义可通行区域：总开关
+    vision_seg_front_cam: front_h100 #V2独享： 视觉语义可通行区域：视觉语义输入中的前向相机名字
+    vision_seg_front_distortion_cam: front_120 #V2独享： 视觉语义可通行区域：标定参数(ktdx_distortion.yaml)中的前向相机名字
+    
+  XDLOpenMDCVision_MDC610:
+    board_name: "mdc610" # 当前板子类型，参考config下文件夹名字，例：mdc610
+    yaml_file_name: "visionperception.yaml" # 视觉模型配置文件yaml名字
+    so_file_name: "libgsds_vision_perception.so" # dlopen库名字
+    camera_params_file_name: "camera_params.yaml" # 相机标定参数文件名字
+    topic_camnames: "left_front_around:left_front;front:front_h100;right_front_around:right_front;back:back;right_back_around:right_back;left_back_around:left_back;unvalid:front_h30" # 相机名称重映射输入列表，映射为相机标定参数文件中的内容，注意：顺序必须一致，英文分割
+    append_cameras: true # 如果输入相机数量不足，自动补全
+    frequency_10hz: true # 当图像30hz输入是，是否以10hz输出视觉结果。  默认关闭该功能
+    debug_vis: false 
+    use_offline_imgs: false
+    offline_imgs_path: "/opt/usr/zxz/aarch64-linux-gnu/idp/per_libs/offline_imgs"
+    is_segment_compressed: true # 分割结果是否压缩，注意，压缩后读取结果需要解压缩
+  
+  XDLOpenMDCLidar_MDC610:
+    board_name: "mdc610" #用于区分不同板子模型,可以查看函数config下文件夹名字。取值举例mdc610
+    yaml_file_name: "centerPoint.yaml" #激光配置文件名字
+    so_file_name: "libgsds_lidar_perception.so" #激光so文件名字
+    debug_vis: false #是否可视化
+    is_gridmap_compressed: false # 激光可通行区域结果是否压缩，注意，压缩后读取结果需要解压缩
+  
+  XPerceptionFollow:
+    working_mode: 1 #工作模式0 跟人 1 跟车
+    lost_time: 15
+    is_offline: false #离线调试时设置为true
+    image_u: 0 #离线调试时初始化跟随目标起始帧在前相机图像中像素横坐标位置
+    image_v: 0 #离线调试时初始化跟随目标起始帧在前相机图像中像素纵坐标位置
+    enable_left_lidar: true #是否增加左雷达数据融合与故障诊断
+    enable_right_lidar: true #是否增加左雷达数据融合与故障诊断
+    enable_middle_radar: true #是否增加毫米波数据融合与故障诊断
+    enable_left_front_radar: true #是否开启左毫米波雷达
+    enable_right_front_radar: true #是否开启右毫米波雷达
+    enable_claster: true #是否开启目标聚类，在大扬尘场景聚类目标会引入误检测，需要关闭
+
+  XPerceptionFusionV3:
+    enable_debug_log: false
+    enable_debug_draw: false
+  
+  XPerceptionLidarCluster:
+    enable_debug_draw:    false    #debug 可视化                   
+    enable_filter:        true    #是否过滤侧面点云
+    filter_max_x: 4               #过滤范围
+    filter_min_x: -1              #过滤范围
+    filter_max_y_offset: 1.15     #过滤范围,y轴偏移量
+    filter_max_z: 2             #过滤范围
+    enable_detection_range: true
+    detection_max_x: 50
+    detection_min_x: -25
+    detection_max_y: 25
+    detection_min_y: -25
+  
+  XTopic2UDPConverter:
+    local_ip: "127.0.0.1"
+    local_port: 127
+    remote_ip: "127.0.0.1"
+    remote_port: 128
+
+  is_only_dr: false # 只使用dr is_enable_dr
+  is_rotate_location_coordinate: false # 有时候采集的数据中定位传感器没有正确安装，坐标系旋转了90度，需要旋转回来才能正确使用
+    
+  muti_task:
+    demo: 1
+  

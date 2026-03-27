@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 0 从dnet收ocu的task  1 从此配置文件读取task -->
+<task_recv_source>1</task_recv_source>
+
+<!-- 4 person 7 vehicle -->
+<mode>4</mode>
+
+<debug>0</debug>
+
+<calib_path>
+   <lidar_calib_path>/opt/usr/wx/newap2/config/calib/kitti_calib.txt</lidar_calib_path>
+   <camera_intrinsic_path>/opt/usr/wx/newap2/config/calib/camera_intrinsic.txt</camera_intrinsic_path>
+   <licam_outparam_path>/opt/usr/wx/newap2/config/calib/camera_outparam.txt</licam_outparam_path>
+</calib_path>
+
+<!-- 0 开启 1 关闭 -->
+<enhancement>1</enhancement>
+
+<vehicle_size>
+  <bottom>-1.0</bottom>
+  <top>3.0</top>
+  <left>-0.5</left>
+  <right>0.5</right>
+  <back>-2.0</back>
+  <front>1.0</front>
+  <length>2.0</length>
+  <width>1.0</width>
+</vehicle_size>
+
+<radar>
+	<radar_roi_range>2.0</radar_roi_range>
+	<radar_to_vehicle>0.</radar_to_vehicle>
+</radar>
+
+<lidar>
+   <perception_minz>-1</perception_minz>
+   <perception_maxz>3</perception_maxz>
+</lidar>
+
+<ground_remove>
+   <!-- 高度差 -->
+   <height_diff>0.30</height_diff>
+   <height_diff_tracking_person>0.33</height_diff_tracking_person> <!-- 跟人高度差 -->
+   <height_diff_tracking_vehicle>0.33</height_diff_tracking_vehicle> <!-- 跟车高度差 -->
+   <count_thresh>2</count_thresh>
+   <blind_area>3.5</blind_area>
+   <blind_areax>2</blind_areax>
+   <blind_area_height>0.3</blind_area_height>
+   <remove_noise_ratio>0.1</remove_noise_ratio>
+   <remove_noise_height>0.15</remove_noise_height>
+   <visualize>1</visualize>
+   <!-- 断点阈值1 -->
+   <break_point_th1>20</break_point_th1>
+   <!-- 断点阈值2 一般是激光雷达水平分辨率 -->
+   <break_point_th2>0.15</break_point_th2>
+   <!-- 断线阈值2 -->
+   <break_line_th>0.5</break_line_th>
+   <blind_area_obnums>10</blind_area_obnums>
+   <grid_num_th1>2</grid_num_th1>
+   <grid_num_th2>10</grid_num_th2>
+   <grid_num_th3>10</grid_num_th3>
+   <ring_based_th>3</ring_based_th>
+   <dilate_range>0.2</dilate_range>
+   <dilate_flag>0</dilate_flag>
+</ground_remove>
+
+<ins_calib>
+   <x_pos>0.18</x_pos>
+   <y_pos>1.3</y_pos>
+   <z_pos>0</z_pos>
+</ins_calib>
+
+<person_tracking>
+   <pointcount_thresh>30</pointcount_thresh>
+   <max_width_thresh>2</max_width_thresh>
+   <max_length_thresh>1.5</max_length_thresh>
+   <max_height_thresh>2.1</max_height_thresh>
+   <min_height_thresh>0.5</min_height_thresh>
+   <radius_thresh>1.0</radius_thresh>
+   <init_width_thresh>2.0</init_width_thresh>
+   <init_height_thresh>8.0</init_height_thresh>
+</person_tracking>
+
+<vehicle_tracking>
+   <safe_velocity>2.7</safe_velocity>
+   <safe_dist>35.0</safe_dist>
+   <estop_width>1.25</estop_width>
+   <target_velocity>2.0</target_velocity>
+   <radius_vehicle>1.5</radius_vehicle>
+   <width_vehicle_init>3.0</width_vehicle_init>
+   <height_vehicle_init>20.0</height_vehicle_init>
+   <continue_fail_time>20</continue_fail_time>
+   <fusion_dist_th>2</fusion_dist_th>
+</vehicle_tracking>
+
+<tracking_lost_time>10</tracking_lost_time>
+
+<vehicle_detection>
+   <min_wsize>0.5</min_wsize>
+   <max_wsize>4.0</max_wsize>
+   <min_hsize>0.5</min_hsize>
+   <max_hsize>4.0</max_hsize>
+   <min_lsize>6.0</min_lsize>
+   <min_pixel_size>30</min_pixel_size>
+   <width_ref>3</width_ref>
+</vehicle_detection>
+
+<!-- 0 关闭 1 开启 -->
+<!-- 开启跟随目标融合相机 -->
+<cam_fusion>0</cam_fusion>
+<!-- 开启AEB -->
+<aeb>0</aeb>
+<!-- 可视化相机图像与检测结果 -->
+<cam_view>1</cam_view>

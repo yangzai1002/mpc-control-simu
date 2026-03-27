@@ -1,0 +1,47 @@
+#pragma once
+
+#include <mutex>
+#include <condition_variable>
+#include <atomic>
+#include <map>
+#include <vector>
+
+namespace avos
+{
+    namespace idpware
+    {
+        enum EIdpCameraPlatformIOType
+        {
+            IOCTL_INIT_CAMERA,
+            IOCTL_SET_DATATYPE_PARAM,
+            IOCTL_SET_CHANNELID_PARAM,
+            IOCTL_GET_CAMERADATA,
+            IOCTL_START_SERVICE,
+            IOCTL_FREEDATA,
+            IOCTL_SET_IMGTYPE_PARAM,
+        };
+
+        enum EIdpImgType
+        {
+            IMGTYPE_YUV420NV12,
+            IMGTYPE_RGB,
+            IMGTYPE_BGR,
+            IMGTYPE_H265,
+        };
+
+        struct SCameraData
+        {
+            char* m_ptr;
+            size_t m_ptr_len;
+            double m_stamp;
+            int type;
+        };
+
+        struct SCameraInitTest
+        {
+            std::string name;
+            std::vector<SCameraData> camevec;
+        };
+
+    } // namespace idpware
+} // namespace avos

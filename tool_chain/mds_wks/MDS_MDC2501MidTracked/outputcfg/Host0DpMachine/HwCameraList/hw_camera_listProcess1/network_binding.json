@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "HwCameraList/hw_camera_listExecutable1Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20210",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/compressed_image_list_DdsProvidedServiceInstance41"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "HwCameraList/hw_camera_listExecutable1Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20200",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/ImageListPPortPrototype_DdsProvidedServiceInstance1"
+        }
+      ]
+    }
+  ]
+}

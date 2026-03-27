@@ -1,0 +1,78 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "fusion_semantic_map_base/fusion_semantic_map_base_rootswc/tpfront_left_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5068",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Liblidarpointsleft_DdsRequiredServiceInstance198"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5071",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype12_DdsRequiredServiceInstance120"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5077",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype12_DdsRequiredServiceInstance173"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_semantic_map_base/fusion_semantic_map_base_rootswc/tpfront_middle_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5072",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype10_DdsRequiredServiceInstance172"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5074",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Liblidarpointsfront_DdsRequiredServiceInstance197"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5075",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype10_DdsRequiredServiceInstance119"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_semantic_map_base/fusion_semantic_map_base_rootswc/tpfront_right_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5069",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype13_DdsRequiredServiceInstance174"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5073",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype13_DdsRequiredServiceInstance121"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5076",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Liblidarpointsright_DdsRequiredServiceInstance199"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_semantic_map_base/fusion_semantic_map_base_rootswc/tplocalization",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5070",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype14_DdsRequiredServiceInstance122"
+        }
+      ]
+    }
+  ]
+}

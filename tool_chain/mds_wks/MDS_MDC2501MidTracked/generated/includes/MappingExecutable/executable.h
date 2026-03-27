@@ -1,0 +1,11 @@
+/*
+ * Copyright (c) Shenzhen Yinwang Intelligent Technologies Co., Ltd. 2024-2026. All rights reserved.
+ */
+
+#ifndef MAPPINGEXECUTABLE_EXECUTABLE_H
+#define MAPPINGEXECUTABLE_EXECUTABLE_H
+
+#include "mdc/location/locationserviceinterface_proxy.h"
+#include "mdc/location/locationserviceinterface_skeleton.h"
+
+#endif // MAPPINGEXECUTABLE_EXECUTABLE_H

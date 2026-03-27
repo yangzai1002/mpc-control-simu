@@ -1,0 +1,6 @@
+#ifndef MODULES_COMMON_STRING_UTIL_INTERNAL_H_
+#define MODULES_COMMON_STRING_UTIL_INTERNAL_H_
+
+#include "avos_utils/string_util_internal.h"
+
+#endif  // MODULES_COMMON_STRING_UTIL_INTERNAL_H_

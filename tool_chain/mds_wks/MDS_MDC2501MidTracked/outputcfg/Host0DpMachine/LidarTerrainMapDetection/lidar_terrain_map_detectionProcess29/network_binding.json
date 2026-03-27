@@ -1,0 +1,52 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "LidarTerrainMapDetection/lidar_terrain_map_detectionExecutable29Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance111"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance189"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance113"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "LidarTerrainMapDetection/lidar_terrain_map_detectionExecutable29Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20208",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpterrainmap_DdsProvidedServiceInstance31"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "LidarTerrainMapDetection/lidar_terrain_map_detectionExecutable29Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance115"
+        }
+      ]
+    }
+  ]
+}

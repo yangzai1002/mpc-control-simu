@@ -1,0 +1,49 @@
+{
+  "profile": 0,
+  "rc_mode": "cbr",
+  "max_i_qp": 47,
+  "min_i_qp": 36,
+  "max_qp": 47,
+  "min_qp": 22,
+  "max_i_proportion": 5,
+  "min_i_proportion": 5,
+  "max_reencode_times": 2,
+  "gop": 30 ,
+  "stats_time": 1,
+  "dst_frame_rate": 30,
+  "max_bit_rate_ratio": 0.8,
+  "ip_qp_delta": 3,
+  "vbr": {
+    "chg_pos": 90
+  },
+  "avbr": {
+    "chg_pos": 65,
+     "min_still_percent": 25,
+     "max_still_qp": 35,
+     "min_still_psnr": 2,
+     "min_qp_delta": 0,
+     "motion_sensitivity": 100
+  },
+  "qvbr": {
+    "max_bit_percent": 110,
+    "min_bit_percent": 45,
+    "max_psnr_fluctuate": 40,
+    "min_psnr_fluctuate": 23
+  },
+  "cvbr": {
+    "short_term_stats_time": 1,
+    "long_term_stats_time": 1,
+    "long_term_max_bit_rate_ratio": 0.8,
+    "long_term_min_bit_rate_ratio": 0.5,
+
+    "min_qp_delta": 0,
+    "max_qp_delta": 0,
+    "extra_bit_percent": 5,
+    "long_term_stats_time_unit": 60
+  },
+  "fixqp": {
+    "i_qp": 35,
+    "p_qp": 35,
+    "b_qp": 35
+  }
+}

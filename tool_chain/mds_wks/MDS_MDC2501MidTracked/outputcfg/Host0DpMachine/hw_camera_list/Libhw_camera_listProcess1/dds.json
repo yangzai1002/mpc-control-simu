@@ -1,0 +1,73 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/hw_camera_list/Libhw_camera_listProcess1",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "serviceId": 1,
+      "events": [
+        {
+          "event": "EventImageList",
+          "id": 19949,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageDataList",
+          "topicName": "TopicOfEventImageList"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibImageListPPortPrototype_DdsProvidedServiceInstance1",
+          "instance": "5018",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 19949,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "serviceId": 30,
+      "events": [
+        {
+          "event": "EventCompressedImageList",
+          "id": 18110,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageDataList",
+          "topicName": "TopicOfEventCompressedImageList"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libcompressed_image_list_DdsProvidedServiceInstance41",
+          "instance": "5017",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 18110,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

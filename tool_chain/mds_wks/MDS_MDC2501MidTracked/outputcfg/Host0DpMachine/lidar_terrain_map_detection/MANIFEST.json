@@ -1,0 +1,53 @@
+[
+  {
+    "key": "application_name",
+    "value": {
+      "string": "lidar_terrain_map_detection_rootswc"
+    },
+    "checksum": 111
+  },
+  {
+    "key": "startup_configs",
+    "value": {
+      "object[]": [
+        {
+          "key": "Liblidar_terrain_map_detectionProcess29",
+          "value": {
+            "object[]": [
+              {
+                "key": "executable",
+                "value": {
+                  "string": "lidar_terrain_map_detection"
+                },
+                "checksum": 333
+              },
+              {
+                "key": "restart_attempt_num",
+                "value": {
+                  "uint32": 0
+                },
+                "checksum": 333
+              },
+              {
+                "key": "shall_run_ons",
+                "value": {
+                  "string[]": []
+                },
+                "checksum": 333
+              },
+              {
+                "key": "shall_not_run_ons",
+                "value": {
+                  "string[]": []
+                },
+                "checksum": 333
+              }
+            ]
+          },
+          "checksum": 222
+        }
+      ]
+    },
+    "checksum": 111
+  }
+]

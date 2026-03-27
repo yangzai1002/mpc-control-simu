@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "LidarDetection/LidarDetectionExecutable28Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20222",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tplidarobjects_DdsProvidedServiceInstance39"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "LidarDetection/LidarDetectionExecutable28Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance53"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- UDP接收配置 -->
+    <udp>
+        <local_ip>26.28.1.2</local_ip>
+        <local_port>9906</local_port>
+        <buffer_size>2048</buffer_size>
+    </udp>
+    <!-- 协议解析配置 -->
+    <nmea>
+        <checksum_enable>true</checksum_enable> <!-- 是否启用校验和验证 -->
+    </nmea>
+</config>

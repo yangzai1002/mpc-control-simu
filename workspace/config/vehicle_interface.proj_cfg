@@ -1,0 +1,42 @@
+vehicle_interface:
+  host_ip: 192.168.1.112
+  car_length:  5.0
+  body_base_height: 0.34 # for perception use 车体坐标系原点距离地面高度，一般是后轴中点距离地面的高度
+  car_width: 2.5
+  wheel_base_length: 2.5
+  front_axle_tofront: 0.0
+  wheel_center: 0.0
+  left_reduce_ratio: 16.5
+  right_reduce_ratio: 16.5
+  left_max_steerangle: 480
+  right_max_steerangle: 480
+  trafficability: 20
+  negative_trafficability: -20
+  min_turn_radius: 3
+  turning_around_min_radius: 3.0
+  eps_speed: 500
+  eps_delay: 0.2
+  control_mode: 2
+  torque_max: 4000
+  torque_min: 0
+  pressure_max: 100
+  pressure_min: 0
+  drive_lagtime: 1.0
+  brake_lagtime: 1.0
+  emergency_brake_lagtime: 0.5
+  emergency_brake_accel: 5.0
+  min_driver_torque: 0
+  acel_max: 2.5
+  acel_min: -5
+  driver_type: 1
+  brake_type: 1
+  car_front: 2.85
+  car_back: -0.48
+  car_left: 0.9
+  car_right: -0.9
+  car_bottom: -0.34
+  car_top: 1.33
+  vehicle_speed_limit: 80
+  def_vehicle_speed_limit: 20
+  car_type: aion
+

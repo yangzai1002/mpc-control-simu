@@ -1,0 +1,59 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "odometry_base/odometry_base_rootswc/tpimu",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5087",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "odometry_base/odometry_base_rootswc/tpododr",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5088",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpododr_DdsProvidedServiceInstance37"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "odometry_base/odometry_base_rootswc/tpsensorgps",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5085",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance111"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "odometry_base/odometry_base_rootswc/tpsensorimu",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5089",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance41"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "odometry_base/odometry_base_rootswc/tpwheelspeed",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5086",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance40"
+        }
+      ]
+    }
+  ]
+}

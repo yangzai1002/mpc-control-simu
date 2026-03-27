@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="3435dc3b-533d-44f6-8690-1b89339db0b4">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c6a4e682-4ef1-4baa-a120-0d8ccd4b5272">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="435e83af-52a6-4f4c-b8f8-451069c934c6">
+              <SHORT-NAME>Control</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="36770a76-bc2b-4f25-92c4-45236f3f2596">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="daf790c7-053d-4adb-8201-084d96a860b6">
+                      <SHORT-NAME>control_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="c4235504-da22-46fc-986f-5d387c083a8d">
+                        <SHORT-NAME>control_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Control/SwComponent/control_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,18 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+hw_fr671_radar:
+  sendInstanceID:
+    SensorRadarPacketServiceInterface:
+        instanceId: [20227]
+        portName: ["radarpackets"]
+    RadarPointCloudServiceInterface:
+        instanceId: [20226]
+        portName: ["radarpoints"]
+  recvInstanceID:
+    VehicleInfomationServiceInterface:
+        instanceId: [20205]
+        portName: ["tpvehiclestate3"]
+    LocationServiceInterface:
+        instanceId: [20229]
+        portName: ["tpimu3"]

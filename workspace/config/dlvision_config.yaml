@@ -1,0 +1,37 @@
+camera_count: 1
+camera_name: 
+  - front_h125
+
+output_width: 640
+output_height: 320
+
+color_output_format: RGB_FORMAT
+scale_method: FILL_OUTPUT
+process_method: NORMLIZATION
+back_fill_method: GPU
+back_value_fill: [0.5, 0.5, 0.5]
+norm_value: [0.00392156, 0.00392156, 0.00392156]
+
+# output_image_id和transform_id目前配置保持一致，且必须从上到下按照先后顺序，即output_image_id和transform_id不能倒序或乱序
+transform_conf:
+  - use_cpu: false
+    camera_name: front_h125
+    input_roi: [0, 80, 1920, 1080]
+    output_roi: [0, 0, 640, 320]
+    merge_method: ADD
+    output_image_id: 0
+    transform_id: 0
+
+detector_param:
+  - name: NormObjectDetection
+    detector_config: orin/gpu/multy_tast_engine.yaml
+
+tracker_param:
+  track_time_since_update: 1
+  track_time_hit: 1
+  track_iou: 0.4
+  feature_thresh: 0.51
+  use_feature: false
+  ignore_thresh: 0.4
+  feature_channel: 128
+  use_track_fusion: false

@@ -1,0 +1,63 @@
+engine_file: centernet_mixCspRegnet_infrad5class_simplify.om
+thread_token: ASCENDNPU_3
+device: ASCENDNPU
+device_id: 0
+group_id: 3 # only for huawei ascend
+priority: 0
+max_batch_size: 1
+
+engine_inputs:
+  - name: input 
+    indexe: 0    
+    dtype: UINT8
+    dims_scale: 1
+    dims_min:
+      - 3
+      - 320
+      - 640
+
+engine_outputs:
+  - name: od_hm
+    dtype: FLOAT32
+    indexe: 1
+    dims_min:
+      - 5
+      - 40
+      - 80
+  - name: od_offset
+    dtype: FLOAT32
+    indexe: 2
+    dims_min:
+      - 10
+      - 40
+      - 80
+  - name: od_wh
+    dtype: FLOAT32
+    indexe: 3
+    dims_min:
+      - 10
+      - 40
+      - 80
+
+outputs:
+  - name: object_od
+    type: IDRIVER_OBJECT_2D
+    indexe: 1
+    dims_min:
+      - 100
+      - 8
+      
+engin_output_num: 1
+plugins:
+  - bottom: [0, 1, 2]
+    top: [object_od]
+    plugin_name: CenterNet2dPluginV2
+    plugin_param:
+      class_number: 5
+      max_output_box_number: 100
+      ignore_thresh: 0.3
+      head_number: 1
+      center_nms: false
+      box_number_prenms: 300
+      nms_thresh: 0.5
+      class_remap: [0,1,2,3,4]

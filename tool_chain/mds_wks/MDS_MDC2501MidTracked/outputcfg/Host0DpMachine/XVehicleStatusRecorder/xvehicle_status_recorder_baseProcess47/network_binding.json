@@ -1,0 +1,81 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20244",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype8_DdsRequiredServiceInstance162"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20211",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance160"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype6_DdsRequiredServiceInstance161"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20205",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype9_DdsRequiredServiceInstance163"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20200",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype11_DdsRequiredServiceInstance171"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20220",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance164"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XVehicleStatusRecorder/xvehicle_status_recorder_baseExecutable47Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20213",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance156"
+        }
+      ]
+    }
+  ]
+}

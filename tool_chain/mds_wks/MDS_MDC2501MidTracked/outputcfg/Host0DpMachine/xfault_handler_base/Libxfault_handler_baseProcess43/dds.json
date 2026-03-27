@@ -1,0 +1,73 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/xfault_handler_base/Libxfault_handler_baseProcess43",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "serviceId": 21,
+      "events": [
+        {
+          "event": "EventFaultData",
+          "id": 28026,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData",
+          "topicName": "TopicOfEventFaultData"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpfault_data_DdsProvidedServiceInstance27",
+          "instance": "5020",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 28026,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "serviceId": 7,
+      "events": [
+        {
+          "event": "EventRCAppRemoteCtl",
+          "id": 32868,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/AppRemoteControl",
+          "topicName": "TopicOfEventRCAppRemoteCtl"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance154",
+          "instance": "5019",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 32868,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

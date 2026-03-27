@@ -1,0 +1,21 @@
+//
+// MessagePack for C++ memory pool
+//
+// Copyright (C) 2008-2016 FURUHASHI Sadayuki and KONDO Takatoshi
+//
+//    Distributed under the Boost Software License, Version 1.0.
+//    (See accompanying file LICENSE_1_0.txt or copy at
+//    http://www.boost.org/LICENSE_1_0.txt)
+//
+#ifndef MSGHANDLE_V2_ZONE_DECL_HPP
+#define MSGHANDLE_V2_ZONE_DECL_HPP
+
+#include "msghandle/cpp_config.hpp"
+
+#if defined(MSGHANDLE_USE_CPP03)
+#include "msghandle/v2/detail/cpp03_zone_decl.hpp"
+#else  // MSGHANDLE_USE_CPP03
+#include "msghandle/v2/detail/cpp11_zone_decl.hpp"
+#endif // MSGHANDLE_USE_CPP03
+
+#endif // MSGHANDLE_V2_ZONE_DECL_HPP

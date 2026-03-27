@@ -1,0 +1,64 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "Control/ControlExecutable16Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20212",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/tppathplan_recv_DdsRequiredServiceInstance111"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20212",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance108"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Control/ControlExecutable16Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20220",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance97"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Control/ControlExecutable16Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype8_DdsRequiredServiceInstance129"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Control/ControlExecutable16Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20205",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance14"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Control/ControlExecutable16Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20211",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpvehicle_to_can_pre_aeb_DdsProvidedServiceInstance39"
+        }
+      ]
+    }
+  ]
+}

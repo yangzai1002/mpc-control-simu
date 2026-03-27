@@ -1,0 +1,40 @@
+{
+   "compile_config" : {
+      "const_cmake_info" : [],
+      "depends" : [],
+      "third_party_includes_dirs" : [],
+      "third_party_libs" : [],
+      "third_party_link_dirs" : []
+   },
+   "module_config" : {
+      "addition_config_file" : [],
+      "config_plugin" : [],
+      "state_plugin" : []
+   },
+   "module_connection_vec" : [],
+   "module_info" : {
+      "category" : "多媒体/通用",
+      "category_name" : "",
+      "module_adaptive" : "x86_64;aarch64_93;aarch64_75",
+      "module_alias" : "",
+      "module_author" : "admin",
+      "module_belong" : "icaos",
+      "module_decare" : "void XH265Nalu (  );",
+      "module_define" : "void XH265Nalu (  ){\n \t // add your code here\n}",
+      "module_description" : "",
+      "module_granularity" : "Element",
+      "module_header" : "",
+      "module_invoke" : " XH265Nalu (  );",
+      "module_name" : "XH265Nalu",
+      "module_state" : "develop",
+      "module_tag" : "",
+      "module_type" : "Userfunction",
+      "module_uuid" : "",
+      "module_version" : "0.1.1",
+      "param_list" : []
+   },
+   "module_instance_vec" : [],
+   "user_setting" : {
+      "compile_setting" : []
+   }
+}

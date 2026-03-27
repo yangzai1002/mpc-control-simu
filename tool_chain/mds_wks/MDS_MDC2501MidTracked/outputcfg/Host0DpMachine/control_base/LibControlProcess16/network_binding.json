@@ -1,0 +1,64 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "control_base/control_base_rootswc/tpfault_data",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5118",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance97"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "control_base/control_base_rootswc/tpfusionloc",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5119",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype8_DdsRequiredServiceInstance129"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "control_base/control_base_rootswc/tppathplan_recv",
+      "service": "/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5116",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Libtppathplan_recv_DdsRequiredServiceInstance111"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5117",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance108"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "control_base/control_base_rootswc/tpvehicle_to_can_pre_aeb",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5121",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpvehicle_to_can_pre_aeb_DdsProvidedServiceInstance39"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "control_base/control_base_rootswc/tpvehiclestate",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5120",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance14"
+        }
+      ]
+    }
+  ]
+}

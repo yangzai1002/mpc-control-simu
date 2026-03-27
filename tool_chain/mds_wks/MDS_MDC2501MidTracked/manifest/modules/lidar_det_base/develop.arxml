@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0a8a9ef3-0d59-4c47-9507-ac7a1e8f5e8c">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="94779935-43f3-4a79-8b7a-89b0b65608d5">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="71793ee0-acc0-4809-b82c-48c01cefa742">
+              <SHORT-NAME>LidarDet</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="e318d3a0-1dbf-4658-bbf8-56b7ba6da691">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="94fab496-cfc3-4789-91d1-e107cb762097">
+                      <SHORT-NAME>lidar_det_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="434ded5a-b0c8-4f34-ba29-872ed4d6d609">
+                        <SHORT-NAME>lidar_det_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/LidarDet/SwComponent/lidar_det_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

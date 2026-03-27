@@ -1,0 +1,47 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "DriverDevNull/driver_dev_nullExecutable37Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20231",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance158"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20232",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype6_DdsRequiredServiceInstance159"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20234",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype7_DdsRequiredServiceInstance160"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "DriverDevNull/driver_dev_nullExecutable37Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20210",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance154"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "DriverDevNull/driver_dev_nullExecutable37Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20219",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance155"
+        }
+      ]
+    }
+  ]
+}

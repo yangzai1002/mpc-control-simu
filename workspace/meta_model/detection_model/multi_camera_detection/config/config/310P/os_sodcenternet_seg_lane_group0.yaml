@@ -1,0 +1,134 @@
+engine_file: os_sodcenternet_seg_lane.om
+thread_token: ASCENDNPU_0
+device: ASCENDNPU
+device_id: 0
+group_id: 0 # only for huawei ascend
+priority: 0
+max_batch_size: 6
+
+engine_inputs:
+  - name: input 
+    indexe: 0    
+    dtype: UINT8
+    dims_scale: 0.5
+    dims_min:
+      - 3
+      - 320
+      - 640
+
+engine_outputs:
+  - name: od_hm
+    dtype: FLOAT32
+    indexe: 1
+    dims_min:
+      - 7
+      - 40
+      - 80
+  - name: od_offset
+    dtype: FLOAT32
+    indexe: 2
+    dims_min:
+      - 14
+      - 40
+      - 80
+  - name: od_wh
+    dtype: FLOAT32
+    indexe: 3
+    dims_min:
+      - 14
+      - 40
+      - 80
+  - name: sod_hm
+    dtype: FLOAT32
+    indexe: 4
+    dims_min:
+      - 5
+      - 40
+      - 80
+  - name: sod_offset
+    dtype: FLOAT32
+    indexe: 5
+    dims_min:
+      - 10
+      - 40
+      - 80
+  - name: sod_wh
+    dtype: FLOAT32
+    indexe: 6
+    dims_min:
+      - 10
+      - 40
+      - 80
+  - name: segment
+    dtype: UINT8
+    indexe: 7
+    dims_min:
+      - 320
+      - 640
+  - name: lane
+    dtype: UINT8
+    indexe: 8
+    dims_min:
+      - 320
+      - 640
+
+outputs:
+  - name: object_od
+    type: IDRIVER_OBJECT_2D
+    indexe: 1
+    dims_min:
+      - 300
+      - 8
+  - name: object_sod
+    type: IDRIVER_OBJECT_2D
+    indexe: 2
+    dims_min:
+      - 50
+      - 8
+  - name: segment
+    type: IDRIVER_SEGMENT
+    indexe: 3
+    dims_min:
+      - 1
+      - 320
+      - 640
+  - name: lane
+    type: IDRIVER_LANE_SEGMENT
+    indexe: 4
+    dims_min:
+      - 1
+      - 320
+      - 640
+      
+engin_output_num: 3
+plugins:
+  - bottom: [0, 1, 2]
+    top: [object_od]
+    plugin_name: CenterNet2dPluginV2
+    plugin_param:
+      class_number: 7
+      max_output_box_number: 300
+      ignore_thresh: 0.3
+      head_number: 1
+      center_nms: false
+      box_number_prenms: 500
+      nms_thresh: 0.5
+      class_remap: [2, 3, 4, 6, 7, 0, 1]
+  - bottom: [3, 4, 5]
+    top: [object_sod]
+    plugin_name: CenterNet2dPluginV2
+    plugin_param:
+      class_number: 5
+      max_output_box_number: 50
+      ignore_thresh: 0.4
+      head_number: 1
+      center_nms: false
+      box_number_prenms: 100
+      nms_thresh: 0.5
+      class_remap: [10, 11, 12, 21, 22]
+  - bottom: [6]
+    top: [segment]
+    plugin_name: SegmentPlugin
+  - bottom: [7]
+    top: [lane]
+    plugin_name: SegmentPlugin

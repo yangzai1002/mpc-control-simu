@@ -1,0 +1,73 @@
+{
+  "applicationName": "/HuaweiMDC/exe_manifests/swcs/multy_camera_det_base/Libmulty_camera_det_baseProcess34",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "serviceId": 1,
+      "events": [
+        {
+          "event": "EventImageList",
+          "id": 19949,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageDataList",
+          "topicName": "TopicOfEventImageList"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance124",
+          "instance": "5123",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 19949,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface",
+      "serviceId": 4,
+      "events": [
+        {
+          "event": "EventVisionSegment",
+          "id": 24805,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgCameraVPResult",
+          "topicName": "TopicOfEventVisionSegment"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpperception_vp_result_DdsProvidedServiceInstance38",
+          "instance": "5124",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 24805,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

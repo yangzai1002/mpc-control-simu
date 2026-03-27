@@ -1,0 +1,190 @@
+#include "XX264EncodingInMdc.h"
+#include "mdc_adapter/cidpabstractplatforminterface.h"
+#include "mdc_adapter/imgdvppplatform2usrprotocol.h"
+
+#include <iostream>
+
+#include <cstddef>
+#include <string>
+#include <stdio.h>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <unistd.h>
+#include <cstdlib>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <stdio.h>
+#include <vector>
+
+#include "SensorImage.h"
+#include "VideoEncodedFrame.h"
+#include "AppVideoParameter.h"
+#include "VideoEncodingPerf.h"
+
+#include "custom_stack.h"
+#include "ShmBufferInfo.h"
+
+class CMdcImgDvppInterface
+{
+public:
+	CMdcImgDvppInterface(std::string _so_path, const int in_image_width, const int in_image_height,
+																								  const int out_image_width, const int out_image_height) 
+	{
+		so_path = _so_path;
+		m_inimage_width = in_image_width;
+		m_inimage_height = in_image_height;
+		m_outimage_width = out_image_width;
+		m_outimage_height = out_image_height;
+	}
+
+
+	~CMdcImgDvppInterface() {
+		        if (outputFile.is_open())
+        {
+            outputFile.close();
+        }
+	}	
+	char* imageData;
+	std::ofstream outputFile;
+	int Init() {
+
+		m_dvpp_cfg.m_inputtype = avos::idpware::imgdvpp::IMGTYPE_YUV420NV12;
+		m_dvpp_cfg.m_outputtype = avos::idpware::imgdvpp::IMGTYPE_H264;
+		m_dvpp_cfg.m_inwidth = m_inimage_width;
+		m_dvpp_cfg.m_inheight = m_inimage_height;
+		m_dvpp_cfg.m_outwidth = m_outimage_width;
+		m_dvpp_cfg.m_outheight = m_outimage_height;
+
+		mdc_camera_ptr = std::make_shared<avos::idpware::CIdpAbstractPlatformInterface>();
+		mdc_camera_ptr->open(so_path.c_str(), RTLD_LAZY);
+		mdc_camera_ptr->ioctl(avos::idpware::imgdvpp::IOCTL_INIT_DVPP, &(m_dvpp_cfg));
+
+
+
+		const size_t IMAGE_SIZE = 1920 * 1080 * 1.5; // 图像数据大小
+		 imageData = (char*)malloc(IMAGE_SIZE); // 用于存储图像数据的缓冲区
+	    std::ifstream file("/opt/usr/input_1920x1080_nv12_0.yuv", std::ios::binary | std::ios::ate); // 打开文件
+		if (!file.is_open())
+		{
+			std::cerr << "Failed to open file!" << std::endl;
+		}
+		    // 获取文件大小
+		std::streamsize fileSize = file.tellg();
+		file.seekg(0, std::ios::beg);
+		file.read(imageData, IMAGE_SIZE);
+        if (file.gcount() != IMAGE_SIZE)
+        {
+            std::cerr << "Failed to read enough data from file!" << std::endl;
+        }
+
+	outputFile.open("/opt/usr/input_1920x1080_nv12_0.h264", std::ios::binary);
+    if (!outputFile.is_open())
+    {
+        std::cerr << "Failed to open output file!" << std::endl;
+        return -1;
+    }
+
+		return 0;
+	}
+
+	void SetBGRImage(uint8_t * ptr, int size) {
+		// m_input_img.m_ptr = ptr;
+		// m_input_img.m_mode=0;
+		// m_input_img.m_ptr_len = size;
+
+		m_input_img.m_ptr = (u_int8_t*)imageData;
+		m_input_img.m_mode=0;
+		m_input_img.m_ptr_len = 1920 * 1080 * 1.5;
+		if (size != m_inimage_height*m_inimage_width*1.5)
+		{
+			std::cout << "CMdcImgDvppInterface::SetBGRImage size is error size =" << size <<std::endl;
+		}
+		
+		mdc_camera_ptr->ioctl(avos::idpware::imgdvpp::IOCTL_SET_INPUTIMG, &m_input_img);
+	}
+
+	void GetH264Image(std::vector<unsigned char>&	frame_data) {
+		std::cout << "GetH264Image <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
+		mdc_camera_ptr->ioctl(avos::idpware::imgdvpp::IOCTL_GET_OUTPUTIMG, &m_output_img);
+		frame_data.clear();
+		frame_data.resize(m_output_img.m_ptr_len);
+		std::cout << "m_output_img.m_ptr_len = " << m_output_img.m_ptr_len << std::endl;
+		memcpy(&frame_data[0], m_output_img.m_ptr, m_output_img.m_ptr_len);
+
+		outputFile.write( (const char*)m_output_img.m_ptr, m_output_img.m_ptr_len);
+		if (!outputFile)
+		{
+			std::cerr << "Failed to write data to output file!" << std::endl;
+		}
+	}
+
+private:
+	std::string so_path;
+	int m_inimage_width;
+	int m_inimage_height;
+	int m_outimage_width;
+	int m_outimage_height;
+
+	avos::idpware::imgdvpp::SImgDvppCfg m_dvpp_cfg;
+	avos::idpware::imgdvpp::SImgDvppInData  m_input_img;
+	avos::idpware::imgdvpp::SImgDvppOutData  m_output_img;
+	std::shared_ptr<avos::idpware::CIdpAbstractPlatformInterface> mdc_camera_ptr;
+public:
+	
+};
+
+
+void XX264EncodingInMdc ( const SensorImage& sensor_Image , 	// 原始视频帧	
+const AppVideoParameter& video_prameter , 	// 视频编码控制参数	
+VideoEncodedFrame& encoded_frame , 	// 编码后的视频帧	
+VideoEncodingPerf& encoding_perf ){
+ 	 // add your code here
+
+	std::cout << "\nXX264EncodingInMdc in\n";
+	STATIC_DATA(bool, _init, false);
+	STATIC_DATA(std::shared_ptr<CMdcImgDvppInterface>, mdc_mdcimg_interface_ptr, nullptr);
+
+	// if (sensor_Image.data.empty()) {
+    //     std::cout << "sensor_image.data is empty" << std::endl;
+    //     return;
+    // }
+	if (!_init) {
+        auto ptr = CustomStack::Instance();
+        // ptr->GetConfig("num_threads", _num_threads);
+        std::cout << "num_threads: " << "_num_threads" << std::endl;
+		mdc_mdcimg_interface_ptr = std::make_shared<CMdcImgDvppInterface>(
+			"/opt/usr/zxz/aarch64-linux-gnu/idp/libimgdvpp_plugin.so", 
+			1920, 1080,
+			1920, 1080
+			// 1280,720
+			);
+		mdc_mdcimg_interface_ptr->Init();
+        _init = true;
+    }
+
+
+	
+	mdc_mdcimg_interface_ptr->SetBGRImage((uint8_t *)sensor_Image.data.data(),sensor_Image.data.size());
+	
+	mdc_mdcimg_interface_ptr->GetH264Image(encoded_frame.frame_data);
+    encoded_frame.header = sensor_Image.header;
+    encoded_frame.encoding = 0;
+    encoded_frame.fps = 30;
+	encoded_frame.pts = 30;
+	encoded_frame.key_frame = 1;
+	encoded_frame.frame_size = encoded_frame.frame_data.size();
+	if (encoded_frame.frame_size > 64)
+	{
+		for (size_t i = 0; i < 64; i++)
+		{
+			printf("%02x ",encoded_frame.frame_data[i]);
+		}
+		printf("\n");
+	}
+
+	std::cout << "encoded_frame.frame_data.size() = " << encoded_frame.frame_data.size() << std::endl;
+	std::cout << "encoded_frame.fps = " << encoded_frame.fps << std::endl;
+}
+

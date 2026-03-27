@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "hw_camera_list/hw_camera_list_rootswc/compressed_image_list",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5017",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libcompressed_image_list_DdsProvidedServiceInstance41"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_camera_list/hw_camera_list_rootswc/image_list",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5018",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibImageListPPortPrototype_DdsProvidedServiceInstance1"
+        }
+      ]
+    }
+  ]
+}

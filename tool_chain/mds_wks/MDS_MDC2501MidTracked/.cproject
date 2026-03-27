@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="org.eclipse.cdt.core.default.config.1699433533">
+			<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="org.eclipse.cdt.core.default.config.1699433533" moduleId="org.eclipse.cdt.core.settings" name="Configuration">
+				<externalSettings/>
+				<extensions/>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+		<pathentry excluding="**/build/**" kind="out" path="build"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="com.huawei.mdc.devstudio.repo.configuration">
+		<content-type-mapping repo_path="/usr/local/mdc_sdk_llvm"/>
+	</storageModule>
+	<storageModule moduleId="com.huawei.mdc.devstudio.toolchains.configuration">
+		<content-type-mapping c_compiler="/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang" cmake="/usr/bin/cmake" cpp_compiler="/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++" gcov="/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/llvm-cov" linker="/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/lld" make="/usr/bin/make" toolchain_name="dp_gea"/>
+	</storageModule>
+	<storageModule moduleId="com.huawei.mdc.devstudio.cmake.configuration">
+		<content-type-mapping binary_path="" build_options="-j12" build_type="Release" cmake_name="Default_CMake" cmake_options="-G &quot;Unix Makefiles&quot;" install_options="" isSelected="true" source_path="" toolchain="dp_gea"/>
+	</storageModule>
+	<storageModule att_arch="aarch64" attr_os="aos_gea" attr_path="/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler" attr_type="clang" moduleId="com.huawei.mdc.devstudio.sdk.configuration"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

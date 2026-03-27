@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "multy_camera_det_base/multy_camera_det_base_rootswc/tpimage_list",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5123",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance124"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "multy_camera_det_base/multy_camera_det_base_rootswc/tpperception_vp_result",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5124",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpperception_vp_result_DdsProvidedServiceInstance38"
+        }
+      ]
+    }
+  ]
+}

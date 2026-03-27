@@ -1,0 +1,66 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "FusionSemanticMap/fusion_semantic_map_baseExecutable11Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance172"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsfront_DdsRequiredServiceInstance197"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance119"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsleft_DdsRequiredServiceInstance198"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype12_DdsRequiredServiceInstance120"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype12_DdsRequiredServiceInstance173"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype13_DdsRequiredServiceInstance174"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype13_DdsRequiredServiceInstance121"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance199"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionSemanticMap/fusion_semantic_map_baseExecutable11Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype14_DdsRequiredServiceInstance122"
+        }
+      ]
+    }
+  ]
+}

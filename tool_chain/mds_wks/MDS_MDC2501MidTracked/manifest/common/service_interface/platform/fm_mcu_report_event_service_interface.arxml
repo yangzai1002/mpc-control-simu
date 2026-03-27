@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>MdcPlatformServices</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>PlatformServiceInterface</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>FmMcuReportFaultServiceInterface</SHORT-NAME>
+                  <ELEMENTS>
+                    <SERVICE-INTERFACE>
+                      <SHORT-NAME>FmMcuReportFaultService</SHORT-NAME>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>mdc</SHORT-NAME>
+                          <SYMBOL>mdc</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>fm</SHORT-NAME>
+                          <SYMBOL>fm</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                      <METHODS>
+                        <CLIENT-SERVER-OPERATION>
+                          <SHORT-NAME>McuReportFault</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE>
+                              <SHORT-NAME>faultData</SHORT-NAME>
+                              <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultData</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE>
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/HuaweiMDC/StdCppDataType/Int32</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                      </METHODS>
+                    </SERVICE-INTERFACE>
+                    <SOMEIP-SERVICE-INTERFACE-DEPLOYMENT>
+                      <SHORT-NAME>FmMcuReportFaultServiceDeployment</SHORT-NAME>
+                      <METHOD-DEPLOYMENTS>
+                        <SOMEIP-METHOD-DEPLOYMENT>
+                          <SHORT-NAME>ReportFault_Someip</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmMcuReportFaultServiceInterface/FmMcuReportFaultService/McuReportFault</METHOD-REF>
+                          <METHOD-ID>1</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                      </METHOD-DEPLOYMENTS>
+                      <SERVICE-INTERFACE-REF DEST="SERVICE-INTERFACE">/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmMcuReportFaultServiceInterface/FmMcuReportFaultService</SERVICE-INTERFACE-REF>
+                      <SERVICE-INTERFACE-ID>1680</SERVICE-INTERFACE-ID>
+                      <SERVICE-INTERFACE-VERSION>
+                        <MAJOR-VERSION>1</MAJOR-VERSION>
+                        <MINOR-VERSION>0</MINOR-VERSION>
+                      </SERVICE-INTERFACE-VERSION>
+                    </SOMEIP-SERVICE-INTERFACE-DEPLOYMENT>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

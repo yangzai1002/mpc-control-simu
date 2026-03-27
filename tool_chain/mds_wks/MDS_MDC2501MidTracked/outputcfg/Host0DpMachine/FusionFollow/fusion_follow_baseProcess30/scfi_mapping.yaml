@@ -1,0 +1,24 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+fusion_follow_base:
+  sendInstanceID:
+    FusionObjectArrayIntf:
+        instanceId: [20228]
+        portName: ["tptarget_obj"]
+  recvInstanceID:
+    RadarPointCloudServiceInterface:
+        instanceId: [20225,20226,20226,20225,20224,20226,20225,20224,20224,20224,20224,20225,20226]
+        portName: ["tpfront_middle_radar_points","tpfront_right_radar_points","tpfront_left_radar_points","tpfront_middle_radar_points","tpfront_right_radar_points","tpfront_left_radar_points","tpfront_middle_radar_points","tpfront_right_radar_points","tpfront_middle_radar_points","tpfront_right_radar_points","tpfront_middle_radar_points","tpfront_left_radar_points","tpfront_left_radar_points"]
+    VisionSegmentServiceInterface:
+        instanceId: [20207]
+        portName: ["tpperception_vp_result"]
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20203,20203,20202,20201,20201,20203,20201,20202]
+        portName: ["tpfront_right_lidar_points","tpfront_right_lidar_points","tpfront_left_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_middle_lidar_points","tpfront_left_lidar_points"]
+    Object3dArrayIntf:
+        instanceId: [20222]
+        portName: ["tplidarobjects"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tplocalization"]

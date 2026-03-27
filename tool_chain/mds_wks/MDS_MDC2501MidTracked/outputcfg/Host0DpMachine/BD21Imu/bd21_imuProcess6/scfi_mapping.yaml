@@ -1,0 +1,18 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+bd21_imu:
+  sendInstanceID:
+    SensorGpsServiceInterface:
+        instanceId: [20244]
+        portName: ["ivsensorgps"]
+    SensorImuServiceInterface:
+        instanceId: [20223]
+        portName: ["ivsensorimu"]
+    SensorWheelSpeedServiceInterface:
+        instanceId: [20204]
+        portName: ["ivwheelspeed"]
+    LocationServiceInterface:
+        instanceId: [20229]
+        portName: ["tpimu"]
+  recvInstanceID:

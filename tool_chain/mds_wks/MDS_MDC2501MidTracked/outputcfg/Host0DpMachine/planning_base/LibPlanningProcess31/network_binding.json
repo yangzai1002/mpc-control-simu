@@ -1,0 +1,59 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "planning_base/planning_base_rootswc/tpfusionloc",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5110",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance113"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "planning_base/planning_base_rootswc/tppathplan_track",
+      "service": "/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5109",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtppathplan_track_DdsProvidedServiceInstance32"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "planning_base/planning_base_rootswc/tptarget_obj",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5107",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance106"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "planning_base/planning_base_rootswc/tpterrainmap",
+      "service": "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayServiceInterface/FusionObjectArrayIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5106",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance107"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "planning_base/planning_base_rootswc/tpvehiclestate4",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5108",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance112"
+        }
+      ]
+    }
+  ]
+}

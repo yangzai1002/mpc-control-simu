@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "MultiCameraDetection/multy_camera_det_baseExecutable34Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20200",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance124"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "MultiCameraDetection/multy_camera_det_baseExecutable34Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20207",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpperception_vp_result_DdsProvidedServiceInstance38"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "VehicleChassisRecv/mid_track_chassis_recvExecutable7Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20205",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/VehicleInfoPPortPrototype_DdsProvidedServiceInstance6"
+        }
+      ]
+    }
+  ]
+}

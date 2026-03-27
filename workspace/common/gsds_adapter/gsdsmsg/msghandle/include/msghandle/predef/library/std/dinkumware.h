@@ -1,0 +1,52 @@
+/*
+Copyright Rene Rivera 2008-2015
+Distributed under the Boost Software License, Version 1.0.
+(See accompanying file LICENSE_1_0.txt or copy at
+http://www.boost.org/LICENSE_1_0.txt)
+*/
+
+#ifndef MSGHANDLE_PREDEF_LIBRARY_STD_DINKUMWARE_H
+#define MSGHANDLE_PREDEF_LIBRARY_STD_DINKUMWARE_H
+
+#include <msghandle/predef/library/std/_prefix.h>
+
+#include <msghandle/predef/version_number.h>
+#include <msghandle/predef/make.h>
+
+/*`
+[heading `MSGHANDLE_LIB_STD_DINKUMWARE`]
+
+[@http://en.wikipedia.org/wiki/Dinkumware Dinkumware] Standard C++ Library.
+If available version number as major, minor, and patch.
+
+[table
+    [[__predef_symbol__] [__predef_version__]]
+
+    [[`_YVALS`, `__IBMCPP__`] [__predef_detection__]]
+    [[`_CPPLIB_VER`] [__predef_detection__]]
+
+    [[`_CPPLIB_VER`] [V.R.0]]
+    ]
+ */
+
+#define MSGHANDLE_LIB_STD_DINKUMWARE MSGHANDLE_VERSION_NUMBER_NOT_AVAILABLE
+
+#if (defined(_YVALS) && !defined(__IBMCPP__)) || defined(_CPPLIB_VER)
+#   undef MSGHANDLE_LIB_STD_DINKUMWARE
+#   if defined(_CPPLIB_VER)
+#       define MSGHANDLE_LIB_STD_DINKUMWARE MSGHANDLE_PREDEF_MAKE_10_VVRR(_CPPLIB_VER)
+#   else
+#       define MSGHANDLE_LIB_STD_DINKUMWARE MSGHANDLE_VERSION_NUMBER_AVAILABLE
+#   endif
+#endif
+
+#if MSGHANDLE_LIB_STD_DINKUMWARE
+#   define MSGHANDLE_LIB_STD_DINKUMWARE_AVAILABLE
+#endif
+
+#define MSGHANDLE_LIB_STD_DINKUMWARE_NAME "Dinkumware"
+
+#endif
+
+#include <msghandle/predef/detail/test.h>
+MSGHANDLE_PREDEF_DECLARE_TEST(MSGHANDLE_LIB_STD_DINKUMWARE,MSGHANDLE_LIB_STD_DINKUMWARE_NAME)

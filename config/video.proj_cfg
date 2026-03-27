@@ -1,0 +1,199 @@
+media:
+  video:
+    encoder:
+      # 需要加载的插件的动态链接库路径
+      so_path: libimgdvpp_plugin_h265_v1_220.so
+      # 使用固定编码参数，如果使用固定编码参数则下列 constant_ 开头的编码参数生效，否则使用 VideoParameter 里面的参数
+      use_constant_parameter: false
+      # 固定码率（单位：kbps）
+      constant_bps: 1024
+      # 固定帧率
+      constant_fps: 30
+      # 固定宽度
+      constant_width: 1280
+      # 固定高度
+      constant_height: 720
+      # 固定 GOP
+      constant_gop: 30
+    recorder:
+      # 保存路径
+      location: /opt/usr/records/h264_push
+      # 单个文件保存时长（单位：秒）
+      single_file_duration: 300
+      # 存储容量配额（单位：MB）
+      quota: 4096
+      # 清理历史文件的阈值（单位：MB），不能大于 quota 的值
+      clean_threshold: 4000
+
+video:
+  rtsp:
+    # RTSP服务端口
+    port: 8555
+    # RTP数据封包方式，0-标准STP-A；1-RAW
+    rtp_packer: 0
+    # 是否将码流保存到文件中
+    save_stream: 0
+    # 连接超时时间（单位：毫秒）
+    expiry: 99999999
+
+video:
+  edit:
+    # 目标颜色
+    target_info_color: "red"
+    #前相机-车前距离(移动辅助线)
+    camera_front_x: 3.9
+    #后相机-车后距离(移动辅助线)
+    camera_back_x: 3
+    #前相机左边距离中间位置长度
+    camera_front_left_length: 1.6
+    #后相机左边距离中间位置长度
+    camera_back_left_length: 1.6
+    #前相机右边距离中间位置长度
+    camera_front_right_length: 1.6
+    #后相机右边距离中间位置长度
+    camera_back_right_length: 1.6
+    #前相机高度
+    camera_front_height: 0
+    #后相机高度
+    camera_back_height: 0
+    #绘制线段样式 2为区域   1为线
+    path_type: 2
+    #前相机标定参对应相机名称
+    front_ktdx_type: "front_120"
+    #后相机标定参对应相机名称
+    back_ktdx_type: "back_120"
+    #夜视相机标定参数
+    front_night_ktdx_type: ""
+    #后夜视相机标定参数
+    back_night_ktdx_type: ""
+    #绘制区域的透明度
+    path_plan_alpha: 0.12
+    #截取路径线段长度
+    plan_path_length: 25
+    #文本字体
+    target_text_size: 50
+
+video:
+  select:
+    # 默认输出图像数据的宽度
+    out_width: 1280
+    #默认输出图像数据的高度
+    out_height: 720
+    #默认输出帧率
+    out_fps: 30
+    #默认输出码率（单位：kbps）
+    out_bps: 1024
+    #编码GOP
+    out_gop: 30
+    #默认自适应切换帧率阈值
+    threshold_bps: 29.2
+    #默认自适应切换周期（单位：毫秒）
+    switchover_interval: 2000
+    #默认码率控制方式：0-码率；1-质量
+    rate_control_mode: 0
+    #默认全采图编码质量：1-51，1 最好，51 最差
+    qualities: "18,23,30,36"
+    #筛选点距离    
+    point_length: 25
+    #筛选点间距
+    point_interval: 0.5
+    #车辆长度
+    car_length: 2.6
+
+video:
+  layouts:
+    num_type: 4
+    channels_type_0:
+      - name: front
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 1080
+    channels_type_1:
+      - name: front
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 1080
+      - name: left_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 320
+        view_right_bottom_y: 240
+      - name: right_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 1600
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 240
+    channels_type_2:
+      - name: left_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 1080
+      - name: front
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 320
+        view_right_bottom_y: 240
+      - name: right_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 1600
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 240
+    channels_type_3:
+      - name: right_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 1080
+      - name: left_front_around
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 0
+        view_left_top_y: 0
+        view_right_bottom_x: 320
+        view_right_bottom_y: 240
+      - name: front
+        crop_left_top_x: 0
+        crop_left_top_y: 0
+        crop_right_bottom_x: 0
+        crop_right_bottom_y: 0
+        view_left_top_x: 1600
+        view_left_top_y: 0
+        view_right_bottom_x: 1920
+        view_right_bottom_y: 240

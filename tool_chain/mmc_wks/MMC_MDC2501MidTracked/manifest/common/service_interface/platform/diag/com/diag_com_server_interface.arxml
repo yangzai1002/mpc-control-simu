@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0dc70e73-e996-41de-aa7e-640aa22969d6">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>PlatformServices</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-INTERFACE>
+              <SHORT-NAME>DiagComServer</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <NAMESPACES>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>ara</SHORT-NAME>
+                  <SYMBOL>ara</SYMBOL>
+                </SYMBOL-PROPS>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>diag</SHORT-NAME>
+                  <SYMBOL>diag</SYMBOL>
+                </SYMBOL-PROPS>
+              </NAMESPACES>
+              <METHODS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>Request</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>requestData</SHORT-NAME>
+                      <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>isResponsePositive</SHORT-NAME>
+                      <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/HuaweiMDC/StdCppDataType/Boolean</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>responseData</SHORT-NAME>
+                      <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                </CLIENT-SERVER-OPERATION>
+              </METHODS>
+            </SERVICE-INTERFACE>
+            <DDS-SERVICE-INTERFACE-DEPLOYMENT>
+              <SHORT-NAME>DiagComServerDeployment</SHORT-NAME>
+              <METHOD-DEPLOYMENTS>
+                <DDS-METHOD-DEPLOYMENT>
+                  <SHORT-NAME>RequestDeployment</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/HuaweiMDC/PlatformServices/DiagComServer/Request</METHOD-REF>
+                  <DDS-RPC-SERVICE-REF DEST="DDS-RPC-SERVICE-DEPLOYMENT">/HuaweiMDC/PlatformServices/DiagComServerDeployment/RpcOfRequestDeployment</DDS-RPC-SERVICE-REF>
+                  <TRANSPORT-PROTOCOLS>
+                    <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                  </TRANSPORT-PROTOCOLS>
+                </DDS-METHOD-DEPLOYMENT>
+              </METHOD-DEPLOYMENTS>
+              <SERVICE-INTERFACE-REF DEST="SERVICE-INTERFACE">/HuaweiMDC/PlatformServices/DiagComServer</SERVICE-INTERFACE-REF>
+              <DDS-RPC-SERVICES>
+                <DDS-RPC-SERVICE-DEPLOYMENT>
+                  <SHORT-NAME>RpcOfRequestDeployment</SHORT-NAME>
+                  <FRAG-SIZE>2048</FRAG-SIZE>
+                  <LIST-SIZE>256</LIST-SIZE>
+                  <REPLY-TOPIC-NAME>ReplyTopicNameOfRequestDeployment</REPLY-TOPIC-NAME>
+                  <REQUEST-TOPIC-NAME>RequestTopicNameOfRequestDeployment</REQUEST-TOPIC-NAME>
+                </DDS-RPC-SERVICE-DEPLOYMENT>
+              </DDS-RPC-SERVICES>
+              <FRAG-SIZE>2048</FRAG-SIZE>
+              <LIST-SIZE>256</LIST-SIZE>
+              <SERVICE-INTERFACE-ID>103</SERVICE-INTERFACE-ID>
+            </DDS-SERVICE-INTERFACE-DEPLOYMENT>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

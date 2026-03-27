@@ -1,0 +1,37 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "sensor_viualize_base/sensor_viualize_base_rootswc/RPortPrototype1",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RadarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5015",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "sensor_viualize_base/sensor_viualize_base_rootswc/tpcameralist",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5014",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance164"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "sensor_viualize_base/sensor_viualize_base_rootswc/tplidarfront",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5013",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Libtplidarfront"
+        }
+      ]
+    }
+  ]
+}

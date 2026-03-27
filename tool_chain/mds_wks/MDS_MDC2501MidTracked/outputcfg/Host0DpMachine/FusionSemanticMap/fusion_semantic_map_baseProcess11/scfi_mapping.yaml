@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+fusion_semantic_map_base:
+  sendInstanceID:
+  recvInstanceID:
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20202,20203,20202,20201,20203,20201,20201,20203,20202]
+        portName: ["tpfront_left_lidar_points","tpfront_right_lidar_points","tpfront_left_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_left_lidar_points"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tplocalization"]

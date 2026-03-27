@@ -1,0 +1,20 @@
+[IAM][WARN][ClientSystemFops.cpp:136] Cannot find libc.so.
+[1768359379.985515] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-19_0.bag
+[1768359380.229817] [WARNING]: Unknown event: /HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf/LocationInfo[/HuaweiMDC/instance_manifests/providedInstances/LocFusionPPortPrototype_DdsProvidedServiceInstance26]
+[1768359380.229881] [WARNING]: Unknown event: /HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf/PlanningResult[/HuaweiMDC/instance_manifests/providedInstances/PlanningPPort_DdsProvidedServiceInstance11]
+[1768359380.229906] [WARNING]: Unknown event: /HuaweiMDC/interface_manifests/interfaces/PlanningStatusServiceInterface/EventPlanningStatus[/HuaweiMDC/instance_manifests/providedInstances/PlanningStatusPPortPrototype_DdsProvidedServiceInstance10]
+[1768359380.240763] [INFO]: Subscribing to /HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/BodyCmdPPort_DdsProvidedServiceInstance12][27506229]
+[1768359380.246228] [INFO]: Subscribing to /HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/BodyCommandPPortPrototype_DdsProvidedServiceInstance13][27506240]
+[1768359380.251775] [INFO]: Subscribing to /HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/RCBodyCommandPPortPrototype_DdsProvidedServiceInstance22][27506227]
+[1768359380.256172] [INFO]: Subscribing to /HuaweiMDC/interface_manifests/interfaces/BusinessCommandServiceInterface/EventBusinessCommand[/HuaweiMDC/instance_manifests/providedInstances/BusinessCommandPPortPrototype_DdsProvidedServiceInstance20][27506241]
+[1768359380.260221] [INFO]: Subscribing to /HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface/EventVehicleInfo[/HuaweiMDC/instance_manifests/providedInstances/VehicleInfoPPortPrototype_DdsProvidedServiceInstance6][27506222]
+[1768359402.66206] [INFO]: Closing to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-19_0.bag
+[1768359402.66517] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-42_1.bag
+[1768359424.73865] [INFO]: Closing to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-42_1.bag
+[1768359424.74184] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-04_2.bag
+[1768359446.64879] [INFO]: Closing to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-04_2.bag
+[1768359446.65185] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-26_3.bag
+[1768359468.14191] [INFO]: Closing to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-26_3.bag
+[1768359468.14512] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-48_4.bag
+[1768359490.19498] [INFO]: Closing to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-48_4.bag
+[1768359490.19823] [INFO]: Recording to /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-58-10_5.bag

@@ -1,0 +1,112 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/radarpackets",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5054",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance42"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5058",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance44"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5061",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libradarpackets_DdsProvidedServiceInstance43"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/radarpoints",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RadarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5056",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance41"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5062",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance40"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5065",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibRadarPointCloudPPortPrototype_DdsProvidedServiceInstance42"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpimu1",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5055",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance105"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpimu2",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5057",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance107"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpimu3",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5063",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype6_DdsRequiredServiceInstance109"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpvehiclestate1",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5064",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance200"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpvehiclestate2",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5059",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance201"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "hw_fr671_radar/hw_fr671_radar_rootswc/tpvehiclestate3",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5060",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance202"
+        }
+      ]
+    }
+  ]
+}

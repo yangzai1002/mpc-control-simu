@@ -1,0 +1,9 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+xzmq_rc:
+  sendInstanceID:
+    RemoteControlServiceInterface:
+        instanceId: [20213]
+        portName: ["tpappremotecmd"]
+  recvInstanceID:

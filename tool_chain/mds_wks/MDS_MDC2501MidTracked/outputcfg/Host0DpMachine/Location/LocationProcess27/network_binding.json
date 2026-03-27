@@ -1,0 +1,89 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "Location/LocationExecutable27Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance107"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance109"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Location/LocationExecutable27Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20223",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Location/LocationExecutable27Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20229",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance111"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20229",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/tpimu_DdsRequiredServiceInstance185"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Location/LocationExecutable27Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20204",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype6_DdsRequiredServiceInstance112"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20204",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/ivwheelspeed_DdsRequiredServiceInstance184"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20204",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/ivwheelspeed_DdsRequiredServiceInstance186"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Location/LocationExecutable27Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20206",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype7_DdsRequiredServiceInstance113"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20209",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype8_DdsRequiredServiceInstance114"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpfusionloc_DdsProvidedServiceInstance38"
+        }
+      ]
+    }
+  ]
+}

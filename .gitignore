@@ -1,0 +1,6 @@
+!.gitkeep
+tool_chain/mds_wks/MDS_MDC2501MidTracked_bak/build
+workspace/common/perception_fusion_common/build
+tool_chain/mds_wks/.metadata
+workspace/third_party
+workspace/third_party_arm

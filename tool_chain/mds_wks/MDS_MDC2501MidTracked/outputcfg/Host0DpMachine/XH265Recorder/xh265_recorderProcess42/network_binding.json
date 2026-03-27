@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "XH265Recorder/xh265_recorderExecutable42Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20247",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance159"
+        }
+      ]
+    }
+  ]
+}

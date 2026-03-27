@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="8124cde3-97cb-4efd-aa6f-ee624fdb0347">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c1460df1-7e45-435a-96b1-1b910111bd7a">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="74295cab-03a2-4d2a-9840-7003a8a9dc9a">
+              <SHORT-NAME>Location</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="8a834487-cdf3-4d06-bcff-7fe49638577e">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="8a55e1c3-d6b7-42bc-bd7f-01805d9b1198">
+                      <SHORT-NAME>fusion_location_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="d1fc5edd-1fc8-471a-b87b-2420fe306226">
+                        <SHORT-NAME>fusion_location_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Location/SwComponent/fusion_location_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

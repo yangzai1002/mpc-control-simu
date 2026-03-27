@@ -1,0 +1,15 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+lidar_terrain_map_detection:
+  sendInstanceID:
+    PerceptionStaticEnvServiceInterface:
+        instanceId: [20208]
+        portName: ["tpterrainmap"]
+  recvInstanceID:
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20203,20203,20202,20225,20225]
+        portName: ["tpfront_right_lidar_points","tpfront_right_lidar_points","tpfront_left_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tplocalization"]

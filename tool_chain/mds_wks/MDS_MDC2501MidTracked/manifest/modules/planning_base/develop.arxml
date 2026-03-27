@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="760423d2-2421-49aa-a323-47a2fea1fd74">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b122e924-e0c2-42fa-94f9-236816d6ca7c">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="def034ae-b8d1-492f-a0bc-a43615303ea6">
+              <SHORT-NAME>Planning</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="45f4ea3a-6d1e-44f0-8ddb-2811a4e8ee82">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="52708a74-b2e6-4b80-8109-6370fd3b53c9">
+                      <SHORT-NAME>planning_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="2b407e8a-3071-45ab-b79f-95097e342100">
+                        <SHORT-NAME>planning_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Planning/SwComponent/planning_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

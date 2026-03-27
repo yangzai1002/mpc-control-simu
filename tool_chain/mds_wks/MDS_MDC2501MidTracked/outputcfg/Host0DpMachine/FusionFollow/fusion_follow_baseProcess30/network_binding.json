@@ -1,0 +1,165 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RadarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20224",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsright_DdsRequiredServiceInstance194"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20224",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsright_DdsRequiredServiceInstance183"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20224",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsfront_DdsRequiredServiceInstance190"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20224",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsright_DdsRequiredServiceInstance192"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20224",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype7_DdsRequiredServiceInstance119_fradar"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsfront_DdsRequiredServiceInstance195"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsfront_DdsRequiredServiceInstance191"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsfront_DdsRequiredServiceInstance181"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20225",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype8_DdsRequiredServiceInstance120_lradar"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20226",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype9_DdsRequiredServiceInstance121"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20226",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsleft_DdsRequiredServiceInstance182"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20226",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsleft_DdsRequiredServiceInstance196"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20226",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/radarpointsleft_DdsRequiredServiceInstance193"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20207",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance125"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsfront_DdsRequiredServiceInstance178"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance175"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20201",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance116_flidar"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsleft_DdsRequiredServiceInstance179"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20202",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype5_DdsRequiredServiceInstance176"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype6_DdsRequiredServiceInstance118_flidar"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/lidarpointsright_DdsRequiredServiceInstance180"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20203",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype6_DdsRequiredServiceInstance177"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayServiceInterface/FusionObjectArrayIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20228",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tptarget_obj_DdsProvidedServiceInstance38"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20222",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance211"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "FusionFollow/fusion_follow_baseExecutable30Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype10_DdsRequiredServiceInstance122"
+        }
+      ]
+    }
+  ]
+}

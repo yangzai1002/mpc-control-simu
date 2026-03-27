@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "xfault_handler_base/xfault_handler_base_rootswc/tpappremotecmd",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5019",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance154"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "xfault_handler_base/xfault_handler_base_rootswc/tpfault_data",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5020",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpfault_data_DdsProvidedServiceInstance27"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+vehicle_interface:
+  car_name: IDPJJTZX000002
+  host_ip: 192.168.1.100
+  car_length:  4.8
+  car_width: 2.25
+  wheel_base_length: 2.9
+  front_axle_tofront: 0.93
+  wheel_center: 0.0
+  left_reduce_ratio: 16.5
+  right_reduce_ratio: 16.5
+  left_max_steerangle: 480
+  right_max_steerangle: 480
+  trafficability: 20
+  negative_trafficability: -20
+  min_turn_radius: 5
+  turning_around_min_radius: 5.0
+  eps_speed: 500
+  eps_delay: 0.2
+  control_mode: 2
+  torque_max: 4000
+  torque_min: 0
+  pressure_max: 100
+  pressure_min: 0
+  drive_lagtime: 1.0
+  brake_lagtime: 1.0
+  emergency_brake_lagtime: 0.5
+  emergency_brake_accel: 5.0
+  min_driver_torque: 0
+  acel_max: 2.5
+  acel_min: -5
+  driver_type: 1
+  brake_type: 1
+  car_front: 3.9
+  car_back: -0.9
+  car_left: 1.2
+  car_right: -1.2
+  car_bottom: -3
+  car_top: 3
+  body_base_height: 0.33 # for perception use 车体坐标系原点距离地面高度，一般是后轴中点距离地面的高度
+  vehicle_speed_limit: 80
+  def_vehicle_speed_limit: 20
+  car_type: sim
+semanticmap_interface:
+  lidar_num: 3 # 感知多激光栅格模块使用的雷达总数
+  lidar_max_x: 40.0 # 感知多激光栅格模块使用主雷达感知范围
+  lidar_min_x: 0.0 # 感知多激光栅格模块使用主雷达感知范围
+  lidar_max_y: 30.0 # 感知多激光栅格模块使用主雷达感知范围
+  lidar_min_y: -30.0 # 感知多激光栅格模块使用主雷达感知范围
+  lidar_filter_base: 4 # 感知多激光栅格模块使用主雷达滤波参数
+  lidar_1_max_x: 40.0 # 感知多激光栅格模块使用雷达1感知范围
+  lidar_1_min_x: -20.0 # 感知多激光栅格模块使用雷达1感知范围
+  lidar_1_max_y: 20.0 # 感知多激光栅格模块使用雷达1感知范围
+  lidar_1_min_y: -20.0 # 感知多激光栅格模块使用雷达1感知范围
+  lidar_1_filter_base: 4 # 感知多激光栅格模块使用雷达1滤波参数
+  lidar_2_max_x: 0.0 # 感知多激光栅格模块使用雷达2感知范围
+  lidar_2_min_x: -20.0 # 感知多激光栅格模块使用雷达2感知范围
+  lidar_2_max_y: 20.0 # 感知多激光栅格模块使用雷达2感知范围
+  lidar_2_min_y: -20.0 # 感知多激光栅格模块使用雷达2感知范围
+  lidar_2_filter_base: 4 # 感知多激光栅格模块使用雷达2滤波参数
+  lidar_max_z: 1.5 # 感知栅格最大高度有效值
+  lidar_min_z: -1.0 # 感知栅格最大高度有效值
+  voxel_size: 0.25 # 感知栅格大小
+  ground_dh: 0.3 # 感知栅格地面高度差阈值
+  filter_hung_dh: 1.5 # 滤除悬空点高度
+  remember_dis: 0.0 # 记忆范围（0.0时关闭记忆）
+  delete_width: 0.03 # 滤除栅格目标尺寸
+  delete_length: 0.03 # 滤除栅格目标尺寸
+  delete_height: 0.9  # 滤除栅格目标尺寸
+  ultra_mode: 1 # SemanticMapS2使用，SemanticMapMLidar尚未开启

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.huawei.mdc.lanuch.validation.validationLaunchType">
+<booleanAttribute key="Communication Management" value="true"/>
+<booleanAttribute key="Crypto" value="false"/>
+<booleanAttribute key="Crypto Management" value="false"/>
+<booleanAttribute key="Diagnostic" value="false"/>
+<booleanAttribute key="Execution Management" value="false"/>
+<booleanAttribute key="IAM" value="false"/>
+<booleanAttribute key="Log and Trace" value="false"/>
+<booleanAttribute key="Network Management" value="false"/>
+<booleanAttribute key="Persistency" value="false"/>
+<booleanAttribute key="Platform Health Management" value="false"/>
+<booleanAttribute key="State Management" value="false"/>
+<booleanAttribute key="Time Synchronization" value="false"/>
+<booleanAttribute key="Update and Configuration Management" value="false"/>
+</launchConfiguration>

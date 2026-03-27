@@ -1,0 +1,26 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "XFaultHandler/xfault_handler_baseExecutable43Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20213",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance154"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "XFaultHandler/xfault_handler_baseExecutable43Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20220",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpfault_data_DdsProvidedServiceInstance27"
+        }
+      ]
+    }
+  ]
+}

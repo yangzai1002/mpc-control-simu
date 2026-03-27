@@ -1,0 +1,21 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+control_base:
+  sendInstanceID:
+    BodyCommandServiceInterface:
+        instanceId: [20211]
+        portName: ["tpvehicle_to_can_pre_aeb"]
+  recvInstanceID:
+    PlanningResultIntf:
+        instanceId: [20212,20212]
+        portName: ["tppathplan_recv","tppathplan_recv"]
+    FaultDataServiceInterface:
+        instanceId: [20220]
+        portName: ["tpfault_data"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tpfusionloc"]
+    VehicleInfomationServiceInterface:
+        instanceId: [20205]
+        portName: ["tpvehiclestate"]

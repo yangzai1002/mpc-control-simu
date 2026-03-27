@@ -1,0 +1,16 @@
+auto:
+  canbus:
+    receive:
+      can_device: can0
+      addr: "ipc:///opt/usr/FD_task_manager/paramsfile/chassis_status"
+      port: 21000
+      topic_name: chassis2manager_chassis_status
+      over_time: 200
+    send:
+      can_device: can0
+      expiry_threshold_control: 100
+      expiry_threshold_fault: 100
+      addr: "ipc:///opt/usr/FD_task_manager/paramsfile/chassis_control"
+      port: 31000
+      topic_name: auto_control
+      over_time: 200

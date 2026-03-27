@@ -1,0 +1,18 @@
+Size of unsigned long: 8 bytes
+Maximum value of unsigned long: 18446744073709551615
+index = 0,m_path = /opt/usr/ap_adsfi/bag/,m_prefix = ,m_suffix = .bag,m_size = 30
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-51-30_0.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-51-52_1.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-52-14_2.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-52-36_3.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-52-58_4.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-53-20_5.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-53-42_6.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-54-04_7.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-54-26_8.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-54-48_9.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-55-10_10.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-55-32_11.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-19_0.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-56-42_1.bag
+remove file: /opt/usr/ap_adsfi/bag/adsfi_bag__2026-01-14-10-57-04_2.bag

@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "mid_track_chassis_recv/mid_track_chassis_recv_rootswc/tpvehiclestate",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5115",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibVehicleInfoPPortPrototype_DdsProvidedServiceInstance6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "Odometry/OdometryExecutable26Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20244",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype4_DdsRequiredServiceInstance111"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Odometry/OdometryExecutable26Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20204",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype1_DdsRequiredServiceInstance40"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Odometry/OdometryExecutable26Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20229",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Odometry/OdometryExecutable26Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20209",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpododr_DdsProvidedServiceInstance37"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Odometry/OdometryExecutable26Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20223",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance41"
+        }
+      ]
+    }
+  ]
+}

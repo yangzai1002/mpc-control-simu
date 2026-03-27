@@ -1,0 +1,15 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+driver_dev_null:
+  sendInstanceID:
+  recvInstanceID:
+    SensorLidarPacketServiceInterface:
+        instanceId: [20232,20231,20234]
+        portName: ["RPortPrototype6","RPortPrototype5","RPortPrototype7"]
+    SensorCompressedImageListServiceInterface:
+        instanceId: [20210]
+        portName: ["RPortPrototype1"]
+    SensorRadarPacketServiceInterface:
+        instanceId: [20219]
+        portName: ["RPortPrototype2"]

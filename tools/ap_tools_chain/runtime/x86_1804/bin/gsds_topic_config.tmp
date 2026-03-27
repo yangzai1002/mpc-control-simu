@@ -1,0 +1,6 @@
+HwCameraList_compressed_image_list,g2r,./libmsgpack2rosimageplugin.so
+/tpcompressed_image_list,g2r,./libmsgpack2rosimageplugin.so
+/tpsemanticmap,g2r,./libmsgpack2autodebugplugin.so
+FusionSemanticMap_tpsemanticmap,g2r,./libmsgpack2autodebugplugin.so
+PathSelector_tppathplan_auto,g2r,./libmsgpack2autodebugplugin.so
+

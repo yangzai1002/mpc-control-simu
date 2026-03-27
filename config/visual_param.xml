@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- 可视化开关 -->
+    <vis_cam>true</vis_cam>
+    <vis_lidar>true</vis_lidar>
+    <vis_radar>true</vis_radar>
+    <!-- 数据记录开关 -->
+    <data_record>false</data_record>
+    <data_path>./dataset</data_path>
+</config>

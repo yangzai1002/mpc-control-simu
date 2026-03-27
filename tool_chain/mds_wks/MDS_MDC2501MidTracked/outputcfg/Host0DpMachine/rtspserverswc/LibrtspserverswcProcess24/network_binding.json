@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "rtspserverswc/rtspserverswc_rootswc/video_encoded_frame",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5084",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance158"
+        }
+      ]
+    }
+  ]
+}

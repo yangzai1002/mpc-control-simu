@@ -1,0 +1,386 @@
+{
+  "Service": {
+    "cluster_base_path": "/opt/platform/mdc_platform",
+    "project_config_path": "/opt/usr/ap_adsfi/"
+  },
+  "components": [
+    {
+      "component_name": "AEBControl",
+      "component_fg": "ControlFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "BD21Imu",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "Control",
+      "component_fg": "ControlFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "DevNull",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "FusionFollow",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "FusionSemanticMap",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwCameraList",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwFr671RadarFront",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwFr671RadarLeft",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwFr671RadarRight",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwL106LidarFront",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwL106LidarLeft",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "HwL106LidarRight",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "LidarDetection",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "LidarSlam",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "LidarTerrainMapDetection",
+      "component_fg": "LidarTerrainMapFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "Location",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "MdcCameraStitch",
+      "component_fg": "StitchFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "MultiCameraDetection",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "Odometry",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "PathSelector",
+      "component_fg": "ControlFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "PlanningAdjust",
+      "component_fg": "AdjustFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "PlanningArrive",
+      "component_fg": "ArriveFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "PlanningFollow",
+      "component_fg": "FollowFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "PlanningTrack",
+      "component_fg": "TrackFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "RemoteControl",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "VehicleChassisRecv",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "VehicleChassisSend",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XDataTriggerRecorder",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XFaultHandler",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XH265Encoder",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XH265Recorder",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XH265RtpPusher",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XH265RtspServer",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XRemoteContolPriorToAuto",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XSystemMonitor",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XTaskExecutor",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XVehicleStatusRecorder",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XvideoEditor",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XZmqNotification",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XZmqRc",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    },
+    {
+      "component_name": "XZmqTask",
+      "component_fg": "BasicFG",
+      "component_environments": {
+        "EM_INNER_APP_USER": "root",
+        "CM_CONFIG_FILE_PATH": "",
+        "LD_LIBRARY_PATH": ""
+      }
+    }
+  ]
+}

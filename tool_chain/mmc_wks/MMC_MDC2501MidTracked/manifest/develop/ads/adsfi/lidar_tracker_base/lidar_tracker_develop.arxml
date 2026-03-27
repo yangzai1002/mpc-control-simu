@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="827cb5f2-7a74-4e8a-adc5-799d9c6d22b3">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="47c0228c-aab1-4f65-b79c-98fe7372c79e">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="98d6a500-9674-4bde-8dcd-a948e0bf3471">
+              <SHORT-NAME>LidarTrackerApplication</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="0d84b570-4115-4c54-bf59-64920d59f73e">
+                  <SHORT-NAME>Execution</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="5dd46f8d-0a95-4261-b911-b46e282a9b25">
+                      <SHORT-NAME>LidarTrackerExecutable</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="7f4397e6-1c18-4170-8ce6-95970441fbee">
+                        <SHORT-NAME>LidarTrackerRootSwComponent</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/LidarTrackerApplication/SwComponent/LidarTrackerApplicationSwComponent</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="89aece5d-96cb-4691-986c-287a8a88d5ef">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE S="" UUID="b374d8f5-82eb-4a98-9fd3-d3032860f9eb">
+                      <SHORT-NAME>LidarTrackerApplicationSwComponent</SHORT-NAME>
+                      <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                      <PORTS>
+                        <R-PORT-PROTOTYPE UUID="90bb2991-3a6c-4bfb-9c54-d50aa4677c93">
+                          <SHORT-NAME>LidarTrackerLidarDataRPort</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/PlatformServiceInterface/LidarServiceInterface/LidarServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <P-PORT-PROTOTYPE S="" UUID="8c556632-1646-4acd-807e-07e3e9485828">
+                          <SHORT-NAME>LidarTrackerObjectArrayPPort</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/ObjectArrayServiceInterface/ObjectArrayInterface</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="ac619ad2-e577-491a-b9db-ee41166f0f9c">
+                          <SHORT-NAME>LidarTrackerObjectArrayRPort</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/ObjectArrayServiceInterface/ObjectArrayInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                        <R-PORT-PROTOTYPE UUID="34e9effe-50b6-49c5-b9a7-294e4241c9d8">
+                          <SHORT-NAME>LidarTrackerLocationDataRPort</SHORT-NAME>
+                          <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface</REQUIRED-INTERFACE-TREF>
+                        </R-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

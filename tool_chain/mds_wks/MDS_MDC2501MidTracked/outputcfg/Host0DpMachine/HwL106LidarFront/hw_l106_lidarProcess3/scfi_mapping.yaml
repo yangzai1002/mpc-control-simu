@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+hw_l106_lidar:
+  sendInstanceID:
+    SensorLidarPacketServiceInterface:
+        instanceId: [20234]
+        portName: ["lidarpackets"]
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20201]
+        portName: ["lidarpoints"]
+  recvInstanceID:

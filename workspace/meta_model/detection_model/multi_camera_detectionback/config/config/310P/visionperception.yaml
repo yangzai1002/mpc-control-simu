@@ -1,0 +1,7 @@
+camera_name: [front_h100, left_front, right_front, left_back, right_back, back]
+token: VisionPerceptionImpl
+
+processors:
+  - visionperception_group0.yaml
+  - visionperception_group1.yaml
+  - visionperception_group2.yaml

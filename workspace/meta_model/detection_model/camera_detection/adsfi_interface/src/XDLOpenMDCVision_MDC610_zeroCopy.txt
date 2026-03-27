@@ -1,0 +1,46 @@
+#include "XDLOpenMDCVision_MDC610_zeroCopy.h"
+#include "PerceptionVPResult.h"
+#include "mdc_vision_process.h"
+
+void XDLOpenMDCVision_MDC610_zeroCopy ( const SensorImageList& images_in , 	// 视觉图像输入列表	
+PerceptionVPResult& vpresults , 	// 视觉感知结果输出	
+SensorImageList& debug_out ){
+	static mdc_vision_process handle;
+	static std::string init_err;
+	std::string pro_err;
+	static std::shared_ptr<pertarget::FaultDiagnosis<PerceptionVPResult>> error_handle_ptr = std::make_shared<pertarget::FaultDiagnosis<PerceptionVPResult>>();
+	static double last_frame_stamp=0.0;
+	std::cout<<"images_in_stamp:"<<std::fixed<<images_in.header.time<<std::endl;
+	if(handle.init_status<0){
+		// Version 版本号描述
+		// V1.0 : 初始版本 20250326
+		vpresults.header.module_name="XDLOpenMDCVision_MDC610_zeroCopy V1.0";
+		std::cout<<"XDLOpenMDCVision Init vpresults.header.module_name:"<<vpresults.header.module_name<<std::endl;
+		handle.Init(init_err,error_handle_ptr);
+	}
+
+	if(handle.init_status>0){
+		const std::string error_type = "3032008_SensorImageListTimeOut_error";
+		if(last_frame_stamp == images_in.header.time || images_in.header.time<1.0F)
+		{
+			//1.时间戳重复故障
+			double error_stamp = images_in.header.time;
+			if(images_in.header.time<1.0)
+				error_stamp = avos::common::NodeTime::Now().ToSecond();
+			bool is_trigger_error=true;
+			std::string error_info = "plese check camera data!!";
+			error_handle_ptr->SetTopicTimeOut(vpresults,error_type,error_info);
+			return;
+		}else{
+			error_handle_ptr->ResetError(error_type,images_in.header.time);
+		}
+		last_frame_stamp = images_in.header.time;
+		handle.Process(images_in, vpresults, debug_out, pro_err);
+		std::cout<<"XDLOpenMDCVision process done process_err :"<<pro_err<<std::endl;
+	}else{
+		error_handle_ptr->SetInitError(vpresults,init_err);
+		//2.初始化失败故障
+		std::cout<<"XDLOpenMDCVision init error:"<<handle.init_status<<" init_err:"<<init_err<<std::endl;
+	}
+}
+

@@ -1,0 +1,59 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "driver_dev_null/driver_dev_null_rootswc/RPortPrototype1",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5128",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance154"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "driver_dev_null/driver_dev_null_rootswc/RPortPrototype2",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5130",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype2_DdsRequiredServiceInstance155"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "driver_dev_null/driver_dev_null_rootswc/RPortPrototype5",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5127",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype5_DdsRequiredServiceInstance158"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "driver_dev_null/driver_dev_null_rootswc/RPortPrototype6",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5126",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype6_DdsRequiredServiceInstance159"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "driver_dev_null/driver_dev_null_rootswc/RPortPrototype7",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5129",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype7_DdsRequiredServiceInstance160"
+        }
+      ]
+    }
+  ]
+}

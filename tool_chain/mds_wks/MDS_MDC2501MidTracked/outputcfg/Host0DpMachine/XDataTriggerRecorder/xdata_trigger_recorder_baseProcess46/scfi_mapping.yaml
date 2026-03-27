@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+xdata_trigger_recorder_base:
+  sendInstanceID:
+    BagStatusServiceInterface:
+        instanceId: [20216]
+        portName: ["bag_ondemand_status"]
+  recvInstanceID:
+    FaultDataServiceInterface:
+        instanceId: [20220]
+        portName: ["tpfault_data"]

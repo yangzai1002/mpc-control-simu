@@ -1,0 +1,24 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+fusion_location_base:
+  sendInstanceID:
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tpfusionloc"]
+  recvInstanceID:
+    SensorLidarPointCloudServiceInterface:
+        instanceId: [20203,20203,20201,20201,20201,20201,20203,20203]
+        portName: ["tpfront_right_lidar_points","tpfront_right_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_middle_lidar_points","tpfront_right_lidar_points","tpfront_right_lidar_points"]
+    SensorImuServiceInterface:
+        instanceId: [20223,20223,20223,20223]
+        portName: ["tpsensorimu","tpsensorimu","tpsensorimu","tpsensorimu"]
+    LocationServiceInterface:
+        instanceId: [20229,20229]
+        portName: ["tpimu","tpimu"]
+    SensorWheelSpeedServiceInterface:
+        instanceId: [20204,20204,20204]
+        portName: ["tpwheelspeed","tpwheelspeed","tpwheelspeed"]
+    LocationInfoIntf:
+        instanceId: [20209,20206]
+        portName: ["tpododr","tpliodr"]

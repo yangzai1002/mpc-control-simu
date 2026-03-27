@@ -1,0 +1,9 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+xh265_encoder:
+  sendInstanceID:
+    SensorImageServiceInterface:
+        instanceId: [20247]
+        portName: ["video_encoded_frame"]
+  recvInstanceID:

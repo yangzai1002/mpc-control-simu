@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="a5beee15-137f-4a2e-8b63-6abc5ebcf1f2">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="6b778c5d-2007-4a13-954f-82d9a54a697b">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="82e07439-6c66-451e-a4fa-1c950d8c7b9b">
+              <SHORT-NAME>Odometry</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="bbdf1360-c0c5-4a54-a57d-84ee3e362468">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="763be6c5-85e4-4f66-a504-98eb4dfd1620">
+                      <SHORT-NAME>odometry_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="c2862cfe-429d-4872-a81d-5c1ed4ee0e05">
+                        <SHORT-NAME>odometry_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/Odometry/SwComponent/odometry_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

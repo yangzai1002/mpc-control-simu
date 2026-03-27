@@ -1,0 +1,295 @@
+The target system is: Linux -  - arm
+The host system is: Linux - 5.15.0-140-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is Clang, found in "/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is Clang, found in "/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb9f5/fast && make: Warning: File 'Makefile' has modification time 0.035 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_cb9f5.dir/build.make CMakeFiles/cmTC_cb9f5.dir/build
+make[1]: Entering directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_cb9f5.dir/flags.make' has modification time 0.033 s in the future
+Building C object CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o
+/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang   -v -o CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin
+ (in-process)
+ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang-15" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=off -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -mllvm -float-load-perfect=0 -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -resource-dir /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4 -isysroot /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include -fdebug-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target aarch64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include
+End of search list.
+Linking C executable cmTC_cb9f5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb9f5.dir/link.txt --verbose=1
+/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang     -v CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o  -o cmTC_cb9f5 
+iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin
+ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld" --sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_cb9f5 /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a -lc /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: Leaving directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp'
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include]
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/local/include]
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include]
+  implicit include dirs: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/local/include;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_cb9f5/fast && make: Warning: File 'Makefile' has modification time 0.035 s in the future]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cb9f5.dir/build.make CMakeFiles/cmTC_cb9f5.dir/build]
+  ignore line: [make[1]: Entering directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp']
+  ignore line: [make[1]: Warning: File 'CMakeFiles/cmTC_cb9f5.dir/flags.make' has modification time 0.033 s in the future]
+  ignore line: [Building C object CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang   -v -o CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)]
+  ignore line: [Target: aarch64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang-15" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=off -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -mllvm -float-load-perfect=0 -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -resource-dir /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4 -isysroot /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include -fdebug-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target aarch64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_cb9f5]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb9f5.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang     -v CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o  -o cmTC_cb9f5 ]
+  ignore line: [iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)]
+  ignore line: [Target: aarch64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin]
+  link line: [ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld" --sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_cb9f5 /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a -lc /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld] ==> ignore
+    arg [--sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_cb9f5] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o] ==> ignore
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_cb9f5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a] ==> lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+    arg [-lc] ==> lib [c]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a] ==> lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o] ==> ignore
+  remove lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+  remove lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib64]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib64]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib64;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib64;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d34b6/fast && make: Warning: File 'Makefile' has modification time 0.034 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_d34b6.dir/build.make CMakeFiles/cmTC_d34b6.dir/build
+make[1]: Entering directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_d34b6.dir/flags.make' has modification time 0.03 s in the future
+Building CXX object CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o
+/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++    -v -std=gnu++17 -o CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin
+ (in-process)
+ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang-15" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=off -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -mllvm -float-load-perfect=0 -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -resource-dir /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4 -isysroot /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1 -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include -std=gnu++17 -fdeprecated-macro -fdebug-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target aarch64-unknown-linux-gnu
+ignoring nonexistent directory "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include
+ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include
+End of search list.
+Linking CXX executable cmTC_d34b6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d34b6.dir/link.txt --verbose=1
+/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++      -v CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d34b6 
+iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)
+Target: aarch64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin
+ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld" --sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_d34b6 /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lunwind -lm /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a -lc /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+make[1]: Leaving directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp'
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1]
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include]
+    add: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include/c++/v1]
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/local/include]
+  collapse include dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include]
+  implicit include dirs: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include/c++/v1;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/local/include;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_d34b6/fast && make: Warning: File 'Makefile' has modification time 0.034 s in the future]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d34b6.dir/build.make CMakeFiles/cmTC_d34b6.dir/build]
+  ignore line: [make[1]: Entering directory '/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp']
+  ignore line: [make[1]: Warning: File 'CMakeFiles/cmTC_d34b6.dir/flags.make' has modification time 0.03 s in the future]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++    -v -std=gnu++17 -o CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)]
+  ignore line: [Target: aarch64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang-15" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=off -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -mllvm -float-load-perfect=0 -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -resource-dir /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4 -isysroot /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1 -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include -internal-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include -internal-externc-isystem /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include -std=gnu++17 -fdeprecated-macro -fdebug-compilation-dir=/media/sf_zz/tmp/ap_adsfi/workspace/meta_model/location_model/location_basic_src/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target aarch64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include/c++/v1]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/include]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/local/include]
+  ignore line: [ /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_d34b6]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d34b6.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/clang++      -v CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d34b6 ]
+  ignore line: [iAOS BiSheng CPU 4.0.0.B009 clang version 15.0.4 (/usr1/aos/awesome-builder/AOS-Compiler/open_source/hcc_arm64le_llvm_build_src/llvm/clang cef661d416818d1c0dac048264d3942277c39a63)]
+  ignore line: [Target: aarch64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin]
+  link line: [ "/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld" --sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_d34b6 /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64 -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib -L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lunwind -lm /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a -lc /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/ld.lld] ==> ignore
+    arg [--sysroot=/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d34b6] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/Scrt1.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crti.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtbegin-aarch64.o] ==> ignore
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib]
+    arg [-L/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib] ==> dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_d34b6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lunwind] ==> lib [unwind]
+    arg [-lm] ==> lib [m]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a] ==> lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+    arg [-lc] ==> lib [c]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a] ==> lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/clang_rt.crtend-aarch64.o] ==> ignore
+    arg [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64/crtn.o] ==> ignore
+  remove lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+  remove lib [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/lib64/clang/15.0.4/lib/linux/libclang_rt.builtins-aarch64.a]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib/../lib64] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib64]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib/../lib64] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib64]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/lib] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib]
+  collapse library dir [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/bin/../sysroot/usr/lib] ==> [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib]
+  implicit libs: [c++;unwind;m;c]
+  implicit dirs: [/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib64;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib64;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/lib;/usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/lib]
+  implicit fwks: []
+
+

@@ -1,0 +1,5 @@
+camera_name: [front_infra]
+token: VisionPerceptionImpl
+
+processors:
+  - visionperception_group3.yaml

@@ -1,0 +1,1543 @@
+{
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface",
+      "events": [
+        {
+          "event": "EventVisionSegment",
+          "id": 24805,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgCameraVPResult"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VideoRtpServiceInterface",
+      "events": [
+        {
+          "event": "EventVideoRtpParamter",
+          "id": 31545,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VideoRTPParameter"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VideoEncodingPerfServiceInterface",
+      "events": [
+        {
+          "event": "EventVideoEncodingPerf",
+          "id": 41490,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VideoEncodingPerf"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleSensorControlServiceInterface",
+      "events": [
+        {
+          "event": "EventVehicleSensorControl",
+          "id": 38737,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VehicleSensorControl"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "events": [
+        {
+          "event": "EventVehicleInfo",
+          "id": 45548,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VehicleInformation"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/TrackingServiceInterface",
+      "events": [
+        {
+          "event": "EventBusinessCommand",
+          "id": 31463,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/BusinessCommand"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/TaskManageStatusServiceInterface",
+      "events": [
+        {
+          "event": "EventTaskManageStatus",
+          "id": 14366,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/TaskManageStatus"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/TaskExecuteStatusServiceInterface",
+      "events": [
+        {
+          "event": "EventTaskExecuteStatus",
+          "id": 24755,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/TaskExecuteStatus"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "events": [
+        {
+          "event": "EventWheelSpeed",
+          "id": 29843,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafWheelSpeedList"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface",
+      "events": [
+        {
+          "event": "EventSensorRadarPacket",
+          "id": 4226,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/SensorRadarPacket"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "events": [
+        {
+          "event": "EventPointCloud2",
+          "id": 49671,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgLidarFrame"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface",
+      "events": [
+        {
+          "event": "EventLidarPacket",
+          "id": 31043,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/SensorLidarPacket"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "events": [
+        {
+          "event": "EventSensorImu",
+          "id": 8135,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafIMU"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface",
+      "events": [
+        {
+          "event": "EventSensorImage",
+          "id": 12444,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageData"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "events": [
+        {
+          "event": "EventGps",
+          "id": 20028,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafGnssInfo"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface",
+      "events": [
+        {
+          "event": "EventCompressedImageList",
+          "id": 18110,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageDataList"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/Sensor4DRadarServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "events": [
+        {
+          "event": "EventRCAppRemoteCtl",
+          "id": 32868,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/AppRemoteControl"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RadarPointCloudServiceInterface",
+      "events": [
+        {
+          "event": "EventRadarPointCloud",
+          "id": 4483,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/SensorRadarPointCloud"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PlanningTrajectoryServiceInterface",
+      "events": [
+        {
+          "event": "EventPlanningTrajectory",
+          "id": 3755,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafEgoTrajectory"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PlanningStatusServiceInterface",
+      "events": [
+        {
+          "event": "EventPlanningStatus",
+          "id": 63849,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/PlanningStatus"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface",
+      "events": [
+        {
+          "event": "EventPerceptionStaticEnv",
+          "id": 31926,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/PerceptionStaticEnv"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionFinalObjectsServiceInterface",
+      "events": [
+        {
+          "event": "EventPerceptionFinalObjects",
+          "id": 64583,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafFusionOutArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/MsgImageDataListServiceInterface",
+      "events": [
+        {
+          "event": "EventImageList",
+          "id": 19949,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageDataList"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FusionObjectServiceInterface",
+      "events": [
+        {
+          "event": "EventFusionObject",
+          "id": 6271,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayMsgDataType/FusionObject"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "events": [
+        {
+          "event": "EventFaultData",
+          "id": 28026,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BusinessCommandServiceInterface",
+      "events": [
+        {
+          "event": "EventBusinessCommand",
+          "id": 31463,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/BusinessCommand"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface",
+      "events": [
+        {
+          "event": "EventVehicleActControl",
+          "id": 18405,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/VehicleActControl"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BagStatusServiceInterface",
+      "events": [
+        {
+          "event": "EventBagStatus",
+          "id": 24367,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/AppVideoProfileServiceInterface",
+      "events": [
+        {
+          "event": "EventAppVideoProfile",
+          "id": 10012,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/AppVideoProfile"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/Sotif/PerceptionSafetyArrayServiceInterface/PerceptionSafetyArrayIntf",
+      "events": [
+        {
+          "event": "PerceptionSafetyArray",
+          "id": 16295,
+          "dataType": "/HuaweiMDC/Sotif/PerceptionSafetyArrayMsgDataType/PerceptionSafetyArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/Sotif/DecistionSafetyServiceInterface/DecisionSafetyServiceInterface",
+      "events": [
+        {
+          "event": "DecisionSafetyEvent",
+          "id": 59048,
+          "dataType": "/HuaweiMDC/Sotif/DecisionSafetyMsgDataType/DecisionSafety"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/Sotif/CrossValidateArrayServiceInterface/CrossValidateArrayIntf",
+      "events": [
+        {
+          "event": "CrossValidateArray",
+          "id": 37922,
+          "dataType": "/HuaweiMDC/Sotif/CrossValidateArrayMsgDataType/CrossValidateArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServices/DiagComServer",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "Request",
+          "id": 36212,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Boolean",
+            "/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServices/DiagComClient",
+      "events": [
+        {
+          "event": "RequestTrigger",
+          "id": 52019,
+          "dataType": "/HuaweiMDC/DiagDataType/RequestTriggerType"
+        }
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "method": "GetRequest",
+          "id": 62768,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppDataType/UInt64"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Boolean",
+            "/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteArray"
+          ]
+        },
+        {
+          "method": "SendResponse",
+          "id": 17402,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppDataType/UInt64",
+            "/HuaweiMDC/StdCppDataType/Boolean",
+            "/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector"
+          ],
+          "replyDataType": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/VoConfigServiceInterface/VoConfigServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "GetVoConfig",
+          "id": 56223,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/ChnInfoList"
+          ]
+        },
+        {
+          "method": "GetVoChnAttr",
+          "id": 9804,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/ChnAttr"
+          ]
+        },
+        {
+          "method": "SetVoChnAttr",
+          "id": 44618,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t",
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/ChnAttr"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        },
+        {
+          "method": "SetVoSource",
+          "id": 22248,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t",
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/VoEnum"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        },
+        {
+          "method": "GetVoSource",
+          "id": 30687,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/VoEnum",
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        },
+        {
+          "method": "SetChnDisplayAttr",
+          "id": 17796,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t",
+            "/HuaweiMDC/PlatformServiceInterface/VoConfigDataType/DisplayAttrEnum"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/UpdateManagerServiceInterface/UpdateManagerServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "Activate",
+          "id": 4102,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/SwNameVectorType",
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/SwNameVectorType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "Finish",
+          "id": 43324,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "GetActivationProgress",
+          "id": 29393,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8",
+            "/HuaweiMDC/StdCppDataType/Int32",
+            "/HuaweiMDC/StdCppDataType/String"
+          ]
+        },
+        {
+          "method": "GetSwProcessProgress",
+          "id": 36314,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/TransferIdType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8"
+          ]
+        },
+        {
+          "method": "GetUpdatePreCheckProgress",
+          "id": 43431,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8",
+            "/HuaweiMDC/StdCppDataType/Int32",
+            "/HuaweiMDC/StdCppDataType/String"
+          ]
+        },
+        {
+          "method": "GetUpdatePreCheckResult",
+          "id": 45144,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/PreCheckResult"
+          ]
+        },
+        {
+          "method": "GetUpdateProgress",
+          "id": 34795,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8",
+            "/HuaweiMDC/StdCppDataType/Int32",
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/ItemStateVector"
+          ]
+        },
+        {
+          "method": "GetUpdateStatus",
+          "id": 61203,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/PackageManagerStatusType"
+          ]
+        },
+        {
+          "method": "ProcessSwPackage",
+          "id": 16077,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/TransferIdType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "Update",
+          "id": 64985,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppDataType/Int8"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "UpdatePreCheck",
+          "id": 2020,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8",
+            "/HuaweiMDC/StdCppDataType/String"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "GetVerifyList",
+          "id": 17584,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/VerifyCheckResultVectorType",
+            "/HuaweiMDC/StdCppDataType/Boolean",
+            "/HuaweiMDC/StdCppDataType/Int8"
+          ]
+        },
+        {
+          "method": "Rollback",
+          "id": 28344,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "ActivateByMode",
+          "id": 2439,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/SwNameVectorType",
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/SwNameVectorType",
+            "/HuaweiMDC/StdCppDataType/Int8"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/TimeDelayServiceInterface/TimeDelayServiceInterface",
+      "events": [
+        {
+          "event": "mdcEvent",
+          "id": 10488,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/TimeDelayDataType/TimeDelayDataType"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerServiceInterface/SoftwareManagerServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "GetFinggerPrint",
+          "id": 10835,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/FinggerPrintType",
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "GetHistory",
+          "id": 23435,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt64",
+            "/HuaweiMDC/StdCppDataType/UInt64"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/GetHistoryVectorType"
+          ]
+        },
+        {
+          "method": "GetHistoryInfo",
+          "id": 4639,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/SoftwarePackageHistoryRecordVector",
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "GetSwClusterInfo",
+          "id": 25213,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/SwClusterInfoVectorType"
+          ]
+        },
+        {
+          "method": "GetVersionInfo",
+          "id": 26771,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/SysVersion",
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "SetFinggerPrint",
+          "id": 22609,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/FinggerPrintType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "GetSpecificVersionInfo",
+          "id": 32010,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppDataType/String"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/VersionItem",
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "RefreshVersion",
+          "id": 11944,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/Boolean"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "GetUpdateLogList",
+          "id": 38286,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32",
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/LogVector",
+            "/HuaweiMDC/StdCppDataType/String"
+          ]
+        },
+        {
+          "method": "CleanWorkDir",
+          "id": 5466,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/PlatformServiceInterface/SoftwareManagerMsgDataTypes/DataTypes/WhiteList"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "DoArchive",
+          "id": 52788,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppDataType/Boolean"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        },
+        {
+          "method": "SetHeartBeatValue",
+          "id": 26033,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32",
+            "/HuaweiMDC/StdCppDataType/String"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/UpdateManagerMsgDataTypes/DataTypes/Response"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/SmcServiceInterface/TriggerInOut",
+      "events": [],
+      "fields": [
+        {
+          "field": "Notifier",
+          "id": 54564,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/TriggerDataType",
+          "eventGroup": []
+        },
+        {
+          "field": "Trigger",
+          "id": 24507,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/TriggerDataType",
+          "eventGroup": []
+        }
+      ],
+      "methods": [
+        {
+          "method": "AcquireFunctionGroupInfo",
+          "id": 36548,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/FunctionGroupInfoVec"
+          ]
+        },
+        {
+          "method": "ProcessSyncRequest",
+          "id": 8148,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/StateTransitionVec"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ]
+        },
+        {
+          "method": "ResetSystem",
+          "id": 43154,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/ResetCode",
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/ResetCause"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ]
+        },
+        {
+          "method": "ProcessAsyncRequest",
+          "id": 477,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/SmcMsgDataTypes/DataTypes/StateTransitionVec"
+          ],
+          "replyDataType": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/PlatformStateAgentServiceInterface/PlatformStateAgent",
+      "events": [
+        {
+          "event": "PlatformStateEvent",
+          "id": 43376,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/PlatformStateAgentMsgDataTypes/DataTypes/PlatformStateMsg"
+        }
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "method": "QueryPlatformState",
+          "id": 44471,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ]
+        },
+        {
+          "method": "RequestPlatformState",
+          "id": 37348,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t",
+            "/HuaweiMDC/ApplicationDataType/Uint32Vector"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/PlatformServices/PackClientServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "StartPack",
+          "id": 64040,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/PackClientType/PackParamType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "QueryPackStatus",
+          "id": 21666,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "StopPack",
+          "id": 18379,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "QueryPackageDigest",
+          "id": 15537,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/PackClientType/PackageDigestType"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/LpmcServiceInterface/LpmcServiceInterface",
+      "events": [
+        {
+          "event": "MdcWakeupEvent",
+          "id": 53522,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/LpmcMsgDataTypes/DataTypes/MdcWakeupEventData"
+        }
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "method": "SetLowPowerMode",
+          "id": 51001,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        },
+        {
+          "method": "SetEnterDeepSleepTime",
+          "id": 33809,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint32_t"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/DisplayServiceInterfacePkg/DisplayImageMbufServiceInterface",
+      "events": [
+        {
+          "event": "DisplayImageMbufEvent",
+          "id": 56502,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/DisplayMsgDataType/DisplayImageMbufStruct"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/DevmCenterServiceInterface/DevmCenterServiceInterface",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "MsgPipeQuery",
+          "id": 29020,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        },
+        {
+          "method": "MsgPipeCtrl",
+          "id": 17506,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        },
+        {
+          "method": "MsgPipeUpdate",
+          "id": 37011,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        },
+        {
+          "method": "MsgPipe1",
+          "id": 4161,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        },
+        {
+          "method": "MsgPipe2",
+          "id": 4744,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        },
+        {
+          "method": "MsgPipe3",
+          "id": 60620,
+          "requestDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/PlatformServiceInterface/DevmCenterMsgDataType/DataTypes/Uint8List"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/PlatformServiceInterface/DataFlowServiceInterface/DataFlowServiceInterface",
+      "events": [
+        {
+          "event": "mdcEvent",
+          "id": 10488,
+          "dataType": "/HuaweiMDC/PlatformServiceInterface/DataFlowMsgDataType/DataFlowDataType"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/PlatformService/DiagComNotifier",
+      "events": [
+        {
+          "event": "Data",
+          "id": 15323,
+          "dataType": "/HuaweiMDC/PlatformServices/DiagMsgDataType/DataTypes/ByteVector"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmServiceInterface/FmTransMcuDataService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "ReportMcuData",
+          "id": 31537,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmMcuDataHeader",
+            "/HuaweiMDC/ApplicationDataType/Uint8Vector"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmMcuDataRetInfo"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmServiceInterface/FmReportEventService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "ReportFault",
+          "id": 14388,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultData"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "ReportCheckPoint",
+          "id": 3322,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        },
+        {
+          "method": "ReportProcState",
+          "id": 24315,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/String",
+            "/HuaweiMDC/StdCppBasicDataType/uint8_t"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint32_t",
+            "/HuaweiMDC/StdCppBasicDataType/int32_t"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmServiceInterface/FmQueryService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "QueryFaultDetail",
+          "id": 36459,
+          "requestDataType": [],
+          "replyDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultDetailVector"
+          ]
+        },
+        {
+          "method": "QueryFaultOnFlag",
+          "id": 43267,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt32"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultFullVec"
+          ]
+        },
+        {
+          "method": "QueryFaultStatistic",
+          "id": 26435,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt32"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultStatData"
+          ]
+        },
+        {
+          "method": "QuerySystemFaultStatus",
+          "id": 43039,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt32"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmMcuReportFaultServiceInterface/FmMcuReportFaultService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "McuReportFault",
+          "id": 63850,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/FmFaultData"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmAlarmReceiveServiceInterface/FmReportAlmProcPolicyService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "ReportAlmProcPolicy",
+          "id": 6033,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt8",
+            "/HuaweiMDC/StdCppDataType/UInt8"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "DisableOneAlarm",
+          "id": 37733,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppDataType/UInt16",
+            "/HuaweiMDC/StdCppDataType/UInt16",
+            "/HuaweiMDC/StdCppDataType/UInt16"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/FmAlarmReceiveServiceInterface/FmAlarmReceiveService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "ReportAlarm",
+          "id": 30845,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/AlarmInfo"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/ExWdgServiceInterface/QA",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "Answer",
+          "id": 62441,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/AnswerMsgType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        },
+        {
+          "method": "Quesion",
+          "id": 47070,
+          "requestDataType": [
+            "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/DataTypes/QuesionMsgType"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/MdcPlatformServices/PlatformServiceInterface/ExWdgServiceInterface/ExwdgLowPowerNotifyService",
+      "events": [],
+      "fields": [],
+      "methods": [
+        {
+          "method": "LowPowerNotify",
+          "id": 41126,
+          "requestDataType": [
+            "/HuaweiMDC/StdCppBasicDataType/uint32_t"
+          ],
+          "replyDataType": [
+            "/HuaweiMDC/StdCppDataType/Int32"
+          ]
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/TrajetoryPredictionServiceInterface/TrajetoryPredictionInterface",
+      "events": [
+        {
+          "event": "TrajetoryPredictionEvent",
+          "id": 43381,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/TrajetoryPredictionMsgDataType/ObjPredictionOutArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/TrajPredictionServiceInterface/TrajPredictIntf",
+      "events": [
+        {
+          "event": "TrajPredictArray",
+          "id": 13749,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/TrajPredictMsgDataType/TrajPredictArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/TrafficSignalServiceInterface/TrafficSignalIntf",
+      "events": [
+        {
+          "event": "TrafficSignalArray",
+          "id": 9692,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/TrafficSignalMsgDataType/TrafficSignalArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/TrafficLightServiceInterface/TrafficLightInterface",
+      "events": [
+        {
+          "event": "TrafficLightArrayEvent",
+          "id": 15969,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/TrafficLightMsgDataType/TrafficLightArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SelectPointsServiceInterface/SelectPointsIntf",
+      "events": [
+        {
+          "event": "SelectPoints",
+          "id": 13367,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SelectPointsMsgDataType/SelectPoints"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SelectPointServiceInterface/SelectPointServiceInterface",
+      "events": [
+        {
+          "event": "SelectPointEvent",
+          "id": 3640,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SelectPointMsgDataType/SelectPoint"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SceneServiceInterface/SceneIntf",
+      "events": [
+        {
+          "event": "Scene",
+          "id": 60030,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SceneMsgDataType/Scene"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SceneFeatureServiceInterface/SceneFeatureIntf",
+      "events": [
+        {
+          "event": "SceneFeature",
+          "id": 7986,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SceneFeatureMsgDataType/SceneFeature"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SammSceneServiceInterface/SammSceneServiceInterface",
+      "events": [
+        {
+          "event": "SammSceneEvent",
+          "id": 2121,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SammSceneMsgDataType/SammScene"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/SammFeatureServiceInterface/SammFeatureServiceInterface",
+      "events": [
+        {
+          "event": "SammFeatureEvent",
+          "id": 37290,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/SammFeatureMsgDataType/SammFeature"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf",
+      "events": [
+        {
+          "event": "PlanningResult",
+          "id": 22379,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafEgoTrajectory"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/ObjectArrayServiceInterface/ObjectArrayInterface",
+      "events": [
+        {
+          "event": "ObjectArrayEvent",
+          "id": 26552,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/ObjectArrayMsgDataType/ObjectArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf",
+      "events": [
+        {
+          "event": "EventPerceptionLidarObjects",
+          "id": 30785,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHaf3dDetectionOutArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/Object2dArrayServiceInterface/Object2dArrayIntf",
+      "events": [
+        {
+          "event": "Object2dArray",
+          "id": 276,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/Object2dArrayMsgDataType/Object2dArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/NavigationResultServiceInterface/NavigationResultServiceInterface",
+      "events": [
+        {
+          "event": "NavigationResultEvent",
+          "id": 7015,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/NavigationResultMsgDataType/NavigationResultStruct"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/NavigationInfoServiceInterface/NavigationInfoIntf",
+      "events": [
+        {
+          "event": "NavigationInfo",
+          "id": 37457,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/NavigationInfoMsgDataType/NavigationInfo"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "events": [
+        {
+          "event": "LocationEvent",
+          "id": 23528,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "events": [
+        {
+          "event": "LocationInfo",
+          "id": 22646,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafLocation"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LaneLineArrayServiceInterface/LaneLineArrayInterface",
+      "events": [
+        {
+          "event": "LaneLineArrayEvent",
+          "id": 52873,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/LaneLineArrayMsgDataType/LaneLineArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/LaneLineArrayServiceInterface/LaneArrayIntf",
+      "events": [
+        {
+          "event": "LaneArray",
+          "id": 59680,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/LaneLineArrayMsgDataType/LaneArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayServiceInterface/FusionObjectArrayIntf",
+      "events": [
+        {
+          "event": "FusionObjectArray",
+          "id": 47851,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgHafFusionOutArray"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    },
+    {
+      "service": "/HuaweiMDC/FunctionalSoftware/EgoTrajectoryServiceInterface/EgoTrajectoryServiceInterface",
+      "events": [
+        {
+          "event": "EgoTrajectoryEvent",
+          "id": 50903,
+          "dataType": "/HuaweiMDC/FunctionalSoftware/EgoTrajectoryMsgDataType/EgoTrajectory"
+        }
+      ],
+      "fields": [],
+      "methods": []
+    }
+  ]
+}

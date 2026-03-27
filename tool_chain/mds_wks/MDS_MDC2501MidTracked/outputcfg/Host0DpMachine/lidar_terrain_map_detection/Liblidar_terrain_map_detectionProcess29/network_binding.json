@@ -1,0 +1,64 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "lidar_terrain_map_detection/lidar_terrain_map_detection_rootswc/tpfront_left_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5051",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance111"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "lidar_terrain_map_detection/lidar_terrain_map_detection_rootswc/tpfront_middle_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5015",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "lidar_terrain_map_detection/lidar_terrain_map_detection_rootswc/tpfront_right_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5047",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Liblidarpointsright_DdsRequiredServiceInstance189"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5050",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance113"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "lidar_terrain_map_detection/lidar_terrain_map_detection_rootswc/tplocalization",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5049",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype5_DdsRequiredServiceInstance115"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "lidar_terrain_map_detection/lidar_terrain_map_detection_rootswc/tpterrainmap",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5048",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpterrainmap_DdsProvidedServiceInstance31"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "applicationName": "/HuaweiMDC/Common/Common/xh265_encoderCompositionSwComponentType19/xh265_encoderProcess19",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImageServiceInterface",
+      "serviceId": 13,
+      "events": [
+        {
+          "event": "EventSensorImage",
+          "id": 12444,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/MsgImageData",
+          "topicName": "TopicOfEventSensorImage"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/video_encoded_frame_DdsProvidedServiceInstance49",
+          "instance": "20247",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 12444,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

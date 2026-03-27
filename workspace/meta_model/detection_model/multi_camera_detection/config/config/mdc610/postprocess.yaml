@@ -1,0 +1,27 @@
+camera_num: 6
+detector_num: 1
+merge_conf:
+  - camera_id: 0
+    detector_id: 0
+    transform_id: 0
+    merge_method: ADD
+  - camera_id: 1
+    detector_id: 0
+    transform_id: 1
+    merge_method: ADD
+  - camera_id: 2
+    detector_id: 0
+    transform_id: 2
+    merge_method: ADD
+  - camera_id: 3
+    detector_id: 0
+    transform_id: 3
+    merge_method: ADD
+  - camera_id: 4
+    detector_id: 0
+    transform_id: 4
+    merge_method: ADD
+  - camera_id: 5
+    detector_id: 0
+    transform_id: 5
+    merge_method: ADD

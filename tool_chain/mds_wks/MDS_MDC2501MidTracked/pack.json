@@ -1,0 +1,269 @@
+{
+    "cluster": {
+        "cluster": {
+            "area": "gea",
+            "machine": "Host0DpMachine",
+            "version": "1.0.0"
+        }
+    },
+    "components": {
+        "XFaultHandler": [
+            "cluster"
+        ],
+        "XvideoEditor": [
+            "cluster"
+        ],
+        "lidar_slam_base": [
+            "cluster"
+        ],
+        "remote_control_base": [
+            "cluster"
+        ],
+        "mid_track_chassis_send": [
+            "cluster"
+        ],
+        "xfault_handler_base": [
+            "cluster"
+        ],
+        "FusionFollow": [
+            "cluster"
+        ],
+        "HwFr671RadarLeft": [
+            "cluster"
+        ],
+        "MdcCameraStitch": [
+            "cluster"
+        ],
+        "xdata_trigger_recorder_base": [
+            "cluster"
+        ],
+        "RemoteControl": [
+            "cluster"
+        ],
+        "multy_camera_det_base": [
+            "cluster"
+        ],
+        "XDataTriggerRecorder": [
+            "cluster"
+        ],
+        "PlanningArrive": [
+            "cluster"
+        ],
+        "xremote_contol_prior_to_auto": [
+            "cluster"
+        ],
+        "HwFr671RadarRight": [
+            "cluster"
+        ],
+        "planning_base": [
+            "cluster"
+        ],
+        "XH265RtspServer": [
+            "cluster"
+        ],
+        "xzmq_rc": [
+            "cluster"
+        ],
+        "XZmqRc": [
+            "cluster"
+        ],
+        "PlanningAdjust": [
+            "cluster"
+        ],
+        "hw_fr671_radar": [
+            "cluster"
+        ],
+        "fusion_follow_base": [
+            "cluster"
+        ],
+        "mdc_camera_stitch_base": [
+            "cluster"
+        ],
+        "driver_dev_null": [
+            "cluster"
+        ],
+        "xh265_recorder": [
+            "cluster"
+        ],
+        "BD21Imu": [
+            "cluster"
+        ],
+        "HwL106LidarFront": [
+            "cluster"
+        ],
+        "PlanningTrack": [
+            "cluster"
+        ],
+        "DriverDevNull": [
+            "cluster"
+        ],
+        "xvideo_selector": [
+            "cluster"
+        ],
+        "LidarSlam": [
+            "cluster"
+        ],
+        "odometry_base": [
+            "cluster"
+        ],
+        "HwL106LidarRight": [
+            "cluster"
+        ],
+        "MultiCameraDetection": [
+            "cluster"
+        ],
+        "DevNull": [
+            "cluster"
+        ],
+        "xh265_rtp_pusher": [
+            "cluster"
+        ],
+        "LidarDetection": [
+            "cluster"
+        ],
+        "hw_l106_lidar": [
+            "cluster"
+        ],
+        "bd21_imu": [
+            "cluster"
+        ],
+        "aeb_control_base": [
+            "cluster"
+        ],
+        "VehicleChassisRecv": [
+            "cluster"
+        ],
+        "XTaskExecutor": [
+            "cluster"
+        ],
+        "HwL106LidarLeft": [
+            "cluster"
+        ],
+        "FusionSemanticMap": [
+            "cluster"
+        ],
+        "lidar_terrain_map_detection": [
+            "cluster"
+        ],
+        "XH265RtpPusher": [
+            "cluster"
+        ],
+        "control_base": [
+            "cluster"
+        ],
+        "dev_null_base": [
+            "cluster"
+        ],
+        "AEBControl": [
+            "cluster"
+        ],
+        "fusion_semantic_map_base": [
+            "cluster"
+        ],
+        "Odometry": [
+            "cluster"
+        ],
+        "XSystemMonitor": [
+            "cluster"
+        ],
+        "xzmq_task": [
+            "cluster"
+        ],
+        "Control": [
+            "cluster"
+        ],
+        "HwFr671RadarFront": [
+            "cluster"
+        ],
+        "XH265Recorder": [
+            "cluster"
+        ],
+        "HwCameraList": [
+            "cluster"
+        ],
+        "xvehicle_status_recorder_base": [
+            "cluster"
+        ],
+        "PlanningFollow": [
+            "cluster"
+        ],
+        "XZmqNotification": [
+            "cluster"
+        ],
+        "PathSelector": [
+            "cluster"
+        ],
+        "fusion_location_base": [
+            "cluster"
+        ],
+        "VehicleChassisSend": [
+            "cluster"
+        ],
+        "XH265Encoder": [
+            "cluster"
+        ],
+        "mid_track_chassis_recv": [
+            "cluster"
+        ],
+        "xtask_executor": [
+            "cluster"
+        ],
+        "xzmq_notification": [
+            "cluster"
+        ],
+        "rtspserverswc": [
+            "cluster"
+        ],
+        "XVehicleStatusRecorder": [
+            "cluster"
+        ],
+        "hw_camera_list": [
+            "cluster"
+        ],
+        "object_following_base": [
+            "cluster"
+        ],
+        "planning_adjust_base": [
+            "cluster"
+        ],
+        "path_selector_base": [
+            "cluster"
+        ],
+        "XZmqTask": [
+            "cluster"
+        ],
+        "XRemoteContolPriorToAuto": [
+            "cluster"
+        ],
+        "planning_arrive_base": [
+            "cluster"
+        ],
+        "xh265_encoder": [
+            "cluster"
+        ],
+        "xsystem_monitor": [
+            "cluster"
+        ],
+        "LidarTerrainMapDetection": [
+            "cluster"
+        ],
+        "lidar_det_base": [
+            "cluster"
+        ],
+        "Location": [
+            "cluster"
+        ],
+        "sensor_viualize_base": [
+            "cluster"
+        ],
+        "SensorVisualize": [
+            "cluster"
+        ],
+        "PlanningExecutable31": [
+            "cluster"
+        ],
+        "Planning": [
+            "cluster"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+hw_camera_list:
+  sendInstanceID:
+    SensorCompressedImageListServiceInterface:
+        instanceId: [20210]
+        portName: ["compressed_image_list"]
+    MsgImageDataListServiceInterface:
+        instanceId: [20200]
+        portName: ["image_list"]
+  recvInstanceID:

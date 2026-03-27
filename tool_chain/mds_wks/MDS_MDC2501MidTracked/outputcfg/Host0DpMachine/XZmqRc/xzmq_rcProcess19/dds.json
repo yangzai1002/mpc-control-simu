@@ -1,0 +1,39 @@
+{
+  "applicationName": "/HuaweiMDC/Common/Common/xzmq_rcCompositionSwComponentType19/xzmq_rcProcess19",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "serviceId": 7,
+      "events": [
+        {
+          "event": "EventRCAppRemoteCtl",
+          "id": 32868,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/AppRemoteControl",
+          "topicName": "TopicOfEventRCAppRemoteCtl"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/ZmqRRemoteControlPPortPrototype_DdsProvidedServiceInstance26",
+          "instance": "20213",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 32868,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

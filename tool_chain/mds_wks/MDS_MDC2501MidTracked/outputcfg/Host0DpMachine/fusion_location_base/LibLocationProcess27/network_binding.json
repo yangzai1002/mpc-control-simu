@@ -1,0 +1,107 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpfront_middle_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5096",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype1_DdsRequiredServiceInstance107"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpfront_right_lidar_points",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPointCloudServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5090",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype3_DdsRequiredServiceInstance109"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpfusionloc",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5008",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/Libtpfusionloc_DdsProvidedServiceInstance38"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpimu",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5000",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype5_DdsRequiredServiceInstance111"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5001",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Libtpimu_DdsRequiredServiceInstance185"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpliodr",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5007",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype7_DdsRequiredServiceInstance113"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpododr",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5004",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype8_DdsRequiredServiceInstance114"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpsensorimu",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5094",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype4_DdsRequiredServiceInstance110"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "fusion_location_base/fusion_location_base_rootswc/tpwheelspeed",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5002",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/LibRPortPrototype6_DdsRequiredServiceInstance112"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5003",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Libivwheelspeed_DdsRequiredServiceInstance184"
+        },
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5010",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/Libivwheelspeed_DdsRequiredServiceInstance186"
+        }
+      ]
+    }
+  ]
+}

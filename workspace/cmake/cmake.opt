@@ -1,0 +1,3 @@
+Control,/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/control/model.cmake,/opt/usr/ap_adsfi/node_config/pnc_model/control/
+PlanningTrack,/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_arrive_open/model.cmake,/opt/usr/ap_adsfi/node_config/pnc_model/planning_arrive_open/
+Location,/home/cxy/control-simulation/ap_auto/workspace/meta_model/location_model/location/model.cmake,/opt/usr/ap_adsfi/node_config/location_model/location/

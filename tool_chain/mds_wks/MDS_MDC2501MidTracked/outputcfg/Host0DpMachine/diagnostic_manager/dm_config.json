@@ -1,0 +1,252 @@
+{
+  "process": "/ap/diag/DiagMgrProcessDesign",
+  "doIP": {
+    "shortName": "/HuaweiMDC/Machine/Host0DpMachine/IsoDoip",
+    "maxRequestBytes": 4194304
+  },
+  "diagnosticServerInstance": [
+    {
+      "shortName": "/HuaweiMDC/UploadableSoftwarePackage/MdcPlatform",
+      "diagnosticAddress": {
+        "physical": 1818,
+        "functional": [
+          2015
+        ]
+      },
+      "contributionSet": "/HuaweiMDC/DiagnosticMdcExtractTemplate/CommConfig/MdcDext",
+      "tpInstances": [
+        "/HuaweiMDC/Machine/Host0DpMachine/IsoDoip"
+      ]
+    }
+  ],
+  "contributionSets": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/CommConfig/MdcDext",
+      "agingRequiresTestedCycles": false,
+      "clearDtcLimitation": "allSupportedDtcs",
+      "maxNumberOfRequestCorrectlyReceivedResponsePending": 3,
+      "responseOnSecondDeclinedRequest": false,
+      "statusBitHandlingTestFailedSinceLastClear": "statusBitAgingAndDisplacement",
+      "typeOfDtcSupported": "saeJ2012_da",
+      "memorys": [],
+      "serviceTables": [],
+      "dtcs": [],
+      "dtcGroups": [],
+      "events": [],
+      "operationCycles": [
+        "/HuaweiMDC/DiagnosticMdcExtractTemplate/DEM/OperationCylces/opcycle_sleep_wakeup"
+      ],
+      "enableConditions": [],
+      "clearConditions": []
+    }
+  ],
+  "serviceTables": [],
+  "serviceClass": [],
+  "serviceInstance": [],
+  "diagnosticSessions": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DignosticSessions/DefaultSession",
+      "sessionId": 1,
+      "p2ServerMax": 0.05,
+      "p2StarServerMax": 4.0
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DignosticSessions/ExtendedSession",
+      "sessionId": 3,
+      "p2ServerMax": 0.05,
+      "p2StarServerMax": 4.0
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DignosticSessions/ProgrammingSession",
+      "sessionId": 2,
+      "p2ServerMax": 0.05,
+      "p2StarServerMax": 4.0
+    }
+  ],
+  "diagnosticSecurityLevel": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/SecurityLevels/Level1",
+      "keySize": 4,
+      "numFailedSecurityAccess": 3,
+      "securityDelayTime": 10.0,
+      "seedSize": 4
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/SecurityLevels/Level2",
+      "keySize": 16,
+      "numFailedSecurityAccess": 3,
+      "securityDelayTime": 10.0,
+      "seedSize": 16
+    }
+  ],
+  "diagnosticEnvironmentalConditions": [],
+  "diagnosticDataIdentifierSet": [],
+  "diagnosticDataIdentifier": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0xd005",
+      "did": 53253,
+      "didSize": 4
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9103",
+      "did": 37123,
+      "didSize": 2
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9104",
+      "did": 37124,
+      "didSize": 3
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9105",
+      "did": 37125,
+      "didSize": 5
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9106",
+      "did": 37126,
+      "didSize": 4
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0xd003",
+      "did": 53251,
+      "didSize": 1
+    }
+  ],
+  "diagnosticElements": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0xd005",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0xd005"
+          }
+        }
+      ]
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9103",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0x9103"
+          }
+        }
+      ]
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9104",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0x9104"
+          }
+        }
+      ]
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9105",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0x9105"
+          }
+        }
+      ]
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0x9106",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0x9106"
+          }
+        }
+      ]
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DCM/DIDs/DiagnosticDataIdentifier_0xd003",
+      "dataElements": [
+        {
+          "bitOffset": 0,
+          "dataElement": {
+            "shortName": "DiagnosticDataElement_0xd003"
+          }
+        }
+      ]
+    }
+  ],
+  "operationCycle": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DEM/OperationCylces/opcycle_sleep_wakeup",
+      "type": "warmup",
+      "automaticEnd": false,
+      "cycleAutostart": false,
+      "cycleStatusStorage": false
+    }
+  ],
+  "diagnosticRoutine": [],
+  "diagnosticMemoryDestination": [],
+  "freezeFrames": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DEM/DTCs/FreezeFrames/snapshot1",
+      "recordNumber": 1,
+      "trigger": "testFailed",
+      "customTrigger": "",
+      "update": true
+    }
+  ],
+  "extendedDataRecords": [
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DEM/DTCs/ExtendedDataRecords/extendDataRecord_1",
+      "recordNumber": 1,
+      "trigger": "testFailed",
+      "update": true,
+      "elements": []
+    },
+    {
+      "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/DEM/DTCs/ExtendedDataRecords/extendDataRecord_2",
+      "recordNumber": 2,
+      "trigger": "testFailed",
+      "update": true,
+      "elements": []
+    }
+  ],
+  "dtcProps": [],
+  "dtcUds": [],
+  "dtcGroup": [],
+  "clearCondition": [],
+  "clearConditionGroup": [],
+  "enableCondition": [],
+  "enableConditionGroup": [],
+  "debounceAlgorithm": {
+    "counterBased": [],
+    "timerBased": [],
+    "monitorInternal": [
+      {
+        "shortName": "/HuaweiMDC/DiagnosticMdcExtractTemplate/CommConfig/MdcDext/debounceAlgorithm_noDebounce"
+      }
+    ]
+  },
+  "diagnosticEvent": [],
+  "diagnosticSwMappings": {
+    "processCmInstance": 1,
+    "network": "192.168.10.6",
+    "dcm": {
+      "externalDcmService": [],
+      "appInfoService": [],
+      "dcmInfoService": []
+    },
+    "dem": {
+      "demInfoService": [],
+      "appInfoService": []
+    }
+  },
+  "ServiceValidations": [],
+  "memoryIdentifiers": []
+}

@@ -1,0 +1,12 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+multy_camera_det_base:
+  sendInstanceID:
+    VisionSegmentServiceInterface:
+        instanceId: [20207]
+        portName: ["tpperception_vp_result"]
+  recvInstanceID:
+    MsgImageDataListServiceInterface:
+        instanceId: [20200]
+        portName: ["tpimage_list"]

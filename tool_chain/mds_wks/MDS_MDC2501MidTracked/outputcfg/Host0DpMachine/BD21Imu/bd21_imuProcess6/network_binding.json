@@ -1,0 +1,48 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "BD21Imu/bd21_imuExecutable6Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20244",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/ivsensorgps_DdsProvidedServiceInstance45"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "BD21Imu/bd21_imuExecutable6Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20223",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/ImuPPortPrototype_DdsProvidedServiceInstance25"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "BD21Imu/bd21_imuExecutable6Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20204",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/WheelSpeedPPortPrototype_DdsProvidedServiceInstance23"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "BD21Imu/bd21_imuExecutable6Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20229",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tpimu_DdsProvidedServiceInstance30"
+        }
+      ]
+    }
+  ]
+}

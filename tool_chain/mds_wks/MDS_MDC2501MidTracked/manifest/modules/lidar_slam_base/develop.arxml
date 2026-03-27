@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="4b02268e-c444-4f54-af8e-31a8ed981be0">
+      <SHORT-NAME>HuaweiMDC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="19ec2174-6b84-44f0-8905-0187322118b4">
+          <SHORT-NAME>FunctionalSoftware</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ab9967d1-3b7d-4b55-b11c-9598b0e1237a">
+              <SHORT-NAME>LidarSlam</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="a3adfb07-3dff-4722-8fd9-a5e836652db1">
+                  <SHORT-NAME>SwComponent</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="1ba0434e-2067-430d-b38a-694deb82678f">
+                      <SHORT-NAME>lidar_slam_base</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="827c5174-3883-408f-9d16-18ce598cb245">
+                        <SHORT-NAME>lidar_slam_base_rootswc</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/HuaweiMDC/FunctionalSoftware/LidarSlam/SwComponent/lidar_slam_base</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,232 @@
+vin_file: /opt/cfg/icaos/vin
+vehicle_config_path: /opt/cfg/icaos/calibrations
+keyfile_storage_path: /opt/usr/records/mrct_app/
+enable_pre_autonomy_tasking: true
+enable_bad_gps_tasking: true
+
+planner:
+  track:
+    # 最少能够执行循迹的路点数（加密后的点数，约 0.1 米分辨率）
+    min_way_points: 10
+    # 是否在启动时全局匹配最近点
+    match_global_nearest_point_when_start: false
+    # 车辆距离路径最近点的最大距离（单位：米）
+    max_distance_to_nearest_point: 20.0
+    # 在路径中搜索最佳匹配自车位置的点时，向前搜索的时间约束（单位：秒）
+    look_ahead_time: 2.0
+    # 在路径中搜索最佳匹配自车位置的点时，向前搜索的最小距离（单位：米）
+    min_look_ahead_distance: 2.0
+    # 绕圈循迹时，判断循迹方向时的最大航向差（单位：度）
+    max_heading_diff: 60
+    # 绕圈循迹时，判断循迹方向时用于拟合航向路点数（加密后的点数，约 0.1米分辨率）
+    heading_fit_points: 30
+    # 局部参考路径提取策略( expected_speed_kph: km/h, local_path_length_m: m)
+    local_path_policy:
+      - expected_speed_kph: 30.0
+        local_path_length_m: 100.0
+      - expected_speed_kph: 60.0
+        local_path_length_m: 150.0
+      - expected_speed_kph: 80.0
+        local_path_length_m: 350.0
+
+  closedloop:
+    constraints:
+      # 绕圈循迹时，路径最小总长度（单位：米）
+      min_total_distance: 60.0
+      # 绕圈循迹时，起始点位置距离最大距离差（单位：米）
+      max_distance_between_start_end: 10.0
+  # 任务结束时需要额外清除的故障
+  extra_faults_to_clear:
+    [
+      3072001,
+      3072002,
+      3072003,
+      3072004,
+      3072005,
+      3072006,
+      3072007,
+      3072008,
+      3072014,
+      3072015,
+      3072016,
+      3072017,
+      3072018,
+      3072019,
+      3092001,
+      3092002,
+      3092003,
+      3092004,
+      3092005,
+      3092006,
+      3092007,
+      3092008,
+      3102002,
+      3102002,
+      3102003,
+      3102004,
+      3082001,
+      3082002,
+      3082003,
+      3082004,
+      3082005,
+      3082006,
+      3082007,
+      3082008,
+      3082009,
+      3082010,
+      3082011,
+      3092001,
+      3092002,
+      3092003,
+      3092004,
+      3092005,
+      3092006,
+      3092007,
+      3092008,
+    ]
+
+resource:
+  monitor:
+    board_type: mdc610
+    ping_ip: 26.28.1.1
+    threshold:
+      # CPU平均负载
+      threshold_cpu_per_load: 0.8
+      # 系统总负载,
+      threshold_cpu_total_load: 10
+      # 内存使用率（百分比）
+      threshold_usage_ram: 70
+      # 系统分区使用率（百分比）
+      threshold_usage_disk_sys: 70
+      # 系统分区路径,
+      check_disk_sys_path: /tmp
+      # 用户分区使用率（百分比）
+      threshold_usage_disk_user: 85
+      # 用户分区路径
+      check_disk_user_path: /opt/usr
+      # CPU温度上限,
+      threshold_cpu_temp_upper: 70
+      # CPU温度下限,
+      threshold_cpu_temp_lower: -30
+      # GPU温度上限,
+      threshold_gpu_temp_upper: 70
+      # GPU温度下限,
+      threshold_gpu_temp_lower: -30
+      # 板卡温度上限,
+      threshold_board_temp_upper: 70
+      # 板卡温度下限,
+      threshold_board_temp_lower: -30
+      # 网卡名称，系统会对这个网卡上的流量进行监控,
+      ifname: ethg1
+      # 网卡上的数据发送带宽（单位：Mbps）,
+      threshold_tx_bandwidth: 100
+      # 网卡上的数据接收带宽（单位：Mbps）,
+      threshold_rx_bandwidth: 100
+      # 共享内存使用率（百分比）,
+      threshold_usage_shm: 60
+      # 信号量使用率（百分比）,
+      threshold_usage_sem: 60
+
+system:
+  recorder:
+    fault:
+      # 保存路径
+      location: /opt/usr/records/faults
+      # 单个文件保存时长（单位：秒）
+      single_file_duration: 120
+      # 存储容量配额（单位：MB）
+      quota: 1024
+      # 清理历史文件的阈值（单位：MB），不能大于 quota 的值
+      clean_threshold: 1000
+
+    video:
+      # 重采样间隔，每 resample_interval 采样一个
+      resample_interval: 5
+      compose:
+        ttc_filename: wqy-microhei.ttc
+        left_front: front_fisheye
+        right_front: back_fisheye
+        left_back: left_fisheye
+        right_back: right_fisheye
+      encoder:
+        # 需要加载的插件的动态链接库路径
+        so_path: libimgdvpp_plugin_h265_v1_220.so
+        # 固定码率（单位：kbps）
+        constant_bps: 2048
+        # 固定宽度
+        constant_width: 1920
+        # 固定高度
+        constant_height: 1080
+        # 固定 GOP
+        constant_gop: 30
+      # 保存路径
+      location: /opt/usr/records/h265
+      # 单个文件保存时长（单位：秒）
+      single_file_duration: 120
+      # 存储容量配额（单位：MB）
+      quota: 10240
+      # 清理历史文件的阈值（单位：MB），不能大于 quota 的值
+      clean_threshold: 8192
+    status:
+      # 数据保存目录,
+      location: /opt/usr/records/blackbox
+      # 单个文件记录时长（单位：秒）,
+      single_file_duration: 120
+      # 存储空间配额（单位：MB）,
+      quota: 10240
+      # 清理存储空间的阈值（单位：MB），不能大于 quota 值,
+      clean_threshold: 8192
+      # 刷写间隔（单位：秒）
+      flush_interval: 2
+    trigger:
+      # 输出路径
+      output: "/opt/usr/records/trigger/"
+      buffer_size: 1536
+      # 单个文件记录时长（单位：秒）
+      duration: 30
+      # 存储空间配额（单位：MB）,
+      quota: 10240
+      # 清理存储空间的阈值（单位：MB），不能大于 quota 值
+      clean_threshold: 8192
+      # 需要自动触发的故障码
+      fault:
+        fault_codes:
+          - "202"
+          - "301"
+          - "302"
+          - "306"
+      topics: 
+        - "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface/EventVehicleInfo[/HuaweiMDC/instance_manifests/providedInstances/VehicleInfoPPortPrototype_DdsProvidedServiceInstance6]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorCompressedImageListServiceInterface/EventCompressedImageList[/HuaweiMDC/instance_manifests/providedInstances/compressed_image_list_DdsProvidedServiceInstance52]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorWheelSpeedServiceInterface/EventWheelSpeed[/HuaweiMDC/instance_manifests/providedInstances/WheelSpeedPPortPrototype_DdsProvidedServiceInstance23]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorGpsServiceInterface/EventGps[/HuaweiMDC/instance_manifests/providedInstances/ivsensorgps_DdsProvidedServiceInstance45]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorImuServiceInterface/EventSensorImu[/HuaweiMDC/instance_manifests/providedInstances/ImuPPortPrototype_DdsProvidedServiceInstance25]"
+        - "/HuaweiMDC/FunctionalSoftware/LocationServiceInterface/LocationServiceInterface/LocationEvent[/HuaweiMDC/instance_manifests/providedInstances/tpimu_DdsProvidedServiceInstance30]"
+        - "/HuaweiMDC/interface_manifests/interfaces/VisionSegmentServiceInterface/EventVisionSegment[/HuaweiMDC/instance_manifests/providedInstances/VisionSegmentPPortPrototype_DdsProvidedServiceInstance8]"
+        - "/HuaweiMDC/FunctionalSoftware/Object3dArrayServiceInterface/Object3dArrayIntf/EventPerceptionLidarObjects[/HuaweiMDC/instance_manifests/providedInstances/tplidarobjects_DdsProvidedServiceInstance39]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface/EventPerceptionStaticEnv[/HuaweiMDC/instance_manifests/providedInstances/tpterrainmap_DdsProvidedServiceInstance37]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface/EventPerceptionStaticEnv[/HuaweiMDC/instance_manifests/providedInstances/tpsemanticmap_DdsProvidedServiceInstance58]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PerceptionFinalObjectsServiceInterface/EventPerceptionFinalObjects[/HuaweiMDC/instance_manifests/providedInstances/tpperceptionobjects_DdsProvidedServiceInstance36]"
+        - "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayServiceInterface/FusionObjectArrayIntf/FusionObjectArray[/HuaweiMDC/instance_manifests/providedInstances/tptarget_obj_DdsProvidedServiceInstance38]"
+        - "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf/LocationInfo[/HuaweiMDC/instance_manifests/providedInstances/tpododr_DdsProvidedServiceInstance37]"
+        - "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf/LocationInfo[/HuaweiMDC/instance_manifests/providedInstances/tpfusionloc_DdsProvidedServiceInstance38]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PlanningStatusServiceInterface/EventPlanningStatus[/HuaweiMDC/instance_manifests/providedInstances/tpplanningstatus_follow_DdsProvidedServiceInstance43]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PlanningTrajectoryServiceInterface/EventPlanningTrajectory[/HuaweiMDC/instance_manifests/providedInstances/tppathplan_follow_DdsProvidedServiceInstance40]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PlanningTrajectoryServiceInterface/EventPlanningTrajectory[/HuaweiMDC/instance_manifests/providedInstances/tppathplan_auto_DdsProvidedServiceInstance40]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PlanningStatusServiceInterface/EventPlanningStatus[/HuaweiMDC/instance_manifests/providedInstances/tpplanningstatus_rc_DdsProvidedServiceInstance51]"
+        - "/HuaweiMDC/interface_manifests/interfaces/PlanningTrajectoryServiceInterface/EventPlanningTrajectory[/HuaweiMDC/instance_manifests/providedInstances/tpremote_path_DdsProvidedServiceInstance46]"
+        - "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/RCBodyCommandPPortPrototype_DdsProvidedServiceInstance22]"
+        - "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/tpvehicle_to_can_pre_aeb_DdsProvidedServiceInstance39]"
+        - "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/tpvehicle_to_can_auto_DdsProvidedServiceInstance38]"
+        - "/HuaweiMDC/interface_manifests/interfaces/BodyCommandServiceInterface/EventVehicleActControl[/HuaweiMDC/instance_manifests/providedInstances/BodyCommandPPortPrototype_DdsProvidedServiceInstance13]"
+        - "/HuaweiMDC/interface_manifests/interfaces/VideoRtpServiceInterface/EventVideoRtpParamter[/HuaweiMDC/instance_manifests/providedInstances/VideoRtpPPortPrototype_DdsProvidedServiceInstance16]"
+        - "/HuaweiMDC/interface_manifests/interfaces/TrackingServiceInterface/EventBusinessCommand[/HuaweiMDC/instance_manifests/providedInstances/TrackingPPortPrototype_DdsProvidedServiceInstance18]"
+        - "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface/EventRCAppRemoteCtl[/HuaweiMDC/instance_manifests/providedInstances/ZmqRRemoteControlPPortPrototype_DdsProvidedServiceInstance26]"
+        - "/HuaweiMDC/interface_manifests/interfaces/BusinessCommandServiceInterface/EventBusinessCommand[/HuaweiMDC/instance_manifests/providedInstances/BusinessCommandPPortPrototype_DdsProvidedServiceInstance20]"
+        - "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface/EventFaultData[/HuaweiMDC/instance_manifests/providedInstances/tpfault_data_DdsProvidedServiceInstance27]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface/EventLidarPacket[/HuaweiMDC/instance_manifests/providedInstances/lidarpackets_DdsProvidedServiceInstance54]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface/EventLidarPacket[/HuaweiMDC/instance_manifests/providedInstances/lidarpackets_DdsProvidedServiceInstance55]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorLidarPacketServiceInterface/EventLidarPacket[/HuaweiMDC/instance_manifests/providedInstances/lidarpackets_DdsProvidedServiceInstance53]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface/EventSensorRadarPacket[/HuaweiMDC/instance_manifests/providedInstances/radarpackets_DdsProvidedServiceInstance57]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface/EventSensorRadarPacket[/HuaweiMDC/instance_manifests/providedInstances/radarpackets_DdsProvidedServiceInstance58]"
+        - "/HuaweiMDC/interface_manifests/interfaces/SensorRadarPacketServiceInterface/EventSensorRadarPacket[/HuaweiMDC/instance_manifests/providedInstances/radarpackets_DdsProvidedServiceInstance56]"

@@ -1,0 +1,73 @@
+{
+  "applicationName": "/HuaweiMDC/Common/Common/xdata_trigger_recorder_baseCompositionSwComponentType46/xdata_trigger_recorder_baseProcess46",
+  "services": [
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/BagStatusServiceInterface",
+      "serviceId": 20,
+      "events": [
+        {
+          "event": "EventBagStatus",
+          "id": 24367,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData",
+          "topicName": "TopicOfEventBagStatus"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/bag_ondemand_status_DdsProvidedServiceInstance25",
+          "instance": "20216",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": false,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 24367,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "service": "/HuaweiMDC/interface_manifests/interfaces/FaultDataServiceInterface",
+      "serviceId": 21,
+      "events": [
+        {
+          "event": "EventFaultData",
+          "id": 28026,
+          "isDpRawData": false,
+          "dataType": "/HuaweiMDC/interface_manifests/datatypes/FaultData",
+          "topicName": "TopicOfEventFaultData"
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance167",
+          "instance": "20220",
+          "vlan": "Host0DpEthernetCommConnector",
+          "domainId": 30,
+          "network": "192.168.10.6",
+          "isClient": true,
+          "qosProfile": "default_qos.xml",
+          "events": [
+            {
+              "id": 28026,
+              "dataIds": []
+            }
+          ],
+          "fields": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

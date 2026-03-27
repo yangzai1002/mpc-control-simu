@@ -1,0 +1,21 @@
+identifier:
+  "MAPPING"
+description: "Mapping module"
+planning_base:
+  sendInstanceID:
+    PlanningResultIntf:
+        instanceId: [20212]
+        portName: ["tppathplan_track"]
+  recvInstanceID:
+    FusionObjectArrayIntf:
+        instanceId: [20228]
+        portName: ["tpterrainmap"]
+    PerceptionStaticEnvServiceInterface:
+        instanceId: [20208]
+        portName: ["tptarget_obj"]
+    VehicleInfomationServiceInterface:
+        instanceId: [20205]
+        portName: ["tpvehiclestate4"]
+    LocationInfoIntf:
+        instanceId: [20218]
+        portName: ["tpfusionloc"]

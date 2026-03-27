@@ -1,0 +1,15 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "xzmq_rc/xzmq_rc_rootswc/tpappremotecmd",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/RemoteControlServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "5125",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/LibZmqRRemoteControlPPortPrototype_DdsProvidedServiceInstance26"
+        }
+      ]
+    }
+  ]
+}
