@@ -188,7 +188,7 @@ void Controller::runControl(std::shared_ptr<ara::adsfi::VehicleActControl>& Vehi
    printf("[lateralController] timerCallback: lateralController calculating time = %f [ms]\n",elapsed_ms);
    printf("[lateralController] lat_cmd = %f,lon_cmd = %f\n",lat_cmd.control_cmd.steering_tire_rotation_rate,lon_cmd.control_cmd.speed);
 }
-#define Gazebo
+//#define Gazebo
 // 更新定位信息
 void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  curlocation)
 {
@@ -198,11 +198,11 @@ void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  cur
             << curlocation->pose.pose.position.z;
 
     // 位置
-   // m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
-   // m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
+    m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
+    m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
 
-    m_inputData.current_pose.position.x = curlocation->pose.pose.position.x;
-    m_inputData.current_pose.position.y = curlocation->pose.pose.position.y;
+    //m_inputData.current_pose.position.x = curlocation->pose.pose.position.x;
+    //m_inputData.current_pose.position.y = curlocation->pose.pose.position.y;
     m_inputData.current_pose.position.z = curlocation->pose.pose.position.z;
  
 // 2. 弧度归一化到 [-π, π]

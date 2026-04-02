@@ -562,6 +562,7 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
   MPCUtils::convertEulerAngleToMonotonic(traj.yaw);
   printf("[MPC] path callback: resampled traj size() = %lu", traj.relative_time.size());
   /* path smoothing */
+
   if (enable_path_smoothing_)
   {
     for (int i = 0; i < path_smoothing_times_; ++i)
@@ -576,6 +577,7 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
       }
     }
   }
+   
   /* calculate yaw angle */
   if (enable_yaw_recalculation_)
   {
@@ -588,7 +590,16 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
 	  RS_WARNING << "traj size num less than curvature_smoothing_num_";
     return;
   }
+ 
   MPCUtils::calcTrajectoryCurvature(traj, curvature_smoothing_num_);
+if (!traj.size())
+  {
+	  RS_ERROR << "[MPC] path callback: trajectory size is undesired7777";
+    printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
+               traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
+    return;
+  }
+  
   const double max_k = *max_element(traj.k.begin(), traj.k.end());
   const double min_k = *min_element(traj.k.begin(), traj.k.end());
   const double max_yaw = *max_element(traj.yaw.begin(), traj.yaw.end());
@@ -604,7 +615,7 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
 
   if (!traj.size())
   {
-	RS_ERROR << "[MPC] path callback: trajectory size is undesired";
+	  RS_ERROR << "[MPC] path callback: trajectory size is undesired";
     printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
                traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
     return;

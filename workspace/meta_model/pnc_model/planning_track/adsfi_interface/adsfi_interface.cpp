@@ -316,8 +316,8 @@ void AdsfiInterface::coverterLoc(std::shared_ptr<ara::adsfi::MsgHafLocation> loc
 		marker.color.b = 1;
 
 		//geometry_msgs::Point p;
-		marker.pose.position.x = loc_ptr->pose.pose.position.x;
-		marker.pose.position.y = loc_ptr->pose.pose.position.y;
+		marker.pose.position.x = out.longitude;
+		marker.pose.position.y = out.latitude;
 		marker.pose.position.z = 0;
 		// p.z = traj.z.at(i) + z;
 		//printf("p.x:%f,p.y:%f\n",p.x, p.y);
@@ -369,7 +369,7 @@ void AdsfiInterface::coverterGridMap(std::shared_ptr<ara::adsfi::PerceptionStati
         // 原 type = 2（占用）→ 目标 1（占用）
         // 原 type = 1（空闲）→ 目标 0（空闲）
         double value = 0.0;
-        if (grid_value == 0 || grid_value == 2) {
+        if (grid_value == 2) {
             value = 1.0;
         }
 
@@ -581,8 +581,8 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
     VisualizeFinalPaths(output_trajectory);
     ara::adsfi::MsgHafTrajectoryPoint last_point;
 
-	last_point.wayPoint.x = loc_ptr->pose.pose.position.x;
-	last_point.wayPoint.y = loc_ptr->pose.pose.position.y;
+	last_point.wayPoint.x = origin_utm_x;
+	last_point.wayPoint.y = origin_utm_y;
 	plan_result_ptr->trajectoryPoints.push_back(last_point);
 
 	//plan_result_ptr = out;

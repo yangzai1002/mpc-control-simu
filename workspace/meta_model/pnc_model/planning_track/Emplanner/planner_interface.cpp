@@ -35,6 +35,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
         double utm_x = 0.0, utm_y = 0.0;
         //LatLon2XY(pt.latitude, pt.longitude, utm_x, utm_y);
         full_local_path.push_back({pt.longitude - anchor_utm_x, pt.latitude - anchor_utm_y});
+        //full_local_path.push_back({pt.longitude, pt.latitude});
     }
 
 
