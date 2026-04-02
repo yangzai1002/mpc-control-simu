@@ -6,17 +6,14 @@ namespace control
 void  Controller::init()
 {
     // (1) PP横向控制器
-    m_lateralController_pursuit = std::make_shared<
-            pure_pursuit::PurePursuitLateralController>(
+    m_lateralController_pursuit = std::make_shared<pure_pursuit::PurePursuitLateralController>(
                     "/opt/usr/zjy/config/control/lateral_controller_pursuit.yaml");
 
     // (2) PID纵向控制器
-    m_longitudinalController_ = std::make_shared<
-            pid_longitudinal_controller::PidLongitudinalController>(
+    m_longitudinalController_ = std::make_shared<pid_longitudinal_controller::PidLongitudinalController>(
                     "/opt/usr/zjy/config/control/longitudinal_controller_pid.yaml");
 
-    m_lateralController_mpc = std::make_shared<
-            MpcFollower::MPCFollowerController>(
+    m_lateralController_mpc = std::make_shared<MpcFollower::MPCFollowerController>(
                     "/opt/usr/zjy/config/control/lateral_controller_mpc.yaml");
 
               
@@ -97,9 +94,6 @@ void Controller::sendDrivingCmd(LateralOutput lat_cmd_in, LongitudinalOutput lon
     //     HAF_LOG_INFO << " Send chassis command data failed!";
     // }
 
-    
-
-
     //车身命令
     auto bodyCmd = std::make_shared<HafBodyCommand>();
 
@@ -159,8 +153,8 @@ void Controller::runControl(std::shared_ptr<ara::adsfi::VehicleActControl>& Vehi
   
   
     static uint64_t loop_count = 1;
-    HAF_LOG_INFO << "======================================= loop_count: "
-            << loop_count << " =======================================";
+    std::cout << "======================================= loop_count: "
+            << loop_count << " ======================================="<<std::endl;
 
    // processInputData();
 
@@ -169,7 +163,7 @@ void Controller::runControl(std::shared_ptr<ara::adsfi::VehicleActControl>& Vehi
 
     if (!is_lat_ready || !is_lon_ready)
     {
-        HAF_LOG_INFO << " ### [Lat/Lon controller is not ready to run ] or [Recv Stop CMD]";
+        std::cout << " ### [Lat/Lon controller is not ready to run ] or [Recv Stop CMD]"<<std::endl;
 
         return;
     }
@@ -194,18 +188,21 @@ void Controller::runControl(std::shared_ptr<ara::adsfi::VehicleActControl>& Vehi
    printf("[lateralController] timerCallback: lateralController calculating time = %f [ms]\n",elapsed_ms);
    printf("[lateralController] lat_cmd = %f,lon_cmd = %f\n",lat_cmd.control_cmd.steering_tire_rotation_rate,lon_cmd.control_cmd.speed);
 }
-//#define Gazebo
+#define Gazebo
 // 更新定位信息
 void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  curlocation)
 {
-    HAF_LOG_INFO << "### curloc (x, y, z): "
+    std::cout << "### curloc (x, y, z): "
             << curlocation->pose.pose.position.x << ", "
             << curlocation->pose.pose.position.y << ", "
             << curlocation->pose.pose.position.z;
 
     // 位置
-    m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
-    m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
+   // m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
+   // m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
+
+    m_inputData.current_pose.position.x = curlocation->pose.pose.position.x;
+    m_inputData.current_pose.position.y = curlocation->pose.pose.position.y;
     m_inputData.current_pose.position.z = curlocation->pose.pose.position.z;
  
 // 2. 弧度归一化到 [-π, π]
@@ -250,27 +247,35 @@ void Controller::updateVehicleInfo(std::shared_ptr<ara::adsfi::VehicleInformatio
 
 void Controller::updateTrajectory(std::shared_ptr<ara::adsfi::MsgHafEgoTrajectory> PlanningResult)
 {
-    HAF_LOG_INFO << "$$$$ curTrajectory: " << PlanningResult->trajectoryPoints.size();
-    HAF_LOG_INFO << "$$$$ curwayPoints: " << PlanningResult->wayPoints.size();
+    std::cout  << "$$$$ curTrajectory: " << PlanningResult->trajectoryPoints.size() <<std::endl;
+    std::cout << "$$$$ curwayPoints: " << PlanningResult->wayPoints.size() <<std::endl;
     m_inputData.current_trajectory.trajectoryPoints.clear();
-    for(int i =0;i< PlanningResult->wayPoints.size()-2;i++)
+    if(PlanningResult->trajectoryPoints.size() >2)
     {
-        HafTrajectoryPoint new_TrajectoryPoint;
-        new_TrajectoryPoint.wayPoint.x = PlanningResult->wayPoints[i].x;
-        new_TrajectoryPoint.wayPoint.y = PlanningResult->wayPoints[i].y;
-        //new_TrajectoryPoint.wayPoint.z = old_point.z;
-        new_TrajectoryPoint.wayPoint.theta = PlanningResult->wayPoints[i].theta;
-        new_TrajectoryPoint.wayPoint.curvature = PlanningResult->wayPoints[i].curvature;
-        new_TrajectoryPoint.speed = 1.5;
-    
-        m_inputData.current_trajectory.trajectoryPoints.push_back(new_TrajectoryPoint);
-    }
-    if(m_inputData.current_trajectory.trajectoryPoints.size() > 5)
-    {
-        m_inputData.current_trajectory.trajectoryPoints[m_inputData.current_trajectory.trajectoryPoints.size()-1].speed = 0.0;
-    }
-    m_inputData.first_point_x = PlanningResult->wayPoints.back().x;
-    m_inputData.first_point_y = PlanningResult->wayPoints.back().y;
+        for(int i =0;i< PlanningResult->trajectoryPoints.size()-2;i++)
+        {
+            HafTrajectoryPoint new_TrajectoryPoint;
+            new_TrajectoryPoint.wayPoint.x = PlanningResult->trajectoryPoints[i].wayPoint.x;
+            new_TrajectoryPoint.wayPoint.y = PlanningResult->trajectoryPoints[i].wayPoint.y;
+            //new_TrajectoryPoint.wayPoint.z = old_point.z;
+            new_TrajectoryPoint.wayPoint.theta = PlanningResult->trajectoryPoints[i].wayPoint.theta;
+            new_TrajectoryPoint.wayPoint.curvature = PlanningResult->trajectoryPoints[i].wayPoint.curvature;
+            new_TrajectoryPoint.speed = PlanningResult->trajectoryPoints[i].speed;
+            if(new_TrajectoryPoint.speed > 1.5)
+                new_TrajectoryPoint.speed = 1.5;
+            if(new_TrajectoryPoint.speed < 0.2)
+            {
+                new_TrajectoryPoint.speed = 0.2;
+            }
+            m_inputData.current_trajectory.trajectoryPoints.push_back(new_TrajectoryPoint);
+        }
+        // if(m_inputData.current_trajectory.trajectoryPoints.size() > 2)
+        // {
+        //     m_inputData.current_trajectory.trajectoryPoints[m_inputData.current_trajectory.trajectoryPoints.size()-2].speed = 0.0;
+        // }
+        m_inputData.first_point_x = PlanningResult->trajectoryPoints.back().wayPoint.x;
+        m_inputData.first_point_y = PlanningResult->trajectoryPoints.back().wayPoint.y;
+   }
     
     std::cout << "$$$$ trajectoryPoints: " << m_inputData.current_trajectory.trajectoryPoints.size();
 }

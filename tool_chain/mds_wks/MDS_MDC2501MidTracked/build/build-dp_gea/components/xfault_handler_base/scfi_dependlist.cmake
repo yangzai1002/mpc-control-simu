@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;xfault_handler_base_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;faultdataserviceinterface_server.cpp;faultdataserviceinterface_server_impl.cpp;remotecontrolserviceinterface_client.cpp;remotecontrolserviceinterface_client_impl.cpp;xfault_handler_base_swc.cpp;xfault_handler_base_logger.cpp;faultdataserviceinterface_common.cpp;remotecontrolserviceinterface_common.cpp) 

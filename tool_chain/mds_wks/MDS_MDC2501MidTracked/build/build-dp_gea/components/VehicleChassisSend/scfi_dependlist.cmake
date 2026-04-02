@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;VehicleChassisSend_scfi_intf;-Wl,--as-needed;yaml;pthread;mid_track_chassis_send;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;sample.cpp;vehiclechassissend_logger.cpp;main.cpp;vehiclechassissend_manager.cpp;faultdataserviceinterface_common.cpp) 

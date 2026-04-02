@@ -315,6 +315,7 @@ void PidLongitudinalController::updateControlState(
     const bool keep_stopped_condition =
             m_enable_keep_stopped_until_steer_convergence
                     && (!lateral_sync_data_.is_steer_converged);    //!lateral_sync_data_.is_steer_converged
+   // std::cout <<"current_vel::"<<current_vel<<std::endl;
 
     double current_stop_dist = m_smooth_stop.calculateBrakingDistance(current_vel*3.6);
 
@@ -322,15 +323,15 @@ void PidLongitudinalController::updateControlState(
 
     current_stop_dist = std::max((current_stop_dist + 1.0 * current_vel),2.0);
 
-    std::cout <<"stop_dist:"<<stop_dist<<std::endl;
+    //std::cout <<"stop_dist:"<<stop_dist<<std::endl;
     const bool stopping_condition = stop_dist < current_stop_dist;
 
-    std::cout <<"current_stop_dist:"<<current_stop_dist<<std::endl;
+    //std::cout <<"current_stop_dist:"<<current_stop_dist<<std::endl;
 
 
-    std::cout <<"p.stopped_state_entry_vel:"<<p.stopped_state_entry_vel<<"current_vel"<<current_vel<<std::endl;
-    std::cout <<" p.stopped_state_entry_acc:"<<p.stopped_state_entry_vel<<"current_acc"<<current_acc<<std::endl;
-    std::cout <<"lateral_sync_data_.is_steer_converged:"<<lateral_sync_data_.is_steer_converged<<std::endl;
+    ///std::cout <<"p.stopped_state_entry_vel:"<<p.stopped_state_entry_vel<<"current_vel"<<current_vel<<std::endl;
+    //std::cout <<" p.stopped_state_entry_acc:"<<p.stopped_state_entry_vel<<"current_acc"<<current_acc<<std::endl;
+    //std::cout <<"lateral_sync_data_.is_steer_converged:"<<lateral_sync_data_.is_steer_converged<<std::endl;
     if (std::fabs(current_vel) > p.stopped_state_entry_vel
             || std::fabs(current_acc) > p.stopped_state_entry_acc)
     {
@@ -345,7 +346,7 @@ void PidLongitudinalController::updateControlState(
         stopped_condition = true;
    } 
 
-   std::cout <<"stopped_condition:"<<stopped_condition<<std::endl;
+   //std::cout <<"stopped_condition:"<<stopped_condition<<std::endl;
 
     static constexpr double vel_epsilon = 1e-3;
 
@@ -358,7 +359,7 @@ void PidLongitudinalController::updateControlState(
 
     int nearest_idx = static_cast<int>(control_data.nearest_idx);
     int vx_size = static_cast<int>(m_trajectory.vx.size());
-    std::cout <<"control_data.nearest_idx:"<<control_data.nearest_idx<<"vx_size:"<<vx_size<<std::endl;
+    //std::cout <<"control_data.nearest_idx:"<<control_data.nearest_idx<<"vx_size:"<<vx_size<<std::endl;
     // 1. 向前找 2米 内的起始索引
     int start_idx = nearest_idx;
     double forward_dist = 0.0;
@@ -401,12 +402,14 @@ void PidLongitudinalController::updateControlState(
     const double current_vel_cmd = std::fabs(*min_it);
     
 
-   std::cout <<"current_vel_cmd:"<<current_vel_cmd<<std::endl;
+   
     const bool emergency_condition = m_enable_overshoot_emergency
             && stop_dist < p.emergency_state_overshoot_stop_dist
             && current_vel_cmd < vel_epsilon;
 
-    const bool has_nonzero_target_vel = std::abs(current_vel_cmd) > 1.0;
+    const bool has_nonzero_target_vel = std::abs(current_vel_cmd) > 0.1;
+
+   // std::cout <<"current_vel_cmd:"<<current_vel_cmd<<"has_nonzero_target_vel:"<<has_nonzero_target_vel<<std::endl;
 
     const auto changeState = [this](const auto s)
     {
@@ -479,8 +482,8 @@ void PidLongitudinalController::updateControlState(
     {
         if (has_nonzero_target_vel && !departure_condition_from_stopped)
         {
-            HAF_LOG_INFO
-                    << "target speed > 0, but departure condition is not met. Keep STOPPED.";
+            std::cout
+                    << "target speed > 0, but departure condition is not met. Keep STOPPED."<<std::endl;
             return changeState(ControlState::STOPPED);
         }
 
@@ -493,6 +496,8 @@ void PidLongitudinalController::updateControlState(
 
         if (keep_stopped_condition)
         {
+                 std::cout
+                    << "keep_stopped_condition true." <<std::endl;
             return changeState(ControlState::STOPPED);
         }
 
@@ -501,7 +506,6 @@ void PidLongitudinalController::updateControlState(
             m_pid_vel.reset();
             m_lpf_vel_error->reset(0.0);
             m_prev_ctrl_cmd.acc = std::max(0.0, m_prev_ctrl_cmd.acc);
-
             return changeState(ControlState::DRIVE);
         }
         return changeState(ControlState::STOPPED);
@@ -550,11 +554,12 @@ PidLongitudinalController::Motion PidLongitudinalController::calcCtrlCmd(
         raw_ctrl_cmd.vel = raw_ctrl_cmd.acc * control_data.dt
                 + std::abs(control_data.current_motion.vel);
 
-        HAF_LOG_INFO << " PID STATE: " << " DRIVE " << " [ vel: "
+        raw_ctrl_cmd.vel = std::max(raw_ctrl_cmd.vel,0.2); /*最小速度0.2*/
+        std::cout << " PID STATE: " << " DRIVE " << " [ vel: "
                 << raw_ctrl_cmd.vel << ", acc: " << raw_ctrl_cmd.acc << ", dt: "
                 << control_data.dt << ", v_curr: " << current_vel << ", v_ref: "
                 << target_motion.vel << ", stop_dist: "
-                << control_data.stop_dist << " ]";
+                << control_data.stop_dist << " ]"<<std::endl;
 
     }
 
@@ -577,11 +582,11 @@ PidLongitudinalController::Motion PidLongitudinalController::calcCtrlCmd(
                             + std::abs(control_data.current_motion.vel), 1.4);
         }
 
-        HAF_LOG_INFO << " PID STATE: " << " STOPPING " << "| vel: "
+        std::cout  << " PID STATE: " << " STOPPING " << "| vel: "
                 << raw_ctrl_cmd.vel << ", acc: " << raw_ctrl_cmd.acc << ", dt: "
                 << control_data.dt << ", v_curr: " << current_vel << ", v_ref: "
                 << target_motion.vel << ", stop_dist: "
-                << control_data.stop_dist;
+                << control_data.stop_dist<<std::endl;
 
     }
 
@@ -599,11 +604,11 @@ PidLongitudinalController::Motion PidLongitudinalController::calcCtrlCmd(
         raw_ctrl_cmd.vel = std::max(
                     raw_ctrl_cmd.vel ,0.0);
 
-        HAF_LOG_INFO << " PID STATE: " << " STOPPED " << " vel: "
+        std::cout << " PID STATE: " << " STOPPED " << " vel: "
                 << raw_ctrl_cmd.vel << ", acc: " << raw_ctrl_cmd.acc << ", dt: "
                 << control_data.dt << ", v_curr: " << current_vel << ", v_ref: "
                 << target_motion.vel << ", stop_dist: "
-                << control_data.stop_dist;
+                << control_data.stop_dist <<std::endl;
     }
 
     else if (m_control_state == ControlState::EMERGENCY)
@@ -648,8 +653,8 @@ commStruct::LongitudinalCommand PidLongitudinalController::createCtrlCmdMsg(
     m_vel_hist.push_back(
     { getNowTime(), current_vel });
 
-    HAF_LOG_INFO << "[target_speed, current_speed]: (" << cmd.speed << ", "
-            << current_vel << ")";
+    std::cout  << "[target_speed, current_speed]: (" << cmd.speed << ", "
+            << current_vel << ")" << std::endl;
 
     while (m_vel_hist.size()
             > static_cast<size_t>(0.5 / m_longitudinal_ctrl_period))

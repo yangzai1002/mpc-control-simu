@@ -6,6 +6,9 @@
 #include "mdc/sample.h"
 #include <chrono>
 #include <functional>
+#include "adsfi_manager/adsfi_data_manager.h"
+
+
 namespace mdc {
 Sample::Sample(): swcPtr_(std::make_unique<mdc::planning_base::PlanningBaseSwC>()), workFlag_(true)
 {}
@@ -31,7 +34,7 @@ void Sample::StopHandle()
 
 bool Sample::Init()
 {
-    SPL_LOG_SPACE::InitAppLogging();
+    	ApLogInterface::Instance()->Init("Planning");
     SPL_LOG_SPACE::InitLoggerCtx("SPL", "sample log contex");
     if (!swcPtr_) {
         SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to create the SWC object.";
@@ -44,49 +47,11 @@ bool Sample::Init()
         return false;
     }
 	//LOAD_ALL_CONFIG
-	//AdsfiDataManager::Instance()->adsfi_interface.Init();
+    AdsfiDataManager::Instance()->adsfi_interface.Init();
 
     plan_result = std::make_shared<adsfi::PlanningResultDataType>();
    	//AdsfiDataManager::Instance()->adsfi_interface.Init();
 
-   	std::ifstream file("/opt/usr/zjy/path.log");  // 路径自己改
-   	    if (!file.is_open()) {
-   	        printf("open path.log failed");
-   	        return false;
-   	    }
-   	    std::string line;
-   	    bool first_point = false;
-   	    double first_x = 0;
-   	    double first_y = 0;
-   	    while (std::getline(file, line)) {
-   	        if (line.empty()) continue;
-   	        double x, y;
-   	        // 按逗号分割
-   	        if (sscanf(line.c_str(), "%lf,%lf", &x, &y) == 2)
-   	        {
-   	            // 创建轨迹点
-   	        	if(!first_point)
-   	        	{
-   	        		first_x = x;
-   	        		first_y = y;
-   	        		first_point = true;
-   	        	}
-
-   	        	ara::adsfi::MsgHafWayPoint point;
-   	            point.x = x - first_x;
-   	            point.y = y - first_y;
-
-//   	            point.x = x;
-//   	            point.y = y;
-   	            // 添加到结果
-   	            plan_result->wayPoints.push_back(point);
-   	        }
-   	 }
-   	  /*最后一个点是第一个点绝对utm坐标，平移使用*/
-   	 ara::adsfi::MsgHafWayPoint point;
-   	 point.x = first_x;
-   	 point.y = first_y;
-   	 plan_result->wayPoints.push_back(point);
     return true;
 }
 
@@ -124,14 +89,32 @@ void Sample::PlanningResultIntfServerRun()
             if (!serverPtr) {
                 SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to initialize the instance: " << portName;
                 continue;
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
             }
-	        serverPtr->SendPlanningResultData(plan_result);
-			printf("send planing trajectory!!!\n");
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
-            //auto data = std::make_shared<adsfi::PlanningResultDataType>();
+			////PRE_TIMMER_SENTENCE
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
+	        //serverPtr->SendPlanningResultData(plan_result);
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
+			//}
+
+			//END_TIMMER_SENTENCE
+
+		//auto code_tag_key = portName +"_PlanningResultData";
+
+            auto data = std::make_shared<adsfi::PlanningResultDataType>();
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
+			if(AdsfiDataManager::Instance()->adsfi_interface.Process(portName,data) == 0){
             /* Event事件，发送数据，非阻塞接口 <关键接口> */
-          //  serverPtr->SendPlanningResultData(data);
-          //  std::this_thread::sleep_for(std::chrono::milliseconds(500U));
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
+           serverPtr->SendPlanningResultData(data);
+		//AVOS_MSGPACK_PUBLISH("Planning",portName, "MsgHafEgoTrajectory" , static_cast<void *>(data.get()));
+			printf("send planing trajectory!!!\n");
+
+		////AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagPubtagId);
+			}
+			std::this_thread::sleep_for(std::chrono::milliseconds(20));
+
+			//END_TIMMER_SENTENCE
         }
     }
 }
@@ -155,16 +138,21 @@ void Sample::PerceptionStaticEnvServiceInterfaceClientRun()
                 SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to initialize the instance: " << portName;
                 continue;
             }
+			//PRE_TIMMER_SENTENCE
             /* Event事件，注册接收到数据后的回调函数, 此操作必须且在获取数据前执行，执行后才能正常接收数据, 详情可参考用户文档 */
             clientPtr->RegisterEventPerceptionStaticEnvNotifyHandler(
                 std::bind(&Sample::ReceiveAraAdsfiEventPerceptionStaticEnvDataHandle,
                 std::placeholders::_1));
-            /* 获取数据，非阻塞方式 <关键接口> */
-            auto oneData = clientPtr->GetEventPerceptionStaticEnvOneData();
-            /* 获取数据，一次获取5个数据，非阻塞方式 <关键接口> */
-            auto nData = clientPtr->GetEventPerceptionStaticEnvNdata(5U);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
             /* 获取数据，阻塞式接口，超时时间为1000ms <关键接口> */
             auto oneDataBlocking = clientPtr->GetEventPerceptionStaticEnvOneDataBlocking(1000U);
+			//AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			if(oneDataBlocking != nullptr)
+			{
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			    AdsfiDataManager::Instance()->adsfi_interface.Callback(portName, oneDataBlocking);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			}
             
         }
     }
@@ -189,16 +177,21 @@ void Sample::FusionObjectArrayIntfClientRun()
                 SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to initialize the instance: " << portName;
                 continue;
             }
+			//PRE_TIMMER_SENTENCE
             /* Event事件，注册接收到数据后的回调函数, 此操作必须且在获取数据前执行，执行后才能正常接收数据, 详情可参考用户文档 */
             clientPtr->RegisterFusionObjectArrayNotifyHandler(
                 std::bind(&Sample::ReceiveAdsfiFusionObjectArrayDataHandle,
                 std::placeholders::_1));
-            /* 获取数据，非阻塞方式 <关键接口> */
-            auto oneData = clientPtr->GetFusionObjectArrayOneData();
-            /* 获取数据，一次获取5个数据，非阻塞方式 <关键接口> */
-            auto nData = clientPtr->GetFusionObjectArrayNdata(5U);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
             /* 获取数据，阻塞式接口，超时时间为1000ms <关键接口> */
             auto oneDataBlocking = clientPtr->GetFusionObjectArrayOneDataBlocking(1000U);
+			//AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			if(oneDataBlocking != nullptr)
+			{
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			    AdsfiDataManager::Instance()->adsfi_interface.Callback(portName, oneDataBlocking);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			}
             
         }
     }
@@ -223,16 +216,21 @@ void Sample::LocationInfoIntfClientRun()
                 SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to initialize the instance: " << portName;
                 continue;
             }
+			//PRE_TIMMER_SENTENCE
             /* Event事件，注册接收到数据后的回调函数, 此操作必须且在获取数据前执行，执行后才能正常接收数据, 详情可参考用户文档 */
             clientPtr->RegisterLocationInfoNotifyHandler(
                 std::bind(&Sample::ReceiveAdsfiLocationInfoDataHandle,
                 std::placeholders::_1));
-            /* 获取数据，非阻塞方式 <关键接口> */
-            auto oneData = clientPtr->GetLocationInfoOneData();
-            /* 获取数据，一次获取5个数据，非阻塞方式 <关键接口> */
-            auto nData = clientPtr->GetLocationInfoNdata(5U);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
             /* 获取数据，阻塞式接口，超时时间为1000ms <关键接口> */
             auto oneDataBlocking = clientPtr->GetLocationInfoOneDataBlocking(1000U);
+			//AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			if(oneDataBlocking != nullptr)
+			{
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			    AdsfiDataManager::Instance()->adsfi_interface.Callback(portName, oneDataBlocking);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			}
             
         }
     }
@@ -257,16 +255,21 @@ void Sample::VehicleInfomationServiceInterfaceClientRun()
                 SPL_LOG_SPACE::GetLoggerIns("SPL")->LogError()<< "Failed to initialize the instance: " << portName;
                 continue;
             }
+			//PRE_TIMMER_SENTENCE
             /* Event事件，注册接收到数据后的回调函数, 此操作必须且在获取数据前执行，执行后才能正常接收数据, 详情可参考用户文档 */
             clientPtr->RegisterEventVehicleInfoNotifyHandler(
                 std::bind(&Sample::ReceiveAraAdsfiEventVehicleInfoDataHandle,
                 std::placeholders::_1));
-            /* 获取数据，非阻塞方式 <关键接口> */
-            auto oneData = clientPtr->GetEventVehicleInfoOneData();
-            /* 获取数据，一次获取5个数据，非阻塞方式 <关键接口> */
-            auto nData = clientPtr->GetEventVehicleInfoNdata(5U);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
             /* 获取数据，阻塞式接口，超时时间为1000ms <关键接口> */
             auto oneDataBlocking = clientPtr->GetEventVehicleInfoOneDataBlocking(1000U);
+			//AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			if(oneDataBlocking != nullptr)
+			{
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			    AdsfiDataManager::Instance()->adsfi_interface.Callback(portName, oneDataBlocking);
+			    //AVOS_CODETAG_ADV1(code_tag_key.c_str(), 0, eAvosCodetagSubtagId);
+			}
             
         }
     }

@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;hw_l106_lidar_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES hw_l106_lidar_swc.cpp;sensorlidarpacketserviceinterface_server.cpp;sensorlidarpacketserviceinterface_server_impl.cpp;sensorlidarpointcloudserviceinterface_server.cpp;sensorlidarpointcloudserviceinterface_server_impl.cpp;hw_l106_lidar_logger.cpp;mdc_yaml_node.cpp;sensorlidarpointcloudserviceinterface_common.cpp;sensorlidarpacketserviceinterface_common.cpp) 

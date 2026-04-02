@@ -36,7 +36,8 @@ double SmoothStop::calculateBrakingDistance(double speed_kmh, double react_time)
 {
     // 1. 异常处理：车速不能为负
     if (speed_kmh < 0) {
-        throw std::invalid_argument("车速不能为负数");
+        //throw std::invalid_argument("车速不能为负数");
+        speed_kmh = 0;
     }
     // 2. 单位转换：km/h → m/s
     double speed_mps = speed_kmh / 3.6;

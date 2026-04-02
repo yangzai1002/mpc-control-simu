@@ -58,7 +58,6 @@ set(MODULE1_INCLUDE_DIRS
     
     # ara/adsfi 工具链生成的头文件路径
     ${CMAKE_CURRENT_LIST_DIR}/../../../../tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/includes/
-    
     # 通用公共头文件路径
     ${CMAKE_CURRENT_LIST_DIR}/../../../common/planning-common/
     ${CMAKE_CURRENT_LIST_DIR}/../../../common/common_header

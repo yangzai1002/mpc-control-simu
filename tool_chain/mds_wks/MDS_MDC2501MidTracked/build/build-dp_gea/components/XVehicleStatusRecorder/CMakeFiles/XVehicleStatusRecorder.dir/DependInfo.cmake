@@ -1,0 +1,44 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/adsfi/locationinfointf_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/adsfi/locationinfointf_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/bodycommandserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/bodycommandserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/faultdataserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/faultdataserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/msgimagedatalistserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/msgimagedatalistserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/remotecontrolserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/remotecontrolserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/sensorgpsserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/sensorgpsserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/generated/src/ara/adsfi/vehicleinfomationserviceinterface_common.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/__/__/generated/src/ara/adsfi/vehicleinfomationserviceinterface_common.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/components/XVehicleStatusRecorder/src/generated/mdc_adaptive_application.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/src/generated/mdc_adaptive_application.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/components/XVehicleStatusRecorder/src/generated/sample.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/src/generated/sample.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/components/XVehicleStatusRecorder/src/generated/xvehiclestatusrecorder_logger.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/src/generated/xvehiclestatusrecorder_logger.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/components/XVehicleStatusRecorder/src/main.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/src/main.cpp.o"
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/components/XVehicleStatusRecorder/src/xvehiclestatusrecorder_manager.cpp" "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/XVehicleStatusRecorder/CMakeFiles/XVehicleStatusRecorder.dir/src/xvehiclestatusrecorder_manager.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "Clang")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../../generated/includes"
+  "../../components/XVehicleStatusRecorder/include"
+  "../../components/XVehicleStatusRecorder/include/public"
+  "../../components/XVehicleStatusRecorder/include/private"
+  "../../components/XVehicleStatusRecorder/include/generated"
+  "../../components/xvehicle_status_recorder_base/include"
+  "../../components/xvehicle_status_recorder_base/include/public"
+  "../../components/xvehicle_status_recorder_base/include/private"
+  "components/XVehicleStatusRecorder"
+  "../../components/XVehicleStatusRecorder"
+  "components/xvehicle_status_recorder_base"
+  "../../components/xvehicle_status_recorder_base"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/cxy/control-simulation/ap_auto/tool_chain/mds_wks/MDS_MDC2501MidTracked/build/build-dp_gea/components/xvehicle_status_recorder_base/CMakeFiles/xvehicle_status_recorder_base.dir/DependInfo.cmake"
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

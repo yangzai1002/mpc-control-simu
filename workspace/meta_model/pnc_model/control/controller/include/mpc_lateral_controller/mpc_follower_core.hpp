@@ -27,6 +27,8 @@
 #include "pid_longitudinal_controller/pid_longitudinal_controller.hpp"
 #include "trajectory_follower_base/input_data.hpp"
 #include "trajectory_follower_base/lateral_controller_base.hpp"
+#include <fstream>
+
 using namespace Adsfi;
 using namespace trajectory_follower;
 /** 
@@ -107,6 +109,7 @@ class MPCFollowerController:public LateralControllerBase
 
 		mdc::visual::Publisher mpc_current_pos_Pub = mdc::visual::Publisher::Advertise
 						<mdc::visual::Marker>(ara::core::String("mpc_current_pos"));
+        ofstream ofs_log;
 	public:
 		MPCFollowerController(std::string params_path);
 		void MpcUpdateTraj(HafEgoTrajectory curTrajectory);

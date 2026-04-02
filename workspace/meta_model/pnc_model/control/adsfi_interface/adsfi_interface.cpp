@@ -165,7 +165,7 @@ void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara
     std::cout << "FaultData callback" << std::endl;
     safebuf_faultdata.Set(ptr);
 }
-
+#define GazeboSim
 int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi::VehicleActControl> &control_ptr) 
 {
 	std::shared_ptr<ara::adsfi::BusinessCommand> bus_command_ptr;
@@ -196,12 +196,16 @@ int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi:
 		return -1;
 	}
 	//ret = vehicleinfo_deque.getLatestAndClear(vehicle_info_ptr);
+    #ifndef GazeboSim
 	ret = safebuf_vehicleinfo.Get(vehicle_info_ptr);
 	if(ret == false)
 	{
 		std::cout << "Process error IdpVehicleInformation have not new data\n";
+        
 		return -1;
+       
 	}
+     #endif
 	// ret = locationinfo_deque.getLatestAndClear(loc_ptr);
 	ret = safebuf_locationinfo.Get(loc_ptr);
 	if(ret == false)
@@ -238,7 +242,10 @@ int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi:
     // }
 	Control_ptr->updateTrajectory(planning_result_ptr);
     Control_ptr->updateLocation(loc_ptr);
+    #ifndef GazeboSim
 	Control_ptr->updateVehicleInfo(vehicle_info_ptr);
+     #endif
+     
     Control_ptr->runControl(control_ptr);
 
 	// ===================== 关键：把控制指令发给 UDP =====================

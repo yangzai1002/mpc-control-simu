@@ -9,7 +9,7 @@ scfi_package()
 include(${CMAKE_CURRENT_LIST_DIR}/../../../../../../ap_auto/workspace/cmake/common.cmake)
 
 # 2. 包含模块，得到源文件列表和头文件路径
-message("变量路径0000000000000000000000000000000000:"${MODULE_PATH})
+message("变量路径:"${MODULE_PATH})
 if(DEFINED MODULE_PATH AND EXISTS "${MODULE_PATH}")
 	include(${MODULE_PATH})
 else()

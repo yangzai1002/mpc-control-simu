@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;LidarSlam_scfi_intf;-Wl,--as-needed;yaml;pthread;lidar_slam_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES lidarslam_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;lidarslam_manager.cpp;main.cpp;locationinfointf_common.cpp;sensorlidarpointcloudserviceinterface_common.cpp;sensorimuserviceinterface_common.cpp;sensorwheelspeedserviceinterface_common.cpp) 

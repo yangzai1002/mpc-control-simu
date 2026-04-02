@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;XH265RtspServer_scfi_intf;-Wl,--as-needed;yaml;pthread;rtspserverswc;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;sample.cpp;xh265rtspserver_logger.cpp;main.cpp;xh265rtspserver_manager.cpp;sensorimageserviceinterface_common.cpp) 

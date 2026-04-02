@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;multy_camera_det_base_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;msgimagedatalistserviceinterface_client.cpp;msgimagedatalistserviceinterface_client_impl.cpp;multy_camera_det_base_swc.cpp;visionsegmentserviceinterface_server.cpp;visionsegmentserviceinterface_server_impl.cpp;multy_camera_det_base_logger.cpp;visionsegmentserviceinterface_common.cpp;msgimagedatalistserviceinterface_common.cpp) 

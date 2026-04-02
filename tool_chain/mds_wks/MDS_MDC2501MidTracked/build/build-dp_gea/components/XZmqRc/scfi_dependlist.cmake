@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;XZmqRc_scfi_intf;-Wl,--as-needed;yaml;pthread;xzmq_rc;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;sample.cpp;xzmqrc_logger.cpp;main.cpp;xzmqrc_manager.cpp;remotecontrolserviceinterface_common.cpp) 

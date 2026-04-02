@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;HwFr671RadarFront_scfi_intf;-Wl,--as-needed;yaml;pthread;hw_fr671_radar;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES hwfr671radarfront_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;hwfr671radarfront_manager.cpp;main.cpp;radarpointcloudserviceinterface_common.cpp;sensorradarpacketserviceinterface_common.cpp;locationserviceinterface_common.cpp;vehicleinfomationserviceinterface_common.cpp) 

@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;HwCameraList_scfi_intf;-Wl,--as-needed;yaml;pthread;hw_camera_list;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES hwcameralist_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;hwcameralist_manager.cpp;main.cpp;msgimagedatalistserviceinterface_common.cpp;sensorcompressedimagelistserviceinterface_common.cpp) 

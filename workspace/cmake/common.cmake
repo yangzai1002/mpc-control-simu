@@ -27,7 +27,7 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU" OR CMAKE_C_COMPILER_ID MATCHES "GNU")
     link_libraries(stdc++fs)
 
     set(CMAKE_SYSTEM_PROCESSOR x86_64)
-    set(X86_LIB_PATH "/home/cxy/control-simulation/ap_adsfi/workspace/third_party_x86")
+    set(X86_LIB_PATH "/home/cxy/control-simulation/ap_auto/workspace/third_party_x86")
     set(MDC_SDK "${X86_LIB_PATH}/MDC_Ubuntu_X86")
     
     # OpenCV：X86 版本路径
@@ -75,7 +75,7 @@ else()
 endif()
 
 # 设置软链接路径
-set(WORKSPACE_DIR "/home/cxy/control-simulation/ap_adsfi/workspace")
+set(WORKSPACE_DIR "/home/cxy/control-simulation/ap_auto/workspace")
 set(THIRD_PARTY_LINK "${WORKSPACE_DIR}/third_party")
 set(THIRD_PARTY_TARGET "${WORKSPACE_DIR}/third_party_${DETECTED_ARCH}")
 
@@ -135,7 +135,7 @@ else()
         if(EXISTS "${THIRD_PARTY_LINK}")
             message(STATUS "[SoftLink] Successfully created: third_party -> third_party_${DETECTED_ARCH}")
         else()
-            message(FATAL_ERROR "[SoftLink] Failed to create symlink!")
+            message(FATAL_ERROR "[workspaceSoftLink] Failed to create symlink!")
         endif()
     endif()
 endif()

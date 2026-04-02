@@ -22,6 +22,7 @@ namespace MpcFollower
 MPCFollowerController::MPCFollowerController(std::string params_path)
 {
   std::string config_path = params_path;
+  std::string log_path;
   YAML::Node config;
   try
   {
@@ -59,8 +60,39 @@ MPCFollowerController::MPCFollowerController(std::string params_path)
 	yamlRead<double>(param_config, "delay_compensation_time", mpc_param_.delay_compensation_time, double(0.0));
 	yamlRead<double>(param_config, "steer_lim_deg", steer_lim_deg_, double(50.0));
 	yamlRead<double>(param_config, "vehicle_model_wheelbase", wheelbase_, double(0.582));
+  yamlRead<std::string>(param_config, "log_path", log_path, "opt/usr/");
   yamlRead<std::string>(param_config, "vehicle_model_type", vehicle_model_type_, "kinematics_no_delay");
   
+    // 打印 MPC 读取到的所有参数
+  std::cout << "\n==================== MPC 参数配置读取结果 ====================" << std::endl;
+  std::cout << "show_debug_info                : " << std::boolalpha << show_debug_info_ << std::endl;
+  std::cout << "ctrl_period                    : " << ctrl_period_ << " s" << std::endl;
+  std::cout << "enable_path_smoothing          : " << std::boolalpha << enable_path_smoothing_ << std::endl;
+  std::cout << "enable_yaw_recalculation       : " << std::boolalpha << enable_yaw_recalculation_ << std::endl;
+  std::cout << "path_filter_moving_ave_num     : " << path_filter_moving_ave_num_ << std::endl;
+  std::cout << "path_smoothing_times           : " << path_smoothing_times_ << std::endl;
+  std::cout << "curvature_smoothing_num        : " << curvature_smoothing_num_ << std::endl;
+  std::cout << "traj_resample_dist             : " << traj_resample_dist_ << " m" << std::endl;
+  std::cout << "admisible_position_error       : " << admisible_position_error_ << " m" << std::endl;
+  std::cout << "admisible_yaw_error_deg        : " << admisible_yaw_error_deg_ << " deg" << std::endl;
+  std::cout << "mpc_prediction_horizon         : " << mpc_param_.prediction_horizon << std::endl;
+  std::cout << "mpc_prediction_sampling_time   : " << mpc_param_.prediction_sampling_time << " s" << std::endl;
+  std::cout << "mpc_weight_lat_error           : " << mpc_param_.weight_lat_error << std::endl;
+  std::cout << "mpc_weight_heading_error       : " << mpc_param_.weight_heading_error << std::endl;
+  std::cout << "weight_heading_error_vel_coeff : " << mpc_param_.weight_heading_error_squared_vel_coeff << std::endl;
+  std::cout << "mpc_weight_steering_input      : " << mpc_param_.weight_steering_input << std::endl;
+  std::cout << "weight_steer_input_vel_coeff   : " << mpc_param_.weight_steering_input_squared_vel_coeff << std::endl;
+  std::cout << "mpc_weight_lat_jerk            : " << mpc_param_.weight_lat_jerk << std::endl;
+  std::cout << "weight_terminal_lat_error      : " << mpc_param_.weight_terminal_lat_error << std::endl;
+  std::cout << "weight_terminal_heading_error  : " << mpc_param_.weight_terminal_heading_error << std::endl;
+  std::cout << "mpc_zero_ff_steer_deg          : " << mpc_param_.zero_ff_steer_deg << " deg" << std::endl;
+  std::cout << "delay_compensation_time        : " << mpc_param_.delay_compensation_time << " s" << std::endl;
+  std::cout << "steer_lim_deg                  : " << steer_lim_deg_ << " deg" << std::endl;
+  std::cout << "vehicle_model_wheelbase        : " << wheelbase_ << " m" << std::endl;
+  std::cout << "log_path                       : " << log_path << std::endl;
+  std::cout << "vehicle_model_type             : " << vehicle_model_type_ << std::endl;
+  std::cout << "==============================================================\n" << std::endl;
+
   if (vehicle_model_type_ == "kinematics")
   {
     double steer_tau;
@@ -133,6 +165,18 @@ MPCFollowerController::MPCFollowerController(std::string params_path)
   lpf_yaw_error_.initialize(ctrl_period_, error_deriv_lpf_curoff_hz);
   lpf_vel_cmd_.initialize(ctrl_period_,steering_lpf_cutoff_hz);
 
+  time_t now = time(nullptr);
+  char buf[128] = {0};
+    // 格式：年月日_时分秒
+  strftime(buf, sizeof(buf), "MPC_%Y%m%d_%H%M%S", localtime(&now));
+  string full_path = log_path + string(buf) + ".log";
+
+  ofs_log.open(full_path, ios::out);
+
+  if (!ofs_log.is_open()) {
+        cerr << full_path <<"打开日志文件失败！" << endl;
+        //return;
+  }
 
 }
 
@@ -149,9 +193,7 @@ bool MPCFollowerController::MpcUpdate(double& vel_cmd,double& acc_cmd,double& st
   auto start = std::chrono::system_clock::now();
   const bool mpc_solved = calculateMPC(vel_cmd, acc_cmd, steer_cmd, steer_vel_cmd);
   //角速度按照ackerman转向根据转角重新计算
-  
-  //steer_vel_cmd = m_chassisReport.velocity*std::tan(steer_cmd)/wheelbase_;
-  
+
   double elapsed_ms = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now() - start).count() * 1.0e-6;
   printf("[MPC] timerCallback: MPC calculating time = %f [ms]\n",elapsed_ms);
   if (!mpc_solved)/*此情况mpc不收敛,需要紧急制动*/
@@ -250,6 +292,9 @@ bool MPCFollowerController::calculateMPC(double &vel_cmd, double &acc_cmd, doubl
   printf("[MPC] nearpose.x = %f, y = %f, yaw = %f", nearest_pose.position.x, nearest_pose.position.y, MPCUtils::getYaw(nearest_pose.orientation));
   printf("[MPC] nearest_index = %d, nearest_traj_time = %f", nearest_index, nearest_traj_time);
   printf("[MPC] lat error = %f, yaw error = %f, steer = %f, sp_yaw = %f, my_yaw = %f", err_lat, yaw_err, steer, sp_yaw, current_yaw);
+
+  
+        
   /////////////// delay compensation  ///////////////
   Eigen::MatrixXd Ad(DIM_X, DIM_X);
   Eigen::MatrixXd Bd(DIM_X, DIM_U);
@@ -303,7 +348,7 @@ bool MPCFollowerController::calculateMPC(double &vel_cmd, double &acc_cmd, doubl
   std::vector<double> mpc_time_v;
 
   for (int i = 0; i < N; ++i)
-  {
+  {//steer_vel_cmd = m_chassisReport.velocity*std::tan(steer_cmd)/wheelbase_;
     mpc_time_v.push_back(mpc_curr_time + i * DT);
   }
   MPCTrajectory mpc_resampled_ref_traj;
@@ -366,7 +411,7 @@ bool MPCFollowerController::calculateMPC(double &vel_cmd, double &acc_cmd, doubl
     {
       Uref(0, 0) = 0.0; // ignore curvature noise
     }
-    Urefex.block(i * DIM_U, 0, DIM_U, 1) = Uref;
+    Urefex.block(i * DIM_U, 0, DIM_U, 1) = Uref;//steer_vel_cmd = m_chassisReport.velocity*std::tan(steer_cmd)/wheelbase_;
     mpc_curr_time += DT;
   }
   /* add lateral jerk : weight for (v * {u(i) - u(i-1)} )^2 */
@@ -430,8 +475,22 @@ bool MPCFollowerController::calculateMPC(double &vel_cmd, double &acc_cmd, doubl
   /* save to buffer */
   input_buffer_.push_back(steer_cmd);
   input_buffer_.pop_front();
+
   printf("[MPC] calculateMPC: mpc steer command raw = %f, filtered = %f, steer_vel_cmd = %f", Uex(0, 0), u_filtered, steer_vel_cmd);
   printf("[MPC] calculateMPC: mpc vel command = %f, acc_cmd = %f", vel_cmd, acc_cmd);
+
+
+  if (ofs_log.is_open())
+  {
+    time_t now = time(nullptr);
+    char timeStr[64];
+    strftime(timeStr, sizeof(timeStr), "%Y-%m-%d %H:%M:%S", localtime(&now));
+
+    ofs_log << "[" << timeStr << "] " << "lat error = " <<err_lat <<",yaw error = " << yaw_err;
+
+
+  }
+
 
 //  ////////////////// DEBUG ///////////////////
 //
@@ -476,8 +535,11 @@ LateralOutput MPCFollowerController::run(trajectory_follower::InputData const  &
 
     steer_vel_cmd = m_chassisReport.velocity * std::tan(steer_cmd)/wheelbase_;
 
-    steer_vel_cmd = std::clamp(steer_vel_cmd, -1.0, 1.0);
+    steer_vel_cmd = std::clamp(steer_vel_cmd, -1.5, 1.5);
 
+    ofs_log << ",steer_cmd = " <<steer_cmd <<",steer_vel_cmd = " << steer_vel_cmd << ",m_chassisReport.velocity = " << m_chassisReport.velocity << endl;
+    // 立即刷新缓冲区，防止掉日志
+    ofs_log.flush(); 
     lateral_output.control_cmd.steering_tire_angle = steer_cmd;
     lateral_output.control_cmd.steering_tire_rotation_rate = steer_vel_cmd;
    
@@ -534,11 +596,11 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
   printf("[MPC] path callback: trajectory curvature : max_k = %f, min_k = %f,max_yaw:%f,min_yaw:%f\n", max_k, min_k,max_yaw,min_yaw);
   /* add end point with vel=0 on traj for mpc prediction */
   const double mpc_predict_time_length = (mpc_param_.prediction_horizon + 1) * mpc_param_.prediction_sampling_time + mpc_param_.delay_compensation_time + ctrl_period_;
-  const double end_velocity = 0.0;
+  //const double end_velocity = 0.0;
   //const double end_velocity = current_waypoints_.waypoints.back().twist.twist.linear.x;
-  traj.vx.back() = end_velocity; // also for end point
+  //traj.vx.back() = end_velocity; // also for end point
   traj.push_back(traj.x.back(), traj.y.back(), traj.z.back(), traj.yaw.back(),
-                 end_velocity, traj.k.back(),traj.k.back(), traj.relative_time.back() + mpc_predict_time_length);
+                 traj.vx.back(), traj.k.back(),traj.k.back(), traj.relative_time.back() + mpc_predict_time_length);
 
   if (!traj.size())
   {
@@ -560,7 +622,7 @@ void MPCFollowerController::convertTrajToMarker(MPCTrajectory debug_mpc_predicte
 float r,float g,float b)
   {
     mdc::visual::Marker predicted_trajectory_marker;
-    predicted_trajectory_marker.header.frameId = "map";
+    predicted_trajectory_marker.header.frameId = "base_link";
     const auto now = std::chrono::high_resolution_clock::now().time_since_epoch();
     uint32_t sec = std::chrono::duration_cast<std::chrono::seconds>(now).count();
     uint32_t nsec = std::chrono::duration_cast<std::chrono::nanoseconds>(now).count() % 1000000000UL;;
@@ -596,7 +658,7 @@ void MPCFollowerController::convertPosToMarkerAndPublish(const Adsfi::HafPose ve
   mdc::visual::Marker marker;
   marker.points.clear();
   //marker.header.frame_id = current_waypoints_.header.frame_id;
-  marker.header.frameId = "map";
+  marker.header.frameId = "base_link";
   const auto now = std::chrono::high_resolution_clock::now().time_since_epoch();
   uint32_t sec = std::chrono::duration_cast<std::chrono::seconds>(now).count();
   uint32_t nsec = std::chrono::duration_cast<std::chrono::nanoseconds>(now).count() % 1000000000UL;;

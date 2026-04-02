@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;Odometry_scfi_intf;-Wl,--as-needed;yaml;pthread;odometry_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;odometry_logger.cpp;sample.cpp;main.cpp;odometry_manager.cpp;locationinfointf_common.cpp;sensorwheelspeedserviceinterface_common.cpp;sensorimuserviceinterface_common.cpp;locationserviceinterface_common.cpp;sensorgpsserviceinterface_common.cpp) 

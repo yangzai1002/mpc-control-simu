@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;sensor_viualize_base_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;msgimagedatalistserviceinterface_client.cpp;msgimagedatalistserviceinterface_client_impl.cpp;sensor_viualize_base_swc.cpp;sensorlidarpointcloudserviceinterface_client.cpp;sensorlidarpointcloudserviceinterface_client_impl.cpp;sensor_viualize_base_logger.cpp;sensorlidarpointcloudserviceinterface_common.cpp;msgimagedatalistserviceinterface_common.cpp) 

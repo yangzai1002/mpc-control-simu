@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP ascend_hal;-Wl,--no-as-needed;LidarTerrainMapDetection_scfi_intf;-Wl,--as-needed;yaml;pthread;lidar_terrain_map_detection;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library;rm::rm)
+set(SCFI_OUTPUT_SOURCES lidarterrainmapdetection_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;lidarterrainmapdetection_manager.cpp;main.cpp;perceptionstaticenvserviceinterface_common.cpp;sensorlidarpointcloudserviceinterface_common.cpp;locationinfointf_common.cpp) 
