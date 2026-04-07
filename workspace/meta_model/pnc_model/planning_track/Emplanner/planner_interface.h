@@ -101,6 +101,7 @@ private:
 
     // 规控大脑实例
     std::unique_ptr<PlannerManager> planner_manager_;
+
 };
 
 } // namespace interface

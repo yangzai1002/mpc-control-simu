@@ -36,6 +36,14 @@ public:
                   const std::vector<path_planner::PathPointSL>& path_points,
                   std::vector<trajectory::TrajectoryPoint>& trajectory,
                   const double speed_limit_override = -1.0) const;
+    // void Generate(
+    // const std::vector<ref_line::ReferencePoint>& ref_line,
+    // const std::vector<path_planner::PathPointSL>& path_points,
+    // std::vector<trajectory::TrajectoryPoint>& trajectory,
+    // const double speed_limit_override,
+    // const double init_speed,    // 【新增】车辆当前速度（上一帧末速度）
+    // const double init_acc       // 【新增】车辆当前加速度
+    // ) const;
 
 private:
     Config config_;

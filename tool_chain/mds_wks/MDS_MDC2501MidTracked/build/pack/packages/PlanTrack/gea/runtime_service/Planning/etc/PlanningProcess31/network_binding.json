@@ -1,0 +1,59 @@
+{
+  "instanceSpecifiers": [
+    {
+      "instanceSpecifier": "Planning/PlanningExecutable31Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/FusionObjectArrayServiceInterface/FusionObjectArrayIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20228",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype3_DdsRequiredServiceInstance107"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Planning/PlanningExecutable31Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/PerceptionStaticEnvServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20208",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance106"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Planning/PlanningExecutable31Prototype/",
+      "service": "/HuaweiMDC/interface_manifests/interfaces/VehicleInfomationServiceInterface",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20205",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance112"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Planning/PlanningExecutable31Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/PlanningResultServiceInterface/PlanningResultIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20212",
+          "shortName": "/HuaweiMDC/instance_manifests/providedInstances/tppathplan_track_DdsProvidedServiceInstance32"
+        }
+      ]
+    },
+    {
+      "instanceSpecifier": "Planning/PlanningExecutable31Prototype/",
+      "service": "/HuaweiMDC/FunctionalSoftware/LocationInfoServiceInterface/LocationInfoIntf",
+      "instanceIdentifiers": [
+        {
+          "protocol": "DDS",
+          "instanceIdentifier": "20218",
+          "shortName": "/HuaweiMDC/instance_manifests/requiredInstances/RPortPrototype2_DdsRequiredServiceInstance113"
+        }
+      ]
+    }
+  ]
+}

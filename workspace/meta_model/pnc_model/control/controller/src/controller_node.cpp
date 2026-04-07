@@ -198,11 +198,13 @@ void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  cur
             << curlocation->pose.pose.position.z;
 
     // 位置
+#ifndef Gazebo
     m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
     m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
-
-    //m_inputData.current_pose.position.x = curlocation->pose.pose.position.x;
-    //m_inputData.current_pose.position.y = curlocation->pose.pose.position.y;
+#else
+    m_inputData.current_pose.position.x = curlocation->pose.pose.position.x;
+    m_inputData.current_pose.position.y = curlocation->pose.pose.position.y;
+#endif
     m_inputData.current_pose.position.z = curlocation->pose.pose.position.z;
  
 // 2. 弧度归一化到 [-π, π]
@@ -261,6 +263,7 @@ void Controller::updateTrajectory(std::shared_ptr<ara::adsfi::MsgHafEgoTrajector
             new_TrajectoryPoint.wayPoint.theta = PlanningResult->trajectoryPoints[i].wayPoint.theta;
             new_TrajectoryPoint.wayPoint.curvature = PlanningResult->trajectoryPoints[i].wayPoint.curvature;
             new_TrajectoryPoint.speed = PlanningResult->trajectoryPoints[i].speed;
+            std::cout <<"new_TrajectoryPoint.speed:"<<new_TrajectoryPoint.speed<<std::endl;
             if(new_TrajectoryPoint.speed > 1.5)
                 new_TrajectoryPoint.speed = 1.5;
             if(new_TrajectoryPoint.speed < 0.2)

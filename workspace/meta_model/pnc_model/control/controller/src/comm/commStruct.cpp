@@ -183,7 +183,7 @@ MPCTrajectory convertToMPCTrajectory(
         const double k = 0.0;
         const double t = 0.0;
 
-        output.push_back(x, y, z, yaw, vx, k, k,t);
+        output.push_back(x, y, z, yaw, vx , k,t);
     }
 
     calcMPCTrajectoryTime(output);

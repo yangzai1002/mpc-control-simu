@@ -7,7 +7,7 @@ namespace mpc_lateral_controller
 //
 void MPCTrajectory::push_back(const double &xp, const double &yp,
         const double &zp, const double &yawp, const double &vxp,
-        const double &kp, const double &smooth_kp, const double &tp)
+        const double &kp, /*const double &smooth_kp, */const double &tp)
 {
     x.push_back(xp);
     y.push_back(yp);
@@ -17,7 +17,7 @@ void MPCTrajectory::push_back(const double &xp, const double &yp,
     vx.push_back(vxp);
     k.push_back(kp);
 
-    smooth_k.push_back(smooth_kp);
+   // smooth_k.push_back(smooth_kp);
 
     relative_time.push_back(tp);
 }
@@ -35,7 +35,7 @@ void MPCTrajectory::push_back(const MPCTrajectoryPoint &p)
     vx.push_back(p.vx);
     k.push_back(p.k);
 
-    smooth_k.push_back(p.smooth_k);
+    //smooth_k.push_back(p.smooth_k);
     relative_time.push_back(p.relative_time);
 }
 
@@ -54,7 +54,7 @@ MPCTrajectoryPoint MPCTrajectory::back()
     p.vx = vx.back();
     p.k = k.back();
 
-    p.smooth_k = smooth_k.back();
+   // p.smooth_k = smooth_k.back();
 
     p.relative_time = relative_time.back();
 
@@ -73,7 +73,7 @@ void MPCTrajectory::clear()
     vx.clear();
     k.clear();
 
-    smooth_k.clear();
+   // smooth_k.clear();
 
     relative_time.clear();
 }
@@ -85,7 +85,7 @@ size_t MPCTrajectory::size() const
 {
     if (x.size() == y.size() && x.size() == z.size() && x.size() == yaw.size()
             && x.size() == vx.size() && x.size() == k.size()
-            && x.size() == smooth_k.size() && x.size() == relative_time.size())
+            /*&& x.size() == smooth_k.size() */ && x.size() == relative_time.size())
     {
         return x.size();
     }

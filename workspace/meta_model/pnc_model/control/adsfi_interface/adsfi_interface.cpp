@@ -23,7 +23,7 @@
 // #include "XTrajectoryProcess.h"
 // #include "base_control/lat/latcontrol_header.h"
 // #include "base_control/adsfi_struct_adapter.h"
-
+//#define GazeboSim
 
 int udp_send_fd = -1;
 struct sockaddr_in udp_target_addr;
@@ -165,7 +165,7 @@ void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara
     std::cout << "FaultData callback" << std::endl;
     safebuf_faultdata.Set(ptr);
 }
-#define GazeboSim
+//#define GazeboSim
 int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi::VehicleActControl> &control_ptr) 
 {
 	std::shared_ptr<ara::adsfi::BusinessCommand> bus_command_ptr;

@@ -504,7 +504,7 @@ bool MPCFollowerController::calculateMPC(double &vel_cmd, double &acc_cmd, doubl
     const double x = mpc_resampled_ref_traj.x[i] - std::sin(mpc_resampled_ref_traj.yaw[i]) * lat_error;
     const double y = mpc_resampled_ref_traj.y[i] + std::cos(mpc_resampled_ref_traj.yaw[i]) * lat_error;
     const double z = mpc_resampled_ref_traj.z[i];
-    debug_mpc_predicted_traj.push_back(x, y, z, mpc_resampled_ref_traj.yaw[i] + yaw_error, 0, 0, 0,0);
+    debug_mpc_predicted_traj.push_back(x, y, z, mpc_resampled_ref_traj.yaw[i] + yaw_error, 0, 0,0);
   }
 
   /* publish for visualization */
@@ -585,16 +585,24 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
     MPCUtils::convertEulerAngleToMonotonic(traj.yaw);
   }
   /* calculate curvature */
-  if(traj.size()<curvature_smoothing_num_)
+  // if(traj.size()<curvature_smoothing_num_)
+  // {
+	//   std::cout << "traj size num less than curvature_smoothing_num_ ,do not curvature smooth"<<std::endl;
+  //   //return;
+  // }else
+  // {
+  std::cout << "[MPC] path callback: trajectory size is undesired666";
+    printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
+               traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
+    MPCUtils::calcTrajectoryCurvature(traj, curvature_smoothing_num_);
+  std::cout << "[MPC] path callback: trajectory size is undesired888";
+  printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
+              traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
+ // }
+
+  if (!traj.size())
   {
-	  RS_WARNING << "traj size num less than curvature_smoothing_num_";
-    return;
-  }
- 
-  MPCUtils::calcTrajectoryCurvature(traj, curvature_smoothing_num_);
-if (!traj.size())
-  {
-	  RS_ERROR << "[MPC] path callback: trajectory size is undesired7777";
+	  RS_ERROR << "[MPC] path callback: trajectory size is undesired";
     printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
                traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
     return;
@@ -611,7 +619,7 @@ if (!traj.size())
   //const double end_velocity = current_waypoints_.waypoints.back().twist.twist.linear.x;
   //traj.vx.back() = end_velocity; // also for end point
   traj.push_back(traj.x.back(), traj.y.back(), traj.z.back(), traj.yaw.back(),
-                 traj.vx.back(), traj.k.back(),traj.k.back(), traj.relative_time.back() + mpc_predict_time_length);
+                 traj.vx.back(), traj.k.back(), traj.relative_time.back() + mpc_predict_time_length);
 
   if (!traj.size())
   {

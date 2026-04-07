@@ -65,6 +65,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
             match_idx = i;
         }
     }
+   // std::cout <<"match_idx:"<<match_idx<<std::endl;
     double ego_s = accumulated_s[match_idx]; 
 
     // 设定滑动截断边界：向后 30m，向前 150m
@@ -76,6 +77,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
     double aligned_start_s = std::floor(start_s / sample_step) * sample_step;
 
     std::vector<ref_line::RawPoint> local_raw_path;
+    size_t last_idx = 0;
     for (double target_s = aligned_start_s; target_s <= end_s; target_s += sample_step) {
         if (target_s >= accumulated_s.back() - 1e-4) {
             local_raw_path.push_back(full_local_path.back());
@@ -98,8 +100,9 @@ bool PlannerInterface::RunPlanner(const Location& loc,
         double interp_y = full_local_path[prev_idx].y + ratio * (full_local_path[next_idx].y - full_local_path[prev_idx].y);
         
         local_raw_path.push_back({interp_x, interp_y});
+        last_idx = next_idx;
     }
-
+    
     if (local_raw_path.size() < 3) {
         std::cerr << "[PlannerInterface] WARNING: Valid route segment is too short." << std::endl;
         return false;
@@ -167,7 +170,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
         pt.right_bound = tp.right_bound; 
         out_trajectory.push_back(pt);
     }
-
+    
     return success;
 }
 
@@ -184,6 +187,7 @@ std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
     
     map_processor::GridMapConfig map_cfg;
     map_processor::ObstacleExtractor extractor(map_processor::ObstacleExtractor::ExtractConfig{});
+
     std::vector<frenet::FrenetPoint> frenet_obs = extractor.Extract(occupancy_source, map_cfg, ref_line);
 
     std::vector<path_planner::ObstacleSL> obstacles_sl;

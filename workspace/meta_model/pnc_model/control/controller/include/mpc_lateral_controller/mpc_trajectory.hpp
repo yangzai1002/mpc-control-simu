@@ -30,12 +30,12 @@ public:
     std::vector<double> yaw;    //yaw pose
     std::vector<double> vx;    //vx velocity
     std::vector<double> k;    //k曲率
-    std::vector<double> smooth_k;       //k smoothed-curvature
+   // std::vector<double> smooth_k;       //k smoothed-curvature
     std::vector<double> relative_time;    //relative_time duration time from start point
 
     void push_back(const double &xp, const double &yp, const double &zp,
                    const double &yawp, const double &vxp, const double &kp,
-                   const double &smooth_kp, const double &tp);
+                   /*const double &smooth_kp,*/ const double &tp);
 
     void push_back(const MPCTrajectoryPoint &p);
 

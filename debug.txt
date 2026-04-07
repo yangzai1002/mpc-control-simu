@@ -1,0 +1,4786 @@
+Please select a process:
+1) PlanningProcess31
+2025/08/15 21:12:04.439484428 2025/08/15 21:12:04.439744247 000 LOCAL ____ EM info N 3 [[RpcBase][Get loopback ip address][ip=127.0.0.1]]
+2025/08/15 21:12:04.439567553 2025/08/15 21:12:04.439822606 001 LOCAL ____ EM info N 3 [[RpcClient][Config instance id read success][config_instance_id=0]]
+2025/08/15 21:12:04.439593334 2025/08/15 21:12:04.439847398 002 LOCAL ____ EM info N 3 [[RpcClient][Server running env read success][em_in_linux=1]]
+2025/08/15 21:12:04.439614376 2025/08/15 21:12:04.439868283 003 LOCAL ____ EM warn N 3 [[RpcClient][EM operating environment is nullptr, use default value][isolate_communication=0]]
+2025/08/15 21:12:04.439633621 2025/08/15 21:12:04.439887762 004 LOCAL ____ EM info N 1 [[RpcClient][Rpc client using UDP transport mode]]
+2025/08/15 21:12:04.439742423 2025/08/15 21:12:04.439997710 000 LOCAL ____ CM info N 1 [16091-16091 [CM version info][ver=320500.0.0, commit=bee4b51ea]]
+2025/08/15 21:12:04.440214064 2025/08/15 21:12:04.440471981 001 LOCAL ____ CM info N 1 [16091-16091 [ParseJsonToGetConfig][Get SIPC configuration in rtf.json][newSIPC=false, superMemPool=true]]
+2025/08/15 21:12:04.441203022 2025/08/15 21:12:04.441462710 002 LOCAL ____ CM info N 1 [16091-16091 [RTFCOM] Parse dds method config[uri=/Huawei/AP/ExecutionManagement/0, configSource=1, topicNameRP=EM_RPC_REQUEST_INTERNAL_0:EM_RPC_REPLY_INTERNAL_0, poolSizeRP=262144:262144, fragSizeRP=2048:2048, listSizeRP=128:128, domainId=4, uuid=57361.0.127.0.0.1 , serial=ROS, E2E=false, durabilityRP=0:0, requestDepthWR=10:100, replyDepthWR=100:10, iam=false, liteDDS=false, requestHeartBeat=null, replyHeartBeat=null]]
+2025/08/15 21:12:04.441501095 2025/08/15 21:12:04.441756695 003 LOCAL ____ CM info N 1 [16091-16091 [DDSParticipantHandleList][Set participant channel Interoperability][domainId=4, identity=UNDEFINED, unreadchablePeers=, ignoreTags=, runMode=0, ignoreFlag=0]]
+2025/08/15 21:12:04.444950001 2025/08/15 21:12:04.445209794 004 LOCAL ____ CM info N 1 [16091-16091 [RTFCOM][Start find service][entityName=/Huawei/AP/ExecutionManagement/0,UUID=57361.0.DDS.127.0.0.0, domainId=4]]
+2025/08/15 21:12:04.445012553 2025/08/15 21:12:04.445267945 005 LOCAL ____ CM info N 1 [16091-16091 [NodeImpl][MethodClient created][uri=/Huawei/AP/ExecutionManagement/0]]
+2025/08/15 21:12:04.445050965 2025/08/15 21:12:04.445305809 000 LOCAL ____ EMCL info N 1 [[ExecutionClient][Client method initialized successfully]]
+2025/08/15 21:12:04.445308413 2025/08/15 21:12:04.445564898 005 LOCAL ____ EM warn N 3 [[ExecutionClientInner][EM dlopen failed][dlopen_error=libexec_client_extension.so: cannot open shared object file: No such file or directory]]
+load log config :/opt/usr/log/
+error get log config path /opt/usr/log//log.conf
+2025/08/15 21:12:04.446849975 2025/08/15 21:12:04.447107788 006 LOCAL ____ CM info N 1 [16091-16101 [EventController][Event thread is prepared][ctxId=4294967298]]
+2025/08/15 21:12:04.447617866 2025/08/15 21:12:04.447875809 007 LOCAL ____ CM info N 1 [16091-16101 [RTFCOM] Method state changed[name=/Huawei/AP/ExecutionManagement/0, state=kMethodOnline, onlineCount=1, offlineCount=0]]
+init
+Init ShmTransmiiter writer
+object_shmid_header_:31
+shmid_data_:32
+Successfully initialized planning status shared memory writer
+Normal mode - waiting for external inputs
+interface_global_path.szie222245
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:05.535600184 2025/08/15 21:12:05.535861409 000 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:05.535696929 2025/08/15 21:12:05.535966149 001 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20218]
+2025/08/15 21:12:05.535860288 2025/08/15 21:12:05.536118154 000 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:05.535872059 2025/08/15 21:12:05.536131956 001 LOCAL Plan SWC error N 2 [tpfusionloc init failed.]
+2025/08/15 21:12:05.535919064 2025/08/15 21:12:05.536176878 000 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+2025/08/15 21:12:05.535928596 2025/08/15 21:12:05.536190498 001 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpfusionloc]
+2025/08/15 21:12:05.535977111 2025/08/15 21:12:05.536238571 002 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20205]
+2025/08/15 21:12:05.536039064 2025/08/15 21:12:05.536297919 002 LOCAL Plan SWC error N 2 [tpvehiclestate4 init failed.]
+2025/08/15 21:12:05.536069377 2025/08/15 21:12:05.536323987 002 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpvehiclestate4]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:05.636030028 2025/08/15 21:12:05.636289274 003 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:06.537132607 2025/08/15 21:12:06.537431358 004 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:06.537319716 2025/08/15 21:12:06.537576149 003 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:06.537351956 2025/08/15 21:12:06.537621853 003 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+2025/08/15 21:12:06.537418284 2025/08/15 21:12:06.537693884 005 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20218]
+2025/08/15 21:12:06.537625341 2025/08/15 21:12:06.537888832 006 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20205]
+2025/08/15 21:12:06.537917945 2025/08/15 21:12:06.538175160 004 LOCAL Plan SWC error N 2 [tpfusionloc init failed.]
+2025/08/15 21:12:06.537934612 2025/08/15 21:12:06.538191332 005 LOCAL Plan SWC error N 2 [tpvehiclestate4 init failed.]
+2025/08/15 21:12:06.537948596 2025/08/15 21:12:06.538203337 004 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpfusionloc]
+2025/08/15 21:12:06.537961930 2025/08/15 21:12:06.538216748 005 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpvehiclestate4]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:06.636208779 2025/08/15 21:12:06.636482373 007 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:07.538502894 2025/08/15 21:12:07.538767426 008 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:07.538640238 2025/08/15 21:12:07.538897452 006 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:07.538670472 2025/08/15 21:12:07.538925056 006 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+2025/08/15 21:12:07.539016019 2025/08/15 21:12:07.539279431 009 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20218]
+2025/08/15 21:12:07.539169274 2025/08/15 21:12:07.539424978 007 LOCAL Plan SWC error N 2 [tpfusionloc init failed.]
+2025/08/15 21:12:07.539198285 2025/08/15 21:12:07.539452687 007 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpfusionloc]
+2025/08/15 21:12:07.539257165 2025/08/15 21:12:07.539516020 010 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20205]
+2025/08/15 21:12:07.539635238 2025/08/15 21:12:07.539890968 008 LOCAL Plan SWC error N 2 [tpvehiclestate4 init failed.]
+2025/08/15 21:12:07.539662894 2025/08/15 21:12:07.539917504 008 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpvehiclestate4]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+2025/08/15 21:12:07.636395811 2025/08/15 21:12:07.636660030 011 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+Process error LocationInfo have not new data
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79110
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79112
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79113
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79115
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79117
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79118
+Process error Perception_grid_map have not new data
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Process error Perception_grid_map have not new data
+LocationInfo  callback:79119
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Process error Perception_grid_map have not new data
+LocationInfo  callback:79120
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1.75526e+12
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:4.23193
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79121
+IdpVehicleInformation  callback:0
+grid mpa publish:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79123
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79124
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79125
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:93.0991
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:5.43404
+LocationInfo  callback:79126
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79127
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79129
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79130
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:97.8279
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:8.98409
+LocationInfo  callback:79131
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79132
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79133
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79134
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79135
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79136
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:95.706
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1.39093
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79137
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79138
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:08.539808806 2025/08/15 21:12:08.540076854 012 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:08.539941098 2025/08/15 21:12:08.540197297 009 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:08.539970812 2025/08/15 21:12:08.540225344 009 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:89.8969
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:7.75504
+LocationInfo  callback:79141
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79142
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79143
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:99.5691
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:0.853062
+LocationInfo  callback:79146
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79148
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79150
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:104.938
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:4.74811
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79152
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79153
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:86.442
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:2.37107
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79156
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79157
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79158
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79159
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79160
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:101.913
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79161
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79162
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79163
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79164
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79166
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79167
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79168
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79169
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79170
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79171
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79172
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79175
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79176
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79177
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79178
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79179
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79181
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79182
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79183
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79184
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79185
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79186
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79187
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79188
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:09.541147349 2025/08/15 21:12:09.541414120 013 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:09.541267427 2025/08/15 21:12:09.541524537 010 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:09.541296984 2025/08/15 21:12:09.541551620 010 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79189
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79190
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79191
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79193
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79194
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79195
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79196
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79198
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79199
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:806.258
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79201
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79202
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79204
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:88.6469
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1.05405
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79207
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79208
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:100.401
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:5.72491
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79210
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79211
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79212
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79213
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:87.6901
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:15.3708
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79215
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79216
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:85.52
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:8.3251
+LocationInfo  callback:79219
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79220
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79222
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79223
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:99.046
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79224
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79225
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79226
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79227
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79228
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79229
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79231
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79233
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79235
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79236
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79237
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:10.542506594 2025/08/15 21:12:10.542770606 014 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:10.542632089 2025/08/15 21:12:10.542887637 011 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:10.542661698 2025/08/15 21:12:10.542916100 011 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79238
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79239
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79241
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79242
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79243
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79245
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79246
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79249
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79250
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79254
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79255
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79256
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79257
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79258
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79260
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79261
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79262
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79263
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79265
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79267
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79271
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79272
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:11.269293079 2025/08/15 21:12:11.269561309 015 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79274
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79275
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79276
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79277
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79278
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79279
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79281
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79282
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79284
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79285
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79286
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:11.543891152 2025/08/15 21:12:11.544157013 016 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:11.544009668 2025/08/15 21:12:11.544265372 012 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:11.544035527 2025/08/15 21:12:11.544289955 012 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79287
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79288
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79289
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79290
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79291
+IdpVehicleInformation  callback:0
+The MViz server address is parsed and the visualization client is created successfully.
+ publish origin_path::: 45
+plan_cost_time:3469.87
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79292
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:20.144
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79295
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.927
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.1902
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8258
+send planing trajectory!!!
+LocationInfo  callback:79299
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79300
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3759
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79302
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.4402
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79303
+ publish origin_path::: 45
+plan_cost_time:15.285
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79304
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.389
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79306
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1699.46
+ publish origin_path::: 45
+plan_cost_time:15.4641
+send planing trajectory!!!
+LocationInfo  callback:79307
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+IdpVehicleInformation  callback:0
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+ publish origin_path::: 45
+plan_cost_time:17.771
+send planing trajectory!!!
+LocationInfo  callback:79309
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+ publish origin_path::: 45
+plan_cost_time:17.8831
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:102.814
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:3.54314
+LocationInfo  callback:79312
+IdpVehicleInformation  callback:0
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+ publish origin_path::: 45
+plan_cost_time:19.1872
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79314
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.51
+send planing trajectory!!!
+LocationInfo  callback:79315
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:87.0559
+IdpVehicleInformation  callback:0
+[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m).
+ publish origin_path::: 45
+plan_cost_time:23.0181
+send planing trajectory!!!
+LocationInfo  callback:79317
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:12.255
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79318
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.394
+send planing trajectory!!!
+LocationInfo  callback:79319
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79320
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8969
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79321
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:90.724
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.1191
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79323
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.0781
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79324
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79325
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.384
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79326
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79327
+ publish origin_path::: 45
+plan_cost_time:14.0071
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.173
+send planing trajectory!!!
+LocationInfo  callback:79329
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.2951
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79331
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79332
+ publish origin_path::: 45
+plan_cost_time:13.731
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79334
+ publish origin_path::: 45
+plan_cost_time:13.89
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:12.545273940 2025/08/15 21:12:12.545538654 017 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:12.545393888 2025/08/15 21:12:12.545649644 013 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:12.545423210 2025/08/15 21:12:12.545677743 013 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+ publish origin_path::: 45
+plan_cost_time:13.9151
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.9439
+send planing trajectory!!!
+LocationInfo  callback:79338
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79339
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4861
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.763
+send planing trajectory!!!
+LocationInfo  callback:79341
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79342
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:grid mpa publish:0
+1
+ publish origin_path::: 45
+plan_cost_time:13.8869
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79343
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79344
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.9949
+send planing trajectory!!!
+LocationInfo  callback:79345
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79346
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8531
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79347
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79348
+ publish origin_path::: 45
+plan_cost_time:13.6349
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79349
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.562
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79351
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.0629
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79352
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8571
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79353
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8769
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.9909
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79356
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.1521
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.118
+send planing trajectory!!!
+LocationInfo  callback:79359
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79360
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.179
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79362
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.0762
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79363
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.365
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.2889
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79366
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.2369
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79368
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79369
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.21
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79370
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:13.265106232 2025/08/15 21:12:13.265373759 018 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79371
+ publish origin_path::: 45
+plan_cost_time:15.0211
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79372
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79373
+ publish origin_path::: 45
+plan_cost_time:14.0481
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.89
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79375
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79376
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6902
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79377
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79378
+ publish origin_path::: 45
+plan_cost_time:14.5781
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79380
+ publish origin_path::: 45
+plan_cost_time:14.8101
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.513
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79382
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79383
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.492
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79384
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:13.546649643 2025/08/15 21:12:13.546915113 019 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:13.546768081 2025/08/15 21:12:13.547023889 014 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:13.546794904 2025/08/15 21:12:13.547049410 014 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79385
+ publish origin_path::: 45
+plan_cost_time:15.085
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.287
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79388
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.1609
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.178
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79391
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8681
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79393
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.5319
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79395
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.219
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.9999
+send planing trajectory!!!
+LocationInfo  callback:79398
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.333
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79400
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.4909
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79401
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79402
+ publish origin_path::: 45
+plan_cost_time:14.0531
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.035
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1705.83
+LocationInfo  callback:79405
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:6.72388
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.236
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79406
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79407
+ publish origin_path::: 45
+plan_cost_time:13.9761
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79408
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.6708
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79409
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.0568
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79411
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79412
+ publish origin_path::: 45
+plan_cost_time:14.7858
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79414
+ publish origin_path::: 45
+plan_cost_time:16.36
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79415
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.6268
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79417
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.0391
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79419
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.7618
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79420
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79421
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.574
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79422
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79423
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.863
+send planing trajectory!!!
+LocationInfo  callback:79424
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79425
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3608
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79426
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79427
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.125
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.46
+send planing trajectory!!!
+LocationInfo  callback:79429
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79430
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3701
+send planing trajectory!!!
+LocationInfo  callback:79431
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79432
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.7809
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:14.548050634 2025/08/15 21:12:14.548335999 020 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:14.548199280 2025/08/15 21:12:14.548457406 015 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:14.548232431 2025/08/15 21:12:14.548486807 015 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+LocationInfo  callback:79434
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.7552
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79435
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.4781
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79437
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7169
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79439
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.9369
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79440
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.899
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79442
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.132
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79444
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.6029
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+LocationInfo  callback:79445
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.787
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79447
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.6141
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.483
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79450
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79451
+ publish origin_path::: 45
+plan_cost_time:15.3151
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8642
+send planing trajectory!!!
+LocationInfo  callback:79453
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:grid mpa publish:0
+1
+2025/08/15 21:12:14.977661441 2025/08/15 21:12:14.977934151 021 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+ publish origin_path::: 45
+plan_cost_time:14.693
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79456
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.607
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79458
+ publish origin_path::: 45
+plan_cost_time:15.4488
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79459
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.38
+send planing trajectory!!!
+LocationInfo  callback:79460
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79461
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4548
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79463
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1177.75
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.4879
+send planing trajectory!!!
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:8.01206
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79465
+ publish origin_path::: 45
+plan_cost_time:14.1411
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79466
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.891
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79467
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79468
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:100.316
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7378
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79469
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:14.1041
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8108
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79471
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7409
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:LocationInfo  callback:0
+79473
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:89.8619
+ publish origin_path::: 45
+plan_cost_time:15.2011
+send planing trajectory!!!
+IdpVehicleInformation  callback:0LocationInfo  callback:
+79474
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79475
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8449
+send planing trajectory!!!
+LocationInfo  callback:79476
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79477
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.1389
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79479
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.744
+send planing trajectory!!!
+LocationInfo  callback:79480
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79481
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4548
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79482
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:15.549524515 2025/08/15 21:12:15.549813422 022 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:15.549701260 2025/08/15 21:12:15.549957589 016 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:15.549731103 2025/08/15 21:12:15.549985453 016 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+ publish origin_path::: 45
+plan_cost_time:14.899
+send planing trajectory!!!
+LocationInfo  callback:79483
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79484
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.524
+send planing trajectory!!!
+LocationInfo  callback:79485
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3349
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79487
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79488
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.636
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4961
+send planing trajectory!!!
+LocationInfo  callback:79490
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79491
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4191
+send planing trajectory!!!
+LocationInfo  callback:79492
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79493
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6651
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79494
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.5042
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79496
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6301
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79498
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.761
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79499
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.364
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79500
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79501
+ publish origin_path::: 45
+plan_cost_time:14.7989
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.8902
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79503
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79504
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7069
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79506
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.1069
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79507
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79508
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:18.1251
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79509
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79510
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3051
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79511
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79512
+ publish origin_path::: 45
+plan_cost_time:14.6711
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.0261
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79514
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79515
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.709
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.574
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79518
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79519
+ publish origin_path::: 45
+plan_cost_time:14.4131
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79520
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8981
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79522
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.113
+send planing trajectory!!!
+2025/08/15 21:12:16.367701885 2025/08/15 21:12:16.367964855 023 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79523
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79524
+ publish origin_path::: 45
+plan_cost_time:14.8261
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79525
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79526
+ publish origin_path::: 45
+plan_cost_time:15.2729
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79527
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.8079
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79528
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79529
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8962
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79530
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79531
+ publish origin_path::: 45
+plan_cost_time:15.734
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+LocationInfo  callback:79532
+2025/08/15 21:12:16.550921260 2025/08/15 21:12:16.551184673 024 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:16.551012510 2025/08/15 21:12:16.551268032 017 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:16.551036703 2025/08/15 21:12:16.551291522 017 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79533
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4401
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79534
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79535
+ publish origin_path::: 45
+plan_cost_time:13.8662
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79536
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79537
+ publish origin_path::: 45
+plan_cost_time:14.2639
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79538
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.2469
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79539
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.2
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79541
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79542
+ publish origin_path::: 45
+plan_cost_time:14.4849
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.729
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+LocationInfo  callback:79544
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79545
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.0621
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79547
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.1671
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79548
+ publish origin_path::: 45
+plan_cost_time:14.0939
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79549
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3011
+send planing trajectory!!!
+LocationInfo  callback:79550
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79551
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4091
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79553
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3161
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79554
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.395
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79556
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1695.68
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.0178
+send planing trajectory!!!
+LocationInfo  callback:79557
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:15.3069
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3969
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79559
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79560
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.457
+send planing trajectory!!!
+LocationInfo  callback:79561
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:91.5151
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4589
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79564
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.199
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.3359
+send planing trajectory!!!
+LocationInfo  callback:79566
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79567
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.4431
+IdpVehicleInformation  callback:send planing trajectory!!!
+0
+LocationInfo  callback:79568
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79569
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.2729
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79570
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79571
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3301
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79572
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.812
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79574
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.7469
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79576
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.1799
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79577
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.1851
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.059
+send planing trajectory!!!
+LocationInfo  callback:79580
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:17.552298865 2025/08/15 21:12:17.552576288 025 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:17.552444152 2025/08/15 21:12:17.552700611 018 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:17.552473657 2025/08/15 21:12:17.552728241 018 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+LocationInfo  callback:79581
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:19.0079
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79583
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3971
+send planing trajectory!!!
+LocationInfo  callback:79584
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79585
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.28
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79586
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.7001
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79588
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79589
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.2171
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79590
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79591
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3592
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79592
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8609
+send planing trajectory!!!
+LocationInfo  callback:79593
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79594
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.2068
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79596
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8232
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79597
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.992
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79598
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.9231
+send planing trajectory!!!
+LocationInfo  callback:79599
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79600
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.2829
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79602
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.1181
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79603
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79604
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.4159
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79605
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:16.2652
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79607
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.069
+send planing trajectory!!!
+LocationInfo  callback:79608
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79609
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.192
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79610
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:18.170218501 2025/08/15 21:12:18.170489518 026 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79611
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.1229
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79613
+ publish origin_path::: 45
+plan_cost_time:14.8349
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79615
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.3248
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79616
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79617
+ publish origin_path::: 45
+plan_cost_time:14.6871
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.864
+send planing trajectory!!!
+LocationInfo  callback:79619
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79620
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.259
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1194.85
+LocationInfo  callback:79621
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:10.2551
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79622
+ publish origin_path::: 45
+plan_cost_time:12.2111
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79623
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.3301
+send planing trajectory!!!
+LocationInfo  callback:79624
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79625
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.6472
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79626
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79627
+ publish origin_path::: 45
+plan_cost_time:12.5592
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79628
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.3541
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79629
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+2025/08/15 21:12:18.553729387 2025/08/15 21:12:18.554006106 027 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:18.553869517 2025/08/15 21:12:18.554126185 019 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:18.553899205 2025/08/15 21:12:18.554153945 019 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+LocationInfo  callback:79630
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.393
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79631
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.5229
+send planing trajectory!!!
+LocationInfo  callback:79632
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79633
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.265
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79634
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79635
+ publish origin_path::: 45
+plan_cost_time:12.625
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.4478
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+LocationInfo  callback:79637
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79638
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.1469
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79639
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79640
+ publish origin_path::: 45
+plan_cost_time:12.7211
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79641
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.569
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79642
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79643
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.44
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79644
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79645
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.4941
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79646
+ publish origin_path::: 45
+plan_cost_time:12.598
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79647
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.2061
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:IdpVehicleInformation  callback:12.4319
+0
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.4869
+send planing trajectory!!!
+LocationInfo  callback:79651
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79652
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.3649
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.4669
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.1849
+send planing trajectory!!!
+LocationInfo  callback:79656
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79657
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.1331
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79659
+ publish origin_path::: 45
+plan_cost_time:13.3379
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.1119
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79662
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.0239
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.678
+send planing trajectory!!!
+LocationInfo  callback:79664
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.8711
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79667
+ publish origin_path::: 45
+plan_cost_time:11.7052
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79668
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:11.6241
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:19.375310742 2025/08/15 21:12:19.375585821 028 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+LocationInfo  callback:79670
+ publish origin_path::: 45
+plan_cost_time:11.791
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79672
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:11.858
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79673
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79674
+ publish origin_path::: 45
+plan_cost_time:12.8441
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79675
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.9591
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79676
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:11.863
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79678
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.1109
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79679
+2025/08/15 21:12:19.555080169 2025/08/15 21:12:19.555342852 029 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:19.555173216 2025/08/15 21:12:19.555429154 020 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:19.555201315 2025/08/15 21:12:19.555455847 020 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.898
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79681
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:LocationInfo  callback:11.782279682
+
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.9238
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79685
+ publish origin_path::: 45
+plan_cost_time:12.007
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:11.6239
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79687
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.233
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79689
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:12.054
+LocationInfo  callback:79690
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.62
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79692
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.873
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:12.9511
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79695
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:11.7831
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79696
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: LocationInfo  callback:7969745
+
+plan_cost_time:11.796
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79698
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79699
+ publish origin_path::: 45
+plan_cost_time:12.0561
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79700
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:11.673
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79701
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79702
+ publish origin_path::: 45
+plan_cost_time:12.002
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79703
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1689.47
+ publish origin_path::: 45
+plan_cost_time:11.843
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79704
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79705
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.2191
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79706
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.54
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79708
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:101.91
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:0.788212
+ publish origin_path::: 45
+plan_cost_time:13.2821
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79709
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.078
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79712
+ publish origin_path::: 45
+plan_cost_time:13.5891
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79713
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:103.582
+ publish origin_path::: 45
+plan_cost_time:13.4161
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79714
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:7.60794
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79715
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.0701
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79716
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.567
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79718
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:83.4401
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1.37687
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4771
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79720
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.3221
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79721
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79722
+ publish origin_path::: 45
+plan_cost_time:13.4339
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.8511
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79724
+LocationInfo  callback:79725
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.3519
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79727
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.36
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:20.556409779 2025/08/15 21:12:20.556685509 030 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:20.556568555 2025/08/15 21:12:20.556826707 021 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:20.556601941 2025/08/15 21:12:20.556856733 021 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79729
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.3791
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79730
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.1271
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79732
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6189
+send planing trajectory!!!
+LocationInfo  callback:79733
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79734
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.6839
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79735
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79736
+ publish origin_path::: 45
+plan_cost_time:13.5961
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6461
+send planing trajectory!!!
+IdpVehicleInformation  callback:LocationInfo  callback:0
+79738
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79739
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7799
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.3951
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6149
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79743
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8161
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79744
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79745
+ publish origin_path::: 45
+plan_cost_time:13.6368
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.617
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79748
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.603
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79749
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79750
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.381
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79751
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79752
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.827
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79754
+ publish origin_path::: 45
+plan_cost_time:14.7359
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79756
+ publish origin_path::: 45
+plan_cost_time:14.951
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79757
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8332
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79759
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.127
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.9801
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79762
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79763
+ publish origin_path::: 45
+plan_cost_time:15.3661
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79764
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.864
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79765
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:15.0251
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79767
+2025/08/15 21:12:21.363473452 2025/08/15 21:12:21.363734911 031 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79768
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6139
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79769
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.633
+send planing trajectory!!!
+LocationInfo  callback:79770
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79771
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.5559
+send planing trajectory!!!
+LocationInfo  callback:79772
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79773
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.452
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79774
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79775
+ publish origin_path::: 45
+plan_cost_time:14.179
+IdpVehicleInformation  callback:0
+send planing trajectory!!!
+LocationInfo  callback:79776
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79777
+ publish origin_path::: 45
+plan_cost_time:14.719
+send planing trajectory!!!
+2025/08/15 21:12:21.557824259 2025/08/15 21:12:21.558087906 032 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:21.557925874 2025/08/15 21:12:21.558181395 022 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:21.557951264 2025/08/15 21:12:21.558205614 022 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.9379
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79779
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79780
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.962
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.9641
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79783
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.9369
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79785
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.683
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79786
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79787
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.739
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79788
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79789
+ publish origin_path::: 45
+plan_cost_time:14.8301
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79790
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79791
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.884
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79792
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7409
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79793
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7281
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79794
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79795
+ publish origin_path::: 45
+plan_cost_time:14.684
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79797
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:15.0981
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79798
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79799
+ publish origin_path::: 45
+plan_cost_time:14.6992
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8199
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79802
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.874
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79804
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6198
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.73
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1806.12
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1.11485
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79807
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4811
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79808
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79809
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6349
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79810
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79811
+ publish origin_path::: 45
+plan_cost_time:13.572
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:100.12
+IdpVehicleInformation  callback:0LocationInfo  callback:
+79812
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:7.3669
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback: publish origin_path::: 0
+45
+plan_cost_time:13.4468
+send planing trajectory!!!
+LocationInfo  callback:79813
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79814
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4721
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79815
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79816
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:18.7519
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:89.756
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79818
+ publish origin_path::: 45
+plan_cost_time:13.7601
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79819
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79820
+ publish origin_path::: 45
+plan_cost_time:13.9089
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:LocationInfo  callback:0
+79821
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6321
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79822
+LocationInfo  callback:79823
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.7391
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79825
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.658
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79826
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:22.559183166 2025/08/15 21:12:22.559462281 033 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:22.559320562 2025/08/15 21:12:22.559577334 023 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:22.559350796 2025/08/15 21:12:22.559605120 023 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79827
+ publish origin_path::: 45
+plan_cost_time:15.7959
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79828
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.413
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:LocationInfo  callback:0
+79830
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8209
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79831
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:17.745
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79833
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79834
+ publish origin_path::: 45
+plan_cost_time:13.5789
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.68
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79837
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7269
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79839
+ publish origin_path::: 45
+plan_cost_time:13.593
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.896
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.5919
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79842
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79843
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5829
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79844
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79845
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6751
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79846
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6199
+send planing trajectory!!!
+LocationInfo  callback:79847
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79848
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.341
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79849
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79850
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.979
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79851
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79852
+ publish origin_path::: 45
+plan_cost_time:14.4439
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79853
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6099
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79855
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.9201
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79856
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79857
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4802
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79859
+ publish origin_path::: 45
+plan_cost_time:13.9129
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79860
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.556
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79861
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79862
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.412
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79863
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4971
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:23.367982594 2025/08/15 21:12:23.368256188 034 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+ publish origin_path::: 45
+plan_cost_time:13.6151
+send planing trajectory!!!
+LocationInfo  callback:79866
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:IdpVehicleInformation  callback:13.5429
+0
+send planing trajectory!!!
+LocationInfo  callback:79868
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79869
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.602
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79870
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.688
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79872
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4242
+send planing trajectory!!!
+LocationInfo  callback:79873
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79874
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.299
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79875
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:23.561316240 2025/08/15 21:12:23.561585902 035 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:23.561442099 2025/08/15 21:12:23.561698324 024 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:23.561469156 2025/08/15 21:12:23.561723636 024 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:LocationInfo  callback:13.249979876
+
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79877
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79878
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.1199
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79879
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.417
+send planing trajectory!!!
+LocationInfo  callback:79880
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4978
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79882
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79883
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4199
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.593
+send planing trajectory!!!
+LocationInfo  callback:79885
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79886
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.638
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79888
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6259
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79889
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.777
+send planing trajectory!!!
+LocationInfo  callback:79890
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4521
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79891
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79892
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4771
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6092
+send planing trajectory!!!
+LocationInfo  callback:79894
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.627
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79897
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.592
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79898
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79899
+ publish origin_path::: 45
+plan_cost_time:13.3731
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1706.65
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:3.18909
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.483
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79901
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79902
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.149
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79903
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79904
+ publish origin_path::: 45
+plan_cost_time:13.6449
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79905
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79906
+ publish origin_path::: 45
+plan_cost_time:13.6008
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79907
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.4568
+send planing trajectory!!!
+LocationInfo  callback:79908
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79909
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.674
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7391
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79912
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.459
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4389
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79915
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.545
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.1788
+send planing trajectory!!!
+LocationInfo  callback:79918
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79919
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4139
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6339
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79922
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.8771
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79924
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:24.562690589 2025/08/15 21:12:24.562972049 036 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:24.562832230 2025/08/15 21:12:24.563088819 025 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:24.562859496 2025/08/15 21:12:24.563114158 025 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.5352
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79926
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.4188
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79927
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79928
+ publish origin_path::: 45
+plan_cost_time:14.8509
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79929
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79930
+ publish origin_path::: 45
+plan_cost_time:14.6711
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79931
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:14.2348
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79932
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79933
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6692
+send planing trajectory!!!
+LocationInfo  callback:79934
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.7741
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79936
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.2848
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79938
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79939
+ publish origin_path::: 45
+plan_cost_time:14.3349
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.53
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79940
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79941
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.344
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.3829
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.3269
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79945
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79946
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.387
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6402
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79949
+2025/08/15 21:12:25.077814887 2025/08/15 21:12:25.078086268 037 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.137
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.8352
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79952
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79953
+ publish origin_path::: 45
+plan_cost_time:13.526
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:1102.04
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7088
+send planing trajectory!!!
+LocationInfo  callback:79955
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79956
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.617
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6099
+send planing trajectory!!!
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:86.802
+IdpVehicleInformation  callback:0
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:4.70591
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79959
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79960
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:IdpVehicleInformation  callback:13.679
+0
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79961
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.55
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79963
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79964
+ publish origin_path::: 45
+plan_cost_time:20.323
+send planing trajectory!!!
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:104.669
+Perception_grid_map callback
+PerceptionStaticEnv recv_time_cost:0.921965
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79965
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.864
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79966
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79967
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.045
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79968
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79969
+ publish origin_path::: 45
+plan_cost_time:14.4081
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.741
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79971
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7091
+send planing trajectory!!!
+LocationInfo  callback:79973
+IdpVehicleInformation  callback:0
+2025/08/15 21:12:25.564093533 2025/08/15 21:12:25.564361034 038 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:25.564200304 2025/08/15 21:12:25.564456919 026 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:25.564230851 2025/08/15 21:12:25.564485383 026 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.576
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79975
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79976
+ publish origin_path::: 45
+plan_cost_time:13.495
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6321
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.644
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79980
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79981
+ publish origin_path::: 45
+plan_cost_time:13.566
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79982
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.7231
+send planing trajectory!!!
+LocationInfo  callback:79983
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79984
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.644
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5839
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79987
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+LocationInfo  callback:79988
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.6628
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.67
+send planing trajectory!!!
+LocationInfo  callback:79989
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5219
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79991
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:14.6921
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+grid mpa publish:1
+IdpVehicleInformation  callback:0
+ publish origin_path::: 45
+plan_cost_time:13.69
+LocationInfo  callback:79994
+send planing trajectory!!!
+IdpVehicleInformation  callback:0
+IdpVehicleInformation  callback:0
+LocationInfo  callback:79995
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.685
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:16.022
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.638
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.7
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4778
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5651
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.449
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6909
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.485
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.608
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.536
+send planing trajectory!!!
+2025/08/15 21:12:26.376932466 2025/08/15 21:12:26.377205956 039 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.546
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5849
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6321
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5739
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5851
+send planing trajectory!!!
+2025/08/15 21:12:26.565388612 2025/08/15 21:12:26.565667805 040 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:26.565527518 2025/08/15 21:12:26.565783430 027 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:26.565566737 2025/08/15 21:12:26.565822050 027 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6092
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.402
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.567
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5078
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.658
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6979
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.489
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6559
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.618
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6569
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6199
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4521
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5481
+send planing trajectory!!!
+2025/08/15 21:12:27.005815774 2025/08/15 21:12:27.006076946 041 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+2025/08/15 21:12:27.010949732 2025/08/15 21:12:27.011208821 042 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.607
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.552
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.648
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.654
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4621
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.612
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6561
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6261
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.644
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5689
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.598
+send planing trajectory!!!
+2025/08/15 21:12:27.377107727 2025/08/15 21:12:27.377370514 043 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.526
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.581
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5741
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6008
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6051
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6762
+send planing trajectory!!!
+2025/08/15 21:12:27.566639185 2025/08/15 21:12:27.566905046 044 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:27.566751920 2025/08/15 21:12:27.567007650 028 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:27.566779889 2025/08/15 21:12:27.567034473 028 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6509
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6671
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.473
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.8471
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.576
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.659
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6311
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.624
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.592
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6869
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4709
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.448
+send planing trajectory!!!
+grid mpa publish:1
+2025/08/15 21:12:28.005960618 2025/08/15 21:12:28.006219968 045 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+ publish origin_path::: 45
+plan_cost_time:13.648
+send planing trajectory!!!
+2025/08/15 21:12:28.011074316 2025/08/15 21:12:28.011333640 046 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6368
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6631
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.634
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6449
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5829
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.629
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.7031
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.4771
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6359
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.5541
+send planing trajectory!!!
+2025/08/15 21:12:28.377264160 2025/08/15 21:12:28.377525020 047 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.597
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.557
+send planing trajectory!!!
+grid mpa publish:1
+ publish origin_path::: 45
+plan_cost_time:13.6681
+send planing trajectory!!!
+2025/08/15 21:12:28.567839525 2025/08/15 21:12:28.568101244 048 LOCAL Plan CLNT error N 2 [Failed to find the service. instance id:20228]
+2025/08/15 21:12:28.567930540 2025/08/15 21:12:28.568186635 029 LOCAL Plan SWC error N 2 [tpterrainmap init failed.]
+2025/08/15 21:12:28.567959499 2025/08/15 21:12:28.568214031 029 LOCAL Plan SPL error N 2 [Failed to initialize the instance: tpterrainmap]
+2025/08/15 21:12:29.006101009 2025/08/15 21:12:29.006357989 049 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+2025/08/15 21:12:29.011196661 2025/08/15 21:12:29.011454786 050 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]
+2025/08/15 21:12:29.377416557 2025/08/15 21:12:29.377674500 051 LOCAL Plan CLNT error N 2 [No new data arrived since this api called. timeout(ms): 1000]

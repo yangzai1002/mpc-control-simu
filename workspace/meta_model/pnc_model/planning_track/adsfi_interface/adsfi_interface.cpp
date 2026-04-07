@@ -126,7 +126,7 @@ void AdsfiInterface::Init()
    	            interface_global_path.push_back(point);
    	        }
    	 }
-	 std::cout <<"interface_global_path.szie"<<interface_global_path.size()<<std::endl;
+	 std::cout <<"interface_global_path.szie2222"<<interface_global_path.size()<<std::endl;
    	  /*最后一个点是第一个点绝对utm坐标，平移使用*/
    	origin_utm_x = first_x;
    	origin_utm_y = first_y;
@@ -151,7 +151,13 @@ void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara
 void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara::adsfi::PerceptionStaticEnv> &ptr) 
 {
 	std::cout << "Perception_grid_map callback" << std::endl;
-	// fusionobjarray_deque.push(ptr);
+	static double last_ts = 0;
+	timeval  tv_data{};
+    gettimeofday(&tv_data, nullptr);
+    double start_ts = tv_data.tv_sec + tv_data.tv_usec / 1000000.0;
+	double recv_time_cost = (start_ts - last_ts) *1000;
+    std::cout <<"PerceptionStaticEnv recv_time_cost:"<<recv_time_cost<<std::endl;
+	last_ts = start_ts;
 	safebuf_Perception_grid_map.Set(ptr);
 }
 
@@ -199,7 +205,7 @@ void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara
 // 	double heading = loc_ptr->pose.pose.orientation.z;
 // 	avos::vectormap::GeoTool geotool;
 // 	avos::vectormap::PointGPS gps_point(out.llh.lon, out.llh.lat, heading);
-// 	avos::vectormap::PointGCCS loc;
+// 	avos::vectormap::PointGCCS loc;occupancy_source
 // 	geotool.GPS2GCCS(gps_point, loc);
 //     out.pose.pose_euler.position.x = loc.xg;
 //     out.pose.pose_euler.position.y = loc.yg;
@@ -274,6 +280,7 @@ void AdsfiInterface::coverterLoc(std::shared_ptr<ara::adsfi::MsgHafLocation> loc
 		out.veloity = loc_ptr->velocity.twist.linear.x;
 		out.height = 0.0;
     	out.acc = 0.0;
+		double heading_viz = loc_ptr->pose.pose.orientation.z *180 / M_PI;
 		#else
 		GeoPointGPS  temp_point_gps(loc_ptr->llh.x, loc_ptr->llh.y, loc_ptr->llh.z);
     	GeoPointGCCS temp_point_gccs;
@@ -350,7 +357,9 @@ void AdsfiInterface::coverterLoc(std::shared_ptr<ara::adsfi::MsgHafLocation> loc
 void AdsfiInterface::coverterGridMap(std::shared_ptr<ara::adsfi::PerceptionStaticEnv>& map_ptr,std::vector<double>& occupancy_grid)
 {
     //occupancy_grid.assign(1000 * 1000, 0.0);
-    const int DST_SIZE = 1000;
+ 
+
+    const int DST_SIZE = 500;
     // 安全检查：输入数据为空直接返回
     if (map_ptr->reserved.empty() || map_ptr->map_width < DST_SIZE || map_ptr->map_height < DST_SIZE || 
 	   map_ptr->reserved.size() <  DST_SIZE*DST_SIZE) {
@@ -492,7 +501,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 		return -1;
 		
 	}
-
+#ifndef GazeboSim
 
 	bool bGet_map_info = safebuf_Perception_grid_map.Get(gridMap_ptr);
 
@@ -502,7 +511,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 		std::cout << "Process error Perception_grid_map have not new data\n";
 		return -1;
 		
-	}else if(gridMap_ptr->map_width != 1000 || gridMap_ptr->map_height != 1000)
+	}else if(gridMap_ptr->map_width != 500 || gridMap_ptr->map_height != 500)
 	{
 		std::cout << "Process error Perception_grid_map size error map_width: "<<gridMap_ptr->map_width <<
 		"map_height: " <<gridMap_ptr->map_height <<std::endl;
@@ -511,14 +520,19 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 	{
 		;
 	}
-
+#endif
+    timeval        tv_data{};
+    gettimeofday(&tv_data, nullptr);
+    double start_ts = tv_data.tv_sec + tv_data.tv_usec / 1000000.0;
 	//static ara::adsfi::IdpSensorLocFusion m_9_0;
 
 	static Location sensor_loc;
 
 	coverterLoc(loc_ptr, sensor_loc);
-	std::vector<double> occupancy_grid(1000 * 1000, 0.0);
+	std::vector<double> occupancy_grid(500 * 500, 0.0);
+#ifndef GazeboSim
     coverterGridMap(gridMap_ptr, occupancy_grid);
+#endif
 
 #ifdef GazeboSim
 	const double START_UTM_X = 0.0;
@@ -534,23 +548,36 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
     for (const auto& obs : sim_obstacles) {
         double rel_x = obs.x - sensor_loc.longitude;
         double rel_y = obs.y - sensor_loc.latitude;
-        int center_c = 500 + static_cast<int>(rel_x / 0.2);
-        int center_r = 500 + static_cast<int>(reorientationl_y / 0.2);
+        int center_c = 250 + static_cast<int>(rel_x / 0.2);
+        int center_r = 250 + static_cast<int>(rel_y / 0.2);
         int half_w = static_cast<int>((obs.w / 2.0) / 0.2);
         int half_h = static_cast<int>((obs.h / 2.0) / 0.2);
 
         for (int r = center_r - half_h; r < center_r + half_h; ++r) {
             for (int c = center_c - half_w; c < center_c + half_w; ++c) {
-                if (r >= 0 && r < 1000 && c >= 0 && c < 1000) occupancy_grid[r * 1000 + c] = 1.0;
+                if (r >= 0 && r < 500 && c >= 0 && c < 500) occupancy_grid[r * 500 + c] = 1.0;
             }
         }
     }
 	VisualizeObstacles(sim_obstacles);
+#else
+    bool  bGet_veh_inf = safebuf_vehicle_info_.Get(vehicle_info_ptr);
+	if(bGet_veh_inf == false)
+	{
+		std::cout << "Process error vehicleinfo have not new data\n";
+		return -1;
+		
+	}else
+	{
+		sensor_loc.veloity = vehicle_info_ptr->vehicle_act_state.speed;
+		std::cout <<"sensor_loc.veloity : "<<sensor_loc.veloity <<std::endl;
+
+	}
 #endif
 	VisualGridMap(occupancy_grid,sensor_loc);
     // 仅执行一次规划
     std::vector<PathPoint> output_trajectory;
-    bool success = local_planner_ptr->RunPlanner(sensor_loc, interface_global_path, occupancy_grid, 15.0, output_trajectory);
+    bool success = local_planner_ptr->RunPlanner(sensor_loc, interface_global_path, occupancy_grid, 1.5, output_trajectory);
 
     //auto out = std::make_shared<ara::adsfi::MsgHafEgoTrajectory>();
     // out->header.stamp.sec = static_cast<int32_t>(in.header.time);
@@ -674,7 +701,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 	// if(bGet_veh_inf == false)
 	// {
 	// 	if(simulation_mode_)
-	// 	{viz_final_path
+	// 	{
 	// 		// 仿真模式下，使用预设的车辆信息
 	// 		vehicle_info_ptr = sim_vehicle_info_;
 	// 		if(!vehicle_info_ptr)
@@ -725,7 +752,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 	// static avos::planning::Paths m_24_2;
 	// static avos::planning::Paths m_25_1;
 	// static avos::planning::Paths m_2_0;
-	// static avos::planning::Paths m_3_0;
+	// static avos::planplan_cost_timening::Paths m_3_0;
 	// static avos::planning::Paths m_7_0;
 	// static avos::planning::Perception m_5_0;
 	// static avos::planning::PlanningInfo m_12_1;
@@ -761,6 +788,11 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 	// ThreadSafeBuffer<int> safebuf_flag_info_;
 	
 	VisualizeOriginPaths();
+
+	gettimeofday(&tv_data, nullptr);
+    double end_ts = tv_data.tv_sec + tv_data.tv_usec / 1000000.0;
+	double plan_cost_time =  (end_ts - start_ts)*1000;	
+	std::cout <<"plan_cost_time:"<<plan_cost_time<<std::endl;
 	//safebuf_flag_info_.SetNotify(flag_ptr);
 	return 0;
 }
@@ -858,7 +890,7 @@ void AdsfiInterface::VisualGridMap(const std::vector<double> &occupancy_grid,Loc
 {
 
 		// ===================== 固定配置 =====================
-	const int ORIGIN_MAP_SIZE = 1000;  // 原始地图大小不变
+	const int ORIGIN_MAP_SIZE = 500;  // 原始地图大小不变
 	const int CROP_SIZE = 500;          // 要截取的中心大小 500x500
 	const double RESOLUTION = 0.2;     // 分辨率不变
 

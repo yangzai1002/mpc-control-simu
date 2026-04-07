@@ -176,7 +176,7 @@ bool interp1dMPCTraj(const std::vector<double> &index, const MPCTrajectory &valu
     const double vx = ((d_index - a) * values.vx[i - 1] + a * values.vx[i]) / d_index;
     const double k = ((d_index - a) * values.k[i - 1] + a * values.k[i]) / d_index;
     const double t = ref_time[j];
-    ret.push_back(x, y, z, yaw, vx, k,k, t);
+    ret.push_back(x, y, z, yaw, vx, k, t);
   }
   return true;
 }
@@ -217,30 +217,65 @@ void calcTrajectoryYawFromXY(MPCTrajectory &traj)
 
 void calcTrajectoryCurvature(MPCTrajectory &traj, int curvature_smoothing_num)
 {
-  unsigned int traj_k_size = traj.x.size();
+  // unsigned int traj_k_size = traj.x.size();
+  // traj.k.clear();
+
+  // /* calculate curvature by circle fitting from three points */
+  // Adsfi::Point3d p1, p2, p3;
+  // for (unsigned int i = curvature_smoothing_num; i < traj_k_size - curvature_smoothing_num; ++i)
+  // {
+  //   p1.x = traj.x[i - curvature_smoothing_num];
+  //   p2.x = traj.x[i];
+  //   p3.x = traj.x[i + curvature_smoothing_num];
+  //   p1.y = traj.y[i - curvature_smoothing_num];
+  //   p2.y = traj.y[i];
+  //   p3.y = traj.y[i + curvature_smoothing_num];
+  //   double den = std::max(amathutils::find_distance(p1, p2) * amathutils::find_distance(p2, p3) * amathutils::find_distance(p3, p1), 0.0001);
+  //   const double curvature = 2.0 * ((p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x)) / den;
+  //   traj.k.push_back(curvature);
+  // }
+
+  // /* first and last curvature is copied from next value */
+  // for (int i = 0; i < curvature_smoothing_num; ++i)
+  // {
+  //   traj.k.insert(traj.k.begin(), traj.k.front());
+  //   traj.k.push_back(traj.k.back());
+  // }
+
+  // 清空曲率
   traj.k.clear();
+  const int N = traj.x.size();
+  const int smooth_num = curvature_smoothing_num;
 
-  /* calculate curvature by circle fitting from three points */
-  Adsfi::Point3d p1, p2, p3;
-  for (unsigned int i = curvature_smoothing_num; i < traj_k_size - curvature_smoothing_num; ++i)
-  {
-    p1.x = traj.x[i - curvature_smoothing_num];
+  // 安全判断
+  if (N < 3 || smooth_num < 1) {
+  traj.k.resize(N, 0.0);
+  return;
+  }
+
+  // 三点求曲率（安全版本，不会越界）
+  for (int i = 0; i < N; ++i) {
+    int left = std::max(0, i - smooth_num);
+    int right = std::min(N - 1, i + smooth_num);
+
+    Adsfi::Point3d p1, p2, p3;
+    p1.x = traj.x[left];
+    p1.y = traj.y[left];
     p2.x = traj.x[i];
-    p3.x = traj.x[i + curvature_smoothing_num];
-    p1.y = traj.y[i - curvature_smoothing_num];
     p2.y = traj.y[i];
-    p3.y = traj.y[i + curvature_smoothing_num];
-    double den = std::max(amathutils::find_distance(p1, p2) * amathutils::find_distance(p2, p3) * amathutils::find_distance(p3, p1), 0.0001);
-    const double curvature = 2.0 * ((p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x)) / den;
-    traj.k.push_back(curvature);
+    p3.x = traj.x[right];
+    p3.y = traj.y[right];
+
+    double den = (p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x);
+    double dis12 = hypot(p2.x - p1.x, p2.y - p1.y);
+    double dis23 = hypot(p3.x - p2.x, p3.y - p2.y);
+    double dis31 = hypot(p1.x - p3.x, p1.y - p3.y);
+    double dis = dis12 * dis23 * dis31 + 1e-5;
+
+    double k = 2 * fabs(den) / dis;
+    traj.k.push_back(k);
   }
 
-  /* first and last curvature is copied from next value */
-  for (int i = 0; i < curvature_smoothing_num; ++i)
-  {
-    traj.k.insert(traj.k.begin(), traj.k.front());
-    traj.k.push_back(traj.k.back());
-  }
 }
 
 //void convertWaypointsToMPCTraj(const HafEgoTrajectory &pathTrajectory, MPCTrajectory &mpc_traj)
@@ -415,7 +450,7 @@ void convertWaypointsToMPCTrajWithResample(const HafEgoTrajectory &pathTrajector
        point += d_ref_index;
       continue;
     } 
-    ref_traj.push_back(x, y, z, yaw, vx, curvature_tmp,curvature_tmp, t);
+    ref_traj.push_back(x, y, z, yaw, vx, curvature_tmp, t);
     point += d_ref_index;
   }
 }
