@@ -68,7 +68,7 @@ bool SpeedOptimizerQP::Optimize(const double v_limit,
     optimized_tp[0].a = init_state[2];
 
     // 3. 正向动力学推演修复 (防止 QP 求解在低速起步死锁)
-    const double MAX_ACC = 1.0; 
+    const double MAX_ACC = 2.0; 
     for (int i = 1; i < config_.n; ++i) {
         double dt = config_.delta_t;
         double v_acc_limit = optimized_tp[i-1].v + MAX_ACC * dt;

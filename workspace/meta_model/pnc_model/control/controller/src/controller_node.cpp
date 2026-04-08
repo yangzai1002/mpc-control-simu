@@ -263,13 +263,13 @@ void Controller::updateTrajectory(std::shared_ptr<ara::adsfi::MsgHafEgoTrajector
             new_TrajectoryPoint.wayPoint.theta = PlanningResult->trajectoryPoints[i].wayPoint.theta;
             new_TrajectoryPoint.wayPoint.curvature = PlanningResult->trajectoryPoints[i].wayPoint.curvature;
             new_TrajectoryPoint.speed = PlanningResult->trajectoryPoints[i].speed;
-            std::cout <<"new_TrajectoryPoint.speed:"<<new_TrajectoryPoint.speed<<std::endl;
-            if(new_TrajectoryPoint.speed > 1.5)
-                new_TrajectoryPoint.speed = 1.5;
-            if(new_TrajectoryPoint.speed < 0.2)
-            {
-                new_TrajectoryPoint.speed = 0.2;
-            }
+            std::cout <<"x:"<<new_TrajectoryPoint.wayPoint.x <<"y"<<new_TrajectoryPoint.wayPoint.y <<"speed:"<<new_TrajectoryPoint.speed<<std::endl;
+            // if(new_TrajectoryPoint.speed > 1.5)
+            //     new_TrajectoryPoint.speed = 1.5;
+            // if(new_TrajectoryPoint.speed < 0.2)
+            // {
+            //     new_TrajectoryPoint.speed = 0.2;
+            // }
             m_inputData.current_trajectory.trajectoryPoints.push_back(new_TrajectoryPoint);
         }
         // if(m_inputData.current_trajectory.trajectoryPoints.size() > 2)

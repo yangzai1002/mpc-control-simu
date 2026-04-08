@@ -73,7 +73,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
     double end_s = std::min(accumulated_s.back(), ego_s + 150.0);
     
     // 线性插值重采样，统一采样步长
-    const double sample_step = 2.0; 
+    const double sample_step = 1.5; 
     double aligned_start_s = std::floor(start_s / sample_step) * sample_step;
 
     std::vector<ref_line::RawPoint> local_raw_path;

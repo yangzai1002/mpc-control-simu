@@ -598,6 +598,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 		// out->trajectoryPoints[i].wayPoint.z = in.trajectory[i].z;
 		plan_result_ptr->trajectoryPoints[i].wayPoint.theta = output_trajectory[i].theta;
 		plan_result_ptr->trajectoryPoints[i].wayPoint.curvature = output_trajectory[i].kappa;
+		std::cout <<"x:"<<output_trajectory[i].x<<" y:"<<output_trajectory[i].y<<" v:"<<output_trajectory[i].v<<std::endl;
 		//out->trajectoryPoints[i].wayPoint.s = in.trajectory[i].length;
 		// out->trajectoryPoints[i].wayPoint.source = in.trajectory[i].source;
     // out->trajectoryPoints[i].wayPoint.type = in.trajectory[i].type;
@@ -956,7 +957,7 @@ void AdsfiInterface::VisualGridMap(const std::vector<double> &occupancy_grid,Loc
 
 	data.data = std::move(grid_data_crop);
 	auto ret = gridPub.Publish(data);
-	std::cout <<"grid mpa publish:"<<ret<<std::endl;
+	std::cout <<"grid map publish:"<<ret<<std::endl;
 }
 // 路径可视化函数
 void AdsfiInterface::VisualizeOriginPaths()
@@ -1093,7 +1094,7 @@ void AdsfiInterface::VisualizeOriginPaths()
 //     }
 //     local_plan_trajPub.Publish(plan_trajectory_marker);
 // }
-// 功能：把规划轨迹的【中心线 + 左边界 + 右边界】通过 MDC Marker 发布出去
+
 void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_trajectory)
 {
     // ==================== 1. 获取时间戳（和你原来一样） ====================
@@ -1147,43 +1148,57 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
     right_bound_marker.frameLocked = false;
 
     // ==================== 填充点：中心 + 左边界 + 右边界 ====================
-    for (unsigned int i = 0; i < output_trajectory.size(); ++i)
+	double max_kappa = 0.0;
+
+    for (unsigned int i = 1; i < output_trajectory.size(); ++i)
     {
-        const auto& tp = output_trajectory[i];
-        double x = tp.x;
-        double y = tp.y;
-        double theta = tp.theta;               // 轨迹点朝向
-        double l = tp.l;                      // 轨迹点偏移
-        double left_bound = tp.left_bound;    // 左边界
-        double right_bound = tp.right_bound;  // 右边界
+
+		if (std::abs(output_trajectory[i].kappa) > max_kappa)
+            max_kappa = std::abs(output_trajectory[i].kappa);
+
+        
+		double shift_left = output_trajectory[i].left_bound - output_trajectory[i].l;
+		double shift_right = output_trajectory[i].right_bound - output_trajectory[i].l;
+		double th = output_trajectory[i].theta;
+		double nx = -std::sin(th), ny = std::cos(th);
+
+		double l_x = output_trajectory[i].x + shift_left * nx, l_y = output_trajectory[i].y + shift_left * ny;
+		double r_x = output_trajectory[i].x + shift_right * nx, r_y = output_trajectory[i].y + shift_right * ny;
+
+		double shift_left_p = output_trajectory[i-1].left_bound - output_trajectory[i-1].l;
+		double shift_right_p = output_trajectory[i-1].right_bound - output_trajectory[i-1].l;
+		double th_p = output_trajectory[i-1].theta;
+		double nx_p = -std::sin(th_p), ny_p = std::cos(th_p);
+
+		double l_x_p = output_trajectory[i-1].x + shift_left_p * nx_p, l_y_p = output_trajectory[i-1].y + shift_left_p * ny_p;
+		double r_x_p = output_trajectory[i-1].x + shift_right_p * nx_p, r_y_p = output_trajectory[i-1].y + shift_right_p * ny_p;
+
 
         // 1. 轨迹中心线
         mdc::visual::Point p_center;
-        p_center.x = x;
-        p_center.y = y;
+        p_center.x = output_trajectory[i].x;
+        p_center.y = output_trajectory[i].y;
         p_center.z = 0.0;
         center_marker.points.push_back(p_center);
 
-        // 2. 计算左边界点
-        double shift_left = left_bound - l;
-        double nx = -std::sin(theta);
-        double ny = std::cos(theta);
-        double l_x = x + shift_left * nx;
-        double l_y = y + shift_left * ny;
-
         mdc::visual::Point p_left;
+        p_left.x = l_x_p;
+        p_left.y = l_y_p;
+        p_left.z = 0.0;
+        left_bound_marker.points.push_back(p_left);
+
         p_left.x = l_x;
         p_left.y = l_y;
         p_left.z = 0.0;
         left_bound_marker.points.push_back(p_left);
 
-        // 3. 计算右边界点
-        double shift_right = right_bound - l;
-        double r_x = x + shift_right * nx;
-        double r_y = y + shift_right * ny;
-
         mdc::visual::Point p_right;
-        p_right.x = r_x;
+        p_right.x = r_x_p;
+        p_right.y = r_y_p;
+        p_right.z = 0.0;
+        right_bound_marker.points.push_back(p_right);
+
+		p_right.x = r_x;
         p_right.y = r_y;
         p_right.z = 0.0;
         right_bound_marker.points.push_back(p_right);

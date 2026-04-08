@@ -61,6 +61,9 @@ private:
 
         double dt
         { 0.0 };
+      
+        size_t target_idx
+        { 0 };
 
     };
 

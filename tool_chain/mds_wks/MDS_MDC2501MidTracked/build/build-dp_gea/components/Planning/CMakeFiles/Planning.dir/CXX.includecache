@@ -6898,14 +6898,6 @@ sstream
 duration.h
 /home/cxy/control-simulation/ap_auto/workspace/common/time/duration.h
 
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/frenet/cartesian_frenet_converter.h
-vector
--
-frenet_data_types.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/frenet/frenet_data_types.h
-../reference_line/ref_data_types.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/reference_line/ref_data_types.h
-
 /home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/frenet/frenet_data_types.h
 
 /home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/map_processor/map_data_types.h
@@ -6960,18 +6952,6 @@ utility
 Eigen/Dense
 -
 OsqpEigen/OsqpEigen.h
--
-
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/planner_interface.cpp
-planner_interface.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/planner_interface.h
-frenet/cartesian_frenet_converter.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/frenet/cartesian_frenet_converter.h
-reference_line/smoother.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/reference_line/smoother.h
-algorithm
--
-cmath
 -
 
 /home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/planner_interface.h
@@ -7031,18 +7011,6 @@ OsqpEigen/OsqpEigen.h
 -
 ref_data_types.h
 /home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/reference_line/ref_data_types.h
-
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/speed_planner/speed_generator.cpp
-speed_generator.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/speed_planner/speed_generator.h
-../frenet/cartesian_frenet_converter.h
-/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/frenet/cartesian_frenet_converter.h
-cmath
--
-algorithm
--
-iostream
--
 
 /home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/Emplanner/speed_planner/speed_generator.h
 vector

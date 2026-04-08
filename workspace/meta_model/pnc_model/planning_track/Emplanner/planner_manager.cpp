@@ -280,9 +280,9 @@ bool PlannerManager::RunOnce(const std::vector<ref_line::RawPoint>& raw_ref_poin
         // ========================
         // ✅ 强制近处速度保底
         // ========================
-        for (size_t i = 0; i < std::min(15, (int)ref_speed_traj.size()); i++) {
-            ref_speed_traj[i].v = std::max(ref_speed_traj[i].v, 0.0);
-        }
+        // for (size_t i = 0; i < std::min(15, (int)ref_speed_traj.size()); i++) {
+        //     ref_speed_traj[i].v = std::max(ref_speed_traj[i].v, 0.0);
+        // }
 
         double min_v = 99.0;
         for (const auto& p : ref_speed_traj) if (p.v < min_v) min_v = p.v;
@@ -290,8 +290,14 @@ bool PlannerManager::RunOnce(const std::vector<ref_line::RawPoint>& raw_ref_poin
         // ========================
         // ✅ 修复 EM 迭代逻辑
         // ========================
-        if (min_v < 1.0 && em_iter < 1) {
-            dynamic_weight_ddl = 150.0;
+        // if (min_v < 1.0 && em_iter < 1) {
+        //     dynamic_weight_ddl = 150.0;
+        //     em_iter++;
+        // } else {
+        //     em_converged = true;
+        // }
+         if (min_v < 4.1 && em_iter < MAX_EM_ITER - 1) {
+            dynamic_weight_ddl *= 10.0; 
             em_iter++;
         } else {
             em_converged = true;

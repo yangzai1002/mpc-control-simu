@@ -64,7 +64,7 @@ void SpeedGenerator::Generate(const std::vector<ref_line::ReferencePoint>& ref_l
             double v_stop = std::max(0.0, std::sqrt(2.0 * 1.0 * dist_to_end)); 
             raw_tp[i].v = std::min(raw_tp[i].v, v_stop);
         }
-
+        
         g_dis_to_end = dist_to_end;
          
     }
@@ -90,6 +90,7 @@ void SpeedGenerator::Generate(const std::vector<ref_line::ReferencePoint>& ref_l
             raw_tp[i].v = std::min(raw_tp[i].v, v_backward);
         
       }  
+
     }
     
     // for (int i = static_cast<int>(raw_tp.size()) - 2; i >= 0; --i)

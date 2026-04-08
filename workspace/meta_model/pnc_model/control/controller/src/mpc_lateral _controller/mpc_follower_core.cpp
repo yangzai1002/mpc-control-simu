@@ -591,13 +591,7 @@ void MPCFollowerController::MpcUpdateTraj(HafEgoTrajectory curTrajectory)
   //   //return;
   // }else
   // {
-  std::cout << "[MPC] path callback: trajectory size is undesired666";
-    printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
-               traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
-    MPCUtils::calcTrajectoryCurvature(traj, curvature_smoothing_num_);
-  std::cout << "[MPC] path callback: trajectory size is undesired888";
-  printf("size: x=%lu, y=%lu, z=%lu, yaw=%lu, v=%lu,k=%lu,t=%lu", traj.x.size(), traj.y.size(),
-              traj.z.size(), traj.yaw.size(), traj.vx.size(), traj.k.size(), traj.relative_time.size());
+        //;
  // }
 
   if (!traj.size())

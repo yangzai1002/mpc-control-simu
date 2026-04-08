@@ -255,6 +255,11 @@ PidLongitudinalController::ControlData PidLongitudinalController::getControlData
         const Adsfi::HafPose &current_pose)
 {
     ControlData control_data {};
+    double current_vel_cmd = 0.0;
+    const double SEARCH_RANGE = 1.0;  // 向前搜索2米，scout车为1米，需要写成配置
+    const double STOP_DISTANCE = 10.0; // 距离终点小于10米开始减速
+    const double t_lookahead = 1.0;/*需要写成配置*/
+
 
     control_data.dt = getDt();
 
@@ -282,6 +287,30 @@ PidLongitudinalController::ControlData PidLongitudinalController::getControlData
     control_data.stop_dist = longitudinal_utils::calcStopDistance(current_pose,
             m_trajectory, control_data.nearest_idx);
 
+    double lookahead_s = SEARCH_RANGE + std::fabs(m_current_vel) * t_lookahead;
+
+    int nearest_idx = static_cast<int>(control_data.nearest_idx);
+    int vx_size = static_cast<int>(m_trajectory.vx.size());
+
+    int end_idx = nearest_idx;
+    double accumulated_dist = 0.0;
+
+    while (end_idx < vx_size - 1) {
+    double dx = m_trajectory.x[end_idx + 1] - m_trajectory.x[end_idx];
+    double dy = m_trajectory.y[end_idx + 1] - m_trajectory.y[end_idx];
+    double dist = std::hypot(dx, dy);
+    if (accumulated_dist + dist > lookahead_s) {
+            break;
+    }
+
+        accumulated_dist += dist;
+        end_idx++;
+    }
+    /*目标车速还用最近点的目标速度*/
+    control_data.target_idx = end_idx;
+   // std::cout <<"nearest_idx:" <<nearest_idx<<"control_data.target_idx:"<<control_data.target_idx<<std::endl;
+    
+
     return control_data;
 }
 
@@ -308,7 +337,7 @@ void PidLongitudinalController::updateControlState(
     const double stop_dist = control_data.stop_dist;
     const auto &p = m_state_transition_params;
 
-    const bool departure_condition_from_stopping = false;
+    const bool departure_condition_from_stopping = true;
     const bool departure_condition_from_stopped = true;/*后续这个标志从其它地方获取，首先设定为true*/
 
 
@@ -349,59 +378,17 @@ void PidLongitudinalController::updateControlState(
    //std::cout <<"stopped_condition:"<<stopped_condition<<std::endl;
 
     static constexpr double vel_epsilon = 1e-3;
-
+    double current_vel_cmd = 0.0;
     // const double current_vel_cmd = std::fabs(
     //         m_trajectory.vx.at(control_data.nearest_idx));
-
-    /* 目标速度取最近点 2 米范围内的最小速度 */
     
-    const double SEARCH_RANGE = 2.0;  // 2米范围
-
-    int nearest_idx = static_cast<int>(control_data.nearest_idx);
-    int vx_size = static_cast<int>(m_trajectory.vx.size());
-    //std::cout <<"control_data.nearest_idx:"<<control_data.nearest_idx<<"vx_size:"<<vx_size<<std::endl;
-    // 1. 向前找 2米 内的起始索引
-    int start_idx = nearest_idx;
-    double forward_dist = 0.0;
-    while (start_idx > 0) {
-        // 计算相邻点距离（假设轨迹点是等距/连续路径，用坐标差计算）
-        double dx = m_trajectory.x.at(start_idx) - m_trajectory.x.at(start_idx - 1);
-        double dy = m_trajectory.y.at(start_idx) - m_trajectory.y.at(start_idx - 1);
-        double dist = std::hypot(dx, dy);
-
-        if (forward_dist + dist > SEARCH_RANGE) break;
-
-        forward_dist += dist;
-        start_idx--;
+     if (control_data.target_idx < 0 || control_data.target_idx  >= m_trajectory.vx.size()) {
+      current_vel_cmd = 0.0;
+    }else
+    {
+        current_vel_cmd = m_trajectory.vx[control_data.target_idx];
     }
-
-    // 2. 向后找 2米 内的结束索引
-    int end_idx = nearest_idx;
-    double backward_dist = 0.0;
-    while (end_idx < vx_size - 1) {
-        double dx = m_trajectory.x.at(end_idx + 1) - m_trajectory.x.at(end_idx);
-        double dy = m_trajectory.y.at(end_idx + 1) - m_trajectory.y.at(end_idx);
-        double dist = std::hypot(dx, dy);
-
-        if (backward_dist + dist > SEARCH_RANGE) break;
-
-        backward_dist += dist;
-        end_idx++;
-    }
-    std::cout <<"start_idx:"<<start_idx<<"end_idx:"<<end_idx<<std::endl;
-
-    // 3. 在 [start_idx, end_idx] 范围内找最小速度（绝对值）
-    auto min_it = std::min_element(
-        m_trajectory.vx.begin() + start_idx,
-        m_trajectory.vx.begin() + end_idx + 1,
-        [](double a, double b) {
-            return std::fabs(a) < std::fabs(b);
-        }
-    );
-
-    const double current_vel_cmd = std::fabs(*min_it);
-    
-
+  
    
     const bool emergency_condition = m_enable_overshoot_emergency
             && stop_dist < p.emergency_state_overshoot_stop_dist
@@ -409,7 +396,7 @@ void PidLongitudinalController::updateControlState(
 
     const bool has_nonzero_target_vel = std::abs(current_vel_cmd) > 0.1;
 
-   // std::cout <<"current_vel_cmd:"<<current_vel_cmd<<"has_nonzero_target_vel:"<<has_nonzero_target_vel<<std::endl;
+    std::cout <<"current_vel_cmd:"<<current_vel_cmd<<"has_nonzero_target_vel:"<<has_nonzero_target_vel<<std::endl;
 
     const auto changeState = [this](const auto s)
     {
@@ -466,7 +453,7 @@ void PidLongitudinalController::updateControlState(
             return changeState(ControlState::STOPPED);
         }
 
-        if (departure_condition_from_stopping)
+        if (departure_condition_from_stopping && has_nonzero_target_vel)
         {
             m_pid_vel.reset();
             m_lpf_vel_error->reset(0.0);
@@ -543,7 +530,7 @@ PidLongitudinalController::Motion PidLongitudinalController::calcCtrlCmd(
     {
         //
         target_motion = Motion
-        { m_trajectory.vx.at(nearest_idx), 0 };
+        { m_trajectory.vx.at(control_data.target_idx), 0 };
 
         const double pred_vel_in_target = predictedVelocityInTargetPoint(
                 control_data.current_motion, m_delay_compensation_time);

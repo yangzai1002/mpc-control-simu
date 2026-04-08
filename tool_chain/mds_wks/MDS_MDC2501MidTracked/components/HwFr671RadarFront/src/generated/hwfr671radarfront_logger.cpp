@@ -120,7 +120,7 @@ ara::log::LogLevel Hwfr671radarfrontLogger::GetLogLevel(const ara::core::String&
     }
     return ara::log::LogLevel::kInfo;
 }
-
+HwFr671RadarFront
 ara::log::LogMode Hwfr671radarfrontLogger::GetLogMode(const ara::core::Vector<ara::core::String>& modeVec)
 {
     ara::log::LogMode logMode = ara::log::LogMode::kRemote;
