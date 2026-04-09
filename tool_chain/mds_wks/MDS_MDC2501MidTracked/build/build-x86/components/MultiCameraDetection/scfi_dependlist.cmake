@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP MultiCameraDetection_scfi_intf;-Wl,--as-needed;yaml;pthread;multy_camera_det_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;multicameradetection_logger.cpp;sample.cpp;main.cpp;multicameradetection_manager.cpp;visionsegmentserviceinterface_common.cpp;msgimagedatalistserviceinterface_common.cpp) 

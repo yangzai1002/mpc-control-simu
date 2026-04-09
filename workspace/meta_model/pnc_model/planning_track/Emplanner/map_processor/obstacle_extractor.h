@@ -19,7 +19,7 @@ public:
      * @details 定义了车辆关注的“相对危险视野区域” (ROI - Region of Interest)
      */
     struct ExtractConfig {
-        double s_lookahead = 150.0;  ///< 纵向关注距离：扫描车头前方多远的障碍物 (m)
+        double s_lookahead = 50.0;  ///< 纵向关注距离：扫描车头前方多远的障碍物 (m)
         double l_half_width = 6.0;   ///< 横向关注距离：左右两侧的扫描半宽，通常为车道宽+路肩 (m)
     };
 
@@ -43,6 +43,7 @@ public:
 
 private:
     ExtractConfig config_; ///< 提取器配置参数
+    
 };
 
 } // namespace map_processor

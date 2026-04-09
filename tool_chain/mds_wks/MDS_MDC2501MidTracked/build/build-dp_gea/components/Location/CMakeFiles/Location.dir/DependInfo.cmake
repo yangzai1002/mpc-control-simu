@@ -19,6 +19,7 @@ set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/opt/ros/noetic/include"
   "../../generated/includes"
   "../../components/Location/include"
   "../../components/Location/include/public"

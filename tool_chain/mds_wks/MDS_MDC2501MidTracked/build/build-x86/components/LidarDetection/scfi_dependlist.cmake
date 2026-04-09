@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP LidarDetection_scfi_intf;-Wl,--as-needed;yaml;pthread;lidar_det_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES lidardetection_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;lidardetection_manager.cpp;main.cpp;object3darrayintf_common.cpp;sensorlidarpointcloudserviceinterface_common.cpp) 

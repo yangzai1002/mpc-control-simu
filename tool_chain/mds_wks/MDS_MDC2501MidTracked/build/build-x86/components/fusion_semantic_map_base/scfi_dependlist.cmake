@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP fusion_semantic_map_base_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES fusion_semantic_map_base_swc.cpp;locationinfointf_client.cpp;locationinfointf_client_impl.cpp;sensorlidarpointcloudserviceinterface_client.cpp;sensorlidarpointcloudserviceinterface_client_impl.cpp;fusion_semantic_map_base_logger.cpp;mdc_yaml_node.cpp;sensorlidarpointcloudserviceinterface_common.cpp;locationinfointf_common.cpp) 

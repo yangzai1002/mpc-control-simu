@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP mid_track_chassis_send_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;faultdataserviceinterface_client.cpp;faultdataserviceinterface_client_impl.cpp;mid_track_chassis_send_swc.cpp;mid_track_chassis_send_logger.cpp;faultdataserviceinterface_common.cpp) 

@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP DriverDevNull_scfi_intf;-Wl,--as-needed;yaml;pthread;driver_dev_null;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES driverdevnull_manager.cpp;driverdevnull_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;main.cpp;sensorcompressedimagelistserviceinterface_common.cpp;sensorradarpacketserviceinterface_common.cpp;sensorlidarpacketserviceinterface_common.cpp) 

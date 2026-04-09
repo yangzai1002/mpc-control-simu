@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP BD21Imu_scfi_intf;-Wl,--as-needed;yaml;pthread;bd21_imu;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES bd21imu_manager.cpp;bd21imu_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;main.cpp;locationserviceinterface_common.cpp;sensorwheelspeedserviceinterface_common.cpp;sensorgpsserviceinterface_common.cpp;sensorimuserviceinterface_common.cpp) 

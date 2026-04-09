@@ -4,4 +4,4 @@ CMAKE_CONFIGURATION:
   CMAKE_MAKE_PROGRAM: /usr/bin/make
   CMAKE_BUILD_TYPE: Release
   MAKE_OPTIONS: -j12
-  CMAKE_OPTIONS: -G "Unix Makefiles"
+  CMAKE_OPTIONS: -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=/usr/local/mdc_sdk_llvm/dp_gea/toolchain.cmake -DCMAKE_MAKE_PROGRAM=/usr/bin/make

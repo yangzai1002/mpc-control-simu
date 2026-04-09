@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP xh265_recorder_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;sensorimageserviceinterface_client.cpp;sensorimageserviceinterface_client_impl.cpp;xh265_recorder_swc.cpp;xh265_recorder_logger.cpp;sensorimageserviceinterface_common.cpp) 

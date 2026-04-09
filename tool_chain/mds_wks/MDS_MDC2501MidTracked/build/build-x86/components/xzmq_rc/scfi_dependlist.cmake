@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP xzmq_rc_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;remotecontrolserviceinterface_server.cpp;remotecontrolserviceinterface_server_impl.cpp;xzmq_rc_swc.cpp;xzmq_rc_logger.cpp;remotecontrolserviceinterface_common.cpp) 

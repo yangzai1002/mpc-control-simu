@@ -248,7 +248,7 @@ bool PlannerManager::RunOnce(const std::vector<ref_line::RawPoint>& raw_ref_poin
         }
         if (!path_success) {
             std::cout << "[Manager] ⚠️ Narrow corridor detected! Triggering survival mode (Margin 0.2m)." << std::endl;
-            path_success = qp_path_opt.Optimize(dp_path, obstacles_sl, current_path_state, current_v, veh_cfg_, smooth_ref, final_path_sl, 0.2);
+            path_success = qp_path_opt.Optimize(dp_path, obstacles_sl, current_path_state, current_v, veh_cfg_, smooth_ref, final_path_sl, 0.8);
             if (path_success && !final_path_sl.empty()) {
                 int count = 0;
                 for (const auto& p : final_path_sl) {

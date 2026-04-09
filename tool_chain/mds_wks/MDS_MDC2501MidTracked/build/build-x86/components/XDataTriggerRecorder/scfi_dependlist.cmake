@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP XDataTriggerRecorder_scfi_intf;-Wl,--as-needed;yaml;pthread;xdata_trigger_recorder_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;sample.cpp;xdatatriggerrecorder_logger.cpp;main.cpp;xdatatriggerrecorder_manager.cpp;bagstatusserviceinterface_common.cpp;faultdataserviceinterface_common.cpp) 

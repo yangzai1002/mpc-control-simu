@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP xdata_trigger_recorder_base_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;bagstatusserviceinterface_server.cpp;bagstatusserviceinterface_server_impl.cpp;faultdataserviceinterface_client.cpp;faultdataserviceinterface_client_impl.cpp;xdata_trigger_recorder_base_swc.cpp;xdata_trigger_recorder_base_logger.cpp;bagstatusserviceinterface_common.cpp;faultdataserviceinterface_common.cpp) 

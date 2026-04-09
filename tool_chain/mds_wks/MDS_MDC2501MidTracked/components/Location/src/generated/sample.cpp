@@ -6,6 +6,10 @@
 #include "mdc/sample.h"
 #include <chrono>
 #include <functional>
+#include <ros/ros.h>
+#include <nav_msgs/Odometry.h>
+#include <geometry_msgs/Twist.h>
+
 namespace mdc {
 Sample::Sample(): swcPtr_(std::make_unique<mdc::fusion_location_base::FusionLocationBaseSwC>()), workFlag_(true)
 {}
@@ -20,6 +24,7 @@ Sample::~Sample()
 bool Sample::InitHandle()
 {
     SPL_LOG_SPACE::GetLoggerIns("SPL")->LogInfo()<< "Some operations during initialization.";
+
     return true;
 }
 

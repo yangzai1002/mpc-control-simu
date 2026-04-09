@@ -97,7 +97,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/
+CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -312,9 +312,6 @@ MODULE1_INCLUDE_DIRS:PATH=/home/cxy/control-simulation/ap_auto/workspace/meta_mo
 
 //module1 link libraries
 MODULE1_LIBS:STRING=pthread;dl;visual;glog;yaml;yaml-cpp;pcl_common;pcl_features;pcl_filters;pcl_io;pcl_io_ply;pcl_kdtree;pcl_keypoints;pcl_ml;pcl_octree;pcl_recognition;pcl_registration;pcl_sample_consensus;pcl_search;pcl_segmentation;pcl_stereo;pcl_surface;pcl_tracking;/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/../../../third_party/proj4/lib/libProj4.so;opencv_core;opencv_imgproc;opencv_imgcodecs;opencv_highgui;OsqpEigen;osqp;casadi;crypto
-
-//path to config file
-MODULE1_LIB_DIRS:STRING=
 
 //module1 library dirs
 MODULE1_LINK_DIRS:PATH=/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/../../../third_party/casadi-3.6.7/lib;/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/../../../third_party/planning_track_basic/lib;/home/cxy/control-simulation/ap_auto/workspace/meta_model/pnc_model/planning_track/../../../third_party/osqpeigen-0.6.2/lib

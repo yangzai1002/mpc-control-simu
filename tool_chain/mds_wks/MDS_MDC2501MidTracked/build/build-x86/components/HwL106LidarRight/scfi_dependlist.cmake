@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP HwL106LidarRight_scfi_intf;-Wl,--as-needed;yaml;pthread;hw_l106_lidar;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES hwl106lidarright_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;hwl106lidarright_manager.cpp;main.cpp;sensorlidarpointcloudserviceinterface_common.cpp;sensorlidarpacketserviceinterface_common.cpp) 

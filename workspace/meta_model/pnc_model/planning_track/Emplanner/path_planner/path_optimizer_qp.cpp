@@ -60,8 +60,8 @@ bool PathOptimizerQP::Optimize(const std::vector<PathPointSL>& dp_path,
     double s_start = init_state[0]; 
 
     // 1. 动态计算 QP 优化节点数 (根据当前车速计算所需安全视距)
-    // 假设最大舒适减速度 2.0m/s^2，附加 20 米安全余量，最低保障 60 米视距
-    double lookahead_s = std::max(60.0, (current_v * current_v) / (2.0 * 2.0) + 20.0);
+    // 假设最大舒适减速度 2.0m/s^2，附加 20 米安全余量，最低保障 30 米视距
+    double lookahead_s = std::max(50.0, (current_v * current_v) / (2.0 * 2.0) + 20.0);
     int n = static_cast<int>(lookahead_s / config_.delta_s) + 1;
     n = std::min(n, 100); // 限制最大节点数，防止计算耗时过长
     

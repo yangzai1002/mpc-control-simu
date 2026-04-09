@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP mid_track_chassis_recv_scfi_intf;-Wl,--as-needed;yaml;pthread;log;JsonParser;ara_core;ara_per;securec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_yaml_node.cpp;mid_track_chassis_recv_swc.cpp;vehicleinfomationserviceinterface_server.cpp;vehicleinfomationserviceinterface_server_impl.cpp;mid_track_chassis_recv_logger.cpp;vehicleinfomationserviceinterface_common.cpp) 

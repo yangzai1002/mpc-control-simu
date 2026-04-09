@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP XH265Encoder_scfi_intf;-Wl,--as-needed;yaml;pthread;xh265_encoder;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES mdc_adaptive_application.cpp;sample.cpp;xh265encoder_logger.cpp;main.cpp;xh265encoder_manager.cpp;sensorimageserviceinterface_common.cpp) 

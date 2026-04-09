@@ -5,13 +5,14 @@
 #include <cmath>
 #include <iostream>
 #include <memory>
-
+#include <publisher.h>
 #include "planner_manager.h"
 #include "reference_line/ref_data_types.h"
 #include "path_planner/path_data_types.h"
 #include "trajectory/trajectory_data_types.h"
 #include "map_processor/obstacle_extractor.h"
 #include "map_processor/map_data_types.h"
+#include <chrono>   
 
 namespace localplanner {
 namespace interface {
@@ -88,7 +89,7 @@ private:
     // --- 内部数据处理流程 ---
     std::vector<path_planner::ObstacleSL> ProcessOccupancyMap(
         const std::vector<double>& occupancy_source,
-        const std::vector<ref_line::ReferencePoint>& ref_line) const;
+        const std::vector<ref_line::ReferencePoint>& ref_line,const Location& loc) const;
 
     // --- WGS84 椭球体常数配置 ---
     static constexpr double WGS84_A = 6378137.0;
@@ -101,6 +102,9 @@ private:
 
     // 规控大脑实例
     std::unique_ptr<PlannerManager> planner_manager_;
+
+    mdc::visual::Publisher obstacles_Pub = mdc::visual::Publisher::Advertise
+						<mdc::visual::Marker>(ara::core::String("local_plan_obstacles"));
 
 };
 

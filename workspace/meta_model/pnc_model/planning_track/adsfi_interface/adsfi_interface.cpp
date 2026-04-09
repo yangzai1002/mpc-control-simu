@@ -1144,35 +1144,21 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
     right_bound_marker.color.r = 1.0;
     right_bound_marker.color.g = 1.0;
     right_bound_marker.color.b = 0.0;
-   right_bound_marker.color.a = 1.0;
+    right_bound_marker.color.a = 1.0;
     right_bound_marker.frameLocked = false;
 
     // ==================== 填充点：中心 + 左边界 + 右边界 ====================
-	double max_kappa = 0.0;
-
-    for (unsigned int i = 1; i < output_trajectory.size(); ++i)
+    for (unsigned int i = 0; i < output_trajectory.size(); ++i)
     {
 
-		if (std::abs(output_trajectory[i].kappa) > max_kappa)
-            max_kappa = std::abs(output_trajectory[i].kappa);
-
-        
 		double shift_left = output_trajectory[i].left_bound - output_trajectory[i].l;
 		double shift_right = output_trajectory[i].right_bound - output_trajectory[i].l;
 		double th = output_trajectory[i].theta;
+		std::cout <<"output_trajectory[i].theta:"<<output_trajectory[i].theta<<std::endl;
 		double nx = -std::sin(th), ny = std::cos(th);
 
 		double l_x = output_trajectory[i].x + shift_left * nx, l_y = output_trajectory[i].y + shift_left * ny;
 		double r_x = output_trajectory[i].x + shift_right * nx, r_y = output_trajectory[i].y + shift_right * ny;
-
-		double shift_left_p = output_trajectory[i-1].left_bound - output_trajectory[i-1].l;
-		double shift_right_p = output_trajectory[i-1].right_bound - output_trajectory[i-1].l;
-		double th_p = output_trajectory[i-1].theta;
-		double nx_p = -std::sin(th_p), ny_p = std::cos(th_p);
-
-		double l_x_p = output_trajectory[i-1].x + shift_left_p * nx_p, l_y_p = output_trajectory[i-1].y + shift_left_p * ny_p;
-		double r_x_p = output_trajectory[i-1].x + shift_right_p * nx_p, r_y_p = output_trajectory[i-1].y + shift_right_p * ny_p;
-
 
         // 1. 轨迹中心线
         mdc::visual::Point p_center;
@@ -1181,30 +1167,22 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
         p_center.z = 0.0;
         center_marker.points.push_back(p_center);
 
-        mdc::visual::Point p_left;
-        p_left.x = l_x_p;
-        p_left.y = l_y_p;
-        p_left.z = 0.0;
-        left_bound_marker.points.push_back(p_left);
 
+        mdc::visual::Point p_left;
         p_left.x = l_x;
         p_left.y = l_y;
         p_left.z = 0.0;
         left_bound_marker.points.push_back(p_left);
 
         mdc::visual::Point p_right;
-        p_right.x = r_x_p;
-        p_right.y = r_y_p;
-        p_right.z = 0.0;
-        right_bound_marker.points.push_back(p_right);
-
-		p_right.x = r_x;
+        p_right.x = r_x;
         p_right.y = r_y;
         p_right.z = 0.0;
         right_bound_marker.points.push_back(p_right);
     }
 
     // ==================== 发布 ====================
+
     local_plan_trajPub.Publish(center_marker);
     local_plan_trajPub.Publish(left_bound_marker);
     local_plan_trajPub.Publish(right_bound_marker);

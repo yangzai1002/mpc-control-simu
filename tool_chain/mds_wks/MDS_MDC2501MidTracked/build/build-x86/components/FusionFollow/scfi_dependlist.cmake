@@ -1,0 +1,2 @@
+set(SCFI_OUTPUT_DEP FusionFollow_scfi_intf;-Wl,--as-needed;yaml;pthread;fusion_follow_base;log;JsonParser;ara_core;ara_per;securec;ara_exec;ara_com;secoc_library)
+set(SCFI_OUTPUT_SOURCES fusionfollow_manager.cpp;fusionfollow_logger.cpp;mdc_adaptive_application.cpp;sample.cpp;main.cpp;fusionobjectarrayintf_common.cpp;sensorlidarpointcloudserviceinterface_common.cpp;radarpointcloudserviceinterface_common.cpp;locationinfointf_common.cpp;object3darrayintf_common.cpp;visionsegmentserviceinterface_common.cpp) 

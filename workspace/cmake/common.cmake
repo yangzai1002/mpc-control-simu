@@ -75,7 +75,7 @@ else()
 endif()
 
 # 设置软链接路径
-set(WORKSPACE_DIR "/home/idriver/ap_auto/workspace")
+set(WORKSPACE_DIR "/home/cxy/control-simulation/ap_auto/workspace")
 set(THIRD_PARTY_LINK "${WORKSPACE_DIR}/third_party")
 set(THIRD_PARTY_TARGET "${WORKSPACE_DIR}/third_party_${DETECTED_ARCH}")
 
@@ -168,6 +168,7 @@ include_directories(
     ${CMAKE_CURRENT_LIST_DIR}/../third_party/freetype/include
     ${CMAKE_CURRENT_LIST_DIR}/../common/planning-common
     ${CMAKE_CURRENT_LIST_DIR}/../common/common_header
+    /usr/local/mdc_sdk_llvm/dp_gea/mdc_cross_compiler/sysroot/usr/include/adsfi/adb/include/
 )
 
 link_directories(

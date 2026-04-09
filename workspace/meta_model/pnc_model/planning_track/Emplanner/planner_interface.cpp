@@ -3,6 +3,7 @@
 #include "reference_line/smoother.h"
 #include <algorithm>
 #include <cmath>
+#include <publisher.h>
 
 namespace localplanner {
 namespace interface {
@@ -117,7 +118,7 @@ bool PlannerInterface::RunPlanner(const Location& loc,
     }
 
     // 4. 处理栅格地图，提取并聚类障碍物
-    auto obstacles_sl = ProcessOccupancyMap(occupancy_source, smooth_ref);
+    auto obstacles_sl = ProcessOccupancyMap(occupancy_source, smooth_ref,loc);
 
     // 5. 状态同步：计算车辆初始 SL 状态和运动学状态
     std::array<double, 3> current_path_state = {0.0, 0.0, 0.0};  
@@ -183,7 +184,7 @@ double PlannerInterface::ConvertHeadingToMathYaw(double vehicle_heading) const {
 
 std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
     const std::vector<double>& occupancy_source,
-    const std::vector<ref_line::ReferencePoint>& ref_line) const {
+    const std::vector<ref_line::ReferencePoint>& ref_line,const Location& loc) const {
     
     map_processor::GridMapConfig map_cfg;
     map_processor::ObstacleExtractor extractor(map_processor::ObstacleExtractor::ExtractConfig{});
@@ -191,6 +192,9 @@ std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
     std::vector<frenet::FrenetPoint> frenet_obs = extractor.Extract(occupancy_source, map_cfg, ref_line);
 
     std::vector<path_planner::ObstacleSL> obstacles_sl;
+
+    std::vector<mdc::visual::Marker> obstacle_markers;
+
     if (frenet_obs.empty()) return obstacles_sl;
 
     // 障碍物 BFS 连通域聚类
@@ -211,7 +215,7 @@ std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
         size_t head = 0;
         while (head < queue.size()) {
             size_t curr = queue[head++];
-            const auto& pt = frenet_obs[curr];
+            const auto& pt = frenet_obs[curr];  /**/
 
             min_s = std::min(min_s, pt.s);
             max_s = std::max(max_s, pt.s);
@@ -239,6 +243,52 @@ std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
         if ((obs_box.end_s - obs_box.start_s > 0.3) || (obs_box.left_l - obs_box.right_l > 0.3)) {
             obstacles_sl.push_back(obs_box);
         }
+    }
+    const auto now = std::chrono::high_resolution_clock::now().time_since_epoch();
+    uint32_t sec = std::chrono::duration_cast<std::chrono::seconds>(now).count();
+    uint32_t nsec = std::chrono::duration_cast<std::chrono::nanoseconds>(now).count() % 1000000000UL;
+    int marker_id = 0;
+    for (const auto& obs_sl : obstacles_sl) {
+        // 1. 计算障碍物中心点 SL
+        frenet::FrenetPoint center_fp;
+        center_fp.s = (obs_sl.start_s + obs_sl.end_s) / 2.0;
+        center_fp.l = (obs_sl.left_l + obs_sl.right_l) / 2.0;
+
+        // 2. 转笛卡尔坐标 (x, y)
+        double center_x = 0.0, center_y = 0.0;
+
+        frenet::CartesianFrenetConverter::frenet_to_cartesian(ref_line, center_fp, center_x, center_y);
+
+        // 3. 障碍物宽、高（直接作为 CUBE 的 scale）
+        double obs_length = obs_sl.end_s - obs_sl.start_s;   // 纵向长度
+        double obs_width  = obs_sl.left_l - obs_sl.right_l;  // 横向宽度
+
+        // 4. 按你给的格式构造 MDC Marker
+        mdc::visual::Marker marker;
+         marker.header.frameId = "base_link";
+        marker.header.stamp.sec = sec;
+        marker.header.stamp.nsec = nsec;
+        marker.ns = "obstacles";
+        marker.id = marker_id++;
+        marker.type = mdc::visual::MarkerType::CUBE;
+        marker.scale.x = obs_length;    // 障碍物长度
+        marker.scale.y = obs_width;     // 障碍物宽度
+        marker.scale.z = 1.0;           // 高度固定
+        marker.color.r = 1.0;           // 红色
+        marker.color.g = 0.5;           // 绿色
+        marker.color.b = 0.0;           // 蓝色
+        marker.color.a = 0.5;           // 透明度
+        marker.pose.position.x = center_x + loc.longitude;  // 笛卡尔 X
+        marker.pose.position.y = center_y + loc.latitude;  // 笛卡尔 Y
+        marker.pose.position.z = 0.0;
+        marker.pose.orientation.w = 1.0;   // 无旋转
+
+        obstacle_markers.push_back(marker);
+    }
+
+    for(auto obstacle_maker:obstacle_markers)
+    {
+        obstacles_Pub.Publish(obstacle_maker);
     }
 
     return obstacles_sl;
