@@ -1108,7 +1108,7 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
     center_marker.header.stamp.sec = sec;
     center_marker.header.stamp.nsec = nsec;
     center_marker.ns = "local_trajectory_center";
-    center_marker.type = mdc::visual::MarkerType::LINE_STRIP;
+    center_marker.type = mdc::visual::MarkerType::POINTS;
     center_marker.action = mdc::visual::MarkerAction::ADD;
     center_marker.scale.x = 0.2;
     center_marker.color.r = 1.0;
@@ -1147,45 +1147,141 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
     right_bound_marker.color.a = 1.0;
     right_bound_marker.frameLocked = false;
 
+
+	 mdc::visual::Marker right_road_marker;
+    right_road_marker.header.frameId = "base_link";
+    right_road_marker.header.stamp.sec = sec;
+    right_road_marker.header.stamp.nsec = nsec;
+    right_road_marker.ns = "local_trajectory_right_road";
+    right_road_marker.type = mdc::visual::MarkerType::LINE_STRIP;
+    right_road_marker.action = mdc::visual::MarkerAction::ADD;
+    right_road_marker.scale.x = 0.2;
+    right_road_marker.color.r = 0.0;
+    right_road_marker.color.g = 1.0;
+    right_road_marker.color.b = 0.0;
+    right_road_marker.color.a = 1.0;
+    right_road_marker.frameLocked = false;
+
+
+	mdc::visual::Marker left_road_marker;
+    left_road_marker.header.frameId = "base_link";
+    left_road_marker.header.stamp.sec = sec;
+    left_road_marker.header.stamp.nsec = nsec;
+    left_road_marker.ns = "local_trajectory_left_road";
+    left_road_marker.type = mdc::visual::MarkerType::LINE_STRIP;
+    left_road_marker.action = mdc::visual::MarkerAction::ADD;
+    left_road_marker.scale.x = 0.2;
+    left_road_marker.color.r = 0.0;
+    left_road_marker.color.g = 1.0;
+    left_road_marker.color.b = 0.0;
+    left_road_marker.color.a = 1.0;
+    left_road_marker.frameLocked = false;
+
+
     // ==================== 填充点：中心 + 左边界 + 右边界 ====================
-    for (unsigned int i = 0; i < output_trajectory.size(); ++i)
-    {
+    // for (unsigned int i = 0; i < output_trajectory.size(); ++i)
+    // {
+
+	// 	double shift_left = output_trajectory[i].left_bound - output_trajectory[i].l;
+	// 	double shift_right = output_trajectory[i].right_bound - output_trajectory[i].l;
+	// 	double th = output_trajectory[i].theta;
+		
+	// 	double nx = -std::sin(th), ny = std::cos(th);
+
+	// 	double l_x = output_trajectory[i].x + shift_left * nx, l_y = output_trajectory[i].y + shift_left * ny;
+	// 	double r_x = output_trajectory[i].x + shift_right * nx, r_y = output_trajectory[i].y + shift_right * ny;
+
+    //     // 1. 轨迹中心线
+    //     mdc::visual::Point p_center;
+    //     p_center.x = output_trajectory[i].x;
+    //     p_center.y = output_trajectory[i].y;
+    //     p_center.z = 0.0;
+    //     center_marker.points.push_back(p_center);
+
+
+    //     mdc::visual::Point p_left;
+    //     p_left.x = l_x;
+    //     p_left.y = l_y;
+    //     p_left.z = 0.0;
+    //     left_bound_marker.points.push_back(p_left);
+
+    //     mdc::visual::Point p_right;
+    //     p_right.x = r_x;
+    //     p_right.y = r_y;
+    //     p_right.z = 0.0;
+    //     right_bound_marker.points.push_back(p_right);
+    // }
+	const double VEHICLE_HALF_WIDTH = 1.0; // 车辆半宽，根据实际车型调整（如1.0m）
+
+	for (unsigned int i = 0; i < output_trajectory.size(); ++i) {
+		double x = output_trajectory[i].x;
+		double y = output_trajectory[i].y;
+		double th = output_trajectory[i].theta;
+        std::cout <<"output_trajectory[i].theta:"<<output_trajectory[i].theta<<std::endl;
+		std::cout <<"output_trajectory[i].x:"<<output_trajectory[i].x <<"output_trajectory[i].y:"<<output_trajectory[i].y<<std::endl;
+		std::cout <<"output_trajectory[i].left_bound:"<<output_trajectory[i].left_bound <<"output_trajectory[i].right_bound:"<<output_trajectory[i].right_bound<<std::endl;
+		std::cout <<"output_trajectory[i].l:"<<output_trajectory[i].l<<std::endl;
+		// 1. 角度归一化（解决theta跳变问题）
+		th = std::atan2(std::sin(th), std::cos(th)); // 归一化到[-π, π]
+
+		// 2. 计算轨迹的左/右法向量（核心修正）
+		double nx_left = -std::sin(th), ny_left = std::cos(th);  // 左法向量（车辆左侧）
+		double nx_right = std::sin(th), ny_right = -std::cos(th); // 右法向量（车辆右侧）
+
+		// 3. 轨迹中心线（保持不变）
+		mdc::visual::Point p_center;
+		p_center.x = x;
+		p_center.y = y;
+		p_center.z = 0.0;
+		center_marker.points.push_back(p_center);
+
+		// 4. 轨迹左边界：中心线 + 车辆半宽 * 左法向量
+		mdc::visual::Point p_left;
+		p_left.x = x + VEHICLE_HALF_WIDTH * nx_left;
+		p_left.y = y + VEHICLE_HALF_WIDTH * ny_left;
+		p_left.z = 0.0;
+		left_bound_marker.points.push_back(p_left);
+
+		// 5. 轨迹右边界：中心线 + 车辆半宽 * 右法向量
+		mdc::visual::Point p_right;
+		p_right.x = x + VEHICLE_HALF_WIDTH * nx_right;
+		p_right.y = y + VEHICLE_HALF_WIDTH * ny_right;
+		p_right.z = 0.0;
+		right_bound_marker.points.push_back(p_right);
 
 		double shift_left = output_trajectory[i].left_bound - output_trajectory[i].l;
-		double shift_right = output_trajectory[i].right_bound - output_trajectory[i].l;
-		double th = output_trajectory[i].theta;
-		std::cout <<"output_trajectory[i].theta:"<<output_trajectory[i].theta<<std::endl;
+		double shift_right = output_trajectory[i].l - output_trajectory[i].right_bound;
+		//double th = output_trajectory[i].theta;
+	
+		
 		double nx = -std::sin(th), ny = std::cos(th);
 
-		double l_x = output_trajectory[i].x + shift_left * nx, l_y = output_trajectory[i].y + shift_left * ny;
-		double r_x = output_trajectory[i].x + shift_right * nx, r_y = output_trajectory[i].y + shift_right * ny;
-
-        // 1. 轨迹中心线
-        mdc::visual::Point p_center;
-        p_center.x = output_trajectory[i].x;
-        p_center.y = output_trajectory[i].y;
-        p_center.z = 0.0;
-        center_marker.points.push_back(p_center);
+		double l_x = output_trajectory[i].x + shift_left * nx_left, l_y = output_trajectory[i].y + shift_left * ny_left;
+		double r_x = output_trajectory[i].x + shift_right * nx_right, r_y = output_trajectory[i].y + shift_right * ny_right;
 
 
-        mdc::visual::Point p_left;
-        p_left.x = l_x;
-        p_left.y = l_y;
-        p_left.z = 0.0;
-        left_bound_marker.points.push_back(p_left);
+		mdc::visual::Point road_left;
+		road_left.x = l_x;
+		road_left.y = l_y;
+		road_left.z = 0.0;
+		left_road_marker.points.push_back(road_left);
 
-        mdc::visual::Point p_right;
-        p_right.x = r_x;
-        p_right.y = r_y;
-        p_right.z = 0.0;
-        right_bound_marker.points.push_back(p_right);
-    }
+		mdc::visual::Point road_right;
+		road_right.x = r_x;
+		road_right.y = r_y;
+		road_right.z = 0.0;
+		right_road_marker.points.push_back(road_right);
+	}
+
 
     // ==================== 发布 ====================
 
     local_plan_trajPub.Publish(center_marker);
-    local_plan_trajPub.Publish(left_bound_marker);
+    local_plan_trajPub.Publish(left_road_marker);
+    local_plan_trajPub.Publish(right_road_marker);
+	local_plan_trajPub.Publish(left_bound_marker);
     local_plan_trajPub.Publish(right_bound_marker);
+
 } 
 
 

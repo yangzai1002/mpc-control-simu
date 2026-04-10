@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <cmath>
 #include <publisher.h>
-
+#include <queue>  
 namespace localplanner {
 namespace interface {
 
@@ -198,51 +198,148 @@ std::vector<path_planner::ObstacleSL> PlannerInterface::ProcessOccupancyMap(
     if (frenet_obs.empty()) return obstacles_sl;
 
     // 障碍物 BFS 连通域聚类
+    // std::vector<bool> visited(frenet_obs.size(), false);
+    // const double CLUSTER_EPSILON_SQ = 0.6 * 0.6; 
+    // const double OBS_EXPAND_MARGIN = 0.2; 
+  
+    // for (size_t i = 0; i < frenet_obs.size(); ++i) {
+    //     if (visited[i]) continue;
+
+    //     double min_s = frenet_obs[i].s, max_s = frenet_obs[i].s;
+    //     double min_l = frenet_obs[i].l, max_l = frenet_obs[i].l;
+
+    //     std::vector<size_t> queue;
+    //     queue.push_back(i);
+    //     visited[i] = true;
+
+    //     size_t head = 0;
+    //     while (head < queue.size()) {
+    //         size_t curr = queue[head++];
+    //         const auto& pt = frenet_obs[curr];  /**/
+
+    //         min_s = std::min(min_s, pt.s);
+    //         max_s = std::max(max_s, pt.s);
+    //         min_l = std::min(min_l, pt.l); 
+    //         max_l = std::max(max_l, pt.l); 
+
+    //         for (size_t j = 0; j < frenet_obs.size(); ++j) {
+    //             if (!visited[j]) {
+    //                 double ds = frenet_obs[j].s - pt.s;
+    //                 double dl = frenet_obs[j].l - pt.l;
+    //                 if (ds * ds + dl * dl <= CLUSTER_EPSILON_SQ) {
+    //                     visited[j] = true;
+    //                     queue.push_back(j);
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     path_planner::ObstacleSL obs_box;
+    //     obs_box.start_s = min_s - OBS_EXPAND_MARGIN;
+    //     obs_box.end_s   = max_s + OBS_EXPAND_MARGIN;
+    //     obs_box.left_l  = max_l + OBS_EXPAND_MARGIN;  
+    //     obs_box.right_l = min_l - OBS_EXPAND_MARGIN;  
+
+    //     if ((obs_box.end_s - obs_box.start_s > 0.3) || (obs_box.left_l - obs_box.right_l > 0.3)) {
+    //         obstacles_sl.push_back(obs_box);
+    //     }
+    // }
+
+  // ==================== 超参数（可调节）====================
+    const double CLUSTER_EPSILON = 0.6;             // 聚类距离阈值
+    const double CLUSTER_EPSILON_SQ = CLUSTER_EPSILON * CLUSTER_EPSILON;
+    const double OBS_EXPAND_MARGIN = 0.2;           // 障碍物膨胀
+    const int MIN_CLUSTER_POINTS = 3;               // 最少点数，过滤噪点
+    const double MIN_OBSTACLE_LENGTH = 0.1;         // 最小长度
+    const double MIN_OBSTACLE_WIDTH = 0.1;          // 最小宽度
+    const double GRID_STEP = CLUSTER_EPSILON;       // 空间网格索引步长
+    // ==================== 1. 构建空间网格索引（核心：O(N) 加速）====================
+    // key: (s_grid, l_grid) → value: 点索引列表
+    std::map<std::pair<int, int>, std::vector<size_t>> grid_map;
+    for (size_t i = 0; i < frenet_obs.size(); ++i) {
+        const auto& pt = frenet_obs[i];
+        int s_grid = static_cast<int>(std::floor(pt.s / GRID_STEP));
+        int l_grid = static_cast<int>(std::floor(pt.l / GRID_STEP));
+        grid_map[{s_grid, l_grid}].push_back(i);
+    }
+
+    // ==================== 2. BFS 聚类 ====================
     std::vector<bool> visited(frenet_obs.size(), false);
-    const double CLUSTER_EPSILON_SQ = 0.6 * 0.6; 
-    const double OBS_EXPAND_MARGIN = 0.2; 
 
     for (size_t i = 0; i < frenet_obs.size(); ++i) {
         if (visited[i]) continue;
 
-        double min_s = frenet_obs[i].s, max_s = frenet_obs[i].s;
-        double min_l = frenet_obs[i].l, max_l = frenet_obs[i].l;
+        // 初始化包围盒
+        double min_s = frenet_obs[i].s;
+        double max_s = frenet_obs[i].s;
+        double min_l = frenet_obs[i].l;
+        double max_l = frenet_obs[i].l;
 
-        std::vector<size_t> queue;
-        queue.push_back(i);
+        // BFS 队列
+        std::queue<size_t> q;
+        q.push(i);
         visited[i] = true;
+        int point_count = 1;
+        while (!q.empty()) {
+            size_t curr_idx = q.front();
+            q.pop();
+            const auto& curr_pt = frenet_obs[curr_idx];
 
-        size_t head = 0;
-        while (head < queue.size()) {
-            size_t curr = queue[head++];
-            const auto& pt = frenet_obs[curr];  /**/
+            // 更新包围盒
+            min_s = std::min(min_s, curr_pt.s);
+            max_s = std::max(max_s, curr_pt.s);
+            min_l = std::min(min_l, curr_pt.l);
+            max_l = std::max(max_l, curr_pt.l);
 
-            min_s = std::min(min_s, pt.s);
-            max_s = std::max(max_s, pt.s);
-            min_l = std::min(min_l, pt.l); 
-            max_l = std::max(max_l, pt.l); 
+            // 取当前点所在网格 + 周围 8 邻域（只查附近点）
+            int s_grid = static_cast<int>(std::floor(curr_pt.s / GRID_STEP));
+            int l_grid = static_cast<int>(std::floor(curr_pt.l / GRID_STEP));
 
-            for (size_t j = 0; j < frenet_obs.size(); ++j) {
-                if (!visited[j]) {
-                    double ds = frenet_obs[j].s - pt.s;
-                    double dl = frenet_obs[j].l - pt.l;
-                    if (ds * ds + dl * dl <= CLUSTER_EPSILON_SQ) {
-                        visited[j] = true;
-                        queue.push_back(j);
+            for (int ds = -1; ds <= 1; ++ds) {
+                for (int dl = -1; dl <= 1; ++dl) {
+                    auto it = grid_map.find({s_grid + ds, l_grid + dl});
+                    if (it == grid_map.end()) continue;
+
+                    // 遍历邻域内的点（极少量）
+                    for (size_t neighbor_idx : it->second) {
+                        if (visited[neighbor_idx]) continue;
+
+                        const auto& neighbor_pt = frenet_obs[neighbor_idx];
+                        double ds_val = neighbor_pt.s - curr_pt.s;
+                        double dl_val = neighbor_pt.l - curr_pt.l;
+                        if (ds_val * ds_val + dl_val * dl_val <= CLUSTER_EPSILON_SQ) {
+                            visited[neighbor_idx] = true;
+                            q.push(neighbor_idx);
+                            point_count++;
+                        }
                     }
                 }
             }
         }
 
-        path_planner::ObstacleSL obs_box;
-        obs_box.start_s = min_s - OBS_EXPAND_MARGIN;
-        obs_box.end_s   = max_s + OBS_EXPAND_MARGIN;
-        obs_box.left_l  = max_l + OBS_EXPAND_MARGIN;  
-        obs_box.right_l = min_l - OBS_EXPAND_MARGIN;  
+        // ==================== 3. 过滤无效障碍物 ====================
+        // 点数太少 → 噪点
+        if (point_count < MIN_CLUSTER_POINTS) continue;
 
-        if ((obs_box.end_s - obs_box.start_s > 0.3) || (obs_box.left_l - obs_box.right_l > 0.3)) {
-            obstacles_sl.push_back(obs_box);
+        double obs_length = max_s - min_s;
+        double obs_width = max_l - min_l;
+        if (obs_length < MIN_OBSTACLE_LENGTH || obs_width < MIN_OBSTACLE_WIDTH) {
+            continue;
         }
+
+        // ==================== 4. 障碍物膨胀（安全距离）====================
+        min_s -= OBS_EXPAND_MARGIN;
+        max_s += OBS_EXPAND_MARGIN;
+        min_l -= OBS_EXPAND_MARGIN;
+        max_l += OBS_EXPAND_MARGIN;
+
+        // ==================== 5. 生成最终 ObstacleSL ====================
+        path_planner::ObstacleSL obs_sl;
+        obs_sl.start_s = min_s;
+        obs_sl.end_s   = max_s;
+        obs_sl.left_l  = max_l;  
+        obs_sl.right_l = min_l;  
+        obstacles_sl.push_back(obs_sl);
     }
     const auto now = std::chrono::high_resolution_clock::now().time_since_epoch();
     uint32_t sec = std::chrono::duration_cast<std::chrono::seconds>(now).count();
