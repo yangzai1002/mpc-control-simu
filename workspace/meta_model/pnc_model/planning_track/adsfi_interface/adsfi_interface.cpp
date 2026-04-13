@@ -21,7 +21,7 @@
 // #include "XSpeedPlanTrack.h"
 // #include "XTurnAround.h"
 #include "mviz_interface/mviz_interface.h"
-//#define GazeboSim
+#define GazeboSim
 
 void SimUTMToLatLon(double x, double y, double& lat, double& lon) {
     double a = 6378137.0;

@@ -27,7 +27,7 @@
 
 int udp_send_fd = -1;
 struct sockaddr_in udp_target_addr;
-const char* UDP_TARGET_IP = "26.28.1.122";   // 发送到本机 ROS
+const char* UDP_TARGET_IP = "127.0.0.1";   // 发送到本机 ROS
 const int UDP_TARGET_PORT = 9000;          // 与 ROS 监听端口一致
 
 // ===================== UDP 初始化函数 =====================
@@ -76,7 +76,9 @@ void AdsfiInterface::Init()
 	Control_ptr = std::make_shared<control::Controller>();
 	Control_ptr->init();
 	std::cout << "init end" << std::endl;
+    #ifdef GazeboSim
 	InitUDPSender();
+    #endif
 
 	bool result = mdc::visual::Connect();
 	if (result) {
@@ -251,7 +253,9 @@ int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi:
 	// ===================== 关键：把控制指令发给 UDP =====================
     float vx = control_ptr->lon_control.target_speed;
     float wz = control_ptr->lat_control.target_angle; // 或 angular_z，按你实际字段改
+    #ifdef GazeboSim
     SendControlToUDP(vx, wz);
+    #endif
 
     // XSelectLocForControl (m_13_0,m_4_0,m_14_0);
     // XTrajectoryProcess (m_3_0,m_14_0,m_7_0);

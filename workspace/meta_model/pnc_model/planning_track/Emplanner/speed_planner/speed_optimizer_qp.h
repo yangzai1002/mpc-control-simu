@@ -16,7 +16,7 @@ namespace speed_planner {
 class SpeedOptimizerQP {
 public:
     struct Config {
-        double delta_t = 0.2;       ///< QP 优化的时间离散步长 (s)
+        double delta_t = 1.0;       ///< QP 优化的时间离散步长 (s)
         int n = 40;                 ///< 优化前瞻点数 (总时长 = n * delta_t)
         
         double weight_v_ref = 10.0; ///< 速度跟随权重
