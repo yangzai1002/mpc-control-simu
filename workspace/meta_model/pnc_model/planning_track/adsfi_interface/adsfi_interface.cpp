@@ -21,7 +21,7 @@
 // #include "XSpeedPlanTrack.h"
 // #include "XTurnAround.h"
 #include "mviz_interface/mviz_interface.h"
-#define GazeboSim
+//#define GazeboSim
 
 void SimUTMToLatLon(double x, double y, double& lat, double& lon) {
     double a = 6378137.0;
@@ -598,7 +598,7 @@ int AdsfiInterface::Process(const std::string &name,std::shared_ptr<ara::adsfi::
 		// out->trajectoryPoints[i].wayPoint.z = in.trajectory[i].z;
 		plan_result_ptr->trajectoryPoints[i].wayPoint.theta = output_trajectory[i].theta;
 		plan_result_ptr->trajectoryPoints[i].wayPoint.curvature = output_trajectory[i].kappa;
-		std::cout <<"x:"<<output_trajectory[i].x<<" y:"<<output_trajectory[i].y<<" v:"<<output_trajectory[i].v<<std::endl;
+		//std::cout <<"x:"<<output_trajectory[i].x<<" y:"<<output_trajectory[i].y<<" v:"<<output_trajectory[i].v<<std::endl;
 		//out->trajectoryPoints[i].wayPoint.s = in.trajectory[i].length;
 		// out->trajectoryPoints[i].wayPoint.source = in.trajectory[i].source;
     // out->trajectoryPoints[i].wayPoint.type = in.trajectory[i].type;
@@ -1108,7 +1108,7 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
     center_marker.header.stamp.sec = sec;
     center_marker.header.stamp.nsec = nsec;
     center_marker.ns = "local_trajectory_center";
-    center_marker.type = mdc::visual::MarkerType::POINTS;
+    center_marker.type = mdc::visual::MarkerType::LINE_STRIP;
     center_marker.action = mdc::visual::MarkerAction::ADD;
     center_marker.scale.x = 0.2;
     center_marker.color.r = 1.0;
@@ -1217,10 +1217,10 @@ void AdsfiInterface::VisualizeFinalPaths(const std::vector<PathPoint>& output_tr
 		double x = output_trajectory[i].x;
 		double y = output_trajectory[i].y;
 		double th = output_trajectory[i].theta;
-        std::cout <<"output_trajectory[i].theta:"<<output_trajectory[i].theta<<std::endl;
-		std::cout <<"output_trajectory[i].x:"<<output_trajectory[i].x <<"output_trajectory[i].y:"<<output_trajectory[i].y<<std::endl;
-		std::cout <<"output_trajectory[i].left_bound:"<<output_trajectory[i].left_bound <<"output_trajectory[i].right_bound:"<<output_trajectory[i].right_bound<<std::endl;
-		std::cout <<"output_trajectory[i].l:"<<output_trajectory[i].l<<std::endl;
+        //std::cout <<"output_trajectory[i].theta:"<<output_trajectory[i].theta<<std::endl;
+		//std::cout <<"output_trajectory[i].x:"<<output_trajectory[i].x <<"output_trajectory[i].y:"<<output_trajectory[i].y<<std::endl;
+		//std::cout <<"output_trajectory[i].left_bound:"<<output_trajectory[i].left_bound <<"output_trajectory[i].right_bound:"<<output_trajectory[i].right_bound<<std::endl;
+		//std::cout <<"output_trajectory[i].l:"<<output_trajectory[i].l<<std::endl;
 		// 1. 角度归一化（解决theta跳变问题）
 		th = std::atan2(std::sin(th), std::cos(th)); // 归一化到[-π, π]
 

@@ -167,7 +167,7 @@ void AdsfiInterface::Callback(const std::string &name, const std::shared_ptr<ara
     std::cout << "FaultData callback" << std::endl;
     safebuf_faultdata.Set(ptr);
 }
-//#define GazeboSim
+
 int AdsfiInterface::Process(const std::string &name, std::shared_ptr<ara::adsfi::VehicleActControl> &control_ptr) 
 {
 	std::shared_ptr<ara::adsfi::BusinessCommand> bus_command_ptr;

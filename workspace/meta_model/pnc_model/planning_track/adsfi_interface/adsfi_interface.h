@@ -131,6 +131,7 @@ private:
 
 	double origin_utm_x = 0.0;
 	double origin_utm_y = 0.0;
+	double plan_last_time = 0.0;
 
 
 

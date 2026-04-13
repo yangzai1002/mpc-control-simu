@@ -1,6 +1,6 @@
 
 #include "controller_node.hpp"
-
+//#define GazeboSim
 namespace control
 {
 void  Controller::init()
@@ -188,7 +188,7 @@ void Controller::runControl(std::shared_ptr<ara::adsfi::VehicleActControl>& Vehi
    printf("[lateralController] timerCallback: lateralController calculating time = %f [ms]\n",elapsed_ms);
    printf("[lateralController] lat_cmd = %f,lon_cmd = %f\n",lat_cmd.control_cmd.steering_tire_rotation_rate,lon_cmd.control_cmd.speed);
 }
-//#define Gazebo
+
 // 更新定位信息
 void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  curlocation)
 {
@@ -198,7 +198,7 @@ void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  cur
             << curlocation->pose.pose.position.z;
 
     // 位置
-#ifndef Gazebo
+#ifndef GazeboSim
     m_inputData.current_pose.position.x = curlocation->pose.pose.position.x - m_inputData.first_point_x;
     m_inputData.current_pose.position.y = curlocation->pose.pose.position.y - m_inputData.first_point_y;
 #else
@@ -219,7 +219,7 @@ void Controller::updateLocation(std::shared_ptr<ara::adsfi::MsgHafLocation>  cur
     };
 
     /*角度转弧度*/
-    #ifndef Gazebo
+    #ifndef GazeboSim
     m_inputData.current_pose.orientation.x = normalize(curlocation->pose.pose.orientation.x *PI / 180.0);
     m_inputData.current_pose.orientation.y = normalize(curlocation->pose.pose.orientation.y *PI / 180.0);
     m_inputData.current_pose.orientation.z = PI/2 - normalize(curlocation->pose.pose.orientation.z *PI / 180.0); /*将角度转到车体坐标系*/

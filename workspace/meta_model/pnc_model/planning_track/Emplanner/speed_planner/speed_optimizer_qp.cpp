@@ -130,7 +130,7 @@ void SpeedOptimizerQP::SpatiotemporalFusion(const std::vector<path_planner::Path
 
     for (auto& tp : trajectory) {
         // 1. S -> SL 映射
-        std::cout <<"tp.s:"<<tp.s<<std::endl;
+        //std::cout <<"tp.s:"<<tp.s<<std::endl;
         auto p_sl = InterpolatePath(path_sl, tp.s);
         tp.l = p_sl.l;
         
